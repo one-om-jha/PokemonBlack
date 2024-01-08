@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://typedef/Item.gd" id="1_0aopb"]
+
+[resource]
+script = ExtResource("1_0aopb")
+id = 127
+name = "chesto-berry"
+cost = 80
+fling_power = 10
+fling_effect = "berry-effect"
+effect = "Held in battle
+:   When the holder is asleep, it consumes this item to wake up.
+
+Used on a party Pokémon
+:   Cures sleep."
+flavor = "A Berry to be consumed by Pokémon. If a Pokémon
+holds one, it can recover from sleep on its own
+in battle."
+sprite = "res://sprites/items/chesto-berry.png"
+attributes = ["holdable-active"]
+category = "medicine"

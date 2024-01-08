@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://typedef/Item.gd" id="1_jphsn"]
+
+[resource]
+script = ExtResource("1_jphsn")
+id = 256
+name = "lagging-tail"
+cost = 4000
+fling_power = 10
+fling_effect = ""
+effect = "Held: The holder will go last within its move's priority bracket, regardless of Speed.  If multiple Pokémon within the same priority bracket are subject to this effect, the slower Pokémon will go first.  The holder will move after Pokémon with Stall.  If the holder has Stall, Stall is ignored.  This item ignores Trick Room."
+flavor = "An item to be held by a Pokémon. It is tremendously
+heavy and makes the holder move slower
+than usual."
+sprite = "res://sprites/items/lagging-tail.png"
+attributes = ["holdable", "holdable-active"]
+category = "bad-held-items"

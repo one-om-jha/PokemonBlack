@@ -1,0 +1,35 @@
+[gd_resource type="Resource" script_class="Move" load_steps=3 format=3]
+
+[ext_resource type="Resource" path="res://Ailments/none.tres" id="1_6s42q"]
+[ext_resource type="Script" path="res://typedef/Move.gd" id="2_sfk6v"]
+
+[resource]
+script = ExtResource("2_sfk6v")
+id = 191
+name = "spikes"
+accuracy = 0
+effect_chance = 0
+pp = 20
+priority = 0
+power = 0
+damage_class = "status"
+effect = "Scatters spikes around the opposing field, which damage opposing Pokémon that enter the field for 1/8 of their max HP.  Pokémon immune to ground moves are immune to this damage, except during gravity.  Up to three layers of spikes may be laid down, adding 1/16 to the damage done: two layers of spikes damage for 3/16 max HP, and three layers damage for 1/4 max HP.
+
+wonder guard does not block damage from this effect.
+
+rapid spin removes this effect from its user's side of the field.  defog removes this effect from its target's side of the field."
+stat_changes = []
+target = "opponents-field"
+type = 8
+ailment = ExtResource("1_6s42q")
+category = "field-effect"
+min_hits = 0
+max_hits = 0
+min_turns = 0
+max_turns = 0
+drain = 0
+healing = 0
+crit_rate = 0
+ailment_chance = 0
+flinch_chance = 0
+stat_chance = 0

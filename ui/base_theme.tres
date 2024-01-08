@@ -1,0 +1,24 @@
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://bopkg17damgfh"]
+
+[ext_resource type="FontFile" uid="uid://cvbi044pyxaga" path="res://ui/fonts/NunitoSans_10pt-Regular.ttf" id="1_3oukq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wgfst"]
+bg_color = Color(0.0666667, 0.0666667, 0.0666667, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gsdja"]
+bg_color = Color(0, 0, 0, 0.5)
+skew = Vector2(0.5, 2.08165e-12)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2g3vr"]
+bg_color = Color(1, 1, 1, 1)
+skew = Vector2(0.5, 2.08165e-12)
+
+[resource]
+default_font = ExtResource("1_3oukq")
+default_font_size = 24
+BoxContainer/constants/separation = 0
+Panel/styles/panel = SubResource("StyleBoxFlat_wgfst")
+ProgressBar/styles/background = SubResource("StyleBoxFlat_gsdja")
+ProgressBar/styles/fill = SubResource("StyleBoxFlat_2g3vr")
+RichTextLabel/font_sizes/normal_font_size = 20
+RichTextLabel/fonts/normal_font = ExtResource("1_3oukq")

@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="Species" load_steps=3 format=3]
+
+[ext_resource type="Resource" path="res://GrowthRates/fast-then-very-slow.tres" id="1_6exsu"]
+[ext_resource type="Script" path="res://typedef/Species.gd" id="2_svn1x"]
+
+[resource]
+script = ExtResource("2_svn1x")
+id = 320
+name = "wailmer"
+order = 348
+genus = "Ball Whale Pokémon"
+flavor = "On sunny days, it lands on beaches
+to bounce like a ball and play.
+It spouts water from its nose."
+gender_rate = 4
+capture_rate = 125
+base_happiness = 50
+is_baby = false
+is_legendary = false
+is_mythical = false
+hatch_counter = 40
+has_gender_differences = false
+forms_switchable = false
+growth_rate = ExtResource("1_6exsu")
+local_dex = 0
+national_dex = 320
+egg_groups = ["ground", "water2"]
+evolution_chain = 161
+habitat = "sea"

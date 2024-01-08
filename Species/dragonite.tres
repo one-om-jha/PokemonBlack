@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="Species" load_steps=3 format=3]
+
+[ext_resource type="Resource" path="res://GrowthRates/slow.tres" id="1_mtx5q"]
+[ext_resource type="Script" path="res://typedef/Species.gd" id="2_4a1jr"]
+
+[resource]
+script = ExtResource("2_4a1jr")
+id = 149
+name = "dragonite"
+order = 181
+genus = "Dragon Pokémon"
+flavor = "It is said to make its home
+somewhere in the sea. It guides
+crews of shipwrecks to shore."
+gender_rate = 4
+capture_rate = 45
+base_happiness = 35
+is_baby = false
+is_legendary = false
+is_mythical = false
+hatch_counter = 40
+has_gender_differences = false
+forms_switchable = false
+growth_rate = ExtResource("1_mtx5q")
+local_dex = 0
+national_dex = 149
+egg_groups = ["water1", "dragon"]
+evolution_chain = 76
+habitat = "waters-edge"

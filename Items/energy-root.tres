@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://typedef/Item.gd" id="1_fvcfj"]
+
+[resource]
+script = ExtResource("1_fvcfj")
+id = 35
+name = "energy-root"
+cost = 1200
+fling_power = 30
+fling_effect = ""
+effect = "Used on a party Pokémon
+:   Restores 200 HP.  Decreases happiness by 10/10/15."
+flavor = "An extremely bitter medicinal root. It can be used to
+restore 120 HP to a single Pokémon."
+sprite = "res://sprites/items/energy-root.png"
+attributes = ["countable", "consumable", "usable-overworld", "usable-in-battle", "holdable"]
+category = "healing"

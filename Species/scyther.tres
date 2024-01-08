@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="Species" load_steps=3 format=3]
+
+[ext_resource type="Resource" path="res://GrowthRates/medium.tres" id="1_d11si"]
+[ext_resource type="Script" path="res://typedef/Species.gd" id="2_dxpyy"]
+
+[resource]
+script = ExtResource("2_dxpyy")
+id = 123
+name = "scyther"
+order = 141
+genus = "Mantis Pokémon"
+flavor = "The sharp scythes on its forearms
+become increasingly sharp by
+cutting through hard objects."
+gender_rate = 4
+capture_rate = 45
+base_happiness = 50
+is_baby = false
+is_legendary = false
+is_mythical = false
+hatch_counter = 25
+has_gender_differences = true
+forms_switchable = false
+growth_rate = ExtResource("1_d11si")
+local_dex = 0
+national_dex = 123
+egg_groups = ["bug"]
+evolution_chain = 58
+habitat = "grassland"

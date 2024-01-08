@@ -1,0 +1,69 @@
+[gd_resource type="Resource" script_class="EvolutionChain" load_steps=9 format=3]
+
+[ext_resource type="Script" path="res://typedef/ChainLink.gd" id="1_j0xab"]
+[ext_resource type="Resource" path="res://Species/ninjask.tres" id="2_tt1y4"]
+[ext_resource type="Resource" path="res://Species/shedinja.tres" id="3_bodjh"]
+[ext_resource type="Resource" path="res://Species/nincada.tres" id="4_qjjtd"]
+[ext_resource type="Script" path="res://typedef/EvolutionChain.gd" id="5_l0clh"]
+
+[sub_resource type="Resource" id="Resource_owdiu"]
+script = ExtResource("1_j0xab")
+is_baby = false
+species = ExtResource("2_tt1y4")
+evolves_to = []
+trigger = ""
+gender = 0
+known_move_type = 0
+location = ""
+min_level = 0
+min_happiness = 0
+min_beauty = 0
+min_affection = 0
+needs_overworld_rain = false
+party_type = 0
+relative_physical_stats = 0
+time_of_day = ""
+turn_upside_down = false
+
+[sub_resource type="Resource" id="Resource_1qljp"]
+script = ExtResource("1_j0xab")
+is_baby = false
+species = ExtResource("3_bodjh")
+evolves_to = []
+trigger = ""
+gender = 0
+known_move_type = 0
+location = ""
+min_level = 0
+min_happiness = 0
+min_beauty = 0
+min_affection = 0
+needs_overworld_rain = false
+party_type = 0
+relative_physical_stats = 0
+time_of_day = ""
+turn_upside_down = false
+
+[sub_resource type="Resource" id="Resource_aohv7"]
+script = ExtResource("1_j0xab")
+is_baby = false
+species = ExtResource("4_qjjtd")
+evolves_to = [SubResource("Resource_owdiu"), SubResource("Resource_1qljp")]
+trigger = ""
+gender = 0
+known_move_type = 0
+location = ""
+min_level = 0
+min_happiness = 0
+min_beauty = 0
+min_affection = 0
+needs_overworld_rain = false
+party_type = 0
+relative_physical_stats = 0
+time_of_day = ""
+turn_upside_down = false
+
+[resource]
+script = ExtResource("5_l0clh")
+id = 144
+chain = SubResource("Resource_aohv7")

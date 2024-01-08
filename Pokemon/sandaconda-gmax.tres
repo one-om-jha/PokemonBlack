@@ -1,0 +1,45 @@
+[gd_resource type="Resource" script_class="Pokemon" load_steps=6 format=3]
+
+[ext_resource type="Resource" path="res://Abilities/sand-spit.tres" id="1_4ws08"]
+[ext_resource type="Resource" path="res://Abilities/shed-skin.tres" id="2_c0pru"]
+[ext_resource type="Resource" path="res://Abilities/sand-veil.tres" id="3_78lac"]
+[ext_resource type="Script" path="res://typedef/Pokemon.gd" id="4_7ge70"]
+[ext_resource type="Resource" path="res://Species/sandaconda.tres" id="5_p2pu0"]
+
+[resource]
+script = ExtResource("4_7ge70")
+id = 10218
+name = "sandaconda-gmax"
+base_experience = 179
+height = 220
+weight = 10000
+abilities = [ExtResource("1_4ws08"), ExtResource("2_c0pru"), ExtResource("3_78lac")]
+forms = ["sandaconda-gmax"]
+held_items = []
+moves = []
+species = ExtResource("5_p2pu0")
+sprites = {
+"back_default": "res://sprites/pokemon/back/10218.gif",
+"back_shiny": "res://sprites/pokemon/back/shiny/10218.gif",
+"front_default": "res://sprites/pokemon/10218.gif",
+"front_shiny": "res://sprites/pokemon/shiny/10218.gif"
+}
+stats = {
+"attack": 107.0,
+"defense": 125.0,
+"hp": 72.0,
+"special-attack": 65.0,
+"special-defense": 70.0,
+"speed": 71.0
+}
+stats_effort = {
+"attack": 0.0,
+"defense": 2.0,
+"hp": 0.0,
+"special-attack": 0.0,
+"special-defense": 0.0,
+"speed": 0.0
+}
+types = {
+1.0: 8
+}

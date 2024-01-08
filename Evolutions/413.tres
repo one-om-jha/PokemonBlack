@@ -1,0 +1,89 @@
+[gd_resource type="Resource" script_class="EvolutionChain" load_steps=11 format=3]
+
+[ext_resource type="Script" path="res://typedef/ChainLink.gd" id="1_sk34r"]
+[ext_resource type="Resource" path="res://Species/solgaleo.tres" id="2_n5o3q"]
+[ext_resource type="Resource" path="res://Species/lunala.tres" id="3_38ujl"]
+[ext_resource type="Resource" path="res://Species/cosmoem.tres" id="4_otdsu"]
+[ext_resource type="Resource" path="res://Species/cosmog.tres" id="5_wdall"]
+[ext_resource type="Script" path="res://typedef/EvolutionChain.gd" id="6_nnnik"]
+
+[sub_resource type="Resource" id="Resource_f24cv"]
+script = ExtResource("1_sk34r")
+is_baby = false
+species = ExtResource("2_n5o3q")
+evolves_to = []
+trigger = ""
+gender = 0
+known_move_type = 0
+location = ""
+min_level = 0
+min_happiness = 0
+min_beauty = 0
+min_affection = 0
+needs_overworld_rain = false
+party_type = 0
+relative_physical_stats = 0
+time_of_day = ""
+turn_upside_down = false
+
+[sub_resource type="Resource" id="Resource_e6xf5"]
+script = ExtResource("1_sk34r")
+is_baby = false
+species = ExtResource("3_38ujl")
+evolves_to = []
+trigger = ""
+gender = 0
+known_move_type = 0
+location = ""
+min_level = 0
+min_happiness = 0
+min_beauty = 0
+min_affection = 0
+needs_overworld_rain = false
+party_type = 0
+relative_physical_stats = 0
+time_of_day = ""
+turn_upside_down = false
+
+[sub_resource type="Resource" id="Resource_bk5lr"]
+script = ExtResource("1_sk34r")
+is_baby = false
+species = ExtResource("4_otdsu")
+evolves_to = [SubResource("Resource_f24cv"), SubResource("Resource_e6xf5")]
+trigger = ""
+gender = 0
+known_move_type = 0
+location = ""
+min_level = 0
+min_happiness = 0
+min_beauty = 0
+min_affection = 0
+needs_overworld_rain = false
+party_type = 0
+relative_physical_stats = 0
+time_of_day = ""
+turn_upside_down = false
+
+[sub_resource type="Resource" id="Resource_l3ixg"]
+script = ExtResource("1_sk34r")
+is_baby = false
+species = ExtResource("5_wdall")
+evolves_to = [SubResource("Resource_bk5lr")]
+trigger = ""
+gender = 0
+known_move_type = 0
+location = ""
+min_level = 0
+min_happiness = 0
+min_beauty = 0
+min_affection = 0
+needs_overworld_rain = false
+party_type = 0
+relative_physical_stats = 0
+time_of_day = ""
+turn_upside_down = false
+
+[resource]
+script = ExtResource("6_nnnik")
+id = 413
+chain = SubResource("Resource_l3ixg")

@@ -1,0 +1,61 @@
+[gd_resource type="Resource" script_class="Pokemon" load_steps=22 format=3]
+
+[ext_resource type="Resource" path="res://Abilities/rattled.tres" id="1_wf3v6"]
+[ext_resource type="Resource" path="res://Moves/tackle.tres" id="2_j7rwb"]
+[ext_resource type="Resource" path="res://Moves/take-down.tres" id="3_qsp1e"]
+[ext_resource type="Resource" path="res://Moves/night-shade.tres" id="4_lk0y8"]
+[ext_resource type="Resource" path="res://Moves/confuse-ray.tres" id="5_ycg7k"]
+[ext_resource type="Resource" path="res://Moves/light-screen.tres" id="6_g0k5m"]
+[ext_resource type="Resource" path="res://Moves/reflect.tres" id="7_2glqi"]
+[ext_resource type="Resource" path="res://Moves/rest.tres" id="8_f2843"]
+[ext_resource type="Resource" path="res://Moves/substitute.tres" id="9_pl4tr"]
+[ext_resource type="Resource" path="res://Moves/thief.tres" id="10_faiy1"]
+[ext_resource type="Resource" path="res://Moves/protect.tres" id="11_a3lir"]
+[ext_resource type="Resource" path="res://Moves/endure.tres" id="12_158v2"]
+[ext_resource type="Resource" path="res://Moves/sleep-talk.tres" id="13_0xgak"]
+[ext_resource type="Resource" path="res://Moves/shadow-ball.tres" id="14_la0ep"]
+[ext_resource type="Resource" path="res://Moves/astonish.tres" id="15_pph74"]
+[ext_resource type="Resource" path="res://Moves/power-gem.tres" id="16_arm38"]
+[ext_resource type="Resource" path="res://Moves/nasty-plot.tres" id="17_tymow"]
+[ext_resource type="Resource" path="res://Moves/hex.tres" id="18_kmksb"]
+[ext_resource type="Resource" path="res://Moves/tera-blast.tres" id="19_awuap"]
+[ext_resource type="Script" path="res://typedef/Pokemon.gd" id="20_roab7"]
+[ext_resource type="Resource" path="res://Species/gimmighoul.tres" id="21_leh2q"]
+
+[resource]
+script = ExtResource("20_roab7")
+id = 999
+name = "gimmighoul"
+base_experience = 0
+height = 3
+weight = 50
+abilities = [ExtResource("1_wf3v6"), ExtResource("1_wf3v6"), ExtResource("1_wf3v6")]
+forms = ["gimmighoul-chest"]
+held_items = []
+moves = [[1, "level-up", ExtResource("2_j7rwb")], [0, "machine", ExtResource("3_qsp1e")], [0, "machine", ExtResource("4_lk0y8")], [0, "machine", ExtResource("5_ycg7k")], [0, "machine", ExtResource("6_g0k5m")], [0, "machine", ExtResource("7_2glqi")], [0, "machine", ExtResource("8_f2843")], [0, "machine", ExtResource("9_pl4tr")], [0, "machine", ExtResource("10_faiy1")], [0, "machine", ExtResource("11_a3lir")], [0, "machine", ExtResource("12_158v2")], [0, "machine", ExtResource("13_0xgak")], [0, "machine", ExtResource("14_la0ep")], [1, "level-up", ExtResource("15_pph74")], [0, "machine", ExtResource("16_arm38")], [0, "machine", ExtResource("17_tymow")], [0, "machine", ExtResource("18_kmksb")], [0, "machine", ExtResource("19_awuap")]]
+species = ExtResource("21_leh2q")
+sprites = {
+"back_default": "res://sprites/pokemon/back/999.gif",
+"back_shiny": "res://sprites/pokemon/back/shiny/999.gif",
+"front_default": "res://sprites/pokemon/999.gif",
+"front_shiny": "res://sprites/pokemon/shiny/999.gif"
+}
+stats = {
+"attack": 30.0,
+"defense": 70.0,
+"hp": 45.0,
+"special-attack": 75.0,
+"special-defense": 70.0,
+"speed": 10.0
+}
+stats_effort = {
+"attack": 0.0,
+"defense": 0.0,
+"hp": 0.0,
+"special-attack": 1.0,
+"special-defense": 0.0,
+"speed": 0.0
+}
+types = {
+1.0: 13
+}

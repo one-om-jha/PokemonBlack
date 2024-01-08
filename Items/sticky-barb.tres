@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://typedef/Item.gd" id="1_3xckr"]
+
+[resource]
+script = ExtResource("1_3xckr")
+id = 265
+name = "sticky-barb"
+cost = 4000
+fling_power = 80
+fling_effect = ""
+effect = "Held: Damaged the holder for 1/8 its max HP.  When the holder is struck by a contact move, damages the attacker for 1/8 its max HP; if the attacker is not holding an item, it will take this item."
+flavor = "An item to be held by a Pokémon. It damages the
+holder every turn and may latch on to Pokémon
+that touch the holder."
+sprite = "res://sprites/items/sticky-barb.png"
+attributes = ["holdable", "holdable-active"]
+category = "bad-held-items"

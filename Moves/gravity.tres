@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="Move" load_steps=3 format=3]
+
+[ext_resource type="Resource" path="res://Ailments/none.tres" id="1_fgnyc"]
+[ext_resource type="Script" path="res://typedef/Move.gd" id="2_550lw"]
+
+[resource]
+script = ExtResource("2_550lw")
+id = 356
+name = "gravity"
+accuracy = 0
+effect_chance = 0
+pp = 5
+priority = 0
+power = 0
+damage_class = "status"
+effect = "For five turns (including this one), all immunities to ground moves are disabled.  For the duration of this effect, the evasion of every Pokémon on the field is lowered by two stages.  Cancels the effects of bounce, fly, and sky drop.
+
+Specifically, flying Pokémon and those with levitate or that have used magnet rise are no longer immune to ground attacks, arena trap, spikes, or toxic spikes.
+
+bounce, fly, sky drop, high jump kick, jump kick, and splash cannot be used while this move is in effect.
+
+*Bug*: If this move is used during a double or triple battle while Pokémon are under the effect of sky drop, Sky Drop's effect is not correctly canceled on its target, and it remains high in the air indefinitely.  As Sky Drop prevents the target from acting, the only way to subsequently remove it from the field is to faint it."
+stat_changes = []
+target = "entire-field"
+type = 10
+ailment = ExtResource("1_fgnyc")
+category = "whole-field-effect"
+min_hits = 0
+max_hits = 0
+min_turns = 0
+max_turns = 0
+drain = 0
+healing = 0
+crit_rate = 0
+ailment_chance = 0
+flinch_chance = 0
+stat_chance = 0

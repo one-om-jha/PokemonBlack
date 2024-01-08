@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="Move" load_steps=3 format=3]
+
+[ext_resource type="Resource" path="res://Ailments/none.tres" id="1_fr30e"]
+[ext_resource type="Script" path="res://typedef/Move.gd" id="2_7qvib"]
+
+[resource]
+script = ExtResource("2_7qvib")
+id = 694
+name = "aurora-veil"
+accuracy = 0
+effect_chance = 0
+pp = 20
+priority = 0
+power = 0
+damage_class = "status"
+effect = "Places the Aurora Veil effect on the user's side of the field for the next 5 turns.  If the weather is not hail, or the weather is disabled by the effects of cloud nine or air lock, this move will fail.
+
+Any regular damage dealt to an affected Pokémon is reduced by ½.  (If there are multiple Pokémon on the affected field, the reduction is ⅓.)"
+stat_changes = []
+target = "users-field"
+type = 5
+ailment = ExtResource("1_fr30e")
+category = "field-effect"
+min_hits = 0
+max_hits = 0
+min_turns = 0
+max_turns = 0
+drain = 0
+healing = 0
+crit_rate = 0
+ailment_chance = 0
+flinch_chance = 0
+stat_chance = 0

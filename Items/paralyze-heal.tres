@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://typedef/Item.gd" id="1_nqr6b"]
+
+[resource]
+script = ExtResource("1_nqr6b")
+id = 22
+name = "paralyze-heal"
+cost = 200
+fling_power = 30
+fling_effect = ""
+effect = "Used on a party Pokémon
+:   Cures paralysis."
+flavor = "A spray-type medicine for treating paralysis. It can be
+used to free a single Pokémon that has been paralyzed."
+sprite = "res://sprites/items/paralyze-heal.png"
+attributes = ["countable", "consumable", "usable-overworld", "usable-in-battle", "holdable"]
+category = "status-cures"

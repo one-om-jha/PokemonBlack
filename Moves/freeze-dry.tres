@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="Move" load_steps=3 format=3]
+
+[ext_resource type="Resource" path="res://Ailments/freeze.tres" id="1_i4lvo"]
+[ext_resource type="Script" path="res://typedef/Move.gd" id="2_8wi3m"]
+
+[resource]
+script = ExtResource("2_8wi3m")
+id = 573
+name = "freeze-dry"
+accuracy = 100
+effect_chance = 10
+pp = 20
+priority = 0
+power = 70
+damage_class = "special"
+effect = "Inflicts regular damage.  This move is super-effective against the water type.
+
+The target's other type will affect damage as usual.  If this move's type is changed, it remains super-effective against Water regardless of its type."
+stat_changes = []
+target = "selected-pokemon"
+type = 5
+ailment = ExtResource("1_i4lvo")
+category = "damage+ailment"
+min_hits = 0
+max_hits = 0
+min_turns = 0
+max_turns = 0
+drain = 0
+healing = 0
+crit_rate = 0
+ailment_chance = 10
+flinch_chance = 0
+stat_chance = 0

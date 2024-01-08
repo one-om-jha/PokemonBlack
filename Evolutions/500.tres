@@ -1,0 +1,49 @@
+[gd_resource type="Resource" script_class="EvolutionChain" load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://typedef/ChainLink.gd" id="1_xi5dp"]
+[ext_resource type="Resource" path="res://Species/espathra.tres" id="2_rprcs"]
+[ext_resource type="Resource" path="res://Species/flittle.tres" id="3_g7xpq"]
+[ext_resource type="Script" path="res://typedef/EvolutionChain.gd" id="4_fmo5d"]
+
+[sub_resource type="Resource" id="Resource_lnhh6"]
+script = ExtResource("1_xi5dp")
+is_baby = false
+species = ExtResource("2_rprcs")
+evolves_to = []
+trigger = ""
+gender = 0
+known_move_type = 0
+location = ""
+min_level = 0
+min_happiness = 0
+min_beauty = 0
+min_affection = 0
+needs_overworld_rain = false
+party_type = 0
+relative_physical_stats = 0
+time_of_day = ""
+turn_upside_down = false
+
+[sub_resource type="Resource" id="Resource_7fso4"]
+script = ExtResource("1_xi5dp")
+is_baby = false
+species = ExtResource("3_g7xpq")
+evolves_to = [SubResource("Resource_lnhh6")]
+trigger = ""
+gender = 0
+known_move_type = 0
+location = ""
+min_level = 0
+min_happiness = 0
+min_beauty = 0
+min_affection = 0
+needs_overworld_rain = false
+party_type = 0
+relative_physical_stats = 0
+time_of_day = ""
+turn_upside_down = false
+
+[resource]
+script = ExtResource("4_fmo5d")
+id = 500
+chain = SubResource("Resource_7fso4")

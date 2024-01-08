@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://typedef/Item.gd" id="1_jntm4"]
+
+[resource]
+script = ExtResource("1_jntm4")
+id = 15
+name = "quick-ball"
+cost = 1000
+fling_power = 0
+fling_effect = ""
+effect = "Used in battle
+:   Attempts to catch a wild Pokémon, using a catch rate of 4× on the first turn of a battle, but 1× any other time.
+
+    If used in a trainer battle, nothing happens and the ball is lost."
+flavor = "A somewhat different Poké Ball that has a more
+successful catch rate if used at the start of a
+wild encounter."
+sprite = "res://sprites/items/quick-ball.png"
+attributes = ["countable", "consumable", "usable-in-battle", "holdable"]
+category = "special-balls"

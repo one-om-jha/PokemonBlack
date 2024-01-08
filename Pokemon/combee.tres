@@ -1,0 +1,63 @@
+[gd_resource type="Resource" script_class="Pokemon" load_steps=23 format=3]
+
+[ext_resource type="Resource" path="res://Abilities/honey-gather.tres" id="1_tt0l4"]
+[ext_resource type="Resource" path="res://Abilities/hustle.tres" id="2_ch4u3"]
+[ext_resource type="Resource" path="res://Items/honey.tres" id="3_pjymh"]
+[ext_resource type="Resource" path="res://Moves/gust.tres" id="4_l30ye"]
+[ext_resource type="Resource" path="res://Moves/string-shot.tres" id="5_dgc85"]
+[ext_resource type="Resource" path="res://Moves/swift.tres" id="6_om1a1"]
+[ext_resource type="Resource" path="res://Moves/snore.tres" id="7_fm8u6"]
+[ext_resource type="Resource" path="res://Moves/mud-slap.tres" id="8_a71sx"]
+[ext_resource type="Resource" path="res://Moves/sleep-talk.tres" id="9_l6rup"]
+[ext_resource type="Resource" path="res://Moves/sweet-scent.tres" id="10_055ea"]
+[ext_resource type="Resource" path="res://Moves/endeavor.tres" id="11_hnfqg"]
+[ext_resource type="Resource" path="res://Moves/air-cutter.tres" id="12_yjm8p"]
+[ext_resource type="Resource" path="res://Moves/tailwind.tres" id="13_v7rkl"]
+[ext_resource type="Resource" path="res://Moves/bug-buzz.tres" id="14_26sbj"]
+[ext_resource type="Resource" path="res://Moves/bug-bite.tres" id="15_gyxeh"]
+[ext_resource type="Resource" path="res://Moves/ominous-wind.tres" id="16_x7vnc"]
+[ext_resource type="Resource" path="res://Moves/struggle-bug.tres" id="17_5foug"]
+[ext_resource type="Resource" path="res://Moves/lunge.tres" id="18_u84g5"]
+[ext_resource type="Resource" path="res://Moves/dual-wingbeat.tres" id="19_diduc"]
+[ext_resource type="Resource" path="res://Moves/tera-blast.tres" id="20_ul8f3"]
+[ext_resource type="Script" path="res://typedef/Pokemon.gd" id="21_bxf7l"]
+[ext_resource type="Resource" path="res://Species/combee.tres" id="22_u4kth"]
+
+[resource]
+script = ExtResource("21_bxf7l")
+id = 415
+name = "combee"
+base_experience = 49
+height = 3
+weight = 55
+abilities = [ExtResource("1_tt0l4"), ExtResource("1_tt0l4"), ExtResource("2_ch4u3")]
+forms = ["combee"]
+held_items = [[ExtResource("3_pjymh"), 5.0]]
+moves = [[1, "level-up", ExtResource("4_l30ye")], [0, "", ExtResource("5_dgc85")], [0, "", ExtResource("6_om1a1")], [0, "machine", ExtResource("7_fm8u6")], [0, "", ExtResource("8_a71sx")], [0, "machine", ExtResource("9_l6rup")], [1, "level-up", ExtResource("10_055ea")], [0, "", ExtResource("11_hnfqg")], [0, "", ExtResource("12_yjm8p")], [0, "", ExtResource("13_v7rkl")], [0, "machine", ExtResource("14_26sbj")], [0, "machine", ExtResource("15_gyxeh")], [0, "", ExtResource("16_x7vnc")], [0, "machine", ExtResource("17_5foug")], [0, "machine", ExtResource("18_u84g5")], [0, "tutor", ExtResource("19_diduc")], [0, "machine", ExtResource("20_ul8f3")]]
+species = ExtResource("22_u4kth")
+sprites = {
+"back_default": "res://sprites/pokemon/versions/generation-v/black-white/animated/back/415.gif",
+"back_shiny": "res://sprites/pokemon/versions/generation-v/black-white/animated/back/shiny/415.gif",
+"front_default": "res://sprites/pokemon/versions/generation-v/black-white/animated/415.gif",
+"front_shiny": "res://sprites/pokemon/versions/generation-v/black-white/animated/shiny/415.gif"
+}
+stats = {
+"attack": 30.0,
+"defense": 42.0,
+"hp": 30.0,
+"special-attack": 30.0,
+"special-defense": 42.0,
+"speed": 70.0
+}
+stats_effort = {
+"attack": 0.0,
+"defense": 0.0,
+"hp": 0.0,
+"special-attack": 0.0,
+"special-defense": 0.0,
+"speed": 1.0
+}
+types = {
+1.0: 11,
+2.0: 9
+}

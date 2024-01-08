@@ -1,0 +1,51 @@
+[gd_resource type="Resource" script_class="Pokemon" load_steps=12 format=3]
+
+[ext_resource type="Resource" path="res://Abilities/shed-skin.tres" id="1_me06i"]
+[ext_resource type="Resource" path="res://Abilities/overcoat.tres" id="2_xd5s5"]
+[ext_resource type="Resource" path="res://Moves/tackle.tres" id="3_d2e8x"]
+[ext_resource type="Resource" path="res://Moves/string-shot.tres" id="4_h11ui"]
+[ext_resource type="Resource" path="res://Moves/snore.tres" id="5_pwhqj"]
+[ext_resource type="Resource" path="res://Moves/protect.tres" id="6_3oout"]
+[ext_resource type="Resource" path="res://Moves/hidden-power.tres" id="7_ty01o"]
+[ext_resource type="Resource" path="res://Moves/bug-bite.tres" id="8_uxpjm"]
+[ext_resource type="Resource" path="res://Moves/electroweb.tres" id="9_ovrqx"]
+[ext_resource type="Script" path="res://typedef/Pokemon.gd" id="10_xxl1j"]
+[ext_resource type="Resource" path="res://Species/burmy.tres" id="11_eo34d"]
+
+[resource]
+script = ExtResource("10_xxl1j")
+id = 412
+name = "burmy"
+base_experience = 45
+height = 2
+weight = 34
+abilities = [ExtResource("1_me06i"), ExtResource("1_me06i"), ExtResource("2_xd5s5")]
+forms = ["burmy-plant", "burmy-sandy", "burmy-trash"]
+held_items = []
+moves = [[10, "level-up", ExtResource("3_d2e8x")], [0, "", ExtResource("4_h11ui")], [0, "", ExtResource("5_pwhqj")], [0, "machine", ExtResource("6_3oout")], [0, "machine", ExtResource("7_ty01o")], [15, "level-up", ExtResource("8_uxpjm")], [0, "", ExtResource("9_ovrqx")]]
+species = ExtResource("11_eo34d")
+sprites = {
+"back_default": "res://sprites/pokemon/versions/generation-v/black-white/animated/back/412.gif",
+"back_shiny": "res://sprites/pokemon/versions/generation-v/black-white/animated/back/shiny/412.gif",
+"front_default": "res://sprites/pokemon/versions/generation-v/black-white/animated/412.gif",
+"front_shiny": "res://sprites/pokemon/versions/generation-v/black-white/animated/shiny/412.gif"
+}
+stats = {
+"attack": 29.0,
+"defense": 45.0,
+"hp": 40.0,
+"special-attack": 29.0,
+"special-defense": 45.0,
+"speed": 36.0
+}
+stats_effort = {
+"attack": 0.0,
+"defense": 0.0,
+"hp": 0.0,
+"special-attack": 0.0,
+"special-defense": 1.0,
+"speed": 0.0
+}
+types = {
+1.0: 11
+}

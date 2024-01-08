@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="Species" load_steps=3 format=3]
+
+[ext_resource type="Resource" path="res://GrowthRates/medium.tres" id="1_eaipv"]
+[ext_resource type="Script" path="res://typedef/Species.gd" id="2_c6hen"]
+
+[resource]
+script = ExtResource("2_c6hen")
+id = 48
+name = "venonat"
+order = 53
+genus = "Insect Pokémon"
+flavor = "Its big eyes are actually clusters
+of tiny eyes. At night, its kind is
+drawn by light."
+gender_rate = 4
+capture_rate = 190
+base_happiness = 70
+is_baby = false
+is_legendary = false
+is_mythical = false
+hatch_counter = 20
+has_gender_differences = false
+forms_switchable = false
+growth_rate = ExtResource("1_eaipv")
+local_dex = 0
+national_dex = 48
+egg_groups = ["bug"]
+evolution_chain = 20
+habitat = "forest"

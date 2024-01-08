@@ -1,0 +1,69 @@
+[gd_resource type="Resource" script_class="EvolutionChain" load_steps=9 format=3]
+
+[ext_resource type="Script" path="res://typedef/ChainLink.gd" id="1_eshtu"]
+[ext_resource type="Resource" path="res://Species/vanilluxe.tres" id="2_y7o8g"]
+[ext_resource type="Resource" path="res://Species/vanillish.tres" id="3_sxjmk"]
+[ext_resource type="Resource" path="res://Species/vanillite.tres" id="4_dly2c"]
+[ext_resource type="Script" path="res://typedef/EvolutionChain.gd" id="5_e7lxp"]
+
+[sub_resource type="Resource" id="Resource_8ty1q"]
+script = ExtResource("1_eshtu")
+is_baby = false
+species = ExtResource("2_y7o8g")
+evolves_to = []
+trigger = ""
+gender = 0
+known_move_type = 0
+location = ""
+min_level = 0
+min_happiness = 0
+min_beauty = 0
+min_affection = 0
+needs_overworld_rain = false
+party_type = 0
+relative_physical_stats = 0
+time_of_day = ""
+turn_upside_down = false
+
+[sub_resource type="Resource" id="Resource_uneal"]
+script = ExtResource("1_eshtu")
+is_baby = false
+species = ExtResource("3_sxjmk")
+evolves_to = [SubResource("Resource_8ty1q")]
+trigger = ""
+gender = 0
+known_move_type = 0
+location = ""
+min_level = 0
+min_happiness = 0
+min_beauty = 0
+min_affection = 0
+needs_overworld_rain = false
+party_type = 0
+relative_physical_stats = 0
+time_of_day = ""
+turn_upside_down = false
+
+[sub_resource type="Resource" id="Resource_etn4c"]
+script = ExtResource("1_eshtu")
+is_baby = false
+species = ExtResource("4_dly2c")
+evolves_to = [SubResource("Resource_uneal")]
+trigger = ""
+gender = 0
+known_move_type = 0
+location = ""
+min_level = 0
+min_happiness = 0
+min_beauty = 0
+min_affection = 0
+needs_overworld_rain = false
+party_type = 0
+relative_physical_stats = 0
+time_of_day = ""
+turn_upside_down = false
+
+[resource]
+script = ExtResource("5_e7lxp")
+id = 296
+chain = SubResource("Resource_etn4c")

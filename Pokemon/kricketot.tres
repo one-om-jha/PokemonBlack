@@ -1,0 +1,62 @@
+[gd_resource type="Resource" script_class="Pokemon" load_steps=19 format=3]
+
+[ext_resource type="Resource" path="res://Abilities/shed-skin.tres" id="1_1r5wr"]
+[ext_resource type="Resource" path="res://Abilities/run-away.tres" id="2_0b2b1"]
+[ext_resource type="Resource" path="res://Items/metronome.tres" id="3_jqtbj"]
+[ext_resource type="Resource" path="res://Moves/pound.tres" id="4_hgif5"]
+[ext_resource type="Resource" path="res://Moves/tackle.tres" id="5_oedcf"]
+[ext_resource type="Resource" path="res://Moves/growl.tres" id="6_i52x7"]
+[ext_resource type="Resource" path="res://Moves/string-shot.tres" id="7_ynwvk"]
+[ext_resource type="Resource" path="res://Moves/bide.tres" id="8_4p4br"]
+[ext_resource type="Resource" path="res://Moves/snore.tres" id="9_iyv5d"]
+[ext_resource type="Resource" path="res://Moves/mud-slap.tres" id="10_annjm"]
+[ext_resource type="Resource" path="res://Moves/uproar.tres" id="11_thmom"]
+[ext_resource type="Resource" path="res://Moves/endeavor.tres" id="12_egnjj"]
+[ext_resource type="Resource" path="res://Moves/bug-bite.tres" id="13_3df56"]
+[ext_resource type="Resource" path="res://Moves/struggle-bug.tres" id="14_xa5wv"]
+[ext_resource type="Resource" path="res://Moves/lunge.tres" id="15_vuhyu"]
+[ext_resource type="Resource" path="res://Moves/tera-blast.tres" id="16_r0s0g"]
+[ext_resource type="Script" path="res://typedef/Pokemon.gd" id="17_c7oup"]
+[ext_resource type="Resource" path="res://Species/kricketot.tres" id="18_rq7yy"]
+
+[resource]
+script = ExtResource("17_c7oup")
+id = 401
+name = "kricketot"
+base_experience = 39
+height = 3
+weight = 22
+abilities = [ExtResource("1_1r5wr"), ExtResource("1_1r5wr"), ExtResource("2_0b2b1")]
+forms = ["kricketot"]
+held_items = [[ExtResource("3_jqtbj"), 5.0]]
+moves = [[0, "", ExtResource("4_hgif5")], [1, "level-up", ExtResource("5_oedcf")], [1, "level-up", ExtResource("6_i52x7")], [0, "", ExtResource("7_ynwvk")], [1, "level-up", ExtResource("8_4p4br")], [0, "", ExtResource("9_iyv5d")], [0, "", ExtResource("10_annjm")], [0, "", ExtResource("11_thmom")], [0, "", ExtResource("12_egnjj")], [0, "machine", ExtResource("13_3df56")], [0, "machine", ExtResource("14_xa5wv")], [0, "machine", ExtResource("15_vuhyu")], [0, "machine", ExtResource("16_r0s0g")]]
+species = ExtResource("18_rq7yy")
+sprites = {
+"back_default": "res://sprites/pokemon/versions/generation-v/black-white/animated/back/401.gif",
+"back_female": "res://sprites/pokemon/versions/generation-v/black-white/animated/back/female/401.gif",
+"back_shiny": "res://sprites/pokemon/versions/generation-v/black-white/animated/back/shiny/401.gif",
+"back_shiny_female": "res://sprites/pokemon/versions/generation-v/black-white/animated/back/female/401.gif",
+"front_default": "res://sprites/pokemon/versions/generation-v/black-white/animated/401.gif",
+"front_female": "res://sprites/pokemon/versions/generation-v/black-white/animated/female/401.gif",
+"front_shiny": "res://sprites/pokemon/versions/generation-v/black-white/animated/shiny/401.gif",
+"front_shiny_female": "res://sprites/pokemon/versions/generation-v/black-white/animated/shiny/female/401.gif"
+}
+stats = {
+"attack": 25.0,
+"defense": 41.0,
+"hp": 37.0,
+"special-attack": 25.0,
+"special-defense": 41.0,
+"speed": 25.0
+}
+stats_effort = {
+"attack": 0.0,
+"defense": 1.0,
+"hp": 0.0,
+"special-attack": 0.0,
+"special-defense": 0.0,
+"speed": 0.0
+}
+types = {
+1.0: 11
+}

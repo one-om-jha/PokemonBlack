@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="Species" load_steps=3 format=3]
+
+[ext_resource type="Resource" path="res://GrowthRates/slow.tres" id="1_ho0cw"]
+[ext_resource type="Script" path="res://typedef/Species.gd" id="2_xwhsx"]
+
+[resource]
+script = ExtResource("2_xwhsx")
+id = 221
+name = "piloswine"
+order = 252
+genus = "Swine Pokémon"
+flavor = "Covered by a shaggy coat, it is
+strong against the cold. Its tusks
+of ice thicken when it snows."
+gender_rate = 4
+capture_rate = 75
+base_happiness = 50
+is_baby = false
+is_legendary = false
+is_mythical = false
+hatch_counter = 20
+has_gender_differences = true
+forms_switchable = false
+growth_rate = ExtResource("1_ho0cw")
+local_dex = 0
+national_dex = 221
+egg_groups = ["ground"]
+evolution_chain = 112
+habitat = "cave"

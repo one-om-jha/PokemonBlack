@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://typedef/Item.gd" id="1_bkfdq"]
+
+[resource]
+script = ExtResource("1_bkfdq")
+id = 211
+name = "leftovers"
+cost = 4000
+fling_power = 10
+fling_effect = ""
+effect = "Held: Heals the holder by 1/16 its max HP at the end of each turn."
+flavor = "An item to be held by a Pokémon. The holder’s HP
+is slowly but steadily restored throughout
+every battle."
+sprite = "res://sprites/items/leftovers.png"
+attributes = ["holdable", "holdable-active"]
+category = "held-items"

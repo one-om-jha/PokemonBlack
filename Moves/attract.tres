@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="Move" load_steps=3 format=3]
+
+[ext_resource type="Resource" path="res://Ailments/infatuation.tres" id="1_vqs5t"]
+[ext_resource type="Script" path="res://typedef/Move.gd" id="2_urerc"]
+
+[resource]
+script = ExtResource("2_urerc")
+id = 213
+name = "attract"
+accuracy = 100
+effect_chance = 0
+pp = 15
+priority = 0
+power = 0
+damage_class = "status"
+effect = "Causes the target to fall in love with the user, giving it a 50% chance to do nothing each turn.  If the user and target are the same gender, or either is genderless, this move will fail.  If either Pokémon leaves the field, this effect ends."
+stat_changes = []
+target = "selected-pokemon"
+type = 0
+ailment = ExtResource("1_vqs5t")
+category = "ailment"
+min_hits = 0
+max_hits = 0
+min_turns = 0
+max_turns = 0
+drain = 0
+healing = 0
+crit_rate = 0
+ailment_chance = 0
+flinch_chance = 0
+stat_chance = 0

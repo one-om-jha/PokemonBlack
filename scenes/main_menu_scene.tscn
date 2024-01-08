@@ -1,0 +1,230 @@
+[gd_scene load_steps=21 format=3 uid="uid://b8prsw8df1hdl"]
+
+[ext_resource type="Script" path="res://scenes/main_menu_scene.gd" id="1_bwsbf"]
+[ext_resource type="PackedScene" uid="uid://b4gkuphhu0arv" path="res://models/reshiram/reshiram.glb" id="1_gr7m3"]
+[ext_resource type="Texture2D" uid="uid://b0b2r8ljkd1pv" path="res://textures/cross_texture.png" id="2_igcf7"]
+[ext_resource type="AudioStream" uid="uid://darrgswu0nqud" path="res://Audio/Music/03 - Title Screen.mp3" id="4_4rvoi"]
+[ext_resource type="Texture2D" uid="uid://cxrb4tf68btqe" path="res://textures/menu_screen.png" id="4_4x3ci"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_i7epp"]
+size = Vector2(20, 20)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y141e"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_b1f34"]
+flip_faces = true
+top_radius = 10.0
+bottom_radius = 10.0
+height = 40.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ixrks"]
+shading_mode = 0
+albedo_color = Color(0.956863, 0.956863, 0.956863, 1)
+albedo_texture = ExtResource("2_igcf7")
+uv1_scale = Vector3(17.94, 17.94, 17.94)
+uv1_offset = Vector3(2.08165e-12, 2.08165e-12, 2.08165e-12)
+uv1_triplanar = true
+uv1_triplanar_sharpness = 150.0
+
+[sub_resource type="Animation" id="Animation_nywk5"]
+resource_name = "default"
+length = 30.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 29.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(3.48787e-16, 6.28319, -6.28319)]
+}
+
+[sub_resource type="Animation" id="Animation_v0y1m"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_i4og0"]
+_data = {
+"RESET": SubResource("Animation_v0y1m"),
+"default": SubResource("Animation_nywk5")
+}
+
+[sub_resource type="Animation" id="Animation_d7ib6"]
+resource_name = "default"
+length = 60.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 30, 60.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(-2.78, -0.96, 8.567), Vector3(-1.98, -1.33, 7.737), Vector3(-2.78, -0.96, 8.567)]
+}
+
+[sub_resource type="Animation" id="Animation_caquh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-2.78, -0.96, 8.567)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_imohu"]
+_data = {
+"RESET": SubResource("Animation_caquh"),
+"default": SubResource("Animation_d7ib6")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s0uqb"]
+bg_color = Color(0, 0, 0, 0)
+
+[sub_resource type="Environment" id="Environment_1ueqk"]
+volumetric_fog_enabled = true
+volumetric_fog_albedo = Color(0, 0, 0, 1)
+volumetric_fog_detail_spread = 0.5
+
+[sub_resource type="Animation" id="Animation_qcl0t"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/Panel:theme_override_styles/panel:bg_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_u8rru"]
+resource_name = "start"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/Panel:theme_override_styles/panel:bg_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(-2, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"change_scene"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_h82od"]
+_data = {
+"RESET": SubResource("Animation_qcl0t"),
+"start": SubResource("Animation_u8rru")
+}
+
+[node name="MainMenuScene" type="Node3D"]
+script = ExtResource("1_bwsbf")
+
+[node name="Plane" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("PlaneMesh_i7epp")
+surface_material_override/0 = SubResource("StandardMaterial3D_y141e")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.87577, 0)
+mesh = SubResource("CylinderMesh_b1f34")
+surface_material_override/0 = SubResource("StandardMaterial3D_ixrks")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MeshInstance3D"]
+libraries = {
+"": SubResource("AnimationLibrary_i4og0")
+}
+autoplay = "default"
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, -2.88221e-16, 3.43488e-16, 3.43488e-16, 0.984808, -0.173648, -2.88221e-16, 0.173648, 0.984808, 0.42, 2.385, 7.837)
+fov = 79.6
+
+[node name="reshiram" parent="." instance=ExtResource("1_gr7m3")]
+transform = Transform3D(-0.0196926, 0.0022098, 0.00270488, 0.000317932, 0.0165582, -0.0112128, -0.00347828, -0.0109975, -0.0163389, -2.78, -0.96, 8.567)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="reshiram"]
+libraries = {
+"": SubResource("AnimationLibrary_imohu")
+}
+autoplay = "default"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_4x3ci")
+expand_mode = 1
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_s0uqb")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.557484, 0, -0.830188, 0, 1, 0, 0.830188, 0, 0.557484, 0, 4.07738, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_1ueqk")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_h82od")
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_4rvoi")
+autoplay = true
+
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]

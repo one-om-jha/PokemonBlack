@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="Move" load_steps=3 format=3]
+
+[ext_resource type="Resource" path="res://Ailments/leech-seed.tres" id="1_4380q"]
+[ext_resource type="Script" path="res://typedef/Move.gd" id="2_7nghq"]
+
+[resource]
+script = ExtResource("2_7nghq")
+id = 73
+name = "leech-seed"
+accuracy = 90
+effect_chance = 0
+pp = 10
+priority = 0
+power = 0
+damage_class = "status"
+effect = "Plants a seed on the target that drains 1/8 of its max HP at the end of every turn and heals the user for the amount taken.  Has no effect on grass Pokémon.  The seed remains until the target leaves the field.
+
+The user takes damage instead of being healed if the target has liquid ooze.
+
+rapid spin will remove this effect.
+
+This effect is passed on by baton pass."
+stat_changes = []
+target = "selected-pokemon"
+type = 4
+ailment = ExtResource("1_4380q")
+category = "ailment"
+min_hits = 0
+max_hits = 0
+min_turns = 0
+max_turns = 0
+drain = 0
+healing = 0
+crit_rate = 0
+ailment_chance = 0
+flinch_chance = 0
+stat_chance = 0

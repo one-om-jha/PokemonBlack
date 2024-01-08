@@ -1,0 +1,35 @@
+[gd_resource type="Resource" script_class="Move" load_steps=3 format=3]
+
+[ext_resource type="Resource" path="res://Ailments/yawn.tres" id="1_mt022"]
+[ext_resource type="Script" path="res://typedef/Move.gd" id="2_deohu"]
+
+[resource]
+script = ExtResource("2_deohu")
+id = 281
+name = "yawn"
+accuracy = 0
+effect_chance = 0
+pp = 10
+priority = 0
+power = 0
+damage_class = "status"
+effect = "Puts the target to sleep at the end of the next turn.  Ignores accuracy and evasion modifiers.  If the target leaves the field, this effect is canceled.  If the target has a status effect when this move is used, this move will fail.
+
+If the target is protected by safeguard when this move is used, this move will fail.
+
+insomnia and vital spirit prevent the sleep if the target has either at the end of the next turn, but will not cause this move to fail on use."
+stat_changes = []
+target = "selected-pokemon"
+type = 0
+ailment = ExtResource("1_mt022")
+category = "ailment"
+min_hits = 0
+max_hits = 0
+min_turns = 2
+max_turns = 2
+drain = 0
+healing = 0
+crit_rate = 0
+ailment_chance = 0
+flinch_chance = 0
+stat_chance = 0

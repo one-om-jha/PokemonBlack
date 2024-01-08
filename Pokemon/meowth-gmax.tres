@@ -1,0 +1,45 @@
+[gd_resource type="Resource" script_class="Pokemon" load_steps=6 format=3]
+
+[ext_resource type="Resource" path="res://Abilities/pickup.tres" id="1_0ruyb"]
+[ext_resource type="Resource" path="res://Abilities/technician.tres" id="2_ehmnd"]
+[ext_resource type="Resource" path="res://Abilities/unnerve.tres" id="3_k13m1"]
+[ext_resource type="Script" path="res://typedef/Pokemon.gd" id="4_d51cj"]
+[ext_resource type="Resource" path="res://Species/meowth.tres" id="5_iq542"]
+
+[resource]
+script = ExtResource("4_d51cj")
+id = 10200
+name = "meowth-gmax"
+base_experience = 58
+height = 330
+weight = 10000
+abilities = [ExtResource("1_0ruyb"), ExtResource("2_ehmnd"), ExtResource("3_k13m1")]
+forms = ["meowth-gmax"]
+held_items = []
+moves = []
+species = ExtResource("5_iq542")
+sprites = {
+"back_default": "res://sprites/pokemon/back/10200.gif",
+"back_shiny": "res://sprites/pokemon/back/shiny/10200.gif",
+"front_default": "res://sprites/pokemon/10200.gif",
+"front_shiny": "res://sprites/pokemon/shiny/10200.gif"
+}
+stats = {
+"attack": 45.0,
+"defense": 35.0,
+"hp": 40.0,
+"special-attack": 40.0,
+"special-defense": 40.0,
+"speed": 90.0
+}
+stats_effort = {
+"attack": 0.0,
+"defense": 0.0,
+"hp": 0.0,
+"special-attack": 0.0,
+"special-defense": 0.0,
+"speed": 1.0
+}
+types = {
+1.0: 0
+}

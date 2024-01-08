@@ -1,0 +1,53 @@
+[gd_resource type="Resource" script_class="Pokemon" load_steps=10 format=3]
+
+[ext_resource type="Resource" path="res://Abilities/swift-swim.tres" id="1_0nw2l"]
+[ext_resource type="Resource" path="res://Abilities/rattled.tres" id="2_3wg42"]
+[ext_resource type="Resource" path="res://Moves/tackle.tres" id="3_n0a70"]
+[ext_resource type="Resource" path="res://Moves/hydro-pump.tres" id="4_88gu6"]
+[ext_resource type="Resource" path="res://Moves/splash.tres" id="5_o8l1s"]
+[ext_resource type="Resource" path="res://Moves/flail.tres" id="6_roqtn"]
+[ext_resource type="Resource" path="res://Moves/bounce.tres" id="7_jigcm"]
+[ext_resource type="Script" path="res://typedef/Pokemon.gd" id="8_5wkah"]
+[ext_resource type="Resource" path="res://Species/magikarp.tres" id="9_gvjwg"]
+
+[resource]
+script = ExtResource("8_5wkah")
+id = 129
+name = "magikarp"
+base_experience = 40
+height = 9
+weight = 100
+abilities = [ExtResource("1_0nw2l"), ExtResource("1_0nw2l"), ExtResource("2_3wg42")]
+forms = ["magikarp"]
+held_items = []
+moves = [[15, "level-up", ExtResource("3_n0a70")], [0, "machine", ExtResource("4_88gu6")], [1, "level-up", ExtResource("5_o8l1s")], [25, "level-up", ExtResource("6_roqtn")], [0, "machine", ExtResource("7_jigcm")]]
+species = ExtResource("9_gvjwg")
+sprites = {
+"back_default": "res://sprites/pokemon/versions/generation-v/black-white/animated/back/129.gif",
+"back_female": "res://sprites/pokemon/versions/generation-v/black-white/animated/back/female/129.gif",
+"back_shiny": "res://sprites/pokemon/versions/generation-v/black-white/animated/back/shiny/129.gif",
+"back_shiny_female": "res://sprites/pokemon/versions/generation-v/black-white/animated/back/female/129.gif",
+"front_default": "res://sprites/pokemon/versions/generation-v/black-white/animated/129.gif",
+"front_female": "res://sprites/pokemon/versions/generation-v/black-white/animated/female/129.gif",
+"front_shiny": "res://sprites/pokemon/versions/generation-v/black-white/animated/shiny/129.gif",
+"front_shiny_female": "res://sprites/pokemon/versions/generation-v/black-white/animated/shiny/female/129.gif"
+}
+stats = {
+"attack": 10.0,
+"defense": 55.0,
+"hp": 20.0,
+"special-attack": 15.0,
+"special-defense": 20.0,
+"speed": 80.0
+}
+stats_effort = {
+"attack": 0.0,
+"defense": 0.0,
+"hp": 0.0,
+"special-attack": 0.0,
+"special-defense": 0.0,
+"speed": 1.0
+}
+types = {
+1.0: 2
+}

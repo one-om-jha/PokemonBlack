@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://typedef/Item.gd" id="1_e7340"]
+
+[resource]
+script = ExtResource("1_e7340")
+id = 194
+name = "quick-claw"
+cost = 4000
+fling_power = 80
+fling_effect = ""
+effect = "Held in battle
+:   Whenever the holder attempts to use a move, it has a 3/16 chance to act first among moves with the same priority.  If multiple Pokémon have this effect at the same time, Speed is the tie-breaker as normal, but the effect of trick room is ignored."
+flavor = "An item to be held by a Pokémon. This light, sharp
+claw lets the bearer move first occasionally."
+sprite = "res://sprites/items/quick-claw.png"
+attributes = ["holdable", "holdable-active"]
+category = "held-items"

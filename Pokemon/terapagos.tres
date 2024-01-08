@@ -1,0 +1,43 @@
+[gd_resource type="Resource" script_class="Pokemon" load_steps=4 format=3]
+
+[ext_resource type="Resource" path="res://Abilities/tera-shift.tres" id="1_iu71e"]
+[ext_resource type="Script" path="res://typedef/Pokemon.gd" id="2_8ux33"]
+[ext_resource type="Resource" path="res://Species/terapagos.tres" id="3_5gq6w"]
+
+[resource]
+script = ExtResource("2_8ux33")
+id = 1024
+name = "terapagos"
+base_experience = 0
+height = 2
+weight = 65
+abilities = [ExtResource("1_iu71e"), ExtResource("1_iu71e"), null]
+forms = ["terapagos"]
+held_items = []
+moves = []
+species = ExtResource("3_5gq6w")
+sprites = {
+"back_default": "res://sprites/pokemon/back/1024.gif",
+"back_shiny": "res://sprites/pokemon/back/shiny/1024.gif",
+"front_default": "res://sprites/pokemon/1024.gif",
+"front_shiny": "res://sprites/pokemon/shiny/1024.gif"
+}
+stats = {
+"attack": 65.0,
+"defense": 85.0,
+"hp": 90.0,
+"special-attack": 65.0,
+"special-defense": 85.0,
+"speed": 60.0
+}
+stats_effort = {
+"attack": 0.0,
+"defense": 1.0,
+"hp": 0.0,
+"special-attack": 0.0,
+"special-defense": 0.0,
+"speed": 0.0
+}
+types = {
+1.0: 0
+}

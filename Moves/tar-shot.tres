@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="Move" load_steps=3 format=3]
+
+[ext_resource type="Resource" path="res://Ailments/tar-shot.tres" id="1_3ra81"]
+[ext_resource type="Script" path="res://typedef/Move.gd" id="2_5rvfy"]
+
+[resource]
+script = ExtResource("2_5rvfy")
+id = 749
+name = "tar-shot"
+accuracy = 100
+effect_chance = 100
+pp = 15
+priority = 0
+power = 0
+damage_class = "status"
+effect = ""
+stat_changes = [{
+"change": -1.0,
+"stat": {
+"name": "speed",
+"url": "https://pokeapi.co/api/v2/stat/6/"
+}
+}]
+target = "selected-pokemon"
+type = 12
+ailment = ExtResource("1_3ra81")
+category = "swagger"
+min_hits = 0
+max_hits = 0
+min_turns = 0
+max_turns = 0
+drain = 0
+healing = 0
+crit_rate = 0
+ailment_chance = 100
+flinch_chance = 0
+stat_chance = 100

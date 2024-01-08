@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="Species" load_steps=3 format=3]
+
+[ext_resource type="Resource" path="res://GrowthRates/slow.tres" id="1_xeush"]
+[ext_resource type="Script" path="res://typedef/Species.gd" id="2_la8e4"]
+
+[resource]
+script = ExtResource("2_la8e4")
+id = 91
+name = "cloyster"
+order = 99
+genus = "Bivalve Pokémon"
+flavor = "It fights by keeping its shell
+tightly shut for protection and
+by shooting spikes to repel foes."
+gender_rate = 4
+capture_rate = 60
+base_happiness = 50
+is_baby = false
+is_legendary = false
+is_mythical = false
+hatch_counter = 20
+has_gender_differences = false
+forms_switchable = false
+growth_rate = ExtResource("1_xeush")
+local_dex = 0
+national_dex = 91
+egg_groups = ["water3"]
+evolution_chain = 39
+habitat = "sea"

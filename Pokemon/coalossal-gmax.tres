@@ -1,0 +1,46 @@
+[gd_resource type="Resource" script_class="Pokemon" load_steps=6 format=3]
+
+[ext_resource type="Resource" path="res://Abilities/steam-engine.tres" id="1_nl7af"]
+[ext_resource type="Resource" path="res://Abilities/flame-body.tres" id="2_5dg7g"]
+[ext_resource type="Resource" path="res://Abilities/flash-fire.tres" id="3_eug8u"]
+[ext_resource type="Script" path="res://typedef/Pokemon.gd" id="4_hywbi"]
+[ext_resource type="Resource" path="res://Species/coalossal.tres" id="5_qsctq"]
+
+[resource]
+script = ExtResource("4_hywbi")
+id = 10215
+name = "coalossal-gmax"
+base_experience = 255
+height = 420
+weight = 10000
+abilities = [ExtResource("1_nl7af"), ExtResource("2_5dg7g"), ExtResource("3_eug8u")]
+forms = ["coalossal-gmax"]
+held_items = []
+moves = []
+species = ExtResource("5_qsctq")
+sprites = {
+"back_default": "res://sprites/pokemon/back/10215.gif",
+"back_shiny": "res://sprites/pokemon/back/shiny/10215.gif",
+"front_default": "res://sprites/pokemon/10215.gif",
+"front_shiny": "res://sprites/pokemon/shiny/10215.gif"
+}
+stats = {
+"attack": 80.0,
+"defense": 120.0,
+"hp": 110.0,
+"special-attack": 80.0,
+"special-defense": 90.0,
+"speed": 30.0
+}
+stats_effort = {
+"attack": 0.0,
+"defense": 3.0,
+"hp": 0.0,
+"special-attack": 0.0,
+"special-defense": 0.0,
+"speed": 0.0
+}
+types = {
+1.0: 12,
+2.0: 1
+}

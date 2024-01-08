@@ -1,0 +1,152 @@
+[gd_scene load_steps=12 format=3 uid="uid://clbe4o2v8wa8c"]
+
+[ext_resource type="Script" path="res://scenes/save_scene.gd" id="1_jn2qc"]
+[ext_resource type="Theme" uid="uid://bopkg17damgfh" path="res://ui/base_theme.tres" id="1_y12kd"]
+[ext_resource type="Texture2D" uid="uid://b0b2r8ljkd1pv" path="res://textures/cross_texture.png" id="2_20wlq"]
+[ext_resource type="Shader" path="res://shaders/cross.gdshader" id="3_jryry"]
+[ext_resource type="PackedScene" uid="uid://unuonqlx2xpd" path="res://scenes/ui/save_node.tscn" id="4_1bga6"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_aj7sf"]
+shader = ExtResource("3_jryry")
+shader_parameter/Direction = Vector2(1, 0)
+shader_parameter/Speed = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sn6n1"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_2wrqs"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel2:theme_override_styles/panel:bg_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_gbq3k"]
+resource_name = "begin_game"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel2:theme_override_styles/panel:bg_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(-2, -2),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"begin_game"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_n5i45"]
+resource_name = "start"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel2:theme_override_styles/panel:bg_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(-2, -2),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rlixs"]
+_data = {
+"RESET": SubResource("Animation_2wrqs"),
+"begin_game": SubResource("Animation_gbq3k"),
+"start": SubResource("Animation_n5i45")
+}
+
+[node name="SaveScene" type="CanvasLayer"]
+script = ExtResource("1_jn2qc")
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_y12kd")
+
+[node name="TextureRect" type="TextureRect" parent="Panel"]
+modulate = Color(1, 1, 1, 0.2)
+material = SubResource("ShaderMaterial_aj7sf")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_20wlq")
+stretch_mode = 1
+
+[node name="Save1" parent="." instance=ExtResource("4_1bga6")]
+offset_left = 532.0
+offset_top = 216.0
+offset_right = 1388.0
+offset_bottom = 416.0
+focus_neighbor_top = NodePath("../Save3")
+focus_neighbor_bottom = NodePath("../Save2")
+focus_next = NodePath("../Save2")
+focus_previous = NodePath("../Save3")
+
+[node name="Save2" parent="." instance=ExtResource("4_1bga6")]
+offset_left = 532.0
+offset_top = 440.0
+offset_right = 1388.0
+offset_bottom = 640.0
+focus_neighbor_top = NodePath("../Save1")
+focus_neighbor_bottom = NodePath("../Save3")
+focus_next = NodePath("../Save3")
+focus_previous = NodePath("../Save1")
+
+[node name="Save3" parent="." instance=ExtResource("4_1bga6")]
+offset_left = 532.0
+offset_top = 664.0
+offset_right = 1388.0
+offset_bottom = 864.0
+focus_neighbor_top = NodePath("../Save2")
+focus_neighbor_bottom = NodePath("../Save1")
+focus_next = NodePath("../Save1")
+focus_previous = NodePath("../Save2")
+
+[node name="Panel2" type="Panel" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_sn6n1")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_rlixs")
+}
+autoplay = "start"
+
+[connection signal="pressed" from="Save1" to="." method="_on_save_1_pressed"]
+[connection signal="pressed" from="Save2" to="." method="_on_save_2_pressed"]
+[connection signal="pressed" from="Save3" to="." method="_on_save_3_pressed"]

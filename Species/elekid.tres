@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="Species" load_steps=3 format=3]
+
+[ext_resource type="Resource" path="res://GrowthRates/medium.tres" id="1_h46ui"]
+[ext_resource type="Script" path="res://typedef/Species.gd" id="2_x3qjr"]
+
+[resource]
+script = ExtResource("2_x3qjr")
+id = 239
+name = "elekid"
+order = 145
+genus = "Electric Pokémon"
+flavor = "A weak electric current flows
+between its horns. Sticking a hand
+there shocks the unwary."
+gender_rate = 2
+capture_rate = 45
+base_happiness = 50
+is_baby = true
+is_legendary = false
+is_mythical = false
+hatch_counter = 25
+has_gender_differences = false
+forms_switchable = false
+growth_rate = ExtResource("1_h46ui")
+local_dex = 0
+national_dex = 239
+egg_groups = ["no-eggs"]
+evolution_chain = 60
+habitat = "grassland"

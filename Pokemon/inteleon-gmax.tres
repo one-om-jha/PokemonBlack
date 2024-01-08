@@ -1,0 +1,44 @@
+[gd_resource type="Resource" script_class="Pokemon" load_steps=5 format=3]
+
+[ext_resource type="Resource" path="res://Abilities/torrent.tres" id="1_qqssy"]
+[ext_resource type="Resource" path="res://Abilities/sniper.tres" id="2_a25lg"]
+[ext_resource type="Script" path="res://typedef/Pokemon.gd" id="3_k3egs"]
+[ext_resource type="Resource" path="res://Species/inteleon.tres" id="4_g6ens"]
+
+[resource]
+script = ExtResource("3_k3egs")
+id = 10211
+name = "inteleon-gmax"
+base_experience = 265
+height = 400
+weight = 10000
+abilities = [ExtResource("1_qqssy"), ExtResource("1_qqssy"), ExtResource("2_a25lg")]
+forms = ["inteleon-gmax"]
+held_items = []
+moves = []
+species = ExtResource("4_g6ens")
+sprites = {
+"back_default": "res://sprites/pokemon/back/10211.gif",
+"back_shiny": "res://sprites/pokemon/back/shiny/10211.gif",
+"front_default": "res://sprites/pokemon/10211.gif",
+"front_shiny": "res://sprites/pokemon/shiny/10211.gif"
+}
+stats = {
+"attack": 85.0,
+"defense": 65.0,
+"hp": 70.0,
+"special-attack": 125.0,
+"special-defense": 65.0,
+"speed": 120.0
+}
+stats_effort = {
+"attack": 0.0,
+"defense": 0.0,
+"hp": 0.0,
+"special-attack": 0.0,
+"special-defense": 0.0,
+"speed": 3.0
+}
+types = {
+1.0: 2
+}

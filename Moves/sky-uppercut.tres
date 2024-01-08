@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="Move" load_steps=3 format=3]
+
+[ext_resource type="Resource" path="res://Ailments/none.tres" id="1_ne5pg"]
+[ext_resource type="Script" path="res://typedef/Move.gd" id="2_t1i35"]
+
+[resource]
+script = ExtResource("2_t1i35")
+id = 327
+name = "sky-uppercut"
+accuracy = 90
+effect_chance = 0
+pp = 15
+priority = 0
+power = 85
+damage_class = "physical"
+effect = "Inflicts regular damage.
+
+This move can hit Pokémon under the effect of bounce, fly, or sky drop."
+stat_changes = []
+target = "selected-pokemon"
+type = 6
+ailment = ExtResource("1_ne5pg")
+category = "damage"
+min_hits = 0
+max_hits = 0
+min_turns = 0
+max_turns = 0
+drain = 0
+healing = 0
+crit_rate = 0
+ailment_chance = 0
+flinch_chance = 0
+stat_chance = 0

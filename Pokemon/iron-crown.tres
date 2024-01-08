@@ -1,0 +1,44 @@
+[gd_resource type="Resource" script_class="Pokemon" load_steps=4 format=3]
+
+[ext_resource type="Resource" path="res://Abilities/quark-drive.tres" id="1_m3qid"]
+[ext_resource type="Script" path="res://typedef/Pokemon.gd" id="2_f8bsk"]
+[ext_resource type="Resource" path="res://Species/iron-crown.tres" id="3_fne1g"]
+
+[resource]
+script = ExtResource("2_f8bsk")
+id = 1023
+name = "iron-crown"
+base_experience = 0
+height = 16
+weight = 1560
+abilities = [ExtResource("1_m3qid"), ExtResource("1_m3qid"), null]
+forms = ["iron-crown"]
+held_items = []
+moves = []
+species = ExtResource("3_fne1g")
+sprites = {
+"back_default": "res://sprites/pokemon/back/1023.gif",
+"back_shiny": "res://sprites/pokemon/back/shiny/1023.gif",
+"front_default": "res://sprites/pokemon/1023.gif",
+"front_shiny": "res://sprites/pokemon/shiny/1023.gif"
+}
+stats = {
+"attack": 72.0,
+"defense": 100.0,
+"hp": 90.0,
+"special-attack": 122.0,
+"special-defense": 108.0,
+"speed": 98.0
+}
+stats_effort = {
+"attack": 0.0,
+"defense": 0.0,
+"hp": 0.0,
+"special-attack": 3.0,
+"special-defense": 0.0,
+"speed": 0.0
+}
+types = {
+1.0: 16,
+2.0: 10
+}

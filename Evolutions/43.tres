@@ -1,0 +1,49 @@
+[gd_resource type="Resource" script_class="EvolutionChain" load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://typedef/ChainLink.gd" id="1_f3k7l"]
+[ext_resource type="Resource" path="res://Species/kingler.tres" id="2_4uye7"]
+[ext_resource type="Resource" path="res://Species/krabby.tres" id="3_yhg5b"]
+[ext_resource type="Script" path="res://typedef/EvolutionChain.gd" id="4_wt1hu"]
+
+[sub_resource type="Resource" id="Resource_isbi4"]
+script = ExtResource("1_f3k7l")
+is_baby = false
+species = ExtResource("2_4uye7")
+evolves_to = []
+trigger = ""
+gender = 0
+known_move_type = 0
+location = ""
+min_level = 0
+min_happiness = 0
+min_beauty = 0
+min_affection = 0
+needs_overworld_rain = false
+party_type = 0
+relative_physical_stats = 0
+time_of_day = ""
+turn_upside_down = false
+
+[sub_resource type="Resource" id="Resource_1djey"]
+script = ExtResource("1_f3k7l")
+is_baby = false
+species = ExtResource("3_yhg5b")
+evolves_to = [SubResource("Resource_isbi4")]
+trigger = ""
+gender = 0
+known_move_type = 0
+location = ""
+min_level = 0
+min_happiness = 0
+min_beauty = 0
+min_affection = 0
+needs_overworld_rain = false
+party_type = 0
+relative_physical_stats = 0
+time_of_day = ""
+turn_upside_down = false
+
+[resource]
+script = ExtResource("4_wt1hu")
+id = 43
+chain = SubResource("Resource_1djey")

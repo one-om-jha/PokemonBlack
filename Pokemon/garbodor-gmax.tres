@@ -1,0 +1,45 @@
+[gd_resource type="Resource" script_class="Pokemon" load_steps=6 format=3]
+
+[ext_resource type="Resource" path="res://Abilities/stench.tres" id="1_t3akk"]
+[ext_resource type="Resource" path="res://Abilities/weak-armor.tres" id="2_nkx2q"]
+[ext_resource type="Resource" path="res://Abilities/aftermath.tres" id="3_gvmwo"]
+[ext_resource type="Script" path="res://typedef/Pokemon.gd" id="4_uxojb"]
+[ext_resource type="Resource" path="res://Species/garbodor.tres" id="5_esivh"]
+
+[resource]
+script = ExtResource("4_uxojb")
+id = 10207
+name = "garbodor-gmax"
+base_experience = 166
+height = 210
+weight = 10000
+abilities = [ExtResource("1_t3akk"), ExtResource("2_nkx2q"), ExtResource("3_gvmwo")]
+forms = ["garbodor-gmax"]
+held_items = []
+moves = []
+species = ExtResource("5_esivh")
+sprites = {
+"back_default": "res://sprites/pokemon/back/10207.gif",
+"back_shiny": "res://sprites/pokemon/back/shiny/10207.gif",
+"front_default": "res://sprites/pokemon/10207.gif",
+"front_shiny": "res://sprites/pokemon/shiny/10207.gif"
+}
+stats = {
+"attack": 95.0,
+"defense": 82.0,
+"hp": 80.0,
+"special-attack": 60.0,
+"special-defense": 82.0,
+"speed": 75.0
+}
+stats_effort = {
+"attack": 2.0,
+"defense": 0.0,
+"hp": 0.0,
+"special-attack": 0.0,
+"special-defense": 0.0,
+"speed": 0.0
+}
+types = {
+1.0: 7
+}

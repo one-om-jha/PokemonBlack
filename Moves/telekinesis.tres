@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="Move" load_steps=3 format=3]
+
+[ext_resource type="Resource" path="res://Ailments/unknown.tres" id="1_0dscg"]
+[ext_resource type="Script" path="res://typedef/Move.gd" id="2_dsji2"]
+
+[resource]
+script = ExtResource("2_dsji2")
+id = 477
+name = "telekinesis"
+accuracy = 0
+effect_chance = 0
+pp = 15
+priority = 0
+power = 0
+damage_class = "status"
+effect = "For three turns (including this one), moves used against the target have 100% accuracy, but the target is immune to ground damage.  Accuracy of one-hit KO moves is exempt from this effect.
+
+This effect is removed by gravity.  If Gravity is already in effect, this move will fail."
+stat_changes = []
+target = "selected-pokemon"
+type = 10
+ailment = ExtResource("1_0dscg")
+category = "ailment"
+min_hits = 0
+max_hits = 0
+min_turns = 3
+max_turns = 3
+drain = 0
+healing = 0
+crit_rate = 0
+ailment_chance = 0
+flinch_chance = 0
+stat_chance = 0

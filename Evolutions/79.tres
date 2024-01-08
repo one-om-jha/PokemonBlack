@@ -1,0 +1,69 @@
+[gd_resource type="Resource" script_class="EvolutionChain" load_steps=9 format=3]
+
+[ext_resource type="Script" path="res://typedef/ChainLink.gd" id="1_wixmn"]
+[ext_resource type="Resource" path="res://Species/meganium.tres" id="2_k4xf7"]
+[ext_resource type="Resource" path="res://Species/bayleef.tres" id="3_wugpb"]
+[ext_resource type="Resource" path="res://Species/chikorita.tres" id="4_tgx8w"]
+[ext_resource type="Script" path="res://typedef/EvolutionChain.gd" id="5_cd7i2"]
+
+[sub_resource type="Resource" id="Resource_ojynn"]
+script = ExtResource("1_wixmn")
+is_baby = false
+species = ExtResource("2_k4xf7")
+evolves_to = []
+trigger = ""
+gender = 0
+known_move_type = 0
+location = ""
+min_level = 0
+min_happiness = 0
+min_beauty = 0
+min_affection = 0
+needs_overworld_rain = false
+party_type = 0
+relative_physical_stats = 0
+time_of_day = ""
+turn_upside_down = false
+
+[sub_resource type="Resource" id="Resource_shsoi"]
+script = ExtResource("1_wixmn")
+is_baby = false
+species = ExtResource("3_wugpb")
+evolves_to = [SubResource("Resource_ojynn")]
+trigger = ""
+gender = 0
+known_move_type = 0
+location = ""
+min_level = 0
+min_happiness = 0
+min_beauty = 0
+min_affection = 0
+needs_overworld_rain = false
+party_type = 0
+relative_physical_stats = 0
+time_of_day = ""
+turn_upside_down = false
+
+[sub_resource type="Resource" id="Resource_cko8r"]
+script = ExtResource("1_wixmn")
+is_baby = false
+species = ExtResource("4_tgx8w")
+evolves_to = [SubResource("Resource_shsoi")]
+trigger = ""
+gender = 0
+known_move_type = 0
+location = ""
+min_level = 0
+min_happiness = 0
+min_beauty = 0
+min_affection = 0
+needs_overworld_rain = false
+party_type = 0
+relative_physical_stats = 0
+time_of_day = ""
+turn_upside_down = false
+
+[resource]
+script = ExtResource("5_cd7i2")
+id = 79
+chain = SubResource("Resource_cko8r")

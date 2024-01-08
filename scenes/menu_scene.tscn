@@ -1,0 +1,2265 @@
+[gd_scene load_steps=59 format=3 uid="uid://dogcybvciw7uf"]
+
+[ext_resource type="Script" path="res://scenes/menu_scene.gd" id="1_pip5s"]
+[ext_resource type="Script" path="res://scenes/MenuStateMachine.gd" id="2_i7qr8"]
+[ext_resource type="Texture2D" uid="uid://b0b2r8ljkd1pv" path="res://textures/cross_texture.png" id="2_w4tbl"]
+[ext_resource type="Shader" path="res://shaders/cross.gdshader" id="3_2dt8x"]
+[ext_resource type="Texture2D" uid="uid://c76q8pgsxj873" path="res://textures/menu/SubmenuBG.png" id="3_6l0yo"]
+[ext_resource type="Script" path="res://scenes/ui/SaveMenu.gd" id="3_dnsyp"]
+[ext_resource type="Texture2D" uid="uid://cyiwdb3qakywu" path="res://textures/menu/MenuBG.png" id="3_s3odm"]
+[ext_resource type="Texture2D" uid="uid://ck3rmafajblhy" path="res://textures/menu/MenuText.png" id="4_2fxd3"]
+[ext_resource type="Theme" uid="uid://bopkg17damgfh" path="res://ui/base_theme.tres" id="4_dsuyh"]
+[ext_resource type="Texture2D" uid="uid://cufy654ipqqba" path="res://textures/menu/SaveText.png" id="4_q1cqp"]
+[ext_resource type="Texture2D" uid="uid://btyknj45x5itj" path="res://textures/menu/PokemonText.png" id="5_8ydid"]
+[ext_resource type="Script" path="res://scenes/ui/PokemonMenu.gd" id="5_82b25"]
+[ext_resource type="Texture2D" uid="uid://dn3g61amgh8dv" path="res://textures/menu/menu_button.png" id="5_jx3wd"]
+[ext_resource type="PackedScene" uid="uid://unuonqlx2xpd" path="res://scenes/ui/save_node.tscn" id="5_tf4e4"]
+[ext_resource type="Texture2D" uid="uid://cp3vr6upf7uly" path="res://textures/menu/menu_button_selected.png" id="6_iw621"]
+[ext_resource type="Texture2D" uid="uid://lkbmho4hu0v1" path="res://textures/menu/pokemon_bg.png" id="6_ye8xn"]
+[ext_resource type="Texture2D" uid="uid://oa1w5qylr8qt" path="res://textures/menu/ball.png" id="7_5h3ug"]
+[ext_resource type="Texture2D" uid="uid://cuxga2v2aauhd" path="res://sprites/pokemon/versions/generation-v/black-white/647-ordinary.png" id="7_8bn2h"]
+[ext_resource type="FontFile" uid="uid://cvbi044pyxaga" path="res://ui/fonts/NunitoSans_10pt-Regular.ttf" id="8_ixxvk"]
+[ext_resource type="Script" path="res://scenes/ui/MainMenu.gd" id="8_r5tjx"]
+[ext_resource type="FontFile" uid="uid://voh2awxrc13f" path="res://ui/fonts/NunitoSans_10pt-BlackItalic.ttf" id="8_xe0j3"]
+[ext_resource type="Texture2D" uid="uid://j8ybfwo5mow8" path="res://textures/menu/dex.png" id="9_rxbgt"]
+[ext_resource type="Texture2D" uid="uid://dtkt0x4opk5br" path="res://textures/menu/bag.png" id="10_4tw7y"]
+[ext_resource type="PackedScene" uid="uid://sw88h8ltfyu6" path="res://scenes/ui/move_node.tscn" id="10_6cv3w"]
+[ext_resource type="Texture2D" uid="uid://ec1a1cd6wieu" path="res://textures/menu/trainer.png" id="11_ggbqp"]
+[ext_resource type="Texture2D" uid="uid://b5lnf2m2wvobr" path="res://textures/menu/save.png" id="12_mdanw"]
+[ext_resource type="FontFile" uid="uid://dqx0wj7cshp1t" path="res://ui/fonts/NunitoSans_10pt-Italic.ttf" id="12_o1m2p"]
+[ext_resource type="Texture2D" uid="uid://bgy8qm7eekdhx" path="res://textures/menu/ds.png" id="13_jjvqm"]
+[ext_resource type="PackedScene" uid="uid://c7tar8lmf133q" path="res://scenes/ui/pokemon_node.tscn" id="13_qeoyx"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pljr4"]
+bg_color = Color(0.0666667, 0.0666667, 0.0666667, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_q4nd5"]
+shader = ExtResource("3_2dt8x")
+shader_parameter/Direction = Vector2(1, 1)
+shader_parameter/Speed = 0.15
+
+[sub_resource type="LabelSettings" id="LabelSettings_y3axo"]
+font = ExtResource("8_xe0j3")
+font_size = 80
+
+[sub_resource type="LabelSettings" id="LabelSettings_h5g2n"]
+font = ExtResource("8_xe0j3")
+font_size = 24
+
+[sub_resource type="LabelSettings" id="LabelSettings_68sp6"]
+line_spacing = -3.0
+font = ExtResource("8_ixxvk")
+font_size = 18
+
+[sub_resource type="LabelSettings" id="LabelSettings_wl8se"]
+font = ExtResource("8_xe0j3")
+font_size = 18
+
+[sub_resource type="LabelSettings" id="LabelSettings_5b05r"]
+line_spacing = 9.32
+font = ExtResource("12_o1m2p")
+font_size = 12
+font_color = Color(1, 1, 1, 0.5)
+
+[sub_resource type="LabelSettings" id="LabelSettings_aupsx"]
+line_spacing = 9.32
+font = ExtResource("12_o1m2p")
+font_size = 12
+
+[sub_resource type="Animation" id="Animation_nqycv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MenuBG:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-1000, 2.08165e-12)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PokemonText:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-1117, 36)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Details:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-2000, 2.08165e-12)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Party:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-1200, 2.08165e-12)]
+}
+
+[sub_resource type="Animation" id="Animation_6l62a"]
+resource_name = "close"
+length = 0.20001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MenuBG:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(0.5, 0.5),
+"update": 0,
+"values": [Vector2(-130, 0), Vector2(-1000, 2.08165e-12)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PokemonText:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(0.5, 0.5),
+"update": 0,
+"values": [Vector2(83, 36), Vector2(-1117, 36)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Details:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(0.5, 0.5),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-2000, 2.08165e-12)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Party:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(0.5, 0.5),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-1200, 2.08165e-12)]
+}
+
+[sub_resource type="Animation" id="Animation_t3kul"]
+resource_name = "open"
+length = 0.20001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MenuBG:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(0.5, 0.5),
+"update": 0,
+"values": [Vector2(-1000, 2.08165e-12), Vector2(-130, 2.08165e-12)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PokemonText:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(0.5, 0.5),
+"update": 0,
+"values": [Vector2(-1117, 36), Vector2(83, 36)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Details:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(0.5, 0.5),
+"update": 0,
+"values": [Vector2(-2000, 2.08165e-12), Vector2(2.08165e-12, 2.08165e-12)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Party:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(0.5, 0.5),
+"update": 0,
+"values": [Vector2(-1200, 2.08165e-12), Vector2(2.08165e-12, 2.08165e-12)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xxcjd"]
+_data = {
+"RESET": SubResource("Animation_nqycv"),
+"close": SubResource("Animation_6l62a"),
+"open": SubResource("Animation_t3kul")
+}
+
+[sub_resource type="Animation" id="Animation_jh68a"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Pokemon1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-44, 191)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Pokemon1:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.5)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Pokemon2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-44, 328)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Pokemon2:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.501961)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Pokemon3:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-44, 464)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Pokemon3:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.5)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Pokemon4:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-44, 600)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Pokemon4:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.5)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Pokemon5:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.5)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Pokemon5:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-44, 736)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Pokemon6:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-44, 872)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Pokemon6:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.5)]
+}
+
+[sub_resource type="Animation" id="Animation_oxulm"]
+resource_name = "select_1"
+length = 0.20001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Pokemon1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(0.5, 0.5),
+"update": 0,
+"values": [Vector2(-44, 191), Vector2(36, 191)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Pokemon1:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(0.5, 0.5),
+"update": 0,
+"values": [Color(1, 1, 1, 0.5), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Pokemon2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-44, 328)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Pokemon2:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.501961)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Pokemon3:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-44, 464)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Pokemon3:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.5)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Pokemon4:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-44, 600)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Pokemon4:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.5)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Pokemon5:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.5)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Pokemon5:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-44, 736)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Pokemon6:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-44, 872)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Pokemon6:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.5)]
+}
+
+[sub_resource type="Animation" id="Animation_x7d5r"]
+resource_name = "select_2"
+length = 0.20001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Pokemon1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-44, 191)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Pokemon1:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.5)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Pokemon2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(0.5, 0.5),
+"update": 0,
+"values": [Vector2(-44, 328), Vector2(36, 328)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Pokemon2:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(0.5, 0.5),
+"update": 0,
+"values": [Color(1, 1, 1, 0.501961), Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Pokemon3:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(0.5),
+"update": 0,
+"values": [Vector2(-44, 464)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Pokemon3:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.5)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Pokemon4:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-44, 600)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Pokemon4:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.5)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Pokemon5:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.5)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Pokemon5:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-44, 736)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Pokemon6:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-44, 872)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Pokemon6:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.5)]
+}
+
+[sub_resource type="Animation" id="Animation_nv4yr"]
+resource_name = "select_3"
+length = 0.20001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Pokemon1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-44, 191)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Pokemon1:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.5)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Pokemon2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-44, 328)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Pokemon2:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.501961)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Pokemon3:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(0.5, 0.5),
+"update": 0,
+"values": [Vector2(-44, 464), Vector2(36, 464)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Pokemon3:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(0.5, 0.5),
+"update": 0,
+"values": [Color(1, 1, 1, 0.5), Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Pokemon4:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-44, 600)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Pokemon4:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.5)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Pokemon5:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.5)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Pokemon5:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-44, 736)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Pokemon6:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-44, 872)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Pokemon6:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.5)]
+}
+
+[sub_resource type="Animation" id="Animation_4nglm"]
+resource_name = "select_4"
+length = 0.20001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Pokemon1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-44, 191)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Pokemon1:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.5)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Pokemon2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-44, 328)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Pokemon2:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.501961)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Pokemon3:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-44, 464)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Pokemon3:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(0.5),
+"update": 0,
+"values": [Color(1, 1, 1, 0.5)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Pokemon4:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(0.5, 0.5),
+"update": 0,
+"values": [Vector2(-44, 600), Vector2(36, 600)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Pokemon4:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(0.5, 0.5),
+"update": 0,
+"values": [Color(1, 1, 1, 0.5), Color(1, 1, 1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Pokemon5:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.5)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Pokemon5:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-44, 736)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Pokemon6:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-44, 872)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Pokemon6:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.5)]
+}
+
+[sub_resource type="Animation" id="Animation_fqtyv"]
+resource_name = "select_5"
+length = 0.20001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Pokemon1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-44, 191)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Pokemon1:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.5)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Pokemon2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-44, 328)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Pokemon2:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.501961)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Pokemon3:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-44, 464)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Pokemon3:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.5)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Pokemon4:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-44, 600)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Pokemon4:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.5)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Pokemon5:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(0.5, 0.5),
+"update": 0,
+"values": [Color(1, 1, 1, 0.5), Color(1, 1, 1, 1)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Pokemon5:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(0.5, 0.5),
+"update": 0,
+"values": [Vector2(-44, 736), Vector2(36, 736)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Pokemon6:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-44, 872)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Pokemon6:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.5)]
+}
+
+[sub_resource type="Animation" id="Animation_13f71"]
+resource_name = "select_6"
+length = 0.20001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Pokemon1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-44, 191)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Pokemon1:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.5)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Pokemon2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-44, 328)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Pokemon2:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.501961)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Pokemon3:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-44, 464)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Pokemon3:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.5)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Pokemon4:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-44, 600)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Pokemon4:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.5)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Pokemon5:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.5)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Pokemon5:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-44, 736)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Pokemon6:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(0.5, 0.5),
+"update": 0,
+"values": [Vector2(-44, 872), Vector2(36, 872)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Pokemon6:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(0.5, 0.5),
+"update": 0,
+"values": [Color(1, 1, 1, 0.5), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rx7ch"]
+_data = {
+"RESET": SubResource("Animation_jh68a"),
+"select_1": SubResource("Animation_oxulm"),
+"select_2": SubResource("Animation_x7d5r"),
+"select_3": SubResource("Animation_nv4yr"),
+"select_4": SubResource("Animation_4nglm"),
+"select_5": SubResource("Animation_fqtyv"),
+"select_6": SubResource("Animation_13f71")
+}
+
+[sub_resource type="Animation" id="Animation_mr2r3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SlashBG:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-1024, 2.08165e-12)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SaveText:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-1519, 56)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SaveButtons:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-1600, 2.08165e-12)]
+}
+
+[sub_resource type="Animation" id="Animation_hwh8h"]
+resource_name = "close"
+length = 0.20001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SlashBG:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(0.5, 0.5),
+"update": 0,
+"values": [Vector2(-374, 2.08165e-12), Vector2(-1024, 2.08165e-12)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SaveText:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(0.5, 0.5),
+"update": 0,
+"values": [Vector2(81, 56), Vector2(-1519, 56)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SaveButtons:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(0.5, 0.5),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-1600, 2.08165e-12)]
+}
+
+[sub_resource type="Animation" id="Animation_41qim"]
+resource_name = "open"
+length = 0.20001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SlashBG:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(0.5, 0.5),
+"update": 0,
+"values": [Vector2(-1024, 2.08165e-12), Vector2(-374, 2.08165e-12)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SaveText:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(0.5, 0.5),
+"update": 0,
+"values": [Vector2(-1519, 56), Vector2(81, 56)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SaveButtons:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(0.5, 0.5),
+"update": 0,
+"values": [Vector2(-1600, 2.08165e-12), Vector2(2.08165e-12, 2.08165e-12)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_r8r1y"]
+_data = {
+"RESET": SubResource("Animation_mr2r3"),
+"close": SubResource("Animation_hwh8h"),
+"open": SubResource("Animation_41qim")
+}
+
+[sub_resource type="LabelSettings" id="LabelSettings_plmho"]
+font = ExtResource("8_xe0j3")
+font_size = 24
+
+[sub_resource type="Animation" id="Animation_syoy3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SlashBG:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-650, 2.08165e-12)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MenuText:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-1500, 76)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MenuButtons:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-1500, 2.08165e-12)]
+}
+
+[sub_resource type="Animation" id="Animation_tij86"]
+resource_name = "close"
+length = 0.20001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SlashBG:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(0.5, 0.5),
+"update": 0,
+"values": [Vector2(2.08165e-12, 2.08165e-12), Vector2(-650, 2.08165e-12)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MenuText:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(0.5, 0.5),
+"update": 0,
+"values": [Vector2(51, 76), Vector2(-1500, 76)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MenuButtons:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(0.5, 0.5),
+"update": 0,
+"values": [Vector2(2.08165e-12, 2.08165e-12), Vector2(-1500, 2.08165e-12)]
+}
+
+[sub_resource type="Animation" id="Animation_hcvdu"]
+resource_name = "open"
+length = 0.20001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SlashBG:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(0.5, 0.5),
+"update": 0,
+"values": [Vector2(-650, 2.08165e-12), Vector2(2.08165e-12, 2.08165e-12)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MenuText:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(0.5, 0.5),
+"update": 0,
+"values": [Vector2(-1500, 76), Vector2(51, 76)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MenuButtons:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(0.5, 0.5),
+"update": 0,
+"values": [Vector2(-1500, 2.08165e-12), Vector2(2.08165e-12, 2.08165e-12)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_x3wd8"]
+_data = {
+"RESET": SubResource("Animation_syoy3"),
+"close": SubResource("Animation_tij86"),
+"open": SubResource("Animation_hcvdu")
+}
+
+[node name="MenuScene" type="Node"]
+script = ExtResource("1_pip5s")
+
+[node name="MenuStateMachine" type="CanvasLayer" parent="."]
+script = ExtResource("2_i7qr8")
+
+[node name="Panel" type="Panel" parent="MenuStateMachine"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_pljr4")
+
+[node name="CrossBG" type="TextureRect" parent="MenuStateMachine/Panel"]
+modulate = Color(1, 1, 1, 0.2)
+material = SubResource("ShaderMaterial_q4nd5")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_w4tbl")
+stretch_mode = 1
+
+[node name="PokemonMenu" type="Control" parent="MenuStateMachine"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme = ExtResource("4_dsuyh")
+script = ExtResource("5_82b25")
+
+[node name="Details" type="Control" parent="MenuStateMachine/PokemonMenu"]
+anchors_preset = 0
+offset_left = -2000.0
+offset_right = -1960.0
+offset_bottom = 40.0
+theme = ExtResource("4_dsuyh")
+
+[node name="DetailsBG" type="TextureRect" parent="MenuStateMachine/PokemonMenu/Details"]
+layout_mode = 0
+offset_left = 736.0
+offset_right = 1910.0
+offset_bottom = 1080.0
+texture = ExtResource("6_ye8xn")
+expand_mode = 3
+
+[node name="Sprite" type="TextureRect" parent="MenuStateMachine/PokemonMenu/Details"]
+layout_mode = 0
+offset_left = 748.0
+offset_top = 48.0
+offset_right = 988.0
+offset_bottom = 288.0
+texture = ExtResource("7_8bn2h")
+expand_mode = 1
+
+[node name="Name" type="Label" parent="MenuStateMachine/PokemonMenu/Details"]
+layout_mode = 0
+offset_left = 1052.0
+offset_top = 116.0
+offset_right = 1302.0
+offset_bottom = 226.0
+text = "Name"
+label_settings = SubResource("LabelSettings_y3axo")
+uppercase = true
+
+[node name="AbilityName" type="Label" parent="MenuStateMachine/PokemonMenu/Details"]
+layout_mode = 0
+offset_left = 748.0
+offset_top = 346.0
+offset_right = 847.0
+offset_bottom = 380.0
+text = "Ability"
+label_settings = SubResource("LabelSettings_h5g2n")
+uppercase = true
+
+[node name="AbilityDetails" type="Label" parent="MenuStateMachine/PokemonMenu/Details"]
+layout_mode = 0
+offset_left = 748.0
+offset_top = 380.0
+offset_right = 1148.0
+offset_bottom = 440.0
+text = "Lorem Ipsum Dolor Sit Amet,
+Blah Blah Blah,
+Poo"
+label_settings = SubResource("LabelSettings_68sp6")
+autowrap_mode = 3
+
+[node name="ItemName" type="Label" parent="MenuStateMachine/PokemonMenu/Details"]
+layout_mode = 0
+offset_left = 1318.0
+offset_top = 346.0
+offset_right = 1417.0
+offset_bottom = 380.0
+text = "-"
+label_settings = SubResource("LabelSettings_h5g2n")
+uppercase = true
+
+[node name="ItemSprite" type="TextureRect" parent="MenuStateMachine/PokemonMenu/Details"]
+layout_mode = 0
+offset_left = 1278.0
+offset_top = 336.0
+offset_right = 1312.0
+offset_bottom = 370.0
+
+[node name="ItemDetails" type="Label" parent="MenuStateMachine/PokemonMenu/Details"]
+layout_mode = 0
+offset_left = 1278.0
+offset_top = 380.0
+offset_right = 1678.0
+offset_bottom = 440.0
+label_settings = SubResource("LabelSettings_68sp6")
+
+[node name="Nature" type="Label" parent="MenuStateMachine/PokemonMenu/Details"]
+layout_mode = 0
+offset_left = 1809.0
+offset_top = 360.0
+offset_right = 1863.0
+offset_bottom = 386.0
+text = "Calm"
+label_settings = SubResource("LabelSettings_wl8se")
+horizontal_alignment = 2
+uppercase = true
+
+[node name="Gender" type="Label" parent="MenuStateMachine/PokemonMenu/Details"]
+layout_mode = 0
+offset_left = 1809.0
+offset_top = 400.0
+offset_right = 1863.0
+offset_bottom = 426.0
+text = "Male"
+label_settings = SubResource("LabelSettings_wl8se")
+horizontal_alignment = 2
+uppercase = true
+
+[node name="Summary" type="Label" parent="MenuStateMachine/PokemonMenu/Details"]
+layout_mode = 0
+offset_left = 1329.0
+offset_top = 766.0
+offset_right = 1779.0
+offset_bottom = 861.0
+text = "We first met one another on 12/31/2023, and it was on Route 1!
+At the time, this Pokémon was Lv. 4.
+
+This Pokémon likes to nod off."
+label_settings = SubResource("LabelSettings_68sp6")
+autowrap_mode = 3
+
+[node name="Height" type="Label" parent="MenuStateMachine/PokemonMenu/Details"]
+layout_mode = 0
+offset_left = 1809.0
+offset_top = 783.0
+offset_right = 1863.0
+offset_bottom = 809.0
+text = "1'8\""
+label_settings = SubResource("LabelSettings_wl8se")
+horizontal_alignment = 2
+uppercase = true
+
+[node name="Weight" type="Label" parent="MenuStateMachine/PokemonMenu/Details"]
+layout_mode = 0
+offset_left = 1778.0
+offset_top = 827.0
+offset_right = 1863.0
+offset_bottom = 853.0
+text = "39.8 LBS."
+label_settings = SubResource("LabelSettings_wl8se")
+horizontal_alignment = 2
+uppercase = true
+
+[node name="OT" type="Label" parent="MenuStateMachine/PokemonMenu/Details"]
+layout_mode = 0
+offset_left = 1778.0
+offset_top = 868.0
+offset_right = 1863.0
+offset_bottom = 894.0
+text = "BEE"
+label_settings = SubResource("LabelSettings_wl8se")
+horizontal_alignment = 2
+uppercase = true
+
+[node name="Stats" type="Control" parent="MenuStateMachine/PokemonMenu/Details"]
+anchors_preset = 0
+offset_left = 1410.0
+offset_top = 535.0
+offset_right = 1450.0
+offset_bottom = 575.0
+
+[node name="HPBar" type="ProgressBar" parent="MenuStateMachine/PokemonMenu/Details/Stats"]
+layout_mode = 0
+offset_top = 4.5
+offset_right = 200.0
+offset_bottom = 12.5
+value = 50.0
+show_percentage = false
+
+[node name="AtkBar" type="ProgressBar" parent="MenuStateMachine/PokemonMenu/Details/Stats"]
+layout_mode = 0
+offset_top = 31.5
+offset_right = 200.0
+offset_bottom = 39.5
+value = 50.0
+show_percentage = false
+
+[node name="DefBar" type="ProgressBar" parent="MenuStateMachine/PokemonMenu/Details/Stats"]
+layout_mode = 0
+offset_top = 58.5
+offset_right = 200.0
+offset_bottom = 66.5
+value = 50.0
+show_percentage = false
+
+[node name="SpatkBar" type="ProgressBar" parent="MenuStateMachine/PokemonMenu/Details/Stats"]
+layout_mode = 0
+offset_top = 85.5
+offset_right = 200.0
+offset_bottom = 93.5
+value = 50.0
+show_percentage = false
+
+[node name="SpdefBar" type="ProgressBar" parent="MenuStateMachine/PokemonMenu/Details/Stats"]
+layout_mode = 0
+offset_top = 112.5
+offset_right = 200.0
+offset_bottom = 120.5
+value = 50.0
+show_percentage = false
+
+[node name="SpdBar" type="ProgressBar" parent="MenuStateMachine/PokemonMenu/Details/Stats"]
+layout_mode = 0
+offset_top = 139.5
+offset_right = 200.0
+offset_bottom = 147.5
+value = 50.0
+show_percentage = false
+
+[node name="IVs" type="Label" parent="MenuStateMachine/PokemonMenu/Details/Stats"]
+layout_mode = 0
+offset_left = 210.0
+offset_right = 235.0
+offset_bottom = 153.0
+text = "000
+000
+000
+000
+000
+000"
+label_settings = SubResource("LabelSettings_5b05r")
+
+[node name="EVs" type="Label" parent="MenuStateMachine/PokemonMenu/Details/Stats"]
+layout_mode = 0
+offset_left = 242.13
+offset_right = 267.13
+offset_bottom = 153.0
+text = "000
+000
+000
+000
+000
+000"
+label_settings = SubResource("LabelSettings_5b05r")
+
+[node name="Stats" type="Label" parent="MenuStateMachine/PokemonMenu/Details/Stats"]
+layout_mode = 0
+offset_left = 278.9
+offset_right = 303.9
+offset_bottom = 153.0
+text = "000
+000
+000
+000
+000
+000"
+label_settings = SubResource("LabelSettings_aupsx")
+
+[node name="Moves" type="Control" parent="MenuStateMachine/PokemonMenu/Details"]
+anchors_preset = 0
+offset_left = 748.0
+offset_top = 512.0
+offset_right = 788.0
+offset_bottom = 552.0
+
+[node name="Move1" parent="MenuStateMachine/PokemonMenu/Details/Moves" instance=ExtResource("10_6cv3w")]
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 550.0
+offset_bottom = 92.0
+focus_neighbor_left = NodePath("../../../Party/Pokemon1")
+focus_neighbor_top = NodePath("../Move4")
+focus_neighbor_bottom = NodePath("../Move2")
+
+[node name="Move2" parent="MenuStateMachine/PokemonMenu/Details/Moves" instance=ExtResource("10_6cv3w")]
+layout_mode = 0
+offset_left = 2.08165e-12
+offset_top = 102.0
+offset_right = 550.0
+offset_bottom = 194.0
+focus_neighbor_left = NodePath("../../../Party/Pokemon1")
+focus_neighbor_top = NodePath("../Move1")
+focus_neighbor_bottom = NodePath("../Move3")
+
+[node name="Move3" parent="MenuStateMachine/PokemonMenu/Details/Moves" instance=ExtResource("10_6cv3w")]
+layout_mode = 0
+offset_left = 2.08165e-12
+offset_top = 204.0
+offset_right = 550.0
+offset_bottom = 296.0
+focus_neighbor_left = NodePath("../../../Party/Pokemon1")
+focus_neighbor_top = NodePath("../Move2")
+focus_neighbor_bottom = NodePath("../Move4")
+
+[node name="Move4" parent="MenuStateMachine/PokemonMenu/Details/Moves" instance=ExtResource("10_6cv3w")]
+layout_mode = 0
+offset_left = 2.08165e-12
+offset_top = 306.0
+offset_right = 550.0
+offset_bottom = 398.0
+focus_neighbor_left = NodePath("../../../Party/Pokemon1")
+focus_neighbor_top = NodePath("../Move3")
+focus_neighbor_bottom = NodePath("../Move1")
+
+[node name="MenuBG" type="TextureRect" parent="MenuStateMachine/PokemonMenu"]
+layout_mode = 0
+offset_left = -1000.0
+offset_right = -104.0
+offset_bottom = 1080.0
+texture = ExtResource("3_6l0yo")
+expand_mode = 3
+
+[node name="PokemonText" type="TextureRect" parent="MenuStateMachine/PokemonMenu"]
+layout_mode = 0
+offset_left = -1117.0
+offset_top = 36.0
+offset_right = -688.0
+offset_bottom = 122.0
+texture = ExtResource("5_8ydid")
+expand_mode = 3
+
+[node name="Party" type="Control" parent="MenuStateMachine/PokemonMenu"]
+anchors_preset = 0
+offset_left = -1200.0
+offset_right = -1160.0
+offset_bottom = 40.0
+
+[node name="Pokemon1" parent="MenuStateMachine/PokemonMenu/Party" instance=ExtResource("13_qeoyx")]
+modulate = Color(1, 1, 1, 0.5)
+layout_mode = 0
+offset_left = -44.0
+offset_right = 448.0
+focus_neighbor_top = NodePath("../Pokemon6")
+focus_neighbor_right = NodePath("../../Details/Moves/Move1")
+focus_neighbor_bottom = NodePath("../Pokemon2")
+
+[node name="Pokemon2" parent="MenuStateMachine/PokemonMenu/Party" instance=ExtResource("13_qeoyx")]
+modulate = Color(1, 1, 1, 0.501961)
+layout_mode = 0
+offset_left = -44.0
+offset_top = 328.0
+offset_right = 448.0
+offset_bottom = 440.0
+focus_neighbor_top = NodePath("../Pokemon1")
+focus_neighbor_right = NodePath("../../Details/Moves/Move1")
+focus_neighbor_bottom = NodePath("../Pokemon3")
+
+[node name="Pokemon3" parent="MenuStateMachine/PokemonMenu/Party" instance=ExtResource("13_qeoyx")]
+modulate = Color(1, 1, 1, 0.5)
+layout_mode = 0
+offset_left = -44.0
+offset_top = 464.0
+offset_right = 448.0
+offset_bottom = 576.0
+focus_neighbor_top = NodePath("../Pokemon2")
+focus_neighbor_right = NodePath("../../Details/Moves/Move1")
+focus_neighbor_bottom = NodePath("../Pokemon4")
+
+[node name="Pokemon4" parent="MenuStateMachine/PokemonMenu/Party" instance=ExtResource("13_qeoyx")]
+modulate = Color(1, 1, 1, 0.5)
+layout_mode = 0
+offset_left = -44.0
+offset_top = 600.0
+offset_right = 448.0
+offset_bottom = 712.0
+focus_neighbor_top = NodePath("../Pokemon3")
+focus_neighbor_right = NodePath("../../Details/Moves/Move1")
+focus_neighbor_bottom = NodePath("../Pokemon5")
+
+[node name="Pokemon5" parent="MenuStateMachine/PokemonMenu/Party" instance=ExtResource("13_qeoyx")]
+modulate = Color(1, 1, 1, 0.5)
+layout_mode = 0
+offset_left = -44.0
+offset_top = 736.0
+offset_right = 448.0
+offset_bottom = 848.0
+focus_neighbor_top = NodePath("../Pokemon4")
+focus_neighbor_right = NodePath("../../Details/Moves/Move1")
+focus_neighbor_bottom = NodePath("../Pokemon6")
+
+[node name="Pokemon6" parent="MenuStateMachine/PokemonMenu/Party" instance=ExtResource("13_qeoyx")]
+modulate = Color(1, 1, 1, 0.5)
+layout_mode = 0
+offset_left = -44.0
+offset_top = 872.0
+offset_right = 448.0
+offset_bottom = 984.0
+focus_neighbor_top = NodePath("../Pokemon5")
+focus_neighbor_right = NodePath("../../Details/Moves/Move1")
+focus_neighbor_bottom = NodePath("../Pokemon1")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MenuStateMachine/PokemonMenu"]
+libraries = {
+"": SubResource("AnimationLibrary_xxcjd")
+}
+
+[node name="PartyAnimPlayer" type="AnimationPlayer" parent="MenuStateMachine/PokemonMenu"]
+root_node = NodePath("../Party")
+libraries = {
+"": SubResource("AnimationLibrary_rx7ch")
+}
+
+[node name="SaveMenu" type="Control" parent="MenuStateMachine"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("3_dnsyp")
+
+[node name="SaveButtons" type="Control" parent="MenuStateMachine/SaveMenu"]
+anchors_preset = 0
+offset_left = -1600.0
+offset_right = -1560.0
+offset_bottom = 40.0
+
+[node name="Save1" parent="MenuStateMachine/SaveMenu/SaveButtons" instance=ExtResource("5_tf4e4")]
+layout_mode = 0
+offset_left = 772.0
+offset_top = 192.0
+offset_right = 1628.0
+offset_bottom = 392.0
+focus_neighbor_top = NodePath("../Save3")
+focus_neighbor_bottom = NodePath("../Save2")
+
+[node name="Save2" parent="MenuStateMachine/SaveMenu/SaveButtons" instance=ExtResource("5_tf4e4")]
+layout_mode = 0
+offset_left = 772.0
+offset_top = 440.0
+offset_right = 1628.0
+offset_bottom = 640.0
+focus_neighbor_top = NodePath("../Save1")
+focus_neighbor_bottom = NodePath("../Save3")
+
+[node name="Save3" parent="MenuStateMachine/SaveMenu/SaveButtons" instance=ExtResource("5_tf4e4")]
+layout_mode = 0
+offset_left = 772.0
+offset_top = 688.0
+offset_right = 1628.0
+offset_bottom = 888.0
+focus_neighbor_top = NodePath("../Save2")
+focus_neighbor_bottom = NodePath("../Save1")
+
+[node name="SlashBG" type="TextureRect" parent="MenuStateMachine/SaveMenu"]
+layout_mode = 0
+offset_left = -1024.0
+offset_right = -128.0
+offset_bottom = 1080.0
+texture = ExtResource("3_6l0yo")
+expand_mode = 3
+
+[node name="SaveText" type="TextureRect" parent="MenuStateMachine/SaveMenu"]
+layout_mode = 0
+offset_left = -1519.0
+offset_top = 56.0
+offset_right = -1301.39
+offset_bottom = 122.0
+texture = ExtResource("4_q1cqp")
+expand_mode = 3
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MenuStateMachine/SaveMenu"]
+libraries = {
+"": SubResource("AnimationLibrary_r8r1y")
+}
+
+[node name="MainMenu" type="Control" parent="MenuStateMachine"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("8_r5tjx")
+
+[node name="SlashBG" type="TextureRect" parent="MenuStateMachine/MainMenu"]
+layout_mode = 0
+offset_left = -650.0
+offset_right = 5.0
+offset_bottom = 1080.0
+texture = ExtResource("3_s3odm")
+expand_mode = 3
+
+[node name="MenuText" type="TextureRect" parent="MenuStateMachine/MainMenu"]
+layout_mode = 0
+offset_left = -1500.0
+offset_top = 76.0
+offset_right = -1069.0
+offset_bottom = 186.615
+texture = ExtResource("4_2fxd3")
+expand_mode = 5
+
+[node name="MenuButtons" type="Control" parent="MenuStateMachine/MainMenu"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -1500.0
+offset_right = -1460.0
+offset_bottom = 40.0
+
+[node name="PokemonButton" type="TextureButton" parent="MenuStateMachine/MainMenu/MenuButtons"]
+layout_mode = 0
+offset_left = 299.0
+offset_top = 329.0
+offset_right = 738.0
+offset_bottom = 387.0
+texture_normal = ExtResource("5_jx3wd")
+texture_focused = ExtResource("6_iw621")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="TextureRect" type="TextureRect" parent="MenuStateMachine/MainMenu/MenuButtons/PokemonButton"]
+layout_mode = 2
+offset_left = 39.0
+offset_top = 12.0
+offset_right = 67.0
+offset_bottom = 40.0
+texture = ExtResource("7_5h3ug")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="MenuStateMachine/MainMenu/MenuButtons/PokemonButton"]
+clip_contents = true
+layout_mode = 2
+offset_left = 79.0
+offset_top = 9.0
+offset_right = 210.0
+offset_bottom = 43.0
+text = "Pokémon"
+label_settings = SubResource("LabelSettings_plmho")
+uppercase = true
+
+[node name="DexButton" type="TextureButton" parent="MenuStateMachine/MainMenu/MenuButtons"]
+layout_mode = 0
+offset_left = 284.0
+offset_top = 405.0
+offset_right = 723.0
+offset_bottom = 463.0
+texture_normal = ExtResource("5_jx3wd")
+texture_focused = ExtResource("6_iw621")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="TextureRect" type="TextureRect" parent="MenuStateMachine/MainMenu/MenuButtons/DexButton"]
+layout_mode = 2
+offset_left = 39.0
+offset_top = 12.0
+offset_right = 67.0
+offset_bottom = 40.0
+texture = ExtResource("9_rxbgt")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="MenuStateMachine/MainMenu/MenuButtons/DexButton"]
+clip_contents = true
+layout_mode = 2
+offset_left = 79.0
+offset_top = 9.0
+offset_right = 210.0
+offset_bottom = 43.0
+text = "Pokédex"
+label_settings = SubResource("LabelSettings_plmho")
+uppercase = true
+
+[node name="BagButton" type="TextureButton" parent="MenuStateMachine/MainMenu/MenuButtons"]
+layout_mode = 0
+offset_left = 266.0
+offset_top = 481.0
+offset_right = 705.0
+offset_bottom = 539.0
+texture_normal = ExtResource("5_jx3wd")
+texture_focused = ExtResource("6_iw621")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="TextureRect" type="TextureRect" parent="MenuStateMachine/MainMenu/MenuButtons/BagButton"]
+layout_mode = 2
+offset_left = 39.0
+offset_top = 12.0
+offset_right = 67.0
+offset_bottom = 40.0
+texture = ExtResource("10_4tw7y")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="MenuStateMachine/MainMenu/MenuButtons/BagButton"]
+clip_contents = true
+layout_mode = 2
+offset_left = 79.0
+offset_top = 9.0
+offset_right = 210.0
+offset_bottom = 43.0
+text = "Bag"
+label_settings = SubResource("LabelSettings_plmho")
+uppercase = true
+
+[node name="TrainerButton" type="TextureButton" parent="MenuStateMachine/MainMenu/MenuButtons"]
+layout_mode = 0
+offset_left = 248.0
+offset_top = 557.0
+offset_right = 687.0
+offset_bottom = 615.0
+texture_normal = ExtResource("5_jx3wd")
+texture_focused = ExtResource("6_iw621")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="TextureRect" type="TextureRect" parent="MenuStateMachine/MainMenu/MenuButtons/TrainerButton"]
+layout_mode = 2
+offset_left = 39.0
+offset_top = 12.0
+offset_right = 67.0
+offset_bottom = 40.0
+texture = ExtResource("11_ggbqp")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="MenuStateMachine/MainMenu/MenuButtons/TrainerButton"]
+clip_contents = true
+layout_mode = 2
+offset_left = 79.0
+offset_top = 9.0
+offset_right = 291.0
+offset_bottom = 43.0
+text = "Trainer"
+label_settings = SubResource("LabelSettings_plmho")
+uppercase = true
+
+[node name="SaveButton" type="TextureButton" parent="MenuStateMachine/MainMenu/MenuButtons"]
+layout_mode = 0
+offset_left = 230.0
+offset_top = 633.0
+offset_right = 669.0
+offset_bottom = 691.0
+texture_normal = ExtResource("5_jx3wd")
+texture_focused = ExtResource("6_iw621")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="TextureRect" type="TextureRect" parent="MenuStateMachine/MainMenu/MenuButtons/SaveButton"]
+layout_mode = 2
+offset_left = 39.0
+offset_top = 12.0
+offset_right = 67.0
+offset_bottom = 40.0
+texture = ExtResource("12_mdanw")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="MenuStateMachine/MainMenu/MenuButtons/SaveButton"]
+clip_contents = true
+layout_mode = 2
+offset_left = 79.0
+offset_top = 9.0
+offset_right = 210.0
+offset_bottom = 43.0
+text = "Save"
+label_settings = SubResource("LabelSettings_plmho")
+uppercase = true
+
+[node name="OptionsButton" type="TextureButton" parent="MenuStateMachine/MainMenu/MenuButtons"]
+layout_mode = 0
+offset_left = 215.0
+offset_top = 709.0
+offset_right = 654.0
+offset_bottom = 767.0
+texture_normal = ExtResource("5_jx3wd")
+texture_focused = ExtResource("6_iw621")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="TextureRect" type="TextureRect" parent="MenuStateMachine/MainMenu/MenuButtons/OptionsButton"]
+layout_mode = 2
+offset_left = 39.0
+offset_top = 12.0
+offset_right = 67.0
+offset_bottom = 40.0
+texture = ExtResource("13_jjvqm")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="MenuStateMachine/MainMenu/MenuButtons/OptionsButton"]
+clip_contents = true
+layout_mode = 2
+offset_left = 79.0
+offset_top = 9.0
+offset_right = 210.0
+offset_bottom = 43.0
+text = "Options"
+label_settings = SubResource("LabelSettings_plmho")
+uppercase = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MenuStateMachine/MainMenu"]
+libraries = {
+"": SubResource("AnimationLibrary_x3wd8")
+}
+
+[connection signal="focus_entered" from="MenuStateMachine/PokemonMenu/Party/Pokemon1" to="MenuStateMachine/PokemonMenu" method="_on_pokemon_1_focus_entered"]
+[connection signal="pressed" from="MenuStateMachine/PokemonMenu/Party/Pokemon1" to="MenuStateMachine/PokemonMenu" method="_on_pokemon_1_pressed"]
+[connection signal="focus_entered" from="MenuStateMachine/PokemonMenu/Party/Pokemon2" to="MenuStateMachine/PokemonMenu" method="_on_pokemon_2_focus_entered"]
+[connection signal="pressed" from="MenuStateMachine/PokemonMenu/Party/Pokemon2" to="MenuStateMachine/PokemonMenu" method="_on_pokemon_2_pressed"]
+[connection signal="focus_entered" from="MenuStateMachine/PokemonMenu/Party/Pokemon3" to="MenuStateMachine/PokemonMenu" method="_on_pokemon_3_focus_entered"]
+[connection signal="pressed" from="MenuStateMachine/PokemonMenu/Party/Pokemon3" to="MenuStateMachine/PokemonMenu" method="_on_pokemon_3_pressed"]
+[connection signal="focus_entered" from="MenuStateMachine/PokemonMenu/Party/Pokemon4" to="MenuStateMachine/PokemonMenu" method="_on_pokemon_4_focus_entered"]
+[connection signal="pressed" from="MenuStateMachine/PokemonMenu/Party/Pokemon4" to="MenuStateMachine/PokemonMenu" method="_on_pokemon_4_pressed"]
+[connection signal="focus_entered" from="MenuStateMachine/PokemonMenu/Party/Pokemon5" to="MenuStateMachine/PokemonMenu" method="_on_pokemon_5_focus_entered"]
+[connection signal="pressed" from="MenuStateMachine/PokemonMenu/Party/Pokemon5" to="MenuStateMachine/PokemonMenu" method="_on_pokemon_5_pressed"]
+[connection signal="focus_entered" from="MenuStateMachine/PokemonMenu/Party/Pokemon6" to="MenuStateMachine/PokemonMenu" method="_on_pokemon_6_focus_entered"]
+[connection signal="pressed" from="MenuStateMachine/PokemonMenu/Party/Pokemon6" to="MenuStateMachine/PokemonMenu" method="_on_pokemon_6_pressed"]
+[connection signal="pressed" from="MenuStateMachine/SaveMenu/SaveButtons/Save1" to="MenuStateMachine/SaveMenu" method="_on_save_1_pressed"]
+[connection signal="pressed" from="MenuStateMachine/SaveMenu/SaveButtons/Save2" to="MenuStateMachine/SaveMenu" method="_on_save_2_pressed"]
+[connection signal="pressed" from="MenuStateMachine/SaveMenu/SaveButtons/Save3" to="MenuStateMachine/SaveMenu" method="_on_save_3_pressed"]
+[connection signal="pressed" from="MenuStateMachine/MainMenu/MenuButtons/PokemonButton" to="MenuStateMachine/MainMenu" method="_on_pokemon_button_pressed"]
+[connection signal="pressed" from="MenuStateMachine/MainMenu/MenuButtons/DexButton" to="MenuStateMachine/MainMenu" method="_on_dex_button_pressed"]
+[connection signal="pressed" from="MenuStateMachine/MainMenu/MenuButtons/BagButton" to="MenuStateMachine/MainMenu" method="_on_bag_button_pressed"]
+[connection signal="pressed" from="MenuStateMachine/MainMenu/MenuButtons/TrainerButton" to="MenuStateMachine/MainMenu" method="_on_trainer_button_pressed"]
+[connection signal="pressed" from="MenuStateMachine/MainMenu/MenuButtons/SaveButton" to="MenuStateMachine/MainMenu" method="_on_save_button_pressed"]
+[connection signal="pressed" from="MenuStateMachine/MainMenu/MenuButtons/OptionsButton" to="MenuStateMachine/MainMenu" method="_on_options_button_pressed"]

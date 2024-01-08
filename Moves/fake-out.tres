@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="Move" load_steps=3 format=3]
+
+[ext_resource type="Resource" path="res://Ailments/none.tres" id="1_5wp50"]
+[ext_resource type="Script" path="res://typedef/Move.gd" id="2_cdulb"]
+
+[resource]
+script = ExtResource("2_cdulb")
+id = 252
+name = "fake-out"
+accuracy = 100
+effect_chance = 100
+pp = 10
+priority = 3
+power = 40
+damage_class = "physical"
+effect = "Inflicts regular damage.  Causes the target to flinch.  Can only be used on the user's first turn after entering the field."
+stat_changes = []
+target = "selected-pokemon"
+type = 0
+ailment = ExtResource("1_5wp50")
+category = "damage"
+min_hits = 0
+max_hits = 0
+min_turns = 0
+max_turns = 0
+drain = 0
+healing = 0
+crit_rate = 0
+ailment_chance = 0
+flinch_chance = 100
+stat_chance = 0

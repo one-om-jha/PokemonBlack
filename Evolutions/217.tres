@@ -1,0 +1,49 @@
+[gd_resource type="Resource" script_class="EvolutionChain" load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://typedef/ChainLink.gd" id="1_4jm1g"]
+[ext_resource type="Resource" path="res://Species/cherrim.tres" id="2_dr8to"]
+[ext_resource type="Resource" path="res://Species/cherubi.tres" id="3_art05"]
+[ext_resource type="Script" path="res://typedef/EvolutionChain.gd" id="4_gvhii"]
+
+[sub_resource type="Resource" id="Resource_0vuno"]
+script = ExtResource("1_4jm1g")
+is_baby = false
+species = ExtResource("2_dr8to")
+evolves_to = []
+trigger = ""
+gender = 0
+known_move_type = 0
+location = ""
+min_level = 0
+min_happiness = 0
+min_beauty = 0
+min_affection = 0
+needs_overworld_rain = false
+party_type = 0
+relative_physical_stats = 0
+time_of_day = ""
+turn_upside_down = false
+
+[sub_resource type="Resource" id="Resource_uk2p0"]
+script = ExtResource("1_4jm1g")
+is_baby = false
+species = ExtResource("3_art05")
+evolves_to = [SubResource("Resource_0vuno")]
+trigger = ""
+gender = 0
+known_move_type = 0
+location = ""
+min_level = 0
+min_happiness = 0
+min_beauty = 0
+min_affection = 0
+needs_overworld_rain = false
+party_type = 0
+relative_physical_stats = 0
+time_of_day = ""
+turn_upside_down = false
+
+[resource]
+script = ExtResource("4_gvhii")
+id = 217
+chain = SubResource("Resource_uk2p0")

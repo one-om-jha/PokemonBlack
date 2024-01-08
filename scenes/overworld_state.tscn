@@ -1,0 +1,171 @@
+[gd_scene load_steps=21 format=3 uid="uid://d0tstx14fo8uu"]
+
+[ext_resource type="Script" path="res://scenes/overworld_state.gd" id="1_0tx77"]
+[ext_resource type="SpriteFrames" uid="uid://bxt3gj6ghl7jc" path="res://textures/player/player_female.tres" id="3_mxpcr"]
+[ext_resource type="Script" path="res://scripts/Player.gd" id="3_v401s"]
+[ext_resource type="Script" path="res://scripts/PlayerSprite.gd" id="5_dh7ra"]
+[ext_resource type="Environment" uid="uid://ieq3y1b1w57v" path="res://scenes/overworld_environment.tres" id="5_e2uh1"]
+[ext_resource type="PackedScene" uid="uid://bwi16slkxowju" path="res://models/maps/matrix1/matrix_1.tscn" id="5_n3rwc"]
+[ext_resource type="CameraAttributesPractical" uid="uid://dy264vdm41fc7" path="res://scenes/camera_attributes.tres" id="5_rp828"]
+[ext_resource type="PackedScene" uid="uid://ceo2eilq4u6l5" path="res://models/maps/matrix1/matrix_1_collision.tscn" id="6_qucfu"]
+[ext_resource type="Script" path="res://typedef/WildArea.gd" id="8_c2qd4"]
+[ext_resource type="Resource" path="res://Pokemon/patrat.tres" id="10_8jjov"]
+[ext_resource type="Script" path="res://typedef/Encounter.gd" id="11_kc0mg"]
+
+[sub_resource type="Animation" id="Animation_orj7q"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Camera3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(2.08165e-12, 2.08165e-12, 2)]
+}
+
+[sub_resource type="Animation" id="Animation_cqv72"]
+resource_name = "idle"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Camera3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(2.08165e-12, 2.08165e-12, 2)]
+}
+
+[sub_resource type="Animation" id="Animation_uka8o"]
+resource_name = "move"
+length = 0.60001
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6),
+"transitions": PackedFloat32Array(-2, -2, -2),
+"update": 1,
+"values": [Vector2(2.08165e-12, 2.08165e-12), Vector2(2.08165e-12, -1), Vector2(2.08165e-12, 2.08165e-12)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Camera3D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6),
+"transitions": PackedFloat32Array(-2, -2, -2),
+"update": 0,
+"values": [Vector3(2.08165e-12, 2.08165e-12, 2), Vector3(2.08165e-12, -0.05, 2), Vector3(2.08165e-12, 2.08165e-12, 2)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ae1f4"]
+_data = {
+"RESET": SubResource("Animation_orj7q"),
+"idle": SubResource("Animation_cqv72"),
+"move": SubResource("Animation_uka8o")
+}
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_vuevi"]
+radius = 0.118493
+height = 0.347427
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_h3ekk"]
+top_radius = 0.1
+bottom_radius = 0.1
+height = 0.001
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mxfa3"]
+shading_mode = 0
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Resource" id="Resource_p10es"]
+script = ExtResource("11_kc0mg")
+pokemon = ExtResource("10_8jjov")
+low_level = 2
+high_level = 4
+appearance_chance = 100
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ey6k2"]
+size = Vector3(2.0224, 2.39661, 1.23535)
+
+[node name="OverworldState" type="Node"]
+script = ExtResource("1_0tx77")
+
+[node name="Player" type="CharacterBody3D" parent="."]
+transform = Transform3D(1, -6.45539e-16, 1.83278e-16, 1.83278e-16, 0.525472, 0.850811, -6.45539e-16, -0.850811, 0.525472, -0.302, 0.246, -0.21)
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+platform_on_leave = 2
+script = ExtResource("3_v401s")
+
+[node name="PlayerSprite" type="AnimatedSprite3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.100257, 0)
+cast_shadow = 2
+offset = Vector2(2.08165e-12, 2.08165e-12)
+pixel_size = 0.015
+alpha_cut = 2
+texture_filter = 0
+render_priority = 1
+sprite_frames = ExtResource("3_mxpcr")
+animation = &"idle_down"
+frame_progress = 0.872622
+script = ExtResource("5_dh7ra")
+
+[node name="SpriteBobPlayer" type="AnimationPlayer" parent="Player/PlayerSprite"]
+libraries = {
+"": SubResource("AnimationLibrary_ae1f4")
+}
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.144074, 0)
+shape = SubResource("CapsuleShape3D_vuevi")
+
+[node name="Camera3D" type="Camera3D" parent="Player"]
+transform = Transform3D(0.999998, 0.00174533, 3.48787e-16, -0.00174533, 0.999998, -3.48787e-16, -3.49395e-16, 3.48177e-16, 1, 2.08165e-12, 2.08165e-12, 2)
+environment = ExtResource("5_e2uh1")
+attributes = ExtResource("5_rp828")
+fov = 95.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Player"]
+transform = Transform3D(1, -5.20353e-17, 1.83278e-16, 1.83278e-16, 0.525472, -0.850811, -5.20351e-17, 0.850811, 0.525472, 0.0138699, -0.27916, -0.0869848)
+sorting_offset = 1.0
+transparency = 0.8
+cast_shadow = 0
+mesh = SubResource("CylinderMesh_h3ekk")
+surface_material_override/0 = SubResource("StandardMaterial3D_mxfa3")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.652257, 0.490548, -0.577861, 0.720723, -0.165235, 0.673243, 0.234775, -0.855605, -0.461324, 0, 3.3313, 0)
+shadow_enabled = true
+shadow_blur = 0.734
+
+[node name="matrix1" parent="." instance=ExtResource("5_n3rwc")]
+
+[node name="matrix1_collision" parent="matrix1" instance=ExtResource("6_qucfu")]
+visible = false
+
+[node name="Area3D" type="Area3D" parent="matrix1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8.5731)
+script = ExtResource("8_c2qd4")
+encounters = Array[ExtResource("11_kc0mg")]([SubResource("Resource_p10es")])
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="matrix1/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.09233, 0.698303, 0.278798)
+shape = SubResource("BoxShape3D_ey6k2")
+
+[connection signal="body_entered" from="matrix1/Area3D" to="matrix1/Area3D" method="_on_body_entered"]
+[connection signal="trigger_battle" from="matrix1/Area3D" to="." method="_on_trigger_battle"]

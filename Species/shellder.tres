@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="Species" load_steps=3 format=3]
+
+[ext_resource type="Resource" path="res://GrowthRates/slow.tres" id="1_3tobu"]
+[ext_resource type="Script" path="res://typedef/Species.gd" id="2_v4wpu"]
+
+[resource]
+script = ExtResource("2_v4wpu")
+id = 90
+name = "shellder"
+order = 98
+genus = "Bivalve Pokémon"
+flavor = "It swims backward by opening and
+closing its two shells. Its large
+tongue is always kept hanging out."
+gender_rate = 4
+capture_rate = 190
+base_happiness = 50
+is_baby = false
+is_legendary = false
+is_mythical = false
+hatch_counter = 20
+has_gender_differences = false
+forms_switchable = false
+growth_rate = ExtResource("1_3tobu")
+local_dex = 0
+national_dex = 90
+egg_groups = ["water3"]
+evolution_chain = 39
+habitat = "sea"

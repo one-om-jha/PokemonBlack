@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://typedef/Item.gd" id="1_nfiua"]
+
+[resource]
+script = ExtResource("1_nfiua")
+id = 197
+name = "choice-band"
+cost = 4000
+fling_power = 10
+fling_effect = ""
+effect = "Held in battle
+:   Holder has 1.5× its Attack.  When the holder attempts to use a move, all its other moves are disabled until it leaves battle or loses this item.
+
+    The restriction ends even if this item is swapped for another Choice item
+via trick or switcheroo."
+flavor = "An item to be held by a Pokémon. This curious
+headband boosts Attack but only allows the use of
+one move."
+sprite = "res://sprites/items/choice-band.png"
+attributes = ["holdable", "holdable-active"]
+category = "choice"

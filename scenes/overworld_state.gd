@@ -1,0 +1,22 @@
+extends State
+
+@onready var player = $Player
+@onready var camera = $Player/Camera3D
+
+func enter_state():
+	player.sprite.load_sprite()
+	camera.current = true
+
+func update(delta):
+	var vert = Input.get_axis("up", "down")
+	var hori = Input.get_axis("left", "right")
+	var direction = Vector2i(hori, vert)
+	var running: bool = Input.is_action_pressed("run")
+	player.move_player(direction, running)
+	
+	if Input.is_action_just_pressed("menu"):
+		get_parent().push_state(get_parent().menu_state)
+
+
+func _on_trigger_battle(battle):
+	get_parent().init_battle(battle)

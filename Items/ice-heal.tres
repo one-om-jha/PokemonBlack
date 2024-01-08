@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://typedef/Item.gd" id="1_vsvup"]
+
+[resource]
+script = ExtResource("1_vsvup")
+id = 20
+name = "ice-heal"
+cost = 200
+fling_power = 30
+fling_effect = ""
+effect = "Used on a party Pokémon
+:   Cures freezing."
+flavor = "A spray-type medicine for treating freezing. It can be
+used to thaw out a single Pokémon that has been
+frozen solid."
+sprite = "res://sprites/items/ice-heal.png"
+attributes = ["countable", "consumable", "usable-overworld", "usable-in-battle", "holdable"]
+category = "status-cures"

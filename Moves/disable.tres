@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="Move" load_steps=3 format=3]
+
+[ext_resource type="Resource" path="res://Ailments/disable.tres" id="1_o1r6p"]
+[ext_resource type="Script" path="res://typedef/Move.gd" id="2_blt3g"]
+
+[resource]
+script = ExtResource("2_blt3g")
+id = 50
+name = "disable"
+accuracy = 100
+effect_chance = 0
+pp = 20
+priority = 0
+power = 0
+damage_class = "status"
+effect = "Disables the target's last used move, preventing its use for 4–7 turns, selected at random, or until the target leaves the field.  If the target hasn't used a move since entering the field, if it tried to use a move this turn and failed,  if its last used move has 0 PP remaining, or if it already has a move disabled, this move will fail."
+stat_changes = []
+target = "selected-pokemon"
+type = 0
+ailment = ExtResource("1_o1r6p")
+category = "unique"
+min_hits = 0
+max_hits = 0
+min_turns = 4
+max_turns = 4
+drain = 0
+healing = 0
+crit_rate = 0
+ailment_chance = 0
+flinch_chance = 0
+stat_chance = 0

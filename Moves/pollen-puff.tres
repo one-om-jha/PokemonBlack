@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="Move" load_steps=3 format=3]
+
+[ext_resource type="Resource" path="res://Ailments/none.tres" id="1_bn2vj"]
+[ext_resource type="Script" path="res://typedef/Move.gd" id="2_jajo6"]
+
+[resource]
+script = ExtResource("2_jajo6")
+id = 676
+name = "pollen-puff"
+accuracy = 100
+effect_chance = 0
+pp = 15
+priority = 0
+power = 90
+damage_class = "special"
+effect = "If the target is an opponent, inflicts regular damage.  If the target is an ally, heals the target for 50% of its max HP."
+stat_changes = []
+target = "selected-pokemon"
+type = 11
+ailment = ExtResource("1_bn2vj")
+category = "damage"
+min_hits = 0
+max_hits = 0
+min_turns = 0
+max_turns = 0
+drain = 0
+healing = 0
+crit_rate = 0
+ailment_chance = 0
+flinch_chance = 0
+stat_chance = 0

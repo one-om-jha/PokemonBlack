@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://typedef/Item.gd" id="1_axpkx"]
+
+[resource]
+script = ExtResource("1_axpkx")
+id = 128
+name = "pecha-berry"
+cost = 80
+fling_power = 10
+fling_effect = "berry-effect"
+effect = "Held in battle
+:   When the holder is poisoned, it consumes this item to cure the poison.
+
+Used on a party Pokémon
+:   Cures poison."
+flavor = "A Berry to be consumed by Pokémon. If a Pokémon
+holds one, it can recover from poisoning on its own
+in battle."
+sprite = "res://sprites/items/pecha-berry.png"
+attributes = ["holdable-active"]
+category = "medicine"

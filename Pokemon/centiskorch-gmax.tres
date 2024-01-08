@@ -1,0 +1,46 @@
+[gd_resource type="Resource" script_class="Pokemon" load_steps=6 format=3]
+
+[ext_resource type="Resource" path="res://Abilities/flash-fire.tres" id="1_klu56"]
+[ext_resource type="Resource" path="res://Abilities/white-smoke.tres" id="2_1c7ym"]
+[ext_resource type="Resource" path="res://Abilities/flame-body.tres" id="3_bi5hp"]
+[ext_resource type="Script" path="res://typedef/Pokemon.gd" id="4_mi12p"]
+[ext_resource type="Resource" path="res://Species/centiskorch.tres" id="5_wpex1"]
+
+[resource]
+script = ExtResource("4_mi12p")
+id = 10220
+name = "centiskorch-gmax"
+base_experience = 184
+height = 750
+weight = 10000
+abilities = [ExtResource("1_klu56"), ExtResource("2_1c7ym"), ExtResource("3_bi5hp")]
+forms = ["centiskorch-gmax"]
+held_items = []
+moves = []
+species = ExtResource("5_wpex1")
+sprites = {
+"back_default": "res://sprites/pokemon/back/10220.gif",
+"back_shiny": "res://sprites/pokemon/back/shiny/10220.gif",
+"front_default": "res://sprites/pokemon/10220.gif",
+"front_shiny": "res://sprites/pokemon/shiny/10220.gif"
+}
+stats = {
+"attack": 115.0,
+"defense": 65.0,
+"hp": 100.0,
+"special-attack": 90.0,
+"special-defense": 90.0,
+"speed": 65.0
+}
+stats_effort = {
+"attack": 2.0,
+"defense": 0.0,
+"hp": 0.0,
+"special-attack": 0.0,
+"special-defense": 0.0,
+"speed": 0.0
+}
+types = {
+1.0: 1,
+2.0: 11
+}

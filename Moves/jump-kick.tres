@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="Move" load_steps=3 format=3]
+
+[ext_resource type="Resource" path="res://Ailments/none.tres" id="1_xlm6o"]
+[ext_resource type="Script" path="res://typedef/Move.gd" id="2_r7ex1"]
+
+[resource]
+script = ExtResource("2_r7ex1")
+id = 26
+name = "jump-kick"
+accuracy = 95
+effect_chance = 0
+pp = 10
+priority = 0
+power = 100
+damage_class = "physical"
+effect = "Inflicts regular damage. If this move misses, is blocked by protect or detect, or has no effect, the user takes damage equal to half of its max HP rounded down.
+
+This move cannot be used while gravity is in effect."
+stat_changes = []
+target = "selected-pokemon"
+type = 6
+ailment = ExtResource("1_xlm6o")
+category = "damage"
+min_hits = 0
+max_hits = 0
+min_turns = 0
+max_turns = 0
+drain = 0
+healing = 0
+crit_rate = 0
+ailment_chance = 0
+flinch_chance = 0
+stat_chance = 0

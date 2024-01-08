@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://typedef/Item.gd" id="1_pu2b6"]
+
+[resource]
+script = ExtResource("1_pu2b6")
+id = 50
+name = "rare-candy"
+cost = 10000
+fling_power = 30
+fling_effect = ""
+effect = "Used on a party Pokémon
+:   Increases level by 1.  Increases happiness by 5/3/2."
+flavor = "A candy that is packed with energy. When consumed,
+it will instantly raise the level of a single Pokémon
+by one."
+sprite = "res://sprites/items/rare-candy.png"
+attributes = ["countable", "consumable", "usable-overworld", "usable-in-battle", "holdable"]
+category = "vitamins"

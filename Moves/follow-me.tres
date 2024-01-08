@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="Move" load_steps=3 format=3]
+
+[ext_resource type="Resource" path="res://Ailments/none.tres" id="1_5x678"]
+[ext_resource type="Script" path="res://typedef/Move.gd" id="2_rvxcr"]
+
+[resource]
+script = ExtResource("2_rvxcr")
+id = 266
+name = "follow-me"
+accuracy = 0
+effect_chance = 0
+pp = 20
+priority = 2
+power = 0
+damage_class = "status"
+effect = "Until the end of this turn, any moves that opposing Pokémon target solely at the user's ally will instead target the user.  If both Pokémon on the same side of the field use this move on the same turn, the Pokémon that uses it last will become the target.
+
+This effect takes priority over lightning rod and storm drain.
+
+If the user's ally switches out, opposing Pokémon may still hit it with pursuit.
+
+This move cannot be selected by assist or metronome."
+stat_changes = []
+target = "user"
+type = 0
+ailment = ExtResource("1_5x678")
+category = "unique"
+min_hits = 0
+max_hits = 0
+min_turns = 0
+max_turns = 0
+drain = 0
+healing = 0
+crit_rate = 0
+ailment_chance = 0
+flinch_chance = 0
+stat_chance = 0

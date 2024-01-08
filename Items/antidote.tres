@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://typedef/Item.gd" id="1_w5hfc"]
+
+[resource]
+script = ExtResource("1_w5hfc")
+id = 18
+name = "antidote"
+cost = 200
+fling_power = 30
+fling_effect = ""
+effect = "Used on a party Pokémon
+:   Cures poison."
+flavor = "A spray-type medicine for treating poisoning. It can be
+used to lift the effects of being poisoned from
+a single Pokémon."
+sprite = "res://sprites/items/antidote.png"
+attributes = ["countable", "consumable", "usable-overworld", "usable-in-battle", "holdable"]
+category = "status-cures"

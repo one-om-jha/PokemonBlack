@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="Move" load_steps=3 format=3]
+
+[ext_resource type="Resource" path="res://Ailments/no-type-immunity.tres" id="1_0oll7"]
+[ext_resource type="Script" path="res://typedef/Move.gd" id="2_t6nfm"]
+
+[resource]
+script = ExtResource("2_t6nfm")
+id = 193
+name = "foresight"
+accuracy = 0
+effect_chance = 0
+pp = 40
+priority = 0
+power = 0
+damage_class = "status"
+effect = "Resets the target's evasion to normal and prevents any further boosting until the target leaves the field.  A ghost under this effect takes normal damage from normal and fighting moves.  This move itself ignores accuracy and evasion modifiers."
+stat_changes = []
+target = "selected-pokemon"
+type = 0
+ailment = ExtResource("1_0oll7")
+category = "ailment"
+min_hits = 0
+max_hits = 0
+min_turns = 0
+max_turns = 0
+drain = 0
+healing = 0
+crit_rate = 0
+ailment_chance = 0
+flinch_chance = 0
+stat_chance = 0

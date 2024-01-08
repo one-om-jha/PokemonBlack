@@ -1,0 +1,66 @@
+[gd_resource type="Resource" script_class="Pokemon" load_steps=26 format=3]
+
+[ext_resource type="Resource" path="res://Abilities/shield-dust.tres" id="1_eoakt"]
+[ext_resource type="Resource" path="res://Abilities/ice-scales.tres" id="2_ahf2v"]
+[ext_resource type="Resource" path="res://Moves/rest.tres" id="3_st0il"]
+[ext_resource type="Resource" path="res://Moves/substitute.tres" id="4_kt6sr"]
+[ext_resource type="Resource" path="res://Moves/snore.tres" id="5_35p3j"]
+[ext_resource type="Resource" path="res://Moves/powder-snow.tres" id="6_4hw5r"]
+[ext_resource type="Resource" path="res://Moves/protect.tres" id="7_wlw4d"]
+[ext_resource type="Resource" path="res://Moves/icy-wind.tres" id="8_napp3"]
+[ext_resource type="Resource" path="res://Moves/endure.tres" id="9_tdc47"]
+[ext_resource type="Resource" path="res://Moves/attract.tres" id="10_agrf2"]
+[ext_resource type="Resource" path="res://Moves/sleep-talk.tres" id="11_fd7bc"]
+[ext_resource type="Resource" path="res://Moves/mirror-coat.tres" id="12_wg070"]
+[ext_resource type="Resource" path="res://Moves/facade.tres" id="13_mhwnl"]
+[ext_resource type="Resource" path="res://Moves/icicle-spear.tres" id="14_a7fib"]
+[ext_resource type="Resource" path="res://Moves/bug-buzz.tres" id="15_20vug"]
+[ext_resource type="Resource" path="res://Moves/bug-bite.tres" id="16_4egix"]
+[ext_resource type="Resource" path="res://Moves/round.tres" id="17_mibxp"]
+[ext_resource type="Resource" path="res://Moves/struggle-bug.tres" id="18_dyw5p"]
+[ext_resource type="Resource" path="res://Moves/fairy-wind.tres" id="19_i0s6c"]
+[ext_resource type="Resource" path="res://Moves/lunge.tres" id="20_imo8q"]
+[ext_resource type="Resource" path="res://Moves/skitter-smack.tres" id="21_rnkke"]
+[ext_resource type="Resource" path="res://Moves/tera-blast.tres" id="22_bviri"]
+[ext_resource type="Resource" path="res://Moves/pounce.tres" id="23_eniot"]
+[ext_resource type="Script" path="res://typedef/Pokemon.gd" id="24_a3ai4"]
+[ext_resource type="Resource" path="res://Species/snom.tres" id="25_ufl2g"]
+
+[resource]
+script = ExtResource("24_a3ai4")
+id = 872
+name = "snom"
+base_experience = 37
+height = 3
+weight = 38
+abilities = [ExtResource("1_eoakt"), ExtResource("1_eoakt"), ExtResource("2_ahf2v")]
+forms = ["snom"]
+held_items = []
+moves = [[0, "machine", ExtResource("3_st0il")], [0, "machine", ExtResource("4_kt6sr")], [0, "machine", ExtResource("5_35p3j")], [1, "level-up", ExtResource("6_4hw5r")], [0, "machine", ExtResource("7_wlw4d")], [0, "machine", ExtResource("8_napp3")], [0, "machine", ExtResource("9_tdc47")], [0, "machine", ExtResource("10_agrf2")], [0, "machine", ExtResource("11_fd7bc")], [0, "egg", ExtResource("12_wg070")], [0, "machine", ExtResource("13_mhwnl")], [0, "machine", ExtResource("14_a7fib")], [0, "machine", ExtResource("15_20vug")], [0, "machine", ExtResource("16_4egix")], [0, "machine", ExtResource("17_mibxp")], [0, "machine", ExtResource("18_dyw5p")], [0, "egg", ExtResource("19_i0s6c")], [0, "machine", ExtResource("20_imo8q")], [0, "tutor", ExtResource("21_rnkke")], [0, "machine", ExtResource("22_bviri")], [0, "machine", ExtResource("23_eniot")]]
+species = ExtResource("25_ufl2g")
+sprites = {
+"back_default": "res://sprites/pokemon/back/872.gif",
+"back_shiny": "res://sprites/pokemon/back/shiny/872.gif",
+"front_default": "res://sprites/pokemon/872.gif",
+"front_shiny": "res://sprites/pokemon/shiny/872.gif"
+}
+stats = {
+"attack": 25.0,
+"defense": 35.0,
+"hp": 30.0,
+"special-attack": 45.0,
+"special-defense": 30.0,
+"speed": 20.0
+}
+stats_effort = {
+"attack": 0.0,
+"defense": 0.0,
+"hp": 0.0,
+"special-attack": 1.0,
+"special-defense": 0.0,
+"speed": 0.0
+}
+types = {
+1.0: 5,
+2.0: 11
+}

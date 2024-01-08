@@ -1,0 +1,79 @@
+[gd_resource type="Resource" script_class="Pokemon" load_steps=39 format=3]
+
+[ext_resource type="Resource" path="res://Abilities/commander.tres" id="1_koa4m"]
+[ext_resource type="Resource" path="res://Abilities/storm-drain.tres" id="2_8u7uo"]
+[ext_resource type="Resource" path="res://Moves/take-down.tres" id="3_bv3ly"]
+[ext_resource type="Resource" path="res://Moves/water-gun.tres" id="4_8rt0t"]
+[ext_resource type="Resource" path="res://Moves/hydro-pump.tres" id="5_gsp2o"]
+[ext_resource type="Resource" path="res://Moves/surf.tres" id="6_vf2ac"]
+[ext_resource type="Resource" path="res://Moves/hyper-beam.tres" id="7_d67n1"]
+[ext_resource type="Resource" path="res://Moves/counter.tres" id="8_sia3s"]
+[ext_resource type="Resource" path="res://Moves/harden.tres" id="9_3cxnj"]
+[ext_resource type="Resource" path="res://Moves/splash.tres" id="10_ig1ft"]
+[ext_resource type="Resource" path="res://Moves/rest.tres" id="11_5ja8a"]
+[ext_resource type="Resource" path="res://Moves/substitute.tres" id="12_4uo1h"]
+[ext_resource type="Resource" path="res://Moves/protect.tres" id="13_3dgkx"]
+[ext_resource type="Resource" path="res://Moves/icy-wind.tres" id="14_xgus7"]
+[ext_resource type="Resource" path="res://Moves/outrage.tres" id="15_qhqbq"]
+[ext_resource type="Resource" path="res://Moves/endure.tres" id="16_w40p1"]
+[ext_resource type="Resource" path="res://Moves/sleep-talk.tres" id="17_q4gvf"]
+[ext_resource type="Resource" path="res://Moves/baton-pass.tres" id="18_n5dfn"]
+[ext_resource type="Resource" path="res://Moves/rapid-spin.tres" id="19_bw71j"]
+[ext_resource type="Resource" path="res://Moves/rain-dance.tres" id="20_oufii"]
+[ext_resource type="Resource" path="res://Moves/mirror-coat.tres" id="21_tbpcu"]
+[ext_resource type="Resource" path="res://Moves/memento.tres" id="22_0y5rb"]
+[ext_resource type="Resource" path="res://Moves/facade.tres" id="23_ea0ed"]
+[ext_resource type="Resource" path="res://Moves/taunt.tres" id="24_aodeg"]
+[ext_resource type="Resource" path="res://Moves/helping-hand.tres" id="25_pkc6o"]
+[ext_resource type="Resource" path="res://Moves/muddy-water.tres" id="26_o6xcx"]
+[ext_resource type="Resource" path="res://Moves/dragon-dance.tres" id="27_vhj5y"]
+[ext_resource type="Resource" path="res://Moves/water-pulse.tres" id="28_pftat"]
+[ext_resource type="Resource" path="res://Moves/dragon-pulse.tres" id="29_vkv32"]
+[ext_resource type="Resource" path="res://Moves/giga-impact.tres" id="30_o86fh"]
+[ext_resource type="Resource" path="res://Moves/nasty-plot.tres" id="31_jrrl1"]
+[ext_resource type="Resource" path="res://Moves/draco-meteor.tres" id="32_6ixd4"]
+[ext_resource type="Resource" path="res://Moves/soak.tres" id="33_hd17e"]
+[ext_resource type="Resource" path="res://Moves/lunge.tres" id="34_2yiaw"]
+[ext_resource type="Resource" path="res://Moves/tera-blast.tres" id="35_0rme8"]
+[ext_resource type="Resource" path="res://Moves/chilling-water.tres" id="36_mn22m"]
+[ext_resource type="Script" path="res://typedef/Pokemon.gd" id="37_gv37r"]
+[ext_resource type="Resource" path="res://Species/tatsugiri.tres" id="38_xsf8e"]
+
+[resource]
+script = ExtResource("37_gv37r")
+id = 10258
+name = "tatsugiri-droopy"
+base_experience = 0
+height = 3
+weight = 80
+abilities = [ExtResource("1_koa4m"), ExtResource("1_koa4m"), ExtResource("2_8u7uo")]
+forms = ["tatsugiri-droopy"]
+held_items = []
+moves = [[0, "machine", ExtResource("3_bv3ly")], [1, "level-up", ExtResource("4_8rt0t")], [0, "machine", ExtResource("5_gsp2o")], [0, "machine", ExtResource("6_vf2ac")], [0, "machine", ExtResource("7_d67n1")], [0, "egg", ExtResource("8_sia3s")], [6, "level-up", ExtResource("9_3cxnj")], [1, "level-up", ExtResource("10_ig1ft")], [0, "machine", ExtResource("11_5ja8a")], [0, "machine", ExtResource("12_4uo1h")], [0, "machine", ExtResource("13_3dgkx")], [0, "machine", ExtResource("14_xgus7")], [0, "machine", ExtResource("15_qhqbq")], [0, "machine", ExtResource("16_w40p1")], [0, "machine", ExtResource("17_q4gvf")], [0, "machine", ExtResource("18_n5dfn")], [0, "egg", ExtResource("19_bw71j")], [0, "machine", ExtResource("20_oufii")], [47, "level-up", ExtResource("21_tbpcu")], [34, "level-up", ExtResource("22_0y5rb")], [0, "machine", ExtResource("23_ea0ed")], [0, "machine", ExtResource("24_aodeg")], [0, "machine", ExtResource("25_pkc6o")], [39, "level-up", ExtResource("26_o6xcx")], [0, "machine", ExtResource("27_vhj5y")], [0, "machine", ExtResource("28_pftat")], [0, "machine", ExtResource("29_vkv32")], [0, "machine", ExtResource("30_o86fh")], [0, "machine", ExtResource("31_jrrl1")], [0, "machine", ExtResource("32_6ixd4")], [23, "level-up", ExtResource("33_hd17e")], [0, "machine", ExtResource("34_2yiaw")], [0, "machine", ExtResource("35_0rme8")], [0, "machine", ExtResource("36_mn22m")]]
+species = ExtResource("38_xsf8e")
+sprites = {
+"back_default": "res://sprites/pokemon/back/10258.gif",
+"back_shiny": "res://sprites/pokemon/back/shiny/10258.gif",
+"front_default": "res://sprites/pokemon/10258.gif",
+"front_shiny": "res://sprites/pokemon/shiny/10258.gif"
+}
+stats = {
+"attack": 50.0,
+"defense": 60.0,
+"hp": 68.0,
+"special-attack": 120.0,
+"special-defense": 95.0,
+"speed": 82.0
+}
+stats_effort = {
+"attack": 0.0,
+"defense": 0.0,
+"hp": 0.0,
+"special-attack": 2.0,
+"special-defense": 0.0,
+"speed": 0.0
+}
+types = {
+1.0: 14,
+2.0: 2
+}

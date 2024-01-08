@@ -1,0 +1,44 @@
+[gd_resource type="Resource" script_class="Pokemon" load_steps=4 format=3]
+
+[ext_resource type="Resource" path="res://Abilities/protosynthesis.tres" id="1_bg83x"]
+[ext_resource type="Script" path="res://typedef/Pokemon.gd" id="2_vn7hr"]
+[ext_resource type="Resource" path="res://Species/gouging-fire.tres" id="3_48jcp"]
+
+[resource]
+script = ExtResource("2_vn7hr")
+id = 1020
+name = "gouging-fire"
+base_experience = 0
+height = 35
+weight = 5900
+abilities = [ExtResource("1_bg83x"), ExtResource("1_bg83x"), null]
+forms = ["gouging-fire"]
+held_items = []
+moves = []
+species = ExtResource("3_48jcp")
+sprites = {
+"back_default": "res://sprites/pokemon/back/1020.gif",
+"back_shiny": "res://sprites/pokemon/back/shiny/1020.gif",
+"front_default": "res://sprites/pokemon/1020.gif",
+"front_shiny": "res://sprites/pokemon/shiny/1020.gif"
+}
+stats = {
+"attack": 115.0,
+"defense": 121.0,
+"hp": 105.0,
+"special-attack": 65.0,
+"special-defense": 93.0,
+"speed": 91.0
+}
+stats_effort = {
+"attack": 0.0,
+"defense": 3.0,
+"hp": 0.0,
+"special-attack": 0.0,
+"special-defense": 0.0,
+"speed": 0.0
+}
+types = {
+1.0: 1,
+2.0: 14
+}

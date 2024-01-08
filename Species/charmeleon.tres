@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="Species" load_steps=3 format=3]
+
+[ext_resource type="Resource" path="res://GrowthRates/medium-slow.tres" id="1_lwxp0"]
+[ext_resource type="Script" path="res://typedef/Species.gd" id="2_l5h17"]
+
+[resource]
+script = ExtResource("2_l5h17")
+id = 5
+name = "charmeleon"
+order = 5
+genus = "Flame Pokémon"
+flavor = "In the rocky mountains where
+Charmeleon live, their fiery
+tails shine at night like stars."
+gender_rate = 1
+capture_rate = 45
+base_happiness = 50
+is_baby = false
+is_legendary = false
+is_mythical = false
+hatch_counter = 20
+has_gender_differences = false
+forms_switchable = false
+growth_rate = ExtResource("1_lwxp0")
+local_dex = 0
+national_dex = 5
+egg_groups = ["monster", "dragon"]
+evolution_chain = 2
+habitat = "mountain"

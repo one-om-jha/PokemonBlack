@@ -1,0 +1,46 @@
+[gd_resource type="Resource" script_class="Pokemon" load_steps=6 format=3]
+
+[ext_resource type="Resource" path="res://Abilities/punk-rock.tres" id="1_28ce4"]
+[ext_resource type="Resource" path="res://Abilities/minus.tres" id="2_1ei4f"]
+[ext_resource type="Resource" path="res://Abilities/technician.tres" id="3_sg47p"]
+[ext_resource type="Script" path="res://typedef/Pokemon.gd" id="4_v00t8"]
+[ext_resource type="Resource" path="res://Species/toxtricity.tres" id="5_7dqpk"]
+
+[resource]
+script = ExtResource("4_v00t8")
+id = 10228
+name = "toxtricity-low-key-gmax"
+base_experience = 176
+height = 240
+weight = 10000
+abilities = [ExtResource("1_28ce4"), ExtResource("2_1ei4f"), ExtResource("3_sg47p")]
+forms = ["toxtricity-low-key-gmax"]
+held_items = []
+moves = []
+species = ExtResource("5_7dqpk")
+sprites = {
+"back_default": "res://sprites/pokemon/back/10228.gif",
+"back_shiny": "res://sprites/pokemon/back/shiny/10228.gif",
+"front_default": "res://sprites/pokemon/10228.gif",
+"front_shiny": "res://sprites/pokemon/shiny/10228.gif"
+}
+stats = {
+"attack": 98.0,
+"defense": 70.0,
+"hp": 75.0,
+"special-attack": 114.0,
+"special-defense": 70.0,
+"speed": 75.0
+}
+stats_effort = {
+"attack": 0.0,
+"defense": 0.0,
+"hp": 0.0,
+"special-attack": 2.0,
+"special-defense": 0.0,
+"speed": 0.0
+}
+types = {
+1.0: 3,
+2.0: 7
+}

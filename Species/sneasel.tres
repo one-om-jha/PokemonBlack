@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="Species" load_steps=3 format=3]
+
+[ext_resource type="Resource" path="res://GrowthRates/medium-slow.tres" id="1_eos52"]
+[ext_resource type="Script" path="res://typedef/Species.gd" id="2_tu24g"]
+
+[resource]
+script = ExtResource("2_tu24g")
+id = 215
+name = "sneasel"
+order = 245
+genus = "Sharp Claw Pokémon"
+flavor = "A smart and sneaky Pokémon. A pair
+may work together to steal eggs by
+having one lure the parents away."
+gender_rate = 4
+capture_rate = 60
+base_happiness = 35
+is_baby = false
+is_legendary = false
+is_mythical = false
+hatch_counter = 20
+has_gender_differences = true
+forms_switchable = false
+growth_rate = ExtResource("1_eos52")
+local_dex = 0
+national_dex = 215
+egg_groups = ["ground"]
+evolution_chain = 109
+habitat = "forest"

@@ -1,0 +1,200 @@
+[gd_scene load_steps=14 format=3 uid="uid://b1d6m57nirgwx"]
+
+[ext_resource type="Script" path="res://scenes/ui/dialogue_manager.gd" id="1_oc61l"]
+[ext_resource type="Texture2D" uid="uid://cctjpbphnp73m" path="res://textures/menu/DialogueFloating.png" id="2_35awy"]
+[ext_resource type="Theme" uid="uid://bopkg17damgfh" path="res://ui/base_theme.tres" id="2_qnftt"]
+[ext_resource type="FontFile" uid="uid://voh2awxrc13f" path="res://ui/fonts/NunitoSans_10pt-BlackItalic.ttf" id="3_e5cau"]
+[ext_resource type="FontFile" uid="uid://cvbi044pyxaga" path="res://ui/fonts/NunitoSans_10pt-Regular.ttf" id="4_tosdl"]
+[ext_resource type="Texture2D" uid="uid://crp2thd1eyiye" path="res://textures/menu/DialogueBottom.png" id="5_1a8u3"]
+[ext_resource type="Texture2D" uid="uid://c2qpgqqa4kvlc" path="res://textures/menu/DialogueBox.png" id="6_n2nhf"]
+[ext_resource type="FontFile" uid="uid://dqx0wj7cshp1t" path="res://ui/fonts/NunitoSans_10pt-Italic.ttf" id="8_us0kn"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_6lr6x"]
+font = ExtResource("3_e5cau")
+font_size = 24
+
+[sub_resource type="LabelSettings" id="LabelSettings_v4nmb"]
+font = ExtResource("3_e5cau")
+font_size = 24
+font_color = Color(0, 0, 0, 0.701961)
+
+[sub_resource type="LabelSettings" id="LabelSettings_vc5q3"]
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tuc5h"]
+content_margin_left = 24.0
+bg_color = Color(0, 0, 0, 0.3)
+skew = Vector2(2.08165e-12, 2.08165e-12)
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 0.2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v2qwa"]
+content_margin_left = 24.0
+bg_color = Color(0, 0, 0, 0.6)
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 0.5)
+
+[node name="DialogueManager" type="CanvasLayer"]
+script = ExtResource("1_oc61l")
+
+[node name="Floating" type="TextureRect" parent="."]
+visible = false
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -448.0
+offset_top = -325.0
+offset_right = 448.0
+offset_bottom = -44.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("2_qnftt")
+texture = ExtResource("2_35awy")
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Speaker" type="Label" parent="Floating"]
+layout_mode = 0
+offset_left = 168.0
+offset_top = 66.0
+offset_right = 286.0
+offset_bottom = 100.0
+text = "Speaker"
+label_settings = SubResource("LabelSettings_6lr6x")
+uppercase = true
+
+[node name="Text" type="RichTextLabel" parent="Floating"]
+layout_mode = 0
+offset_left = 168.0
+offset_top = 112.0
+offset_right = 728.0
+offset_bottom = 212.0
+theme_override_fonts/normal_font = ExtResource("4_tosdl")
+bbcode_enabled = true
+text = "Welcome to the world of Pokémon!"
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="Bottom" type="TextureRect" parent="."]
+visible = false
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -309.0
+offset_top = -293.0
+offset_right = 309.0
+offset_bottom = -112.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("2_qnftt")
+texture = ExtResource("5_1a8u3")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Speaker" type="Label" parent="Bottom"]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 32.0
+offset_right = 156.0
+offset_bottom = 66.0
+text = "Speaker"
+label_settings = SubResource("LabelSettings_v4nmb")
+uppercase = true
+
+[node name="Text" type="RichTextLabel" parent="Bottom"]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 68.0
+offset_right = 580.0
+offset_bottom = 168.0
+theme_override_fonts/normal_font = ExtResource("4_tosdl")
+bbcode_enabled = true
+text = "Hi!"
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="Box" type="TextureRect" parent="."]
+visible = false
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -960.0
+offset_top = -1080.0
+offset_right = -342.0
+offset_bottom = -838.0
+grow_horizontal = 2
+grow_vertical = 0
+pivot_offset = Vector2(309, 242)
+theme = ExtResource("2_qnftt")
+texture = ExtResource("6_n2nhf")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Speaker" type="Label" parent="Box"]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 32.0
+offset_right = 156.0
+offset_bottom = 66.0
+text = "Speaker"
+label_settings = SubResource("LabelSettings_v4nmb")
+uppercase = true
+
+[node name="Text" type="RichTextLabel" parent="Box"]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 68.0
+offset_right = 580.0
+offset_bottom = 168.0
+theme_override_fonts/normal_font = ExtResource("4_tosdl")
+bbcode_enabled = true
+text = "Hi!"
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="Label" type="Label" parent="."]
+visible = false
+offset_right = 40.0
+offset_bottom = 23.0
+label_settings = SubResource("LabelSettings_vc5q3")
+
+[node name="Choice" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1177.77
+offset_top = 650.0
+offset_right = 1393.77
+offset_bottom = 735.0
+
+[node name="Choice One" type="Button" parent="Choice"]
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 31.0
+theme_override_fonts/font = ExtResource("8_us0kn")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_tuc5h")
+theme_override_styles/focus = SubResource("StyleBoxFlat_v2qwa")
+text = "Yes"
+alignment = 0
+
+[node name="Choice Two" type="Button" parent="Choice"]
+layout_mode = 0
+offset_top = 43.0
+offset_right = 200.0
+offset_bottom = 79.0
+theme_override_fonts/font = ExtResource("8_us0kn")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_tuc5h")
+theme_override_styles/focus = SubResource("StyleBoxFlat_v2qwa")
+text = "No"
+alignment = 0
+
+[connection signal="pressed" from="Choice/Choice One" to="." method="_on_choice_one_pressed"]
+[connection signal="pressed" from="Choice/Choice Two" to="." method="_on_choice_two_pressed"]

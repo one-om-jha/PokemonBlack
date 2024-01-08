@@ -1,0 +1,69 @@
+[gd_resource type="Resource" script_class="EvolutionChain" load_steps=9 format=3]
+
+[ext_resource type="Script" path="res://typedef/ChainLink.gd" id="1_74llp"]
+[ext_resource type="Resource" path="res://Species/infernape.tres" id="2_3wx1s"]
+[ext_resource type="Resource" path="res://Species/monferno.tres" id="3_la3cn"]
+[ext_resource type="Resource" path="res://Species/chimchar.tres" id="4_8rheb"]
+[ext_resource type="Script" path="res://typedef/EvolutionChain.gd" id="5_njbtb"]
+
+[sub_resource type="Resource" id="Resource_dkh4q"]
+script = ExtResource("1_74llp")
+is_baby = false
+species = ExtResource("2_3wx1s")
+evolves_to = []
+trigger = ""
+gender = 0
+known_move_type = 0
+location = ""
+min_level = 0
+min_happiness = 0
+min_beauty = 0
+min_affection = 0
+needs_overworld_rain = false
+party_type = 0
+relative_physical_stats = 0
+time_of_day = ""
+turn_upside_down = false
+
+[sub_resource type="Resource" id="Resource_6331j"]
+script = ExtResource("1_74llp")
+is_baby = false
+species = ExtResource("3_la3cn")
+evolves_to = [SubResource("Resource_dkh4q")]
+trigger = ""
+gender = 0
+known_move_type = 0
+location = ""
+min_level = 0
+min_happiness = 0
+min_beauty = 0
+min_affection = 0
+needs_overworld_rain = false
+party_type = 0
+relative_physical_stats = 0
+time_of_day = ""
+turn_upside_down = false
+
+[sub_resource type="Resource" id="Resource_anu3t"]
+script = ExtResource("1_74llp")
+is_baby = false
+species = ExtResource("4_8rheb")
+evolves_to = [SubResource("Resource_6331j")]
+trigger = ""
+gender = 0
+known_move_type = 0
+location = ""
+min_level = 0
+min_happiness = 0
+min_beauty = 0
+min_affection = 0
+needs_overworld_rain = false
+party_type = 0
+relative_physical_stats = 0
+time_of_day = ""
+turn_upside_down = false
+
+[resource]
+script = ExtResource("5_njbtb")
+id = 204
+chain = SubResource("Resource_anu3t")

@@ -1,0 +1,52 @@
+[gd_resource type="Resource" script_class="Pokemon" load_steps=13 format=3]
+
+[ext_resource type="Resource" path="res://Abilities/shadow-tag.tres" id="1_t1t3n"]
+[ext_resource type="Resource" path="res://Abilities/telepathy.tres" id="2_rw33g"]
+[ext_resource type="Resource" path="res://Moves/counter.tres" id="3_jwsm5"]
+[ext_resource type="Resource" path="res://Moves/amnesia.tres" id="4_0y48s"]
+[ext_resource type="Resource" path="res://Moves/splash.tres" id="5_djb3x"]
+[ext_resource type="Resource" path="res://Moves/destiny-bond.tres" id="6_kqqvd"]
+[ext_resource type="Resource" path="res://Moves/charm.tres" id="7_rphki"]
+[ext_resource type="Resource" path="res://Moves/safeguard.tres" id="8_1rmrt"]
+[ext_resource type="Resource" path="res://Moves/encore.tres" id="9_obf1s"]
+[ext_resource type="Resource" path="res://Moves/mirror-coat.tres" id="10_y3v3r"]
+[ext_resource type="Script" path="res://typedef/Pokemon.gd" id="11_t2rj7"]
+[ext_resource type="Resource" path="res://Species/wobbuffet.tres" id="12_yg0xq"]
+
+[resource]
+script = ExtResource("11_t2rj7")
+id = 202
+name = "wobbuffet"
+base_experience = 142
+height = 13
+weight = 285
+abilities = [ExtResource("1_t1t3n"), ExtResource("1_t1t3n"), ExtResource("2_rw33g")]
+forms = ["wobbuffet"]
+held_items = []
+moves = [[1, "level-up", ExtResource("3_jwsm5")], [0, "machine", ExtResource("4_0y48s")], [1, "level-up", ExtResource("5_djb3x")], [1, "level-up", ExtResource("6_kqqvd")], [0, "machine", ExtResource("7_rphki")], [0, "machine", ExtResource("8_1rmrt")], [0, "machine", ExtResource("9_obf1s")], [1, "level-up", ExtResource("10_y3v3r")]]
+species = ExtResource("12_yg0xq")
+sprites = {
+"back_default": "res://sprites/pokemon/versions/generation-v/black-white/animated/back/202.gif",
+"back_shiny": "res://sprites/pokemon/versions/generation-v/black-white/animated/back/shiny/202.gif",
+"front_default": "res://sprites/pokemon/versions/generation-v/black-white/animated/202.gif",
+"front_shiny": "res://sprites/pokemon/versions/generation-v/black-white/animated/shiny/202.gif"
+}
+stats = {
+"attack": 33.0,
+"defense": 58.0,
+"hp": 190.0,
+"special-attack": 33.0,
+"special-defense": 58.0,
+"speed": 33.0
+}
+stats_effort = {
+"attack": 0.0,
+"defense": 0.0,
+"hp": 2.0,
+"special-attack": 0.0,
+"special-defense": 0.0,
+"speed": 0.0
+}
+types = {
+1.0: 10
+}

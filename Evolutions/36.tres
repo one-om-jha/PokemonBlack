@@ -1,0 +1,49 @@
+[gd_resource type="Resource" script_class="EvolutionChain" load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://typedef/ChainLink.gd" id="1_w3rh1"]
+[ext_resource type="Resource" path="res://Species/dodrio.tres" id="2_mfufx"]
+[ext_resource type="Resource" path="res://Species/doduo.tres" id="3_ck4cq"]
+[ext_resource type="Script" path="res://typedef/EvolutionChain.gd" id="4_pvmmp"]
+
+[sub_resource type="Resource" id="Resource_xtjhq"]
+script = ExtResource("1_w3rh1")
+is_baby = false
+species = ExtResource("2_mfufx")
+evolves_to = []
+trigger = ""
+gender = 0
+known_move_type = 0
+location = ""
+min_level = 0
+min_happiness = 0
+min_beauty = 0
+min_affection = 0
+needs_overworld_rain = false
+party_type = 0
+relative_physical_stats = 0
+time_of_day = ""
+turn_upside_down = false
+
+[sub_resource type="Resource" id="Resource_pirci"]
+script = ExtResource("1_w3rh1")
+is_baby = false
+species = ExtResource("3_ck4cq")
+evolves_to = [SubResource("Resource_xtjhq")]
+trigger = ""
+gender = 0
+known_move_type = 0
+location = ""
+min_level = 0
+min_happiness = 0
+min_beauty = 0
+min_affection = 0
+needs_overworld_rain = false
+party_type = 0
+relative_physical_stats = 0
+time_of_day = ""
+turn_upside_down = false
+
+[resource]
+script = ExtResource("4_pvmmp")
+id = 36
+chain = SubResource("Resource_pirci")

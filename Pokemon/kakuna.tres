@@ -1,0 +1,49 @@
+[gd_resource type="Resource" script_class="Pokemon" load_steps=9 format=3]
+
+[ext_resource type="Resource" path="res://Abilities/shed-skin.tres" id="1_53ggy"]
+[ext_resource type="Resource" path="res://Moves/string-shot.tres" id="2_ex4k6"]
+[ext_resource type="Resource" path="res://Moves/harden.tres" id="3_wcxej"]
+[ext_resource type="Resource" path="res://Moves/iron-defense.tres" id="4_a2136"]
+[ext_resource type="Resource" path="res://Moves/bug-bite.tres" id="5_ldo71"]
+[ext_resource type="Resource" path="res://Moves/electroweb.tres" id="6_upkbn"]
+[ext_resource type="Script" path="res://typedef/Pokemon.gd" id="7_gsr56"]
+[ext_resource type="Resource" path="res://Species/kakuna.tres" id="8_k8cb0"]
+
+[resource]
+script = ExtResource("7_gsr56")
+id = 14
+name = "kakuna"
+base_experience = 72
+height = 6
+weight = 100
+abilities = [ExtResource("1_53ggy"), ExtResource("1_53ggy"), null]
+forms = ["kakuna"]
+held_items = []
+moves = [[0, "", ExtResource("2_ex4k6")], [1, "level-up", ExtResource("3_wcxej")], [0, "", ExtResource("4_a2136")], [0, "", ExtResource("5_ldo71")], [0, "", ExtResource("6_upkbn")]]
+species = ExtResource("8_k8cb0")
+sprites = {
+"back_default": "res://sprites/pokemon/versions/generation-v/black-white/animated/back/14.gif",
+"back_shiny": "res://sprites/pokemon/versions/generation-v/black-white/animated/back/shiny/14.gif",
+"front_default": "res://sprites/pokemon/versions/generation-v/black-white/animated/14.gif",
+"front_shiny": "res://sprites/pokemon/versions/generation-v/black-white/animated/shiny/14.gif"
+}
+stats = {
+"attack": 25.0,
+"defense": 50.0,
+"hp": 45.0,
+"special-attack": 25.0,
+"special-defense": 25.0,
+"speed": 35.0
+}
+stats_effort = {
+"attack": 0.0,
+"defense": 2.0,
+"hp": 0.0,
+"special-attack": 0.0,
+"special-defense": 0.0,
+"speed": 0.0
+}
+types = {
+1.0: 11,
+2.0: 7
+}

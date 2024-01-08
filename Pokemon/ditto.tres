@@ -1,0 +1,47 @@
+[gd_resource type="Resource" script_class="Pokemon" load_steps=8 format=3]
+
+[ext_resource type="Resource" path="res://Abilities/limber.tres" id="1_j5k7t"]
+[ext_resource type="Resource" path="res://Abilities/imposter.tres" id="2_qc5eg"]
+[ext_resource type="Resource" path="res://Items/metal-powder.tres" id="3_ifav0"]
+[ext_resource type="Resource" path="res://Items/quick-powder.tres" id="4_ge77d"]
+[ext_resource type="Resource" path="res://Moves/transform.tres" id="5_1l3or"]
+[ext_resource type="Script" path="res://typedef/Pokemon.gd" id="6_0vcfu"]
+[ext_resource type="Resource" path="res://Species/ditto.tres" id="7_s4y7o"]
+
+[resource]
+script = ExtResource("6_0vcfu")
+id = 132
+name = "ditto"
+base_experience = 101
+height = 3
+weight = 40
+abilities = [ExtResource("1_j5k7t"), ExtResource("1_j5k7t"), ExtResource("2_qc5eg")]
+forms = ["ditto"]
+held_items = [[ExtResource("3_ifav0"), 5.0], [ExtResource("4_ge77d"), 50.0]]
+moves = [[1, "level-up", ExtResource("5_1l3or")]]
+species = ExtResource("7_s4y7o")
+sprites = {
+"back_default": "res://sprites/pokemon/versions/generation-v/black-white/animated/back/132.gif",
+"back_shiny": "res://sprites/pokemon/versions/generation-v/black-white/animated/back/shiny/132.gif",
+"front_default": "res://sprites/pokemon/versions/generation-v/black-white/animated/132.gif",
+"front_shiny": "res://sprites/pokemon/versions/generation-v/black-white/animated/shiny/132.gif"
+}
+stats = {
+"attack": 48.0,
+"defense": 48.0,
+"hp": 48.0,
+"special-attack": 48.0,
+"special-defense": 48.0,
+"speed": 48.0
+}
+stats_effort = {
+"attack": 0.0,
+"defense": 0.0,
+"hp": 1.0,
+"special-attack": 0.0,
+"special-defense": 0.0,
+"speed": 0.0
+}
+types = {
+1.0: 0
+}

@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="Species" load_steps=3 format=3]
+
+[ext_resource type="Resource" path="res://GrowthRates/medium.tres" id="1_akf3l"]
+[ext_resource type="Script" path="res://typedef/Species.gd" id="2_u1oeg"]
+
+[resource]
+script = ExtResource("2_u1oeg")
+id = 230
+name = "kingdra"
+order = 134
+genus = "Dragon Pokémon"
+flavor = "It lives in caves on the seafloor
+and creates giant whirlpools
+every time it moves."
+gender_rate = 4
+capture_rate = 45
+base_happiness = 50
+is_baby = false
+is_legendary = false
+is_mythical = false
+hatch_counter = 20
+has_gender_differences = false
+forms_switchable = false
+growth_rate = ExtResource("1_akf3l")
+local_dex = 0
+national_dex = 230
+egg_groups = ["water1", "dragon"]
+evolution_chain = 54
+habitat = "sea"

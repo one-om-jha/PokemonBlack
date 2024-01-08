@@ -1,0 +1,44 @@
+[gd_resource type="Resource" script_class="Pokemon" load_steps=5 format=3]
+
+[ext_resource type="Resource" path="res://Abilities/overgrow.tres" id="1_kt70w"]
+[ext_resource type="Resource" path="res://Abilities/grassy-surge.tres" id="2_klac5"]
+[ext_resource type="Script" path="res://typedef/Pokemon.gd" id="3_nmosa"]
+[ext_resource type="Resource" path="res://Species/rillaboom.tres" id="4_5bagx"]
+
+[resource]
+script = ExtResource("3_nmosa")
+id = 10209
+name = "rillaboom-gmax"
+base_experience = 265
+height = 280
+weight = 10000
+abilities = [ExtResource("1_kt70w"), ExtResource("1_kt70w"), ExtResource("2_klac5")]
+forms = ["rillaboom-gmax"]
+held_items = []
+moves = []
+species = ExtResource("4_5bagx")
+sprites = {
+"back_default": "res://sprites/pokemon/back/10209.gif",
+"back_shiny": "res://sprites/pokemon/back/shiny/10209.gif",
+"front_default": "res://sprites/pokemon/10209.gif",
+"front_shiny": "res://sprites/pokemon/shiny/10209.gif"
+}
+stats = {
+"attack": 125.0,
+"defense": 90.0,
+"hp": 100.0,
+"special-attack": 60.0,
+"special-defense": 70.0,
+"speed": 85.0
+}
+stats_effort = {
+"attack": 3.0,
+"defense": 0.0,
+"hp": 0.0,
+"special-attack": 0.0,
+"special-defense": 0.0,
+"speed": 0.0
+}
+types = {
+1.0: 4
+}

@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="Move" load_steps=3 format=3]
+
+[ext_resource type="Resource" path="res://Ailments/poison.tres" id="1_kkchw"]
+[ext_resource type="Script" path="res://typedef/Move.gd" id="2_jl0hs"]
+
+[resource]
+script = ExtResource("2_jl0hs")
+id = 188
+name = "sludge-bomb"
+accuracy = 100
+effect_chance = 30
+pp = 10
+priority = 0
+power = 90
+damage_class = "special"
+effect = "Inflicts regular damage.  Has a $effect_chance% chance to poison the target."
+stat_changes = []
+target = "selected-pokemon"
+type = 7
+ailment = ExtResource("1_kkchw")
+category = "damage+ailment"
+min_hits = 0
+max_hits = 0
+min_turns = 0
+max_turns = 0
+drain = 0
+healing = 0
+crit_rate = 0
+ailment_chance = 30
+flinch_chance = 0
+stat_chance = 0

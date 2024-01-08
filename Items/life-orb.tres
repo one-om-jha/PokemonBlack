@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://typedef/Item.gd" id="1_rv5xv"]
+
+[resource]
+script = ExtResource("1_rv5xv")
+id = 247
+name = "life-orb"
+cost = 4000
+fling_power = 30
+fling_effect = ""
+effect = "Held: Damage from the holder's moves is increased by 30%.  On each turn the holder uses a damage-inflicting move, it takes 10% its max HP in damage."
+flavor = "An item to be held by a Pokémon. It boosts the
+power of moves but at the cost of some HP on
+each hit."
+sprite = "res://sprites/items/life-orb.png"
+attributes = ["holdable", "holdable-active"]
+category = "held-items"

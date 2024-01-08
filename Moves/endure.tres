@@ -1,0 +1,35 @@
+[gd_resource type="Resource" script_class="Move" load_steps=3 format=3]
+
+[ext_resource type="Resource" path="res://Ailments/none.tres" id="1_hdr8q"]
+[ext_resource type="Script" path="res://typedef/Move.gd" id="2_yptb5"]
+
+[resource]
+script = ExtResource("2_yptb5")
+id = 203
+name = "endure"
+accuracy = 0
+effect_chance = 0
+pp = 10
+priority = 4
+power = 0
+damage_class = "status"
+effect = "The user's HP cannot be lowered below 1 by any means for the remainder of this turn.
+
+If the user successfully used detect, endure, protect, quick guard, or wide guard on the last turn, this move has a 50% chance to fail.
+
+This move cannot be selected by assist or metronome."
+stat_changes = []
+target = "user"
+type = 0
+ailment = ExtResource("1_hdr8q")
+category = "unique"
+min_hits = 0
+max_hits = 0
+min_turns = 0
+max_turns = 0
+drain = 0
+healing = 0
+crit_rate = 0
+ailment_chance = 0
+flinch_chance = 0
+stat_chance = 0

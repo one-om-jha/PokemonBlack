@@ -1,0 +1,129 @@
+[gd_resource type="Resource" script_class="Pokemon" load_steps=89 format=3]
+
+[ext_resource type="Resource" path="res://Abilities/natural-cure.tres" id="1_egwgf"]
+[ext_resource type="Resource" path="res://Abilities/frisk.tres" id="2_hl6uq"]
+[ext_resource type="Resource" path="res://Abilities/harvest.tres" id="3_tmfro"]
+[ext_resource type="Resource" path="res://Moves/cut.tres" id="4_ceids"]
+[ext_resource type="Resource" path="res://Moves/tackle.tres" id="5_pafat"]
+[ext_resource type="Resource" path="res://Moves/disable.tres" id="6_vj80g"]
+[ext_resource type="Resource" path="res://Moves/strength.tres" id="7_qugwo"]
+[ext_resource type="Resource" path="res://Moves/leech-seed.tres" id="8_lxmcl"]
+[ext_resource type="Resource" path="res://Moves/growth.tres" id="9_mxiww"]
+[ext_resource type="Resource" path="res://Moves/solar-beam.tres" id="10_fx6n8"]
+[ext_resource type="Resource" path="res://Moves/dig.tres" id="11_1by5o"]
+[ext_resource type="Resource" path="res://Moves/toxic.tres" id="12_gja6i"]
+[ext_resource type="Resource" path="res://Moves/psychic.tres" id="13_nxs2j"]
+[ext_resource type="Resource" path="res://Moves/night-shade.tres" id="14_s2wvq"]
+[ext_resource type="Resource" path="res://Moves/double-team.tres" id="15_1cg7c"]
+[ext_resource type="Resource" path="res://Moves/confuse-ray.tres" id="16_h0dmj"]
+[ext_resource type="Resource" path="res://Moves/reflect.tres" id="17_qlbpi"]
+[ext_resource type="Resource" path="res://Moves/dream-eater.tres" id="18_t84fe"]
+[ext_resource type="Resource" path="res://Moves/rest.tres" id="19_8arom"]
+[ext_resource type="Resource" path="res://Moves/rock-slide.tres" id="20_7a2jp"]
+[ext_resource type="Resource" path="res://Moves/substitute.tres" id="21_ixwi1"]
+[ext_resource type="Resource" path="res://Moves/thief.tres" id="22_mllny"]
+[ext_resource type="Resource" path="res://Moves/snore.tres" id="23_4rnh3"]
+[ext_resource type="Resource" path="res://Moves/curse.tres" id="24_njd1s"]
+[ext_resource type="Resource" path="res://Moves/spite.tres" id="25_rw5kr"]
+[ext_resource type="Resource" path="res://Moves/protect.tres" id="26_v5uww"]
+[ext_resource type="Resource" path="res://Moves/feint-attack.tres" id="27_rgpb7"]
+[ext_resource type="Resource" path="res://Moves/destiny-bond.tres" id="28_6he4o"]
+[ext_resource type="Resource" path="res://Moves/giga-drain.tres" id="29_drxlm"]
+[ext_resource type="Resource" path="res://Moves/endure.tres" id="30_c5cf2"]
+[ext_resource type="Resource" path="res://Moves/swagger.tres" id="31_4c7h0"]
+[ext_resource type="Resource" path="res://Moves/attract.tres" id="32_o727a"]
+[ext_resource type="Resource" path="res://Moves/sleep-talk.tres" id="33_vgxbc"]
+[ext_resource type="Resource" path="res://Moves/return.tres" id="34_w2c8o"]
+[ext_resource type="Resource" path="res://Moves/frustration.tres" id="35_0u1pm"]
+[ext_resource type="Resource" path="res://Moves/safeguard.tres" id="36_nfuum"]
+[ext_resource type="Resource" path="res://Moves/pain-split.tres" id="37_jdq3r"]
+[ext_resource type="Resource" path="res://Moves/hidden-power.tres" id="38_1vgle"]
+[ext_resource type="Resource" path="res://Moves/rain-dance.tres" id="39_bmn65"]
+[ext_resource type="Resource" path="res://Moves/sunny-day.tres" id="40_prdvc"]
+[ext_resource type="Resource" path="res://Moves/shadow-ball.tres" id="41_m55ad"]
+[ext_resource type="Resource" path="res://Moves/rock-smash.tres" id="42_ngwm2"]
+[ext_resource type="Resource" path="res://Moves/will-o-wisp.tres" id="43_6je6s"]
+[ext_resource type="Resource" path="res://Moves/facade.tres" id="44_a5wlh"]
+[ext_resource type="Resource" path="res://Moves/nature-power.tres" id="45_r8mug"]
+[ext_resource type="Resource" path="res://Moves/trick.tres" id="46_d31s5"]
+[ext_resource type="Resource" path="res://Moves/role-play.tres" id="47_svdk4"]
+[ext_resource type="Resource" path="res://Moves/ingrain.tres" id="48_guaam"]
+[ext_resource type="Resource" path="res://Moves/magic-coat.tres" id="49_wyyn7"]
+[ext_resource type="Resource" path="res://Moves/skill-swap.tres" id="50_oja4f"]
+[ext_resource type="Resource" path="res://Moves/imprison.tres" id="51_iprtq"]
+[ext_resource type="Resource" path="res://Moves/grudge.tres" id="52_04rhs"]
+[ext_resource type="Resource" path="res://Moves/secret-power.tres" id="53_w5msa"]
+[ext_resource type="Resource" path="res://Moves/astonish.tres" id="54_klpxx"]
+[ext_resource type="Resource" path="res://Moves/magical-leaf.tres" id="55_g7wp6"]
+[ext_resource type="Resource" path="res://Moves/worry-seed.tres" id="56_onerx"]
+[ext_resource type="Resource" path="res://Moves/sucker-punch.tres" id="57_u3ehu"]
+[ext_resource type="Resource" path="res://Moves/poison-jab.tres" id="58_tuag0"]
+[ext_resource type="Resource" path="res://Moves/dark-pulse.tres" id="59_d78gk"]
+[ext_resource type="Resource" path="res://Moves/seed-bomb.tres" id="60_jd0su"]
+[ext_resource type="Resource" path="res://Moves/energy-ball.tres" id="61_cf88m"]
+[ext_resource type="Resource" path="res://Moves/shadow-claw.tres" id="62_wyj1c"]
+[ext_resource type="Resource" path="res://Moves/trick-room.tres" id="63_8cf2i"]
+[ext_resource type="Resource" path="res://Moves/grass-knot.tres" id="64_83xc8"]
+[ext_resource type="Resource" path="res://Moves/wood-hammer.tres" id="65_o07ci"]
+[ext_resource type="Resource" path="res://Moves/telekinesis.tres" id="66_7choc"]
+[ext_resource type="Resource" path="res://Moves/foul-play.tres" id="67_vhepf"]
+[ext_resource type="Resource" path="res://Moves/round.tres" id="68_s1dw0"]
+[ext_resource type="Resource" path="res://Moves/ally-switch.tres" id="69_s7uwq"]
+[ext_resource type="Resource" path="res://Moves/hex.tres" id="70_vxspl"]
+[ext_resource type="Resource" path="res://Moves/bestow.tres" id="71_7rrmg"]
+[ext_resource type="Resource" path="res://Moves/bulldoze.tres" id="72_4enti"]
+[ext_resource type="Resource" path="res://Moves/horn-leech.tres" id="73_x3upr"]
+[ext_resource type="Resource" path="res://Moves/phantom-force.tres" id="74_8ypam"]
+[ext_resource type="Resource" path="res://Moves/forests-curse.tres" id="75_rsrji"]
+[ext_resource type="Resource" path="res://Moves/grassy-terrain.tres" id="76_steby"]
+[ext_resource type="Resource" path="res://Moves/confide.tres" id="77_nra63"]
+[ext_resource type="Resource" path="res://Moves/venom-drench.tres" id="78_a4sn7"]
+[ext_resource type="Resource" path="res://Moves/power-up-punch.tres" id="79_04th3"]
+[ext_resource type="Resource" path="res://Moves/branch-poke.tres" id="80_fjfmn"]
+[ext_resource type="Resource" path="res://Moves/grassy-glide.tres" id="81_8fbav"]
+[ext_resource type="Resource" path="res://Moves/skitter-smack.tres" id="82_lkjcx"]
+[ext_resource type="Resource" path="res://Moves/lash-out.tres" id="83_ld0rx"]
+[ext_resource type="Resource" path="res://Moves/poltergeist.tres" id="84_225xf"]
+[ext_resource type="Resource" path="res://Moves/tera-blast.tres" id="85_2k6lc"]
+[ext_resource type="Resource" path="res://Moves/trailblaze.tres" id="86_xxe8j"]
+[ext_resource type="Script" path="res://typedef/Pokemon.gd" id="87_kjb4q"]
+[ext_resource type="Resource" path="res://Species/phantump.tres" id="88_kfkae"]
+
+[resource]
+script = ExtResource("87_kjb4q")
+id = 708
+name = "phantump"
+base_experience = 62
+height = 4
+weight = 70
+abilities = [ExtResource("1_egwgf"), ExtResource("2_hl6uq"), ExtResource("3_tmfro")]
+forms = ["phantump"]
+held_items = []
+moves = [[0, "", ExtResource("4_ceids")], [1, "level-up", ExtResource("5_pafat")], [0, "egg", ExtResource("6_vj80g")], [0, "", ExtResource("7_qugwo")], [8, "level-up", ExtResource("8_lxmcl")], [24, "level-up", ExtResource("9_mxiww")], [0, "machine", ExtResource("10_fx6n8")], [0, "machine", ExtResource("11_1by5o")], [0, "machine", ExtResource("12_gja6i")], [0, "machine", ExtResource("13_nxs2j")], [0, "machine", ExtResource("14_s2wvq")], [0, "machine", ExtResource("15_1cg7c")], [0, "machine", ExtResource("16_h0dmj")], [0, "machine", ExtResource("17_qlbpi")], [0, "machine", ExtResource("18_t84fe")], [0, "machine", ExtResource("19_8arom")], [0, "machine", ExtResource("20_7a2jp")], [0, "machine", ExtResource("21_ixwi1")], [0, "machine", ExtResource("22_mllny")], [0, "machine", ExtResource("23_4rnh3")], [32, "level-up", ExtResource("24_njd1s")], [0, "machine", ExtResource("25_rw5kr")], [0, "machine", ExtResource("26_v5uww")], [19, "level-up", ExtResource("27_rgpb7")], [48, "level-up", ExtResource("28_6he4o")], [0, "machine", ExtResource("29_drxlm")], [0, "machine", ExtResource("30_c5cf2")], [0, "machine", ExtResource("31_4c7h0")], [0, "machine", ExtResource("32_o727a")], [0, "machine", ExtResource("33_vgxbc")], [0, "machine", ExtResource("34_w2c8o")], [0, "machine", ExtResource("35_0u1pm")], [0, "machine", ExtResource("36_nfuum")], [0, "", ExtResource("37_jdq3r")], [0, "machine", ExtResource("38_1vgle")], [0, "machine", ExtResource("39_bmn65")], [0, "machine", ExtResource("40_prdvc")], [0, "machine", ExtResource("41_m55ad")], [0, "", ExtResource("42_ngwm2")], [0, "machine", ExtResource("43_6je6s")], [0, "machine", ExtResource("44_a5wlh")], [0, "machine", ExtResource("45_r8mug")], [0, "machine", ExtResource("46_d31s5")], [0, "", ExtResource("47_svdk4")], [40, "level-up", ExtResource("48_guaam")], [0, "", ExtResource("49_wyyn7")], [0, "machine", ExtResource("50_oja4f")], [0, "machine", ExtResource("51_iprtq")], [0, "egg", ExtResource("52_04rhs")], [0, "", ExtResource("53_w5msa")], [1, "level-up", ExtResource("54_klpxx")], [0, "machine", ExtResource("55_g7wp6")], [0, "", ExtResource("56_onerx")], [0, "egg", ExtResource("57_u3ehu")], [0, "machine", ExtResource("58_tuag0")], [0, "machine", ExtResource("59_d78gk")], [0, "machine", ExtResource("60_jd0su")], [0, "machine", ExtResource("61_cf88m")], [0, "machine", ExtResource("62_wyj1c")], [0, "machine", ExtResource("63_8cf2i")], [0, "machine", ExtResource("64_83xc8")], [44, "level-up", ExtResource("65_o07ci")], [0, "", ExtResource("66_7choc")], [0, "machine", ExtResource("67_vhepf")], [0, "machine", ExtResource("68_s1dw0")], [0, "egg", ExtResource("69_s7uwq")], [0, "machine", ExtResource("70_vxspl")], [0, "egg", ExtResource("71_7rrmg")], [0, "machine", ExtResource("72_4enti")], [28, "level-up", ExtResource("73_x3upr")], [0, "machine", ExtResource("74_8ypam")], [52, "level-up", ExtResource("75_rsrji")], [0, "machine", ExtResource("76_steby")], [0, "machine", ExtResource("77_nra63")], [0, "machine", ExtResource("78_a4sn7")], [0, "", ExtResource("79_04th3")], [4, "level-up", ExtResource("80_fjfmn")], [0, "machine", ExtResource("81_8fbav")], [0, "tutor", ExtResource("82_lkjcx")], [0, "machine", ExtResource("83_ld0rx")], [0, "machine", ExtResource("84_225xf")], [0, "machine", ExtResource("85_2k6lc")], [0, "machine", ExtResource("86_xxe8j")]]
+species = ExtResource("88_kfkae")
+sprites = {
+"back_default": "res://sprites/pokemon/back/708.gif",
+"back_shiny": "res://sprites/pokemon/back/shiny/708.gif",
+"front_default": "res://sprites/pokemon/708.gif",
+"front_shiny": "res://sprites/pokemon/shiny/708.gif"
+}
+stats = {
+"attack": 70.0,
+"defense": 48.0,
+"hp": 43.0,
+"special-attack": 50.0,
+"special-defense": 60.0,
+"speed": 38.0
+}
+stats_effort = {
+"attack": 1.0,
+"defense": 0.0,
+"hp": 0.0,
+"special-attack": 0.0,
+"special-defense": 0.0,
+"speed": 0.0
+}
+types = {
+1.0: 13,
+2.0: 4
+}

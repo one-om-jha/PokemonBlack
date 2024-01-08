@@ -1,0 +1,44 @@
+[gd_resource type="Resource" script_class="Pokemon" load_steps=4 format=3]
+
+[ext_resource type="Resource" path="res://Abilities/protosynthesis.tres" id="1_8qkm0"]
+[ext_resource type="Script" path="res://typedef/Pokemon.gd" id="2_36njk"]
+[ext_resource type="Resource" path="res://Species/raging-bolt.tres" id="3_hvjvq"]
+
+[resource]
+script = ExtResource("2_36njk")
+id = 1021
+name = "raging-bolt"
+base_experience = 0
+height = 52
+weight = 4800
+abilities = [ExtResource("1_8qkm0"), ExtResource("1_8qkm0"), null]
+forms = ["raging-bolt"]
+held_items = []
+moves = []
+species = ExtResource("3_hvjvq")
+sprites = {
+"back_default": "res://sprites/pokemon/back/1021.gif",
+"back_shiny": "res://sprites/pokemon/back/shiny/1021.gif",
+"front_default": "res://sprites/pokemon/1021.gif",
+"front_shiny": "res://sprites/pokemon/shiny/1021.gif"
+}
+stats = {
+"attack": 73.0,
+"defense": 91.0,
+"hp": 125.0,
+"special-attack": 137.0,
+"special-defense": 89.0,
+"speed": 75.0
+}
+stats_effort = {
+"attack": 0.0,
+"defense": 0.0,
+"hp": 0.0,
+"special-attack": 3.0,
+"special-defense": 0.0,
+"speed": 0.0
+}
+types = {
+1.0: 3,
+2.0: 14
+}

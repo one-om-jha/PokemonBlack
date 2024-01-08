@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="Move" load_steps=3 format=3]
+
+[ext_resource type="Resource" path="res://Ailments/none.tres" id="1_ugvac"]
+[ext_resource type="Script" path="res://typedef/Move.gd" id="2_2tnbd"]
+
+[resource]
+script = ExtResource("2_2tnbd")
+id = 496
+name = "round"
+accuracy = 100
+effect_chance = 0
+pp = 15
+priority = 0
+power = 60
+damage_class = "special"
+effect = "Inflicts regular damage.  If round has already been used this turn, this move's power is doubled.  After this move is used, any other Pokémon using it this turn will immediately do so (in the order they would otherwise act), regardless of Speed or priority.  Pokémon using other moves will then continue to act as usual."
+stat_changes = []
+target = "selected-pokemon"
+type = 0
+ailment = ExtResource("1_ugvac")
+category = "damage"
+min_hits = 0
+max_hits = 0
+min_turns = 0
+max_turns = 0
+drain = 0
+healing = 0
+crit_rate = 0
+ailment_chance = 0
+flinch_chance = 0
+stat_chance = 0

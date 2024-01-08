@@ -1,0 +1,35 @@
+[gd_resource type="Resource" script_class="Move" load_steps=3 format=3]
+
+[ext_resource type="Resource" path="res://Ailments/none.tres" id="1_fhsir"]
+[ext_resource type="Script" path="res://typedef/Move.gd" id="2_pf7wg"]
+
+[resource]
+script = ExtResource("2_pf7wg")
+id = 678
+name = "psychic-terrain"
+accuracy = 0
+effect_chance = 0
+pp = 10
+priority = 0
+power = 0
+damage_class = "status"
+effect = "Changes the terrain to Psychic Terrain for 5 turns.  Overrides electric terrain, grassy terrain, and misty terrain.
+
+All Pokémon on the ground are immune to moves with priority greater than 0.  (Moves that target the field rather than individual Pokémon, such as spikes, are not affected.)  Additionally, when a Pokémon on the ground uses a psychic-type move, that move's power is increased to 1.5×.
+
+If a Pokémon is holding a Terrain Extender when creating Psychic Terrain (by any means), the effect lasts for 8 turns instead of 5."
+stat_changes = []
+target = "entire-field"
+type = 10
+ailment = ExtResource("1_fhsir")
+category = "whole-field-effect"
+min_hits = 0
+max_hits = 0
+min_turns = 0
+max_turns = 0
+drain = 0
+healing = 0
+crit_rate = 0
+ailment_chance = 0
+flinch_chance = 0
+stat_chance = 0

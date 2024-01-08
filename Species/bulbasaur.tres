@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="Species" load_steps=3 format=3]
+
+[ext_resource type="Resource" path="res://GrowthRates/medium-slow.tres" id="1_ce22h"]
+[ext_resource type="Script" path="res://typedef/Species.gd" id="2_vvx6u"]
+
+[resource]
+script = ExtResource("2_vvx6u")
+id = 1
+name = "bulbasaur"
+order = 1
+genus = "Seed Pokémon"
+flavor = "For some time after its birth, it
+grows by gaining nourishment from
+the seed on its back."
+gender_rate = 1
+capture_rate = 45
+base_happiness = 50
+is_baby = false
+is_legendary = false
+is_mythical = false
+hatch_counter = 20
+has_gender_differences = false
+forms_switchable = false
+growth_rate = ExtResource("1_ce22h")
+local_dex = 0
+national_dex = 1
+egg_groups = ["monster", "plant"]
+evolution_chain = 1
+habitat = "grassland"

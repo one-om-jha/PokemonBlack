@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="Species" load_steps=3 format=3]
+
+[ext_resource type="Resource" path="res://GrowthRates/slow.tres" id="1_6jxub"]
+[ext_resource type="Script" path="res://typedef/Species.gd" id="2_6kv5n"]
+
+[resource]
+script = ExtResource("2_6kv5n")
+id = 226
+name = "mantine"
+order = 259
+genus = "Kite Pokémon"
+flavor = "While elegantly swimming in the sea,
+it ignores Remoraid that cling to
+its fins seeking food scraps."
+gender_rate = 4
+capture_rate = 25
+base_happiness = 50
+is_baby = false
+is_legendary = false
+is_mythical = false
+hatch_counter = 25
+has_gender_differences = false
+forms_switchable = false
+growth_rate = ExtResource("1_6jxub")
+local_dex = 0
+national_dex = 226
+egg_groups = ["water1"]
+evolution_chain = 116
+habitat = "sea"

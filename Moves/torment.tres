@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="Move" load_steps=3 format=3]
+
+[ext_resource type="Resource" path="res://Ailments/torment.tres" id="1_r5xkk"]
+[ext_resource type="Script" path="res://typedef/Move.gd" id="2_yd8y1"]
+
+[resource]
+script = ExtResource("2_yd8y1")
+id = 259
+name = "torment"
+accuracy = 100
+effect_chance = 0
+pp = 15
+priority = 0
+power = 0
+damage_class = "status"
+effect = "Prevents the target from attempting to use the same move twice in a row.  When the target leaves the field, this effect ends.
+
+If the target is forced to attempt a repeated move due to choice band, choice scarf, choice specs, disable, encore, taunt, only having PP remaining for one move, or any other effect, the target will use struggle instead.  The target is then free to use the forced move next turn, as it didn't use that move this turn."
+stat_changes = []
+target = "selected-pokemon"
+type = 15
+ailment = ExtResource("1_r5xkk")
+category = "ailment"
+min_hits = 0
+max_hits = 0
+min_turns = 0
+max_turns = 0
+drain = 0
+healing = 0
+crit_rate = 0
+ailment_chance = 0
+flinch_chance = 0
+stat_chance = 0

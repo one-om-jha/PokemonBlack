@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="Species" load_steps=3 format=3]
+
+[ext_resource type="Resource" path="res://GrowthRates/medium.tres" id="1_7nynu"]
+[ext_resource type="Script" path="res://typedef/Species.gd" id="2_w4p7o"]
+
+[resource]
+script = ExtResource("2_w4p7o")
+id = 25
+name = "pikachu"
+order = 26
+genus = "Mouse Pokémon"
+flavor = "It occasionally uses an electric
+shock to recharge a fellow Pikachu
+that is in a weakened state."
+gender_rate = 4
+capture_rate = 190
+base_happiness = 50
+is_baby = false
+is_legendary = false
+is_mythical = false
+hatch_counter = 10
+has_gender_differences = true
+forms_switchable = false
+growth_rate = ExtResource("1_7nynu")
+local_dex = 0
+national_dex = 25
+egg_groups = ["ground", "fairy"]
+evolution_chain = 10
+habitat = "forest"

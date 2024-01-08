@@ -1,0 +1,43 @@
+[gd_resource type="Resource" script_class="Pokemon" load_steps=4 format=3]
+
+[ext_resource type="Resource" path="res://Abilities/iron-fist.tres" id="1_m61ve"]
+[ext_resource type="Script" path="res://typedef/Pokemon.gd" id="2_vu5wy"]
+[ext_resource type="Resource" path="res://Species/melmetal.tres" id="3_cljdk"]
+
+[resource]
+script = ExtResource("2_vu5wy")
+id = 10208
+name = "melmetal-gmax"
+base_experience = 270
+height = 250
+weight = 10000
+abilities = [ExtResource("1_m61ve"), ExtResource("1_m61ve"), null]
+forms = ["melmetal-gmax"]
+held_items = []
+moves = []
+species = ExtResource("3_cljdk")
+sprites = {
+"back_default": "res://sprites/pokemon/back/10208.gif",
+"back_shiny": "res://sprites/pokemon/back/shiny/10208.gif",
+"front_default": "res://sprites/pokemon/10208.gif",
+"front_shiny": "res://sprites/pokemon/shiny/10208.gif"
+}
+stats = {
+"attack": 143.0,
+"defense": 143.0,
+"hp": 135.0,
+"special-attack": 80.0,
+"special-defense": 65.0,
+"speed": 34.0
+}
+stats_effort = {
+"attack": 3.0,
+"defense": 0.0,
+"hp": 0.0,
+"special-attack": 0.0,
+"special-defense": 0.0,
+"speed": 0.0
+}
+types = {
+1.0: 16
+}

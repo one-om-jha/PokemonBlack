@@ -1,0 +1,45 @@
+[gd_resource type="Resource" script_class="Pokemon" load_steps=6 format=3]
+
+[ext_resource type="Resource" path="res://Abilities/hyper-cutter.tres" id="1_d4wno"]
+[ext_resource type="Resource" path="res://Abilities/shell-armor.tres" id="2_bpk1d"]
+[ext_resource type="Resource" path="res://Abilities/sheer-force.tres" id="3_pcurl"]
+[ext_resource type="Script" path="res://typedef/Pokemon.gd" id="4_a34io"]
+[ext_resource type="Resource" path="res://Species/kingler.tres" id="5_5ggly"]
+
+[resource]
+script = ExtResource("4_a34io")
+id = 10203
+name = "kingler-gmax"
+base_experience = 166
+height = 190
+weight = 10000
+abilities = [ExtResource("1_d4wno"), ExtResource("2_bpk1d"), ExtResource("3_pcurl")]
+forms = ["kingler-gmax"]
+held_items = []
+moves = []
+species = ExtResource("5_5ggly")
+sprites = {
+"back_default": "res://sprites/pokemon/back/10203.gif",
+"back_shiny": "res://sprites/pokemon/back/shiny/10203.gif",
+"front_default": "res://sprites/pokemon/10203.gif",
+"front_shiny": "res://sprites/pokemon/shiny/10203.gif"
+}
+stats = {
+"attack": 130.0,
+"defense": 115.0,
+"hp": 55.0,
+"special-attack": 50.0,
+"special-defense": 50.0,
+"speed": 75.0
+}
+stats_effort = {
+"attack": 2.0,
+"defense": 0.0,
+"hp": 0.0,
+"special-attack": 0.0,
+"special-defense": 0.0,
+"speed": 0.0
+}
+types = {
+1.0: 2
+}

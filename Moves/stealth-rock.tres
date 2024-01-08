@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="Move" load_steps=3 format=3]
+
+[ext_resource type="Resource" path="res://Ailments/none.tres" id="1_4esmu"]
+[ext_resource type="Script" path="res://typedef/Move.gd" id="2_rygkt"]
+
+[resource]
+script = ExtResource("2_rygkt")
+id = 446
+name = "stealth-rock"
+accuracy = 0
+effect_chance = 0
+pp = 20
+priority = 0
+power = 0
+damage_class = "status"
+effect = "Spreads sharp rocks around the opposing field, damaging any Pokémon that enters the field for 1/8 its max HP.  This damage is affected by the entering Pokémon's susceptibility to rock moves.
+
+rapid spin removes this effect from its user's side of the field."
+stat_changes = []
+target = "opponents-field"
+type = 12
+ailment = ExtResource("1_4esmu")
+category = "field-effect"
+min_hits = 0
+max_hits = 0
+min_turns = 0
+max_turns = 0
+drain = 0
+healing = 0
+crit_rate = 0
+ailment_chance = 0
+flinch_chance = 0
+stat_chance = 0

@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="Move" load_steps=3 format=3]
+
+[ext_resource type="Resource" path="res://Ailments/none.tres" id="1_y56r6"]
+[ext_resource type="Script" path="res://typedef/Move.gd" id="2_oj4q0"]
+
+[resource]
+script = ExtResource("2_oj4q0")
+id = 199
+name = "lock-on"
+accuracy = 0
+effect_chance = 0
+pp = 5
+priority = 0
+power = 0
+damage_class = "status"
+effect = "If the user targets the same target again before the end of the next turn, the move it uses is guaranteed to hit.  This move itself also ignores accuracy and evasion modifiers.
+
+One-hit KO moves are also guaranteed to hit, as long as the user is equal or higher level than the target.  This effect also allows the user to hit Pokémon that are off the field due to moves such as dig or fly.
+
+If the target uses detect or protect while under the effect of this move, the user is not guaranteed to hit, but has a (100 - accuracy)% chance to break through the protection.
+
+This effect is passed on by baton pass."
+stat_changes = []
+target = "selected-pokemon"
+type = 0
+ailment = ExtResource("1_y56r6")
+category = "unique"
+min_hits = 0
+max_hits = 0
+min_turns = 0
+max_turns = 0
+drain = 0
+healing = 0
+crit_rate = 0
+ailment_chance = 0
+flinch_chance = 0
+stat_chance = 0

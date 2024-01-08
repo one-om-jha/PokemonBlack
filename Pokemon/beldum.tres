@@ -1,0 +1,53 @@
+[gd_resource type="Resource" script_class="Pokemon" load_steps=13 format=3]
+
+[ext_resource type="Resource" path="res://Abilities/clear-body.tres" id="1_0c3js"]
+[ext_resource type="Resource" path="res://Abilities/light-metal.tres" id="2_tnesv"]
+[ext_resource type="Resource" path="res://Items/metal-coat.tres" id="3_ipbfe"]
+[ext_resource type="Resource" path="res://Moves/headbutt.tres" id="4_n3f51"]
+[ext_resource type="Resource" path="res://Moves/tackle.tres" id="5_4vvqu"]
+[ext_resource type="Resource" path="res://Moves/take-down.tres" id="6_h88gk"]
+[ext_resource type="Resource" path="res://Moves/iron-defense.tres" id="7_dhpdx"]
+[ext_resource type="Resource" path="res://Moves/zen-headbutt.tres" id="8_p3iju"]
+[ext_resource type="Resource" path="res://Moves/iron-head.tres" id="9_gb470"]
+[ext_resource type="Resource" path="res://Moves/steel-beam.tres" id="10_hxnmt"]
+[ext_resource type="Script" path="res://typedef/Pokemon.gd" id="11_w85o5"]
+[ext_resource type="Resource" path="res://Species/beldum.tres" id="12_iwqe0"]
+
+[resource]
+script = ExtResource("11_w85o5")
+id = 374
+name = "beldum"
+base_experience = 60
+height = 6
+weight = 952
+abilities = [ExtResource("1_0c3js"), ExtResource("1_0c3js"), ExtResource("2_tnesv")]
+forms = ["beldum"]
+held_items = [[ExtResource("3_ipbfe"), 5.0]]
+moves = [[0, "", ExtResource("4_n3f51")], [1, "level-up", ExtResource("5_4vvqu")], [1, "level-up", ExtResource("6_h88gk")], [0, "machine", ExtResource("7_dhpdx")], [0, "machine", ExtResource("8_p3iju")], [0, "machine", ExtResource("9_gb470")], [0, "tutor", ExtResource("10_hxnmt")]]
+species = ExtResource("12_iwqe0")
+sprites = {
+"back_default": "res://sprites/pokemon/versions/generation-v/black-white/animated/back/374.gif",
+"back_shiny": "res://sprites/pokemon/versions/generation-v/black-white/animated/back/shiny/374.gif",
+"front_default": "res://sprites/pokemon/versions/generation-v/black-white/animated/374.gif",
+"front_shiny": "res://sprites/pokemon/versions/generation-v/black-white/animated/shiny/374.gif"
+}
+stats = {
+"attack": 55.0,
+"defense": 80.0,
+"hp": 40.0,
+"special-attack": 35.0,
+"special-defense": 60.0,
+"speed": 30.0
+}
+stats_effort = {
+"attack": 0.0,
+"defense": 1.0,
+"hp": 0.0,
+"special-attack": 0.0,
+"special-defense": 0.0,
+"speed": 0.0
+}
+types = {
+1.0: 16,
+2.0: 10
+}

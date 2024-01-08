@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://typedef/Item.gd" id="1_nfm8u"]
+
+[resource]
+script = ExtResource("1_nfm8u")
+id = 136
+name = "figy-berry"
+cost = 80
+fling_power = 10
+fling_effect = "berry-effect"
+effect = "Held in battle
+:   When the holder has 1/2 its max HP remaining or less, it consumes this item to restore 1/8 its max HP.  If the holder dislikes spicy flavors (i.e., has a nature that lowers Attack), it will also become confused."
+flavor = "If held by a Pokémon, it restores the user’s HP in a
+pinch, but it will cause confusion if the user hates
+the taste."
+sprite = "res://sprites/items/figy-berry.png"
+attributes = ["holdable-active"]
+category = "picky-healing"

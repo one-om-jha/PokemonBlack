@@ -1,0 +1,44 @@
+[gd_resource type="Resource" script_class="Pokemon" load_steps=4 format=3]
+
+[ext_resource type="Resource" path="res://Abilities/poison-puppeteer.tres" id="1_adtoy"]
+[ext_resource type="Script" path="res://typedef/Pokemon.gd" id="2_vfibw"]
+[ext_resource type="Resource" path="res://Species/pecharunt.tres" id="3_b01a2"]
+
+[resource]
+script = ExtResource("2_vfibw")
+id = 1025
+name = "pecharunt"
+base_experience = 0
+height = 3
+weight = 3
+abilities = [ExtResource("1_adtoy"), ExtResource("1_adtoy"), null]
+forms = ["pecharunt"]
+held_items = []
+moves = []
+species = ExtResource("3_b01a2")
+sprites = {
+"back_default": "res://sprites/pokemon/back/1025.gif",
+"back_shiny": "res://sprites/pokemon/back/shiny/1025.gif",
+"front_default": "res://sprites/pokemon/1025.gif",
+"front_shiny": "res://sprites/pokemon/shiny/1025.gif"
+}
+stats = {
+"attack": 88.0,
+"defense": 160.0,
+"hp": 88.0,
+"special-attack": 88.0,
+"special-defense": 88.0,
+"speed": 88.0
+}
+stats_effort = {
+"attack": 0.0,
+"defense": 3.0,
+"hp": 0.0,
+"special-attack": 0.0,
+"special-defense": 0.0,
+"speed": 0.0
+}
+types = {
+1.0: 7,
+2.0: 13
+}

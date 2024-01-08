@@ -1,0 +1,69 @@
+[gd_resource type="Resource" script_class="EvolutionChain" load_steps=9 format=3]
+
+[ext_resource type="Script" path="res://typedef/ChainLink.gd" id="1_gmpwe"]
+[ext_resource type="Resource" path="res://Species/samurott.tres" id="2_0s5f3"]
+[ext_resource type="Resource" path="res://Species/dewott.tres" id="3_xucg4"]
+[ext_resource type="Resource" path="res://Species/oshawott.tres" id="4_aus5x"]
+[ext_resource type="Script" path="res://typedef/EvolutionChain.gd" id="5_asj63"]
+
+[sub_resource type="Resource" id="Resource_16ere"]
+script = ExtResource("1_gmpwe")
+is_baby = false
+species = ExtResource("2_0s5f3")
+evolves_to = []
+trigger = ""
+gender = 0
+known_move_type = 0
+location = ""
+min_level = 0
+min_happiness = 0
+min_beauty = 0
+min_affection = 0
+needs_overworld_rain = false
+party_type = 0
+relative_physical_stats = 0
+time_of_day = ""
+turn_upside_down = false
+
+[sub_resource type="Resource" id="Resource_otcwm"]
+script = ExtResource("1_gmpwe")
+is_baby = false
+species = ExtResource("3_xucg4")
+evolves_to = [SubResource("Resource_16ere")]
+trigger = ""
+gender = 0
+known_move_type = 0
+location = ""
+min_level = 0
+min_happiness = 0
+min_beauty = 0
+min_affection = 0
+needs_overworld_rain = false
+party_type = 0
+relative_physical_stats = 0
+time_of_day = ""
+turn_upside_down = false
+
+[sub_resource type="Resource" id="Resource_rlh75"]
+script = ExtResource("1_gmpwe")
+is_baby = false
+species = ExtResource("4_aus5x")
+evolves_to = [SubResource("Resource_otcwm")]
+trigger = ""
+gender = 0
+known_move_type = 0
+location = ""
+min_level = 0
+min_happiness = 0
+min_beauty = 0
+min_affection = 0
+needs_overworld_rain = false
+party_type = 0
+relative_physical_stats = 0
+time_of_day = ""
+turn_upside_down = false
+
+[resource]
+script = ExtResource("5_asj63")
+id = 258
+chain = SubResource("Resource_rlh75")

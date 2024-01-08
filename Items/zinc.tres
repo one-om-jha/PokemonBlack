@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://typedef/Item.gd" id="1_nxdim"]
+
+[resource]
+script = ExtResource("1_nxdim")
+id = 52
+name = "zinc"
+cost = 10000
+fling_power = 30
+fling_effect = ""
+effect = "Used on a party Pokémon
+:   Increases Special Defense effort by 10, but won't increase it beyond 100.  Increases happiness by 5/3/2."
+flavor = "A nutritious drink for Pokémon. When consumed,
+it raises the Sp. Def base points of a single Pokémon."
+sprite = "res://sprites/items/zinc.png"
+attributes = ["countable", "consumable", "usable-overworld", "usable-in-battle", "holdable"]
+category = "vitamins"

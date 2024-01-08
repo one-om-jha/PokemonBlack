@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://typedef/Item.gd" id="1_dcmpt"]
+
+[resource]
+script = ExtResource("1_dcmpt")
+id = 196
+name = "mental-herb"
+cost = 4000
+fling_power = 10
+fling_effect = "herb-effect"
+effect = "Held in battle
+:   When the holder is attracted, it consumes this item to cure the attraction."
+flavor = "An item to be held by a Pokémon. The holder
+shakes off move-binding effects to move freely.
+It can be used only once."
+sprite = "res://sprites/items/mental-herb.png"
+attributes = ["holdable", "holdable-active"]
+category = "held-items"

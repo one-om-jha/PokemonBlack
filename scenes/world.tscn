@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=3 uid="uid://cun4u16e2thpb"]
+
+[ext_resource type="Script" path="res://scenes/game_state_machine.gd" id="1_bn0n2"]
+[ext_resource type="PackedScene" uid="uid://d0tstx14fo8uu" path="res://scenes/overworld_state.tscn" id="2_v4c5d"]
+[ext_resource type="PackedScene" uid="uid://dogcybvciw7uf" path="res://scenes/menu_scene.tscn" id="3_50k5d"]
+[ext_resource type="PackedScene" uid="uid://dh5ig08mw2psy" path="res://scenes/battle_state.tscn" id="4_kcv38"]
+
+[node name="World" type="Node3D"]
+
+[node name="StateMachine" type="Node" parent="."]
+script = ExtResource("1_bn0n2")
+
+[node name="OverworldState" parent="StateMachine" instance=ExtResource("2_v4c5d")]
+
+[node name="MenuState" parent="StateMachine" instance=ExtResource("3_50k5d")]
+
+[node name="BattleState" parent="StateMachine" instance=ExtResource("4_kcv38")]

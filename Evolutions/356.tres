@@ -1,0 +1,49 @@
+[gd_resource type="Resource" script_class="EvolutionChain" load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://typedef/ChainLink.gd" id="1_ccxbi"]
+[ext_resource type="Resource" path="res://Species/heliolisk.tres" id="2_e67mv"]
+[ext_resource type="Resource" path="res://Species/helioptile.tres" id="3_4v8e2"]
+[ext_resource type="Script" path="res://typedef/EvolutionChain.gd" id="4_robha"]
+
+[sub_resource type="Resource" id="Resource_w7v8k"]
+script = ExtResource("1_ccxbi")
+is_baby = false
+species = ExtResource("2_e67mv")
+evolves_to = []
+trigger = ""
+gender = 0
+known_move_type = 0
+location = ""
+min_level = 0
+min_happiness = 0
+min_beauty = 0
+min_affection = 0
+needs_overworld_rain = false
+party_type = 0
+relative_physical_stats = 0
+time_of_day = ""
+turn_upside_down = false
+
+[sub_resource type="Resource" id="Resource_7jvuv"]
+script = ExtResource("1_ccxbi")
+is_baby = false
+species = ExtResource("3_4v8e2")
+evolves_to = [SubResource("Resource_w7v8k")]
+trigger = ""
+gender = 0
+known_move_type = 0
+location = ""
+min_level = 0
+min_happiness = 0
+min_beauty = 0
+min_affection = 0
+needs_overworld_rain = false
+party_type = 0
+relative_physical_stats = 0
+time_of_day = ""
+turn_upside_down = false
+
+[resource]
+script = ExtResource("4_robha")
+id = 356
+chain = SubResource("Resource_7jvuv")

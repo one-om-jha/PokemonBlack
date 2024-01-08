@@ -1,0 +1,49 @@
+[gd_resource type="Resource" script_class="EvolutionChain" load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://typedef/ChainLink.gd" id="1_lebpn"]
+[ext_resource type="Resource" path="res://Species/gliscor.tres" id="2_o33fp"]
+[ext_resource type="Resource" path="res://Species/gligar.tres" id="3_15kkw"]
+[ext_resource type="Script" path="res://typedef/EvolutionChain.gd" id="4_ljua7"]
+
+[sub_resource type="Resource" id="Resource_gqfcv"]
+script = ExtResource("1_lebpn")
+is_baby = false
+species = ExtResource("2_o33fp")
+evolves_to = []
+trigger = ""
+gender = 0
+known_move_type = 0
+location = ""
+min_level = 0
+min_happiness = 0
+min_beauty = 0
+min_affection = 0
+needs_overworld_rain = false
+party_type = 0
+relative_physical_stats = 0
+time_of_day = ""
+turn_upside_down = false
+
+[sub_resource type="Resource" id="Resource_4yxw7"]
+script = ExtResource("1_lebpn")
+is_baby = false
+species = ExtResource("3_15kkw")
+evolves_to = [SubResource("Resource_gqfcv")]
+trigger = ""
+gender = 0
+known_move_type = 0
+location = ""
+min_level = 0
+min_happiness = 0
+min_beauty = 0
+min_affection = 0
+needs_overworld_rain = false
+party_type = 0
+relative_physical_stats = 0
+time_of_day = ""
+turn_upside_down = false
+
+[resource]
+script = ExtResource("4_ljua7")
+id = 104
+chain = SubResource("Resource_4yxw7")

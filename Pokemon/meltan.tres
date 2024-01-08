@@ -1,0 +1,63 @@
+[gd_resource type="Resource" script_class="Pokemon" load_steps=24 format=3]
+
+[ext_resource type="Resource" path="res://Abilities/magnet-pull.tres" id="1_q5lie"]
+[ext_resource type="Resource" path="res://Moves/headbutt.tres" id="2_togjx"]
+[ext_resource type="Resource" path="res://Moves/tail-whip.tres" id="3_kr8ym"]
+[ext_resource type="Resource" path="res://Moves/thunder-shock.tres" id="4_dfb75"]
+[ext_resource type="Resource" path="res://Moves/thunderbolt.tres" id="5_cc8me"]
+[ext_resource type="Resource" path="res://Moves/thunder-wave.tres" id="6_xitgn"]
+[ext_resource type="Resource" path="res://Moves/toxic.tres" id="7_r5no3"]
+[ext_resource type="Resource" path="res://Moves/harden.tres" id="8_xoirc"]
+[ext_resource type="Resource" path="res://Moves/acid-armor.tres" id="9_6bfki"]
+[ext_resource type="Resource" path="res://Moves/rest.tres" id="10_ietqw"]
+[ext_resource type="Resource" path="res://Moves/substitute.tres" id="11_wx5o8"]
+[ext_resource type="Resource" path="res://Moves/snore.tres" id="12_g0ajb"]
+[ext_resource type="Resource" path="res://Moves/protect.tres" id="13_8ydfj"]
+[ext_resource type="Resource" path="res://Moves/endure.tres" id="14_p6yqd"]
+[ext_resource type="Resource" path="res://Moves/sleep-talk.tres" id="15_y3vtq"]
+[ext_resource type="Resource" path="res://Moves/facade.tres" id="16_rov83"]
+[ext_resource type="Resource" path="res://Moves/iron-defense.tres" id="17_mpptt"]
+[ext_resource type="Resource" path="res://Moves/gyro-ball.tres" id="18_kkols"]
+[ext_resource type="Resource" path="res://Moves/flash-cannon.tres" id="19_ax7ew"]
+[ext_resource type="Resource" path="res://Moves/round.tres" id="20_k150o"]
+[ext_resource type="Resource" path="res://Moves/steel-beam.tres" id="21_rhe5q"]
+[ext_resource type="Script" path="res://typedef/Pokemon.gd" id="22_wbo5i"]
+[ext_resource type="Resource" path="res://Species/meltan.tres" id="23_ajn2y"]
+
+[resource]
+script = ExtResource("22_wbo5i")
+id = 808
+name = "meltan"
+base_experience = 150
+height = 2
+weight = 80
+abilities = [ExtResource("1_q5lie"), ExtResource("1_q5lie"), null]
+forms = ["meltan"]
+held_items = []
+moves = [[16, "level-up", ExtResource("2_togjx")], [8, "level-up", ExtResource("3_kr8ym")], [1, "level-up", ExtResource("4_dfb75")], [0, "machine", ExtResource("5_cc8me")], [0, "machine", ExtResource("6_xitgn")], [0, "", ExtResource("7_r5no3")], [1, "level-up", ExtResource("8_xoirc")], [32, "level-up", ExtResource("9_6bfki")], [0, "machine", ExtResource("10_ietqw")], [0, "machine", ExtResource("11_wx5o8")], [0, "machine", ExtResource("12_g0ajb")], [0, "machine", ExtResource("13_8ydfj")], [0, "machine", ExtResource("14_p6yqd")], [0, "machine", ExtResource("15_y3vtq")], [0, "machine", ExtResource("16_rov83")], [0, "machine", ExtResource("17_mpptt")], [0, "machine", ExtResource("18_kkols")], [0, "machine", ExtResource("19_ax7ew")], [0, "machine", ExtResource("20_k150o")], [0, "tutor", ExtResource("21_rhe5q")]]
+species = ExtResource("23_ajn2y")
+sprites = {
+"back_default": "res://sprites/pokemon/back/808.gif",
+"back_shiny": "res://sprites/pokemon/back/shiny/808.gif",
+"front_default": "res://sprites/pokemon/808.gif",
+"front_shiny": "res://sprites/pokemon/shiny/808.gif"
+}
+stats = {
+"attack": 65.0,
+"defense": 65.0,
+"hp": 46.0,
+"special-attack": 55.0,
+"special-defense": 35.0,
+"speed": 34.0
+}
+stats_effort = {
+"attack": 1.0,
+"defense": 0.0,
+"hp": 0.0,
+"special-attack": 0.0,
+"special-defense": 0.0,
+"speed": 0.0
+}
+types = {
+1.0: 16
+}

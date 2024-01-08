@@ -1,0 +1,48 @@
+[gd_resource type="Resource" script_class="Pokemon" load_steps=9 format=3]
+
+[ext_resource type="Resource" path="res://Abilities/shed-skin.tres" id="1_ts4tx"]
+[ext_resource type="Resource" path="res://Moves/string-shot.tres" id="2_1mge8"]
+[ext_resource type="Resource" path="res://Moves/harden.tres" id="3_lbkvv"]
+[ext_resource type="Resource" path="res://Moves/iron-defense.tres" id="4_t5xqm"]
+[ext_resource type="Resource" path="res://Moves/bug-bite.tres" id="5_hs74m"]
+[ext_resource type="Resource" path="res://Moves/electroweb.tres" id="6_hck72"]
+[ext_resource type="Script" path="res://typedef/Pokemon.gd" id="7_7e1o2"]
+[ext_resource type="Resource" path="res://Species/metapod.tres" id="8_vsupq"]
+
+[resource]
+script = ExtResource("7_7e1o2")
+id = 11
+name = "metapod"
+base_experience = 72
+height = 7
+weight = 99
+abilities = [ExtResource("1_ts4tx"), ExtResource("1_ts4tx"), null]
+forms = ["metapod"]
+held_items = []
+moves = [[0, "", ExtResource("2_1mge8")], [1, "level-up", ExtResource("3_lbkvv")], [0, "machine", ExtResource("4_t5xqm")], [0, "", ExtResource("5_hs74m")], [0, "machine", ExtResource("6_hck72")]]
+species = ExtResource("8_vsupq")
+sprites = {
+"back_default": "res://sprites/pokemon/versions/generation-v/black-white/animated/back/11.gif",
+"back_shiny": "res://sprites/pokemon/versions/generation-v/black-white/animated/back/shiny/11.gif",
+"front_default": "res://sprites/pokemon/versions/generation-v/black-white/animated/11.gif",
+"front_shiny": "res://sprites/pokemon/versions/generation-v/black-white/animated/shiny/11.gif"
+}
+stats = {
+"attack": 20.0,
+"defense": 55.0,
+"hp": 50.0,
+"special-attack": 25.0,
+"special-defense": 25.0,
+"speed": 30.0
+}
+stats_effort = {
+"attack": 0.0,
+"defense": 2.0,
+"hp": 0.0,
+"special-attack": 0.0,
+"special-defense": 0.0,
+"speed": 0.0
+}
+types = {
+1.0: 11
+}

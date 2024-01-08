@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="Species" load_steps=3 format=3]
+
+[ext_resource type="Resource" path="res://GrowthRates/slow.tres" id="1_eucqc"]
+[ext_resource type="Script" path="res://typedef/Species.gd" id="2_s6koj"]
+
+[resource]
+script = ExtResource("2_s6koj")
+id = 143
+name = "snorlax"
+order = 175
+genus = "Sleeping Pokémon"
+flavor = "When its belly is full, it becomes
+too lethargic to even lift a finger,
+so it is safe to bounce on its belly."
+gender_rate = 1
+capture_rate = 25
+base_happiness = 50
+is_baby = false
+is_legendary = false
+is_mythical = false
+hatch_counter = 40
+has_gender_differences = false
+forms_switchable = false
+growth_rate = ExtResource("1_eucqc")
+local_dex = 0
+national_dex = 143
+egg_groups = ["monster"]
+evolution_chain = 72
+habitat = "mountain"

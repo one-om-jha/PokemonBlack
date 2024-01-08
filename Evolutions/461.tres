@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="EvolutionChain" load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://typedef/ChainLink.gd" id="1_0gpt5"]
+[ext_resource type="Resource" path="res://Species/dracozolt.tres" id="2_0kmi7"]
+[ext_resource type="Script" path="res://typedef/EvolutionChain.gd" id="3_pfvqq"]
+
+[sub_resource type="Resource" id="Resource_5ljb0"]
+script = ExtResource("1_0gpt5")
+is_baby = false
+species = ExtResource("2_0kmi7")
+evolves_to = []
+trigger = ""
+gender = 0
+known_move_type = 0
+location = ""
+min_level = 0
+min_happiness = 0
+min_beauty = 0
+min_affection = 0
+needs_overworld_rain = false
+party_type = 0
+relative_physical_stats = 0
+time_of_day = ""
+turn_upside_down = false
+
+[resource]
+script = ExtResource("3_pfvqq")
+id = 461
+chain = SubResource("Resource_5ljb0")

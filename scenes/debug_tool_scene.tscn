@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://vl4x8tdomyn7"]
+
+[ext_resource type="Script" path="res://scenes/debug_tool_scene.gd" id="1_sx2ql"]
+[ext_resource type="Resource" path="res://Pokemon/oshawott.tres" id="2_jul16"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xen61"]
+
+[node name="DebugToolScene" type="FlowContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_sx2ql")
+pokemon = ExtResource("2_jul16")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 2
+text = "fix pokemon abilities"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 2
+text = "add_starter"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_xen61")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

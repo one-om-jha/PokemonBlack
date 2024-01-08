@@ -1,0 +1,49 @@
+[gd_resource type="Resource" script_class="EvolutionChain" load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://typedef/ChainLink.gd" id="1_e1u3c"]
+[ext_resource type="Resource" path="res://Species/copperajah.tres" id="2_4t5mg"]
+[ext_resource type="Resource" path="res://Species/cufant.tres" id="3_oc6g6"]
+[ext_resource type="Script" path="res://typedef/EvolutionChain.gd" id="4_nxv05"]
+
+[sub_resource type="Resource" id="Resource_nuv54"]
+script = ExtResource("1_e1u3c")
+is_baby = false
+species = ExtResource("2_4t5mg")
+evolves_to = []
+trigger = ""
+gender = 0
+known_move_type = 0
+location = ""
+min_level = 0
+min_happiness = 0
+min_beauty = 0
+min_affection = 0
+needs_overworld_rain = false
+party_type = 0
+relative_physical_stats = 0
+time_of_day = ""
+turn_upside_down = false
+
+[sub_resource type="Resource" id="Resource_hlhrm"]
+script = ExtResource("1_e1u3c")
+is_baby = false
+species = ExtResource("3_oc6g6")
+evolves_to = [SubResource("Resource_nuv54")]
+trigger = ""
+gender = 0
+known_move_type = 0
+location = ""
+min_level = 0
+min_happiness = 0
+min_beauty = 0
+min_affection = 0
+needs_overworld_rain = false
+party_type = 0
+relative_physical_stats = 0
+time_of_day = ""
+turn_upside_down = false
+
+[resource]
+script = ExtResource("4_nxv05")
+id = 460
+chain = SubResource("Resource_hlhrm")

@@ -1,0 +1,69 @@
+[gd_resource type="Resource" script_class="EvolutionChain" load_steps=9 format=3]
+
+[ext_resource type="Script" path="res://typedef/ChainLink.gd" id="1_g6s5i"]
+[ext_resource type="Resource" path="res://Species/magmortar.tres" id="2_cedtj"]
+[ext_resource type="Resource" path="res://Species/magmar.tres" id="3_ciqg8"]
+[ext_resource type="Resource" path="res://Species/magby.tres" id="4_2sbu1"]
+[ext_resource type="Script" path="res://typedef/EvolutionChain.gd" id="5_wg8qe"]
+
+[sub_resource type="Resource" id="Resource_nhlci"]
+script = ExtResource("1_g6s5i")
+is_baby = false
+species = ExtResource("2_cedtj")
+evolves_to = []
+trigger = ""
+gender = 0
+known_move_type = 0
+location = ""
+min_level = 0
+min_happiness = 0
+min_beauty = 0
+min_affection = 0
+needs_overworld_rain = false
+party_type = 0
+relative_physical_stats = 0
+time_of_day = ""
+turn_upside_down = false
+
+[sub_resource type="Resource" id="Resource_oh7ch"]
+script = ExtResource("1_g6s5i")
+is_baby = false
+species = ExtResource("3_ciqg8")
+evolves_to = [SubResource("Resource_nhlci")]
+trigger = ""
+gender = 0
+known_move_type = 0
+location = ""
+min_level = 0
+min_happiness = 0
+min_beauty = 0
+min_affection = 0
+needs_overworld_rain = false
+party_type = 0
+relative_physical_stats = 0
+time_of_day = ""
+turn_upside_down = false
+
+[sub_resource type="Resource" id="Resource_crknn"]
+script = ExtResource("1_g6s5i")
+is_baby = true
+species = ExtResource("4_2sbu1")
+evolves_to = [SubResource("Resource_oh7ch")]
+trigger = ""
+gender = 0
+known_move_type = 0
+location = ""
+min_level = 0
+min_happiness = 0
+min_beauty = 0
+min_affection = 0
+needs_overworld_rain = false
+party_type = 0
+relative_physical_stats = 0
+time_of_day = ""
+turn_upside_down = false
+
+[resource]
+script = ExtResource("5_wg8qe")
+id = 61
+chain = SubResource("Resource_crknn")

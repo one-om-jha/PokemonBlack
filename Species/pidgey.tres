@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="Species" load_steps=3 format=3]
+
+[ext_resource type="Resource" path="res://GrowthRates/medium-slow.tres" id="1_tls6r"]
+[ext_resource type="Script" path="res://typedef/Species.gd" id="2_i4rfx"]
+
+[resource]
+script = ExtResource("2_i4rfx")
+id = 16
+name = "pidgey"
+order = 16
+genus = "Tiny Bird Pokémon"
+flavor = "It is docile and prefers to avoid
+conflict. If disturbed, however,
+it can ferociously strike back."
+gender_rate = 4
+capture_rate = 255
+base_happiness = 70
+is_baby = false
+is_legendary = false
+is_mythical = false
+hatch_counter = 15
+has_gender_differences = false
+forms_switchable = false
+growth_rate = ExtResource("1_tls6r")
+local_dex = 0
+national_dex = 16
+egg_groups = ["flying"]
+evolution_chain = 6
+habitat = "forest"

@@ -1,0 +1,46 @@
+[gd_resource type="Resource" script_class="Pokemon" load_steps=6 format=3]
+
+[ext_resource type="Resource" path="res://Abilities/ripen.tres" id="1_f46px"]
+[ext_resource type="Resource" path="res://Abilities/gluttony.tres" id="2_tebxl"]
+[ext_resource type="Resource" path="res://Abilities/thick-fat.tres" id="3_o53g4"]
+[ext_resource type="Script" path="res://typedef/Pokemon.gd" id="4_k8c8q"]
+[ext_resource type="Resource" path="res://Species/appletun.tres" id="5_hxnt4"]
+
+[resource]
+script = ExtResource("4_k8c8q")
+id = 10217
+name = "appletun-gmax"
+base_experience = 170
+height = 240
+weight = 10000
+abilities = [ExtResource("1_f46px"), ExtResource("2_tebxl"), ExtResource("3_o53g4")]
+forms = ["appletun-gmax"]
+held_items = []
+moves = []
+species = ExtResource("5_hxnt4")
+sprites = {
+"back_default": "res://sprites/pokemon/back/10217.gif",
+"back_shiny": "res://sprites/pokemon/back/shiny/10217.gif",
+"front_default": "res://sprites/pokemon/10217.gif",
+"front_shiny": "res://sprites/pokemon/shiny/10217.gif"
+}
+stats = {
+"attack": 85.0,
+"defense": 80.0,
+"hp": 110.0,
+"special-attack": 100.0,
+"special-defense": 80.0,
+"speed": 30.0
+}
+stats_effort = {
+"attack": 0.0,
+"defense": 0.0,
+"hp": 2.0,
+"special-attack": 0.0,
+"special-defense": 0.0,
+"speed": 0.0
+}
+types = {
+1.0: 4,
+2.0: 14
+}

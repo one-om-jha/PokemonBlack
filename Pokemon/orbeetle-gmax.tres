@@ -1,0 +1,46 @@
+[gd_resource type="Resource" script_class="Pokemon" load_steps=6 format=3]
+
+[ext_resource type="Resource" path="res://Abilities/swarm.tres" id="1_mfl4r"]
+[ext_resource type="Resource" path="res://Abilities/frisk.tres" id="2_k5et2"]
+[ext_resource type="Resource" path="res://Abilities/telepathy.tres" id="3_q2ity"]
+[ext_resource type="Script" path="res://typedef/Pokemon.gd" id="4_8pgja"]
+[ext_resource type="Resource" path="res://Species/orbeetle.tres" id="5_wvwws"]
+
+[resource]
+script = ExtResource("4_8pgja")
+id = 10213
+name = "orbeetle-gmax"
+base_experience = 253
+height = 140
+weight = 10000
+abilities = [ExtResource("1_mfl4r"), ExtResource("2_k5et2"), ExtResource("3_q2ity")]
+forms = ["orbeetle-gmax"]
+held_items = []
+moves = []
+species = ExtResource("5_wvwws")
+sprites = {
+"back_default": "res://sprites/pokemon/back/10213.gif",
+"back_shiny": "res://sprites/pokemon/back/shiny/10213.gif",
+"front_default": "res://sprites/pokemon/10213.gif",
+"front_shiny": "res://sprites/pokemon/shiny/10213.gif"
+}
+stats = {
+"attack": 45.0,
+"defense": 110.0,
+"hp": 60.0,
+"special-attack": 80.0,
+"special-defense": 120.0,
+"speed": 90.0
+}
+stats_effort = {
+"attack": 0.0,
+"defense": 0.0,
+"hp": 0.0,
+"special-attack": 0.0,
+"special-defense": 3.0,
+"speed": 0.0
+}
+types = {
+1.0: 11,
+2.0: 10
+}

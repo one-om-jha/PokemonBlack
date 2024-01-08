@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="Move" load_steps=3 format=3]
+
+[ext_resource type="Resource" path="res://Ailments/none.tres" id="1_wxhii"]
+[ext_resource type="Script" path="res://typedef/Move.gd" id="2_stm7d"]
+
+[resource]
+script = ExtResource("2_stm7d")
+id = 176
+name = "conversion-2"
+accuracy = 0
+effect_chance = 0
+pp = 30
+priority = 0
+power = 0
+damage_class = "status"
+effect = "Changes the user's type to a type either resistant or immune to the last damaging move that hit it.  The new type is selected at random and cannot be a type the user already is.  If there is no eligible new type, this move will fail."
+stat_changes = []
+target = "selected-pokemon"
+type = 0
+ailment = ExtResource("1_wxhii")
+category = "unique"
+min_hits = 0
+max_hits = 0
+min_turns = 0
+max_turns = 0
+drain = 0
+healing = 0
+crit_rate = 0
+ailment_chance = 0
+flinch_chance = 0
+stat_chance = 0

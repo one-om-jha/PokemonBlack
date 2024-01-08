@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="Move" load_steps=3 format=3]
+
+[ext_resource type="Resource" path="res://Ailments/none.tres" id="1_bv5xq"]
+[ext_resource type="Script" path="res://typedef/Move.gd" id="2_g3s3w"]
+
+[resource]
+script = ExtResource("2_g3s3w")
+id = 393
+name = "magnet-rise"
+accuracy = 0
+effect_chance = 0
+pp = 10
+priority = 0
+power = 0
+damage_class = "status"
+effect = "For five turns, the user is immune to ground moves.
+
+If the user is under the effect of ingrain or has levitate, this move will fail.
+
+This effect is temporarily disabled by and cannot be used during gravity.
+
+This effect is passed on by baton pass."
+stat_changes = []
+target = "user"
+type = 3
+ailment = ExtResource("1_bv5xq")
+category = "unique"
+min_hits = 0
+max_hits = 0
+min_turns = 0
+max_turns = 0
+drain = 0
+healing = 0
+crit_rate = 0
+ailment_chance = 0
+flinch_chance = 0
+stat_chance = 0

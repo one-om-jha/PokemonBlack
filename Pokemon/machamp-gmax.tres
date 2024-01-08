@@ -1,0 +1,45 @@
+[gd_resource type="Resource" script_class="Pokemon" load_steps=6 format=3]
+
+[ext_resource type="Resource" path="res://Abilities/guts.tres" id="1_n4w2v"]
+[ext_resource type="Resource" path="res://Abilities/no-guard.tres" id="2_8c1mx"]
+[ext_resource type="Resource" path="res://Abilities/steadfast.tres" id="3_kwb8k"]
+[ext_resource type="Script" path="res://typedef/Pokemon.gd" id="4_ktr3x"]
+[ext_resource type="Resource" path="res://Species/machamp.tres" id="5_jtcy6"]
+
+[resource]
+script = ExtResource("4_ktr3x")
+id = 10201
+name = "machamp-gmax"
+base_experience = 227
+height = 250
+weight = 10000
+abilities = [ExtResource("1_n4w2v"), ExtResource("2_8c1mx"), ExtResource("3_kwb8k")]
+forms = ["machamp-gmax"]
+held_items = []
+moves = []
+species = ExtResource("5_jtcy6")
+sprites = {
+"back_default": "res://sprites/pokemon/back/10201.gif",
+"back_shiny": "res://sprites/pokemon/back/shiny/10201.gif",
+"front_default": "res://sprites/pokemon/10201.gif",
+"front_shiny": "res://sprites/pokemon/shiny/10201.gif"
+}
+stats = {
+"attack": 130.0,
+"defense": 80.0,
+"hp": 90.0,
+"special-attack": 65.0,
+"special-defense": 85.0,
+"speed": 55.0
+}
+stats_effort = {
+"attack": 3.0,
+"defense": 0.0,
+"hp": 0.0,
+"special-attack": 0.0,
+"special-defense": 0.0,
+"speed": 0.0
+}
+types = {
+1.0: 6
+}

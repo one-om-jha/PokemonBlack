@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://typedef/Item.gd" id="1_s8vc0"]
+
+[resource]
+script = ExtResource("1_s8vc0")
+id = 130
+name = "aspear-berry"
+cost = 80
+fling_power = 10
+fling_effect = "berry-effect"
+effect = "Held in battle
+:   When the holder is frozen, it consumes this item to thaw itself.
+
+Used on a party Pokémon
+:   Cures freezing."
+flavor = "A Berry to be consumed by Pokémon. If a Pokémon
+holds one, it can recover from being frozen on its
+own in battle."
+sprite = "res://sprites/items/aspear-berry.png"
+attributes = ["holdable-active"]
+category = "medicine"

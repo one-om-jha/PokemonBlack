@@ -1,0 +1,46 @@
+[gd_resource type="Resource" script_class="Pokemon" load_steps=6 format=3]
+
+[ext_resource type="Resource" path="res://Abilities/pressure.tres" id="1_gi8ql"]
+[ext_resource type="Resource" path="res://Abilities/unnerve.tres" id="2_5ffh1"]
+[ext_resource type="Resource" path="res://Abilities/mirror-armor.tres" id="3_idxq8"]
+[ext_resource type="Script" path="res://typedef/Pokemon.gd" id="4_xneds"]
+[ext_resource type="Resource" path="res://Species/corviknight.tres" id="5_webff"]
+
+[resource]
+script = ExtResource("4_xneds")
+id = 10212
+name = "corviknight-gmax"
+base_experience = 248
+height = 140
+weight = 10000
+abilities = [ExtResource("1_gi8ql"), ExtResource("2_5ffh1"), ExtResource("3_idxq8")]
+forms = ["corviknight-gmax"]
+held_items = []
+moves = []
+species = ExtResource("5_webff")
+sprites = {
+"back_default": "res://sprites/pokemon/back/10212.gif",
+"back_shiny": "res://sprites/pokemon/back/shiny/10212.gif",
+"front_default": "res://sprites/pokemon/10212.gif",
+"front_shiny": "res://sprites/pokemon/shiny/10212.gif"
+}
+stats = {
+"attack": 87.0,
+"defense": 105.0,
+"hp": 98.0,
+"special-attack": 53.0,
+"special-defense": 85.0,
+"speed": 67.0
+}
+stats_effort = {
+"attack": 0.0,
+"defense": 3.0,
+"hp": 0.0,
+"special-attack": 0.0,
+"special-defense": 0.0,
+"speed": 0.0
+}
+types = {
+1.0: 9,
+2.0: 16
+}

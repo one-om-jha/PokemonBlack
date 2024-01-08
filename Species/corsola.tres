@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="Species" load_steps=3 format=3]
+
+[ext_resource type="Resource" path="res://GrowthRates/fast.tres" id="1_rlqab"]
+[ext_resource type="Script" path="res://typedef/Species.gd" id="2_0b52h"]
+
+[resource]
+script = ExtResource("2_0b52h")
+id = 222
+name = "corsola"
+order = 254
+genus = "Coral Pokémon"
+flavor = "Many live in the clean seas of the
+south. They apparently can’t live
+in polluted waters."
+gender_rate = 6
+capture_rate = 60
+base_happiness = 50
+is_baby = false
+is_legendary = false
+is_mythical = false
+hatch_counter = 20
+has_gender_differences = false
+forms_switchable = false
+growth_rate = ExtResource("1_rlqab")
+local_dex = 0
+national_dex = 222
+egg_groups = ["water1", "water3"]
+evolution_chain = 113
+habitat = "sea"

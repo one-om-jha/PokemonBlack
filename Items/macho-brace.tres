@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://typedef/Item.gd" id="1_ja3nw"]
+
+[resource]
+script = ExtResource("1_ja3nw")
+id = 192
+name = "macho-brace"
+cost = 3000
+fling_power = 60
+fling_effect = ""
+effect = "Held
+:   When the holder would gain effort due to battle, it gains double that effort instead.
+
+Held in battle
+:   Holder has half its Speed."
+flavor = "An item to be held by a Pokémon. This stiff, heavy
+brace helps Pokémon grow strong but cuts Speed
+in battle."
+sprite = "res://sprites/items/macho-brace.png"
+attributes = ["holdable", "holdable-active"]
+category = "effort-training"

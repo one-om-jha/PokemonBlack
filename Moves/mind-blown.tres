@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="Move" load_steps=3 format=3]
+
+[ext_resource type="Resource" path="res://Ailments/none.tres" id="1_pkhph"]
+[ext_resource type="Script" path="res://typedef/Move.gd" id="2_uybrs"]
+
+[resource]
+script = ExtResource("2_uybrs")
+id = 720
+name = "mind-blown"
+accuracy = 100
+effect_chance = 0
+pp = 5
+priority = 0
+power = 150
+damage_class = "special"
+effect = "Inflicts damage, and the user takes damage equal to half of its max HP, rounded up. The user still takes damage if the move is blocked by Protect or Substitute, misses, or if the target has Flash Fire."
+stat_changes = []
+target = "all-other-pokemon"
+type = 1
+ailment = ExtResource("1_pkhph")
+category = "damage"
+min_hits = 0
+max_hits = 0
+min_turns = 0
+max_turns = 0
+drain = 0
+healing = 0
+crit_rate = 0
+ailment_chance = 0
+flinch_chance = 0
+stat_chance = 0

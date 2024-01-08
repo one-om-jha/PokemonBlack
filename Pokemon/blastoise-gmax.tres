@@ -1,0 +1,44 @@
+[gd_resource type="Resource" script_class="Pokemon" load_steps=5 format=3]
+
+[ext_resource type="Resource" path="res://Abilities/torrent.tres" id="1_ebts1"]
+[ext_resource type="Resource" path="res://Abilities/rain-dish.tres" id="2_ciqh2"]
+[ext_resource type="Script" path="res://typedef/Pokemon.gd" id="3_2n7gd"]
+[ext_resource type="Resource" path="res://Species/blastoise.tres" id="4_bbbfc"]
+
+[resource]
+script = ExtResource("3_2n7gd")
+id = 10197
+name = "blastoise-gmax"
+base_experience = 239
+height = 250
+weight = 10000
+abilities = [ExtResource("1_ebts1"), ExtResource("1_ebts1"), ExtResource("2_ciqh2")]
+forms = ["blastoise-gmax"]
+held_items = []
+moves = []
+species = ExtResource("4_bbbfc")
+sprites = {
+"back_default": "res://sprites/pokemon/back/10197.gif",
+"back_shiny": "res://sprites/pokemon/back/shiny/10197.gif",
+"front_default": "res://sprites/pokemon/10197.gif",
+"front_shiny": "res://sprites/pokemon/shiny/10197.gif"
+}
+stats = {
+"attack": 83.0,
+"defense": 100.0,
+"hp": 79.0,
+"special-attack": 85.0,
+"special-defense": 105.0,
+"speed": 78.0
+}
+stats_effort = {
+"attack": 0.0,
+"defense": 0.0,
+"hp": 0.0,
+"special-attack": 0.0,
+"special-defense": 3.0,
+"speed": 0.0
+}
+types = {
+1.0: 2
+}

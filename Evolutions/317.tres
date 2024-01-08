@@ -1,0 +1,69 @@
+[gd_resource type="Resource" script_class="EvolutionChain" load_steps=9 format=3]
+
+[ext_resource type="Script" path="res://typedef/ChainLink.gd" id="1_to8a8"]
+[ext_resource type="Resource" path="res://Species/kingambit.tres" id="2_diwvq"]
+[ext_resource type="Resource" path="res://Species/bisharp.tres" id="3_5km5k"]
+[ext_resource type="Resource" path="res://Species/pawniard.tres" id="4_em6br"]
+[ext_resource type="Script" path="res://typedef/EvolutionChain.gd" id="5_rjpt6"]
+
+[sub_resource type="Resource" id="Resource_e42fr"]
+script = ExtResource("1_to8a8")
+is_baby = false
+species = ExtResource("2_diwvq")
+evolves_to = []
+trigger = ""
+gender = 0
+known_move_type = 0
+location = ""
+min_level = 0
+min_happiness = 0
+min_beauty = 0
+min_affection = 0
+needs_overworld_rain = false
+party_type = 0
+relative_physical_stats = 0
+time_of_day = ""
+turn_upside_down = false
+
+[sub_resource type="Resource" id="Resource_84u3p"]
+script = ExtResource("1_to8a8")
+is_baby = false
+species = ExtResource("3_5km5k")
+evolves_to = [SubResource("Resource_e42fr")]
+trigger = ""
+gender = 0
+known_move_type = 0
+location = ""
+min_level = 0
+min_happiness = 0
+min_beauty = 0
+min_affection = 0
+needs_overworld_rain = false
+party_type = 0
+relative_physical_stats = 0
+time_of_day = ""
+turn_upside_down = false
+
+[sub_resource type="Resource" id="Resource_6jh2j"]
+script = ExtResource("1_to8a8")
+is_baby = false
+species = ExtResource("4_em6br")
+evolves_to = [SubResource("Resource_84u3p")]
+trigger = ""
+gender = 0
+known_move_type = 0
+location = ""
+min_level = 0
+min_happiness = 0
+min_beauty = 0
+min_affection = 0
+needs_overworld_rain = false
+party_type = 0
+relative_physical_stats = 0
+time_of_day = ""
+turn_upside_down = false
+
+[resource]
+script = ExtResource("5_rjpt6")
+id = 317
+chain = SubResource("Resource_6jh2j")

@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="Species" load_steps=3 format=3]
+
+[ext_resource type="Resource" path="res://GrowthRates/medium.tres" id="1_k08xs"]
+[ext_resource type="Script" path="res://typedef/Species.gd" id="2_1xe7r"]
+
+[resource]
+script = ExtResource("2_1xe7r")
+id = 55
+name = "golduck"
+order = 60
+genus = "Duck Pokémon"
+flavor = "It is seen swimming dynamically and
+elegantly using its well-developed
+limbs and flippers."
+gender_rate = 4
+capture_rate = 75
+base_happiness = 50
+is_baby = false
+is_legendary = false
+is_mythical = false
+hatch_counter = 20
+has_gender_differences = false
+forms_switchable = false
+growth_rate = ExtResource("1_k08xs")
+local_dex = 0
+national_dex = 55
+egg_groups = ["water1", "ground"]
+evolution_chain = 23
+habitat = "waters-edge"

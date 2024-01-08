@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="Species" load_steps=3 format=3]
+
+[ext_resource type="Resource" path="res://GrowthRates/medium-slow.tres" id="1_kr1pr"]
+[ext_resource type="Script" path="res://typedef/Species.gd" id="2_utlhq"]
+
+[resource]
+script = ExtResource("2_utlhq")
+id = 275
+name = "shiftry"
+order = 300
+genus = "Wicked Pokémon"
+flavor = "By flapping its leafy fan, it can
+whip up gusts of 100 ft/second
+that can level houses."
+gender_rate = 4
+capture_rate = 45
+base_happiness = 50
+is_baby = false
+is_legendary = false
+is_mythical = false
+hatch_counter = 15
+has_gender_differences = true
+forms_switchable = false
+growth_rate = ExtResource("1_kr1pr")
+local_dex = 0
+national_dex = 275
+egg_groups = ["ground", "plant"]
+evolution_chain = 137
+habitat = "forest"

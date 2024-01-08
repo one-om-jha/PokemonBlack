@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://typedef/Item.gd" id="1_fsj25"]
+
+[resource]
+script = ExtResource("1_fsj25")
+id = 193
+name = "exp-share"
+cost = 0
+fling_power = 0
+fling_effect = ""
+effect = "Held
+:   Experience is split across two groups: Pokémon who participated in battle, and Pokémon holding this item.  Each Pokémon earns experience as though it had battled alone, divided by the number of Pokémon in its group, then divided by the number of groups. Pokémon holding this item who also participated in battle effectively earn experience twice.
+
+    Fainted Pokémon never earn experience, and empty groups are
+ignored; thus, if a single Pokémon is holding this item and the only Pokémon who battled faints from explosion, the holder will gain full experience."
+flavor = "Turning on this special device will allow all the Pokémon
+on your team to receive Exp. Points from battles."
+sprite = "res://sprites/items/exp-share.png"
+attributes = ["holdable", "holdable-active"]
+category = "training"

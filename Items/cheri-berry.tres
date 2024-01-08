@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://typedef/Item.gd" id="1_ypqph"]
+
+[resource]
+script = ExtResource("1_ypqph")
+id = 126
+name = "cheri-berry"
+cost = 80
+fling_power = 10
+fling_effect = "berry-effect"
+effect = "Held in battle
+:   When the holder is paralyzed, it consumes this item to cure the paralysis.
+
+Used on a party Pokémon
+:   Cures paralysis."
+flavor = "A Berry to be consumed by Pokémon. If a Pokémon
+holds one, it can recover from paralysis on its own
+in battle."
+sprite = "res://sprites/items/cheri-berry.png"
+attributes = ["holdable-active"]
+category = "medicine"

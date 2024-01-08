@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="Species" load_steps=3 format=3]
+
+[ext_resource type="Resource" path="res://GrowthRates/medium.tres" id="1_7gxfe"]
+[ext_resource type="Script" path="res://typedef/Species.gd" id="2_fdgbm"]
+
+[resource]
+script = ExtResource("2_fdgbm")
+id = 42
+name = "golbat"
+order = 45
+genus = "Bat Pokémon"
+flavor = "Its sharp fangs puncture the
+toughest of hides and have small
+holes for greedily sucking blood."
+gender_rate = 4
+capture_rate = 90
+base_happiness = 50
+is_baby = false
+is_legendary = false
+is_mythical = false
+hatch_counter = 15
+has_gender_differences = true
+forms_switchable = false
+growth_rate = ExtResource("1_7gxfe")
+local_dex = 0
+national_dex = 42
+egg_groups = ["flying"]
+evolution_chain = 17
+habitat = "cave"

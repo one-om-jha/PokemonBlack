@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="Move" load_steps=3 format=3]
+
+[ext_resource type="Resource" path="res://Ailments/none.tres" id="1_61f7b"]
+[ext_resource type="Script" path="res://typedef/Move.gd" id="2_c3ujs"]
+
+[resource]
+script = ExtResource("2_c3ujs")
+id = 273
+name = "wish"
+accuracy = 0
+effect_chance = 0
+pp = 10
+priority = 0
+power = 0
+damage_class = "status"
+effect = "At the end of the next turn, user will be healed for half its max HP.  If the user is switched out, its replacement will be healed instead for half of the user's max HP.  If the user faints or is forcefully switched by roar or whirlwind, this effect will not activate."
+stat_changes = []
+target = "user"
+type = 0
+ailment = ExtResource("1_61f7b")
+category = "unique"
+min_hits = 0
+max_hits = 0
+min_turns = 0
+max_turns = 0
+drain = 0
+healing = 0
+crit_rate = 0
+ailment_chance = 0
+flinch_chance = 0
+stat_chance = 0

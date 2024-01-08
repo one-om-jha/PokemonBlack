@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="Move" load_steps=3 format=3]
+
+[ext_resource type="Resource" path="res://Ailments/none.tres" id="1_a2nij"]
+[ext_resource type="Script" path="res://typedef/Move.gd" id="2_lsx7r"]
+
+[resource]
+script = ExtResource("2_lsx7r")
+id = 500
+name = "stored-power"
+accuracy = 100
+effect_chance = 0
+pp = 10
+priority = 0
+power = 20
+damage_class = "special"
+effect = "Inflicts regular damage.  Power is increased by 100% its original value for every stage any of the user's stats have been raised.  Accuracy, evasion, and lowered stats do not affect this move's power.  For a Pokémon with all five stats modified to +6, this move's power is 31×."
+stat_changes = []
+target = "selected-pokemon"
+type = 10
+ailment = ExtResource("1_a2nij")
+category = "damage"
+min_hits = 0
+max_hits = 0
+min_turns = 0
+max_turns = 0
+drain = 0
+healing = 0
+crit_rate = 0
+ailment_chance = 0
+flinch_chance = 0
+stat_chance = 0

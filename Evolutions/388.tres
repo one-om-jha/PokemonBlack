@@ -1,0 +1,49 @@
+[gd_resource type="Resource" script_class="EvolutionChain" load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://typedef/ChainLink.gd" id="1_lq1mm"]
+[ext_resource type="Resource" path="res://Species/lurantis.tres" id="2_wegs8"]
+[ext_resource type="Resource" path="res://Species/fomantis.tres" id="3_u43um"]
+[ext_resource type="Script" path="res://typedef/EvolutionChain.gd" id="4_s1yyi"]
+
+[sub_resource type="Resource" id="Resource_nv4ia"]
+script = ExtResource("1_lq1mm")
+is_baby = false
+species = ExtResource("2_wegs8")
+evolves_to = []
+trigger = ""
+gender = 0
+known_move_type = 0
+location = ""
+min_level = 0
+min_happiness = 0
+min_beauty = 0
+min_affection = 0
+needs_overworld_rain = false
+party_type = 0
+relative_physical_stats = 0
+time_of_day = ""
+turn_upside_down = false
+
+[sub_resource type="Resource" id="Resource_wfjqb"]
+script = ExtResource("1_lq1mm")
+is_baby = false
+species = ExtResource("3_u43um")
+evolves_to = [SubResource("Resource_nv4ia")]
+trigger = ""
+gender = 0
+known_move_type = 0
+location = ""
+min_level = 0
+min_happiness = 0
+min_beauty = 0
+min_affection = 0
+needs_overworld_rain = false
+party_type = 0
+relative_physical_stats = 0
+time_of_day = ""
+turn_upside_down = false
+
+[resource]
+script = ExtResource("4_s1yyi")
+id = 388
+chain = SubResource("Resource_wfjqb")

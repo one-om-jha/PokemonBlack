@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://typedef/Item.gd" id="1_rgdvd"]
+
+[resource]
+script = ExtResource("1_rgdvd")
+id = 254
+name = "metronome"
+cost = 4000
+fling_power = 30
+fling_effect = ""
+effect = "Held: Each time the holder uses the same move consecutively, its power is increased by another 10% of its original, to a maximum of 100%."
+flavor = "An item to be held by a Pokémon. It boosts moves
+used consecutively but only until a different move
+is used."
+sprite = "res://sprites/items/metronome.png"
+attributes = ["holdable", "holdable-active"]
+category = "held-items"

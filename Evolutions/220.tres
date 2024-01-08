@@ -1,0 +1,49 @@
+[gd_resource type="Resource" script_class="EvolutionChain" load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://typedef/ChainLink.gd" id="1_74s08"]
+[ext_resource type="Resource" path="res://Species/lopunny.tres" id="2_sirv7"]
+[ext_resource type="Resource" path="res://Species/buneary.tres" id="3_6m4oq"]
+[ext_resource type="Script" path="res://typedef/EvolutionChain.gd" id="4_m4dua"]
+
+[sub_resource type="Resource" id="Resource_oubh8"]
+script = ExtResource("1_74s08")
+is_baby = false
+species = ExtResource("2_sirv7")
+evolves_to = []
+trigger = ""
+gender = 0
+known_move_type = 0
+location = ""
+min_level = 0
+min_happiness = 0
+min_beauty = 0
+min_affection = 0
+needs_overworld_rain = false
+party_type = 0
+relative_physical_stats = 0
+time_of_day = ""
+turn_upside_down = false
+
+[sub_resource type="Resource" id="Resource_gu6b0"]
+script = ExtResource("1_74s08")
+is_baby = false
+species = ExtResource("3_6m4oq")
+evolves_to = [SubResource("Resource_oubh8")]
+trigger = ""
+gender = 0
+known_move_type = 0
+location = ""
+min_level = 0
+min_happiness = 0
+min_beauty = 0
+min_affection = 0
+needs_overworld_rain = false
+party_type = 0
+relative_physical_stats = 0
+time_of_day = ""
+turn_upside_down = false
+
+[resource]
+script = ExtResource("4_m4dua")
+id = 220
+chain = SubResource("Resource_gu6b0")

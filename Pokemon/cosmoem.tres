@@ -1,0 +1,45 @@
+[gd_resource type="Resource" script_class="Pokemon" load_steps=6 format=3]
+
+[ext_resource type="Resource" path="res://Abilities/sturdy.tres" id="1_ime25"]
+[ext_resource type="Resource" path="res://Moves/teleport.tres" id="2_4qf32"]
+[ext_resource type="Resource" path="res://Moves/cosmic-power.tres" id="3_v5r4q"]
+[ext_resource type="Script" path="res://typedef/Pokemon.gd" id="4_lx2vy"]
+[ext_resource type="Resource" path="res://Species/cosmoem.tres" id="5_ecdnb"]
+
+[resource]
+script = ExtResource("4_lx2vy")
+id = 790
+name = "cosmoem"
+base_experience = 140
+height = 1
+weight = 9999
+abilities = [ExtResource("1_ime25"), ExtResource("1_ime25"), null]
+forms = ["cosmoem"]
+held_items = []
+moves = [[1, "level-up", ExtResource("2_4qf32")], [0, "machine", ExtResource("3_v5r4q")]]
+species = ExtResource("5_ecdnb")
+sprites = {
+"back_default": "res://sprites/pokemon/back/790.gif",
+"back_shiny": "res://sprites/pokemon/back/shiny/790.gif",
+"front_default": "res://sprites/pokemon/790.gif",
+"front_shiny": "res://sprites/pokemon/shiny/790.gif"
+}
+stats = {
+"attack": 29.0,
+"defense": 131.0,
+"hp": 43.0,
+"special-attack": 29.0,
+"special-defense": 131.0,
+"speed": 37.0
+}
+stats_effort = {
+"attack": 0.0,
+"defense": 1.0,
+"hp": 0.0,
+"special-attack": 0.0,
+"special-defense": 1.0,
+"speed": 0.0
+}
+types = {
+1.0: 10
+}

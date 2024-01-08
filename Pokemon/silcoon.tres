@@ -1,0 +1,48 @@
+[gd_resource type="Resource" script_class="Pokemon" load_steps=9 format=3]
+
+[ext_resource type="Resource" path="res://Abilities/shed-skin.tres" id="1_gsml7"]
+[ext_resource type="Resource" path="res://Moves/string-shot.tres" id="2_yll21"]
+[ext_resource type="Resource" path="res://Moves/harden.tres" id="3_dnhex"]
+[ext_resource type="Resource" path="res://Moves/iron-defense.tres" id="4_20wsh"]
+[ext_resource type="Resource" path="res://Moves/bug-bite.tres" id="5_wc6cr"]
+[ext_resource type="Resource" path="res://Moves/electroweb.tres" id="6_vuxci"]
+[ext_resource type="Script" path="res://typedef/Pokemon.gd" id="7_bgrn8"]
+[ext_resource type="Resource" path="res://Species/silcoon.tres" id="8_04gk8"]
+
+[resource]
+script = ExtResource("7_bgrn8")
+id = 266
+name = "silcoon"
+base_experience = 72
+height = 6
+weight = 100
+abilities = [ExtResource("1_gsml7"), ExtResource("1_gsml7"), null]
+forms = ["silcoon"]
+held_items = []
+moves = [[0, "", ExtResource("2_yll21")], [1, "level-up", ExtResource("3_dnhex")], [0, "", ExtResource("4_20wsh")], [0, "", ExtResource("5_wc6cr")], [0, "", ExtResource("6_vuxci")]]
+species = ExtResource("8_04gk8")
+sprites = {
+"back_default": "res://sprites/pokemon/versions/generation-v/black-white/animated/back/266.gif",
+"back_shiny": "res://sprites/pokemon/versions/generation-v/black-white/animated/back/shiny/266.gif",
+"front_default": "res://sprites/pokemon/versions/generation-v/black-white/animated/266.gif",
+"front_shiny": "res://sprites/pokemon/versions/generation-v/black-white/animated/shiny/266.gif"
+}
+stats = {
+"attack": 35.0,
+"defense": 55.0,
+"hp": 50.0,
+"special-attack": 25.0,
+"special-defense": 25.0,
+"speed": 15.0
+}
+stats_effort = {
+"attack": 0.0,
+"defense": 2.0,
+"hp": 0.0,
+"special-attack": 0.0,
+"special-defense": 0.0,
+"speed": 0.0
+}
+types = {
+1.0: 11
+}

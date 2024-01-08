@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://typedef/Item.gd" id="1_il10k"]
+
+[resource]
+script = ExtResource("1_il10k")
+id = 269
+name = "power-band"
+cost = 3000
+fling_power = 70
+fling_effect = ""
+effect = "Held: Decreases the holder's Speed by 50%.  Whenever the holder gains Special Defense effort from battle, increases that effort by 4; this applies before the PokéRUS doubling effect."
+flavor = "An item to be held by a Pokémon. It reduces Speed
+but allows the holder’s Sp. Def stat to grow more
+after battling."
+sprite = "res://sprites/items/power-band.png"
+attributes = ["holdable", "holdable-active"]
+category = "effort-training"

@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="Move" load_steps=3 format=3]
+
+[ext_resource type="Resource" path="res://Ailments/none.tres" id="1_e2e5v"]
+[ext_resource type="Script" path="res://typedef/Move.gd" id="2_vmryn"]
+
+[resource]
+script = ExtResource("2_vmryn")
+id = 564
+name = "sticky-web"
+accuracy = 0
+effect_chance = 0
+pp = 20
+priority = 0
+power = 0
+damage_class = "status"
+effect = "Shoots a web over the opponents' side of the field, which lowers the Speed of any opposing Pokémon that enters the field by one stage.
+
+Pokémon in the air, such as flying-types and those with levitate, are unaffected.  rapid spin removes Sticky Web from the user's side of the field; defog removes it from both sides."
+stat_changes = []
+target = "opponents-field"
+type = 11
+ailment = ExtResource("1_e2e5v")
+category = "field-effect"
+min_hits = 0
+max_hits = 0
+min_turns = 0
+max_turns = 0
+drain = 0
+healing = 0
+crit_rate = 0
+ailment_chance = 0
+flinch_chance = 0
+stat_chance = 0

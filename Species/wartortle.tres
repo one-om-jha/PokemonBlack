@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="Species" load_steps=3 format=3]
+
+[ext_resource type="Resource" path="res://GrowthRates/medium-slow.tres" id="1_7h78w"]
+[ext_resource type="Script" path="res://typedef/Species.gd" id="2_reoyi"]
+
+[resource]
+script = ExtResource("2_reoyi")
+id = 8
+name = "wartortle"
+order = 8
+genus = "Turtle Pokémon"
+flavor = "It is said to live 10,000 years.
+Its furry tail is popular as a
+symbol of longevity."
+gender_rate = 1
+capture_rate = 45
+base_happiness = 50
+is_baby = false
+is_legendary = false
+is_mythical = false
+hatch_counter = 20
+has_gender_differences = false
+forms_switchable = false
+growth_rate = ExtResource("1_7h78w")
+local_dex = 0
+national_dex = 8
+egg_groups = ["monster", "water1"]
+evolution_chain = 3
+habitat = "waters-edge"

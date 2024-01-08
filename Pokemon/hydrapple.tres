@@ -1,0 +1,46 @@
+[gd_resource type="Resource" script_class="Pokemon" load_steps=6 format=3]
+
+[ext_resource type="Resource" path="res://Abilities/supersweet-syrup.tres" id="1_pmgsm"]
+[ext_resource type="Resource" path="res://Abilities/regenerator.tres" id="2_aeis5"]
+[ext_resource type="Resource" path="res://Abilities/sticky-hold.tres" id="3_h0ue5"]
+[ext_resource type="Script" path="res://typedef/Pokemon.gd" id="4_cr52c"]
+[ext_resource type="Resource" path="res://Species/hydrapple.tres" id="5_vvuhq"]
+
+[resource]
+script = ExtResource("4_cr52c")
+id = 1019
+name = "hydrapple"
+base_experience = 0
+height = 18
+weight = 930
+abilities = [ExtResource("1_pmgsm"), ExtResource("2_aeis5"), ExtResource("3_h0ue5")]
+forms = ["hydrapple"]
+held_items = []
+moves = []
+species = ExtResource("5_vvuhq")
+sprites = {
+"back_default": "res://sprites/pokemon/back/1019.gif",
+"back_shiny": "res://sprites/pokemon/back/shiny/1019.gif",
+"front_default": "res://sprites/pokemon/1019.gif",
+"front_shiny": "res://sprites/pokemon/shiny/1019.gif"
+}
+stats = {
+"attack": 80.0,
+"defense": 110.0,
+"hp": 106.0,
+"special-attack": 120.0,
+"special-defense": 80.0,
+"speed": 44.0
+}
+stats_effort = {
+"attack": 0.0,
+"defense": 0.0,
+"hp": 0.0,
+"special-attack": 3.0,
+"special-defense": 0.0,
+"speed": 0.0
+}
+types = {
+1.0: 4,
+2.0: 14
+}

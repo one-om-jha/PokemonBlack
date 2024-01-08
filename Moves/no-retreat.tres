@@ -1,0 +1,61 @@
+[gd_resource type="Resource" script_class="Move" load_steps=3 format=3]
+
+[ext_resource type="Resource" path="res://Ailments/none.tres" id="1_nmq4y"]
+[ext_resource type="Script" path="res://typedef/Move.gd" id="2_4k1sp"]
+
+[resource]
+script = ExtResource("2_4k1sp")
+id = 748
+name = "no-retreat"
+accuracy = 0
+effect_chance = 100
+pp = 5
+priority = 0
+power = 0
+damage_class = "status"
+effect = "Inflicts regular damage.  Hits twice in one turn, with a $effect_chance% chance to make the target flinch."
+stat_changes = [{
+"change": 1.0,
+"stat": {
+"name": "attack",
+"url": "https://pokeapi.co/api/v2/stat/2/"
+}
+}, {
+"change": 1.0,
+"stat": {
+"name": "defense",
+"url": "https://pokeapi.co/api/v2/stat/3/"
+}
+}, {
+"change": 1.0,
+"stat": {
+"name": "special-attack",
+"url": "https://pokeapi.co/api/v2/stat/4/"
+}
+}, {
+"change": 1.0,
+"stat": {
+"name": "special-defense",
+"url": "https://pokeapi.co/api/v2/stat/5/"
+}
+}, {
+"change": 1.0,
+"stat": {
+"name": "speed",
+"url": "https://pokeapi.co/api/v2/stat/6/"
+}
+}]
+target = "user"
+type = 6
+ailment = ExtResource("1_nmq4y")
+category = "net-good-stats"
+min_hits = 0
+max_hits = 0
+min_turns = 0
+max_turns = 0
+drain = 0
+healing = 0
+crit_rate = 0
+ailment_chance = 0
+flinch_chance = 0
+stat_chance = 100

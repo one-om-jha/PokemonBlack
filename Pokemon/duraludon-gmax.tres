@@ -1,0 +1,46 @@
+[gd_resource type="Resource" script_class="Pokemon" load_steps=6 format=3]
+
+[ext_resource type="Resource" path="res://Abilities/light-metal.tres" id="1_3fp8m"]
+[ext_resource type="Resource" path="res://Abilities/heavy-metal.tres" id="2_spo2s"]
+[ext_resource type="Resource" path="res://Abilities/stalwart.tres" id="3_mcefv"]
+[ext_resource type="Script" path="res://typedef/Pokemon.gd" id="4_mssjb"]
+[ext_resource type="Resource" path="res://Species/duraludon.tres" id="5_5tk6a"]
+
+[resource]
+script = ExtResource("4_mssjb")
+id = 10225
+name = "duraludon-gmax"
+base_experience = 187
+height = 430
+weight = 10000
+abilities = [ExtResource("1_3fp8m"), ExtResource("2_spo2s"), ExtResource("3_mcefv")]
+forms = ["duraludon-gmax"]
+held_items = []
+moves = []
+species = ExtResource("5_5tk6a")
+sprites = {
+"back_default": "res://sprites/pokemon/back/10225.gif",
+"back_shiny": "res://sprites/pokemon/back/shiny/10225.gif",
+"front_default": "res://sprites/pokemon/10225.gif",
+"front_shiny": "res://sprites/pokemon/shiny/10225.gif"
+}
+stats = {
+"attack": 95.0,
+"defense": 115.0,
+"hp": 70.0,
+"special-attack": 120.0,
+"special-defense": 50.0,
+"speed": 85.0
+}
+stats_effort = {
+"attack": 0.0,
+"defense": 0.0,
+"hp": 0.0,
+"special-attack": 2.0,
+"special-defense": 0.0,
+"speed": 0.0
+}
+types = {
+1.0: 16,
+2.0: 14
+}

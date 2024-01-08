@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="Species" load_steps=3 format=3]
+
+[ext_resource type="Resource" path="res://GrowthRates/fast-then-very-slow.tres" id="1_g71je"]
+[ext_resource type="Script" path="res://typedef/Species.gd" id="2_67yi2"]
+
+[resource]
+script = ExtResource("2_67yi2")
+id = 321
+name = "wailord"
+order = 349
+genus = "Float Whale Pokémon"
+flavor = "The biggest of all Pokémon.
+It can dive to a depth of almost
+10,000 feet on only one breath."
+gender_rate = 4
+capture_rate = 60
+base_happiness = 50
+is_baby = false
+is_legendary = false
+is_mythical = false
+hatch_counter = 40
+has_gender_differences = false
+forms_switchable = false
+growth_rate = ExtResource("1_g71je")
+local_dex = 0
+national_dex = 321
+egg_groups = ["ground", "water2"]
+evolution_chain = 161
+habitat = "sea"

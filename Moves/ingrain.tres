@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="Move" load_steps=3 format=3]
+
+[ext_resource type="Resource" path="res://Ailments/ingrain.tres" id="1_b8bjf"]
+[ext_resource type="Script" path="res://typedef/Move.gd" id="2_vhd3o"]
+
+[resource]
+script = ExtResource("2_vhd3o")
+id = 275
+name = "ingrain"
+accuracy = 0
+effect_chance = 0
+pp = 20
+priority = 0
+power = 0
+damage_class = "status"
+effect = "Prevents the user from switching out.  User regains 1/16 of its max HP at the end of every turn.  If the user was immune to ground attacks, it will now take normal damage from them.
+
+roar and whirlwind will not affect the user.  The user cannot use magnet rise.
+
+The user may still use u turn to leave the field.
+
+This effect can be passed with baton pass."
+stat_changes = []
+target = "user"
+type = 4
+ailment = ExtResource("1_b8bjf")
+category = "ailment"
+min_hits = 0
+max_hits = 0
+min_turns = 0
+max_turns = 0
+drain = 0
+healing = 0
+crit_rate = 0
+ailment_chance = 0
+flinch_chance = 0
+stat_chance = 0

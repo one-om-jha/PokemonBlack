@@ -1,0 +1,45 @@
+[gd_resource type="Resource" script_class="Pokemon" load_steps=5 format=3]
+
+[ext_resource type="Resource" path="res://Abilities/overgrow.tres" id="1_kqouh"]
+[ext_resource type="Resource" path="res://Abilities/chlorophyll.tres" id="2_bqgoo"]
+[ext_resource type="Script" path="res://typedef/Pokemon.gd" id="3_rbaa7"]
+[ext_resource type="Resource" path="res://Species/venusaur.tres" id="4_m4tcc"]
+
+[resource]
+script = ExtResource("3_rbaa7")
+id = 10195
+name = "venusaur-gmax"
+base_experience = 236
+height = 240
+weight = 10000
+abilities = [ExtResource("1_kqouh"), ExtResource("1_kqouh"), ExtResource("2_bqgoo")]
+forms = ["venusaur-gmax"]
+held_items = []
+moves = []
+species = ExtResource("4_m4tcc")
+sprites = {
+"back_default": "res://sprites/pokemon/back/10195.gif",
+"back_shiny": "res://sprites/pokemon/back/shiny/10195.gif",
+"front_default": "res://sprites/pokemon/10195.gif",
+"front_shiny": "res://sprites/pokemon/shiny/10195.gif"
+}
+stats = {
+"attack": 82.0,
+"defense": 83.0,
+"hp": 80.0,
+"special-attack": 100.0,
+"special-defense": 100.0,
+"speed": 80.0
+}
+stats_effort = {
+"attack": 0.0,
+"defense": 0.0,
+"hp": 0.0,
+"special-attack": 2.0,
+"special-defense": 1.0,
+"speed": 0.0
+}
+types = {
+1.0: 4,
+2.0: 7
+}

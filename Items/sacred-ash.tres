@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://typedef/Item.gd" id="1_ge2iq"]
+
+[resource]
+script = ExtResource("1_ge2iq")
+id = 44
+name = "sacred-ash"
+cost = 50000
+fling_power = 30
+fling_effect = ""
+effect = "Used
+:   Revives all fainted Pokémon in the party and restores their HP to full."
+flavor = "This rare ash can revive all fainted Pokémon in a
+party. In doing so, it also fully restores their max HP."
+sprite = "res://sprites/items/sacred-ash.png"
+attributes = ["countable", "consumable", "usable-overworld", "usable-in-battle", "holdable"]
+category = "revival"

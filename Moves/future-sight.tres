@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="Move" load_steps=3 format=3]
+
+[ext_resource type="Resource" path="res://Ailments/none.tres" id="1_pqp0c"]
+[ext_resource type="Script" path="res://typedef/Move.gd" id="2_r5o34"]
+
+[resource]
+script = ExtResource("2_r5o34")
+id = 248
+name = "future-sight"
+accuracy = 100
+effect_chance = 0
+pp = 10
+priority = 0
+power = 120
+damage_class = "special"
+effect = "Inflicts typeless regular damage at the end of the third turn, starting with this one.  This move cannot score a critical hit.  If the target switches out, its replacement will be hit instead.  Damage is calculated at the time this move is used; stat changes and switching out during the delay won't change the damage inflicted.  No move with this effect can be used against the same target again until after the end of the third turn.
+
+This effect breaks through wonder guard.
+
+If the target is protected by protect or detect on the turn this move is used, this move will fail.  However, the damage on the third turn will break through protection.
+
+The damage is applied at the end of the turn, so it ignores endure and focus sash.
+
+This move cannot be copied by mirror move."
+stat_changes = []
+target = "selected-pokemon"
+type = 10
+ailment = ExtResource("1_pqp0c")
+category = "unique"
+min_hits = 0
+max_hits = 0
+min_turns = 0
+max_turns = 0
+drain = 0
+healing = 0
+crit_rate = 0
+ailment_chance = 0
+flinch_chance = 0
+stat_chance = 0

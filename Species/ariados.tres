@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="Species" load_steps=3 format=3]
+
+[ext_resource type="Resource" path="res://GrowthRates/fast.tres" id="1_uggj6"]
+[ext_resource type="Script" path="res://typedef/Species.gd" id="2_i7kbr"]
+
+[resource]
+script = ExtResource("2_i7kbr")
+id = 168
+name = "ariados"
+order = 200
+genus = "Long Leg Pokémon"
+flavor = "It attaches silk to its prey and
+sets it free. Later, it tracks the
+silk to the prey and its friends."
+gender_rate = 4
+capture_rate = 90
+base_happiness = 70
+is_baby = false
+is_legendary = false
+is_mythical = false
+hatch_counter = 15
+has_gender_differences = false
+forms_switchable = false
+growth_rate = ExtResource("1_uggj6")
+local_dex = 0
+national_dex = 168
+egg_groups = ["bug"]
+evolution_chain = 85
+habitat = "forest"

@@ -1,0 +1,49 @@
+[gd_resource type="Resource" script_class="Pokemon" load_steps=9 format=3]
+
+[ext_resource type="Resource" path="res://Abilities/shield-dust.tres" id="1_3xyks"]
+[ext_resource type="Resource" path="res://Abilities/run-away.tres" id="2_s68m7"]
+[ext_resource type="Resource" path="res://Moves/poison-sting.tres" id="3_3c6ks"]
+[ext_resource type="Resource" path="res://Moves/string-shot.tres" id="4_ju4vb"]
+[ext_resource type="Resource" path="res://Moves/bug-bite.tres" id="5_skjnd"]
+[ext_resource type="Resource" path="res://Moves/electroweb.tres" id="6_4y630"]
+[ext_resource type="Script" path="res://typedef/Pokemon.gd" id="7_82p76"]
+[ext_resource type="Resource" path="res://Species/weedle.tres" id="8_u3a0m"]
+
+[resource]
+script = ExtResource("7_82p76")
+id = 13
+name = "weedle"
+base_experience = 39
+height = 3
+weight = 32
+abilities = [ExtResource("1_3xyks"), ExtResource("1_3xyks"), ExtResource("2_s68m7")]
+forms = ["weedle"]
+held_items = []
+moves = [[1, "level-up", ExtResource("3_3c6ks")], [1, "level-up", ExtResource("4_ju4vb")], [9, "level-up", ExtResource("5_skjnd")], [0, "", ExtResource("6_4y630")]]
+species = ExtResource("8_u3a0m")
+sprites = {
+"back_default": "res://sprites/pokemon/versions/generation-v/black-white/animated/back/13.gif",
+"back_shiny": "res://sprites/pokemon/versions/generation-v/black-white/animated/back/shiny/13.gif",
+"front_default": "res://sprites/pokemon/versions/generation-v/black-white/animated/13.gif",
+"front_shiny": "res://sprites/pokemon/versions/generation-v/black-white/animated/shiny/13.gif"
+}
+stats = {
+"attack": 35.0,
+"defense": 30.0,
+"hp": 40.0,
+"special-attack": 20.0,
+"special-defense": 20.0,
+"speed": 50.0
+}
+stats_effort = {
+"attack": 0.0,
+"defense": 0.0,
+"hp": 0.0,
+"special-attack": 0.0,
+"special-defense": 0.0,
+"speed": 1.0
+}
+types = {
+1.0: 11,
+2.0: 7
+}

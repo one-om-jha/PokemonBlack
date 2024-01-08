@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://typedef/Item.gd" id="1_m4s8u"]
+
+[resource]
+script = ExtResource("1_m4s8u")
+id = 584
+name = "air-balloon"
+cost = 4000
+fling_power = 10
+fling_effect = ""
+effect = "Held
+:   Holder is immune to ground-type moves, spikes, toxic spikes, and arena trap.
+
+    This effect does not apply during gravity or ingrain.
+
+    When the holder takes damage from a move, this item is consumed."
+flavor = "An item to be held by a Pokémon. The holder will
+float in the air until hit. Once the holder is hit, this item
+will burst."
+sprite = "res://sprites/items/air-balloon.png"
+attributes = []
+category = "held-items"

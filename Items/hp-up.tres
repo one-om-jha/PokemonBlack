@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://typedef/Item.gd" id="1_7d3s1"]
+
+[resource]
+script = ExtResource("1_7d3s1")
+id = 45
+name = "hp-up"
+cost = 10000
+fling_power = 30
+fling_effect = ""
+effect = "Used on a party Pokémon
+:   Increases HP effort by 10, but won't increase it beyond 100.  Increases happiness by 5/3/2."
+flavor = "A nutritious drink for Pokémon. When consumed,
+it raises the HP base points of a single Pokémon."
+sprite = "res://sprites/items/hp-up.png"
+attributes = ["countable", "consumable", "usable-overworld", "usable-in-battle", "holdable"]
+category = "vitamins"

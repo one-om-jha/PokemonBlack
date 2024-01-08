@@ -1,0 +1,35 @@
+[gd_resource type="Resource" script_class="Move" load_steps=3 format=3]
+
+[ext_resource type="Resource" path="res://Ailments/none.tres" id="1_urg3m"]
+[ext_resource type="Script" path="res://typedef/Move.gd" id="2_0sxkd"]
+
+[resource]
+script = ExtResource("2_0sxkd")
+id = 54
+name = "mist"
+accuracy = 0
+effect_chance = 0
+pp = 30
+priority = 0
+power = 0
+damage_class = "status"
+effect = "Pokémon on the user's side of the field are immune to stat-lowering effects for five turns.
+
+guard swap, heart swap, and power swap may still be used.
+
+defog used by an opponent will end this effect."
+stat_changes = []
+target = "users-field"
+type = 5
+ailment = ExtResource("1_urg3m")
+category = "field-effect"
+min_hits = 0
+max_hits = 0
+min_turns = 0
+max_turns = 0
+drain = 0
+healing = 0
+crit_rate = 0
+ailment_chance = 0
+flinch_chance = 0
+stat_chance = 0

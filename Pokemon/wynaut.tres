@@ -1,0 +1,52 @@
+[gd_resource type="Resource" script_class="Pokemon" load_steps=13 format=3]
+
+[ext_resource type="Resource" path="res://Abilities/shadow-tag.tres" id="1_o2hp5"]
+[ext_resource type="Resource" path="res://Abilities/telepathy.tres" id="2_s7ym0"]
+[ext_resource type="Resource" path="res://Moves/counter.tres" id="3_g524l"]
+[ext_resource type="Resource" path="res://Moves/amnesia.tres" id="4_mvagb"]
+[ext_resource type="Resource" path="res://Moves/splash.tres" id="5_udiv8"]
+[ext_resource type="Resource" path="res://Moves/destiny-bond.tres" id="6_wad0r"]
+[ext_resource type="Resource" path="res://Moves/charm.tres" id="7_igcgf"]
+[ext_resource type="Resource" path="res://Moves/safeguard.tres" id="8_iefus"]
+[ext_resource type="Resource" path="res://Moves/encore.tres" id="9_o8vol"]
+[ext_resource type="Resource" path="res://Moves/mirror-coat.tres" id="10_nl2kr"]
+[ext_resource type="Script" path="res://typedef/Pokemon.gd" id="11_p6fm6"]
+[ext_resource type="Resource" path="res://Species/wynaut.tres" id="12_bf4u6"]
+
+[resource]
+script = ExtResource("11_p6fm6")
+id = 360
+name = "wynaut"
+base_experience = 52
+height = 6
+weight = 140
+abilities = [ExtResource("1_o2hp5"), ExtResource("1_o2hp5"), ExtResource("2_s7ym0")]
+forms = ["wynaut"]
+held_items = []
+moves = [[1, "level-up", ExtResource("3_g524l")], [0, "machine", ExtResource("4_mvagb")], [1, "level-up", ExtResource("5_udiv8")], [1, "level-up", ExtResource("6_wad0r")], [0, "machine", ExtResource("7_igcgf")], [0, "machine", ExtResource("8_iefus")], [0, "machine", ExtResource("9_o8vol")], [1, "level-up", ExtResource("10_nl2kr")]]
+species = ExtResource("12_bf4u6")
+sprites = {
+"back_default": "res://sprites/pokemon/versions/generation-v/black-white/animated/back/360.gif",
+"back_shiny": "res://sprites/pokemon/versions/generation-v/black-white/animated/back/shiny/360.gif",
+"front_default": "res://sprites/pokemon/versions/generation-v/black-white/animated/360.gif",
+"front_shiny": "res://sprites/pokemon/versions/generation-v/black-white/animated/shiny/360.gif"
+}
+stats = {
+"attack": 23.0,
+"defense": 48.0,
+"hp": 95.0,
+"special-attack": 23.0,
+"special-defense": 48.0,
+"speed": 23.0
+}
+stats_effort = {
+"attack": 0.0,
+"defense": 0.0,
+"hp": 1.0,
+"special-attack": 0.0,
+"special-defense": 0.0,
+"speed": 0.0
+}
+types = {
+1.0: 10
+}

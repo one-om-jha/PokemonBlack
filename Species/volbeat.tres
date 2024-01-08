@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="Species" load_steps=3 format=3]
+
+[ext_resource type="Resource" path="res://GrowthRates/slow-then-very-fast.tres" id="1_qw4oa"]
+[ext_resource type="Script" path="res://typedef/Species.gd" id="2_ob2cy"]
+
+[resource]
+script = ExtResource("2_ob2cy")
+id = 313
+name = "volbeat"
+order = 339
+genus = "Firefly Pokémon"
+flavor = "It communicates with others by
+lighting up its rear at night. It
+loves Illumise’s sweet aroma."
+gender_rate = 0
+capture_rate = 150
+base_happiness = 70
+is_baby = false
+is_legendary = false
+is_mythical = false
+hatch_counter = 15
+has_gender_differences = false
+forms_switchable = false
+growth_rate = ExtResource("1_qw4oa")
+local_dex = 0
+national_dex = 313
+egg_groups = ["bug", "humanshape"]
+evolution_chain = 156
+habitat = "forest"

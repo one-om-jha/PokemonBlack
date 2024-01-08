@@ -1,0 +1,54 @@
+[gd_resource type="Resource" script_class="Pokemon" load_steps=15 format=3]
+
+[ext_resource type="Resource" path="res://Abilities/shield-dust.tres" id="1_oqg7g"]
+[ext_resource type="Resource" path="res://Abilities/compound-eyes.tres" id="2_38p3m"]
+[ext_resource type="Resource" path="res://Abilities/friend-guard.tres" id="3_u367e"]
+[ext_resource type="Resource" path="res://Moves/tackle.tres" id="4_5vn5p"]
+[ext_resource type="Resource" path="res://Moves/poison-powder.tres" id="5_6bd7w"]
+[ext_resource type="Resource" path="res://Moves/stun-spore.tres" id="6_7ryub"]
+[ext_resource type="Resource" path="res://Moves/string-shot.tres" id="7_b68jd"]
+[ext_resource type="Resource" path="res://Moves/bug-bite.tres" id="8_hrldj"]
+[ext_resource type="Resource" path="res://Moves/rage-powder.tres" id="9_t5tvu"]
+[ext_resource type="Resource" path="res://Moves/struggle-bug.tres" id="10_4vdj6"]
+[ext_resource type="Resource" path="res://Moves/tera-blast.tres" id="11_ju7wq"]
+[ext_resource type="Resource" path="res://Moves/pounce.tres" id="12_en5i3"]
+[ext_resource type="Script" path="res://typedef/Pokemon.gd" id="13_aymsw"]
+[ext_resource type="Resource" path="res://Species/scatterbug.tres" id="14_g7iu7"]
+
+[resource]
+script = ExtResource("13_aymsw")
+id = 664
+name = "scatterbug"
+base_experience = 40
+height = 3
+weight = 25
+abilities = [ExtResource("1_oqg7g"), ExtResource("2_38p3m"), ExtResource("3_u367e")]
+forms = ["scatterbug-icy-snow", "scatterbug-polar", "scatterbug-tundra", "scatterbug-continental", "scatterbug-garden", "scatterbug-elegant", "scatterbug-meadow", "scatterbug-modern", "scatterbug-marine", "scatterbug-archipelago", "scatterbug-high-plains", "scatterbug-sandstorm", "scatterbug-river", "scatterbug-monsoon", "scatterbug-savanna", "scatterbug-sun", "scatterbug-ocean", "scatterbug-jungle", "scatterbug-fancy", "scatterbug-poke-ball"]
+held_items = []
+moves = [[1, "level-up", ExtResource("4_5vn5p")], [0, "egg", ExtResource("5_6bd7w")], [6, "level-up", ExtResource("6_7ryub")], [1, "level-up", ExtResource("7_b68jd")], [0, "machine", ExtResource("8_hrldj")], [0, "egg", ExtResource("9_t5tvu")], [0, "machine", ExtResource("10_4vdj6")], [0, "machine", ExtResource("11_ju7wq")], [0, "machine", ExtResource("12_en5i3")]]
+species = ExtResource("14_g7iu7")
+sprites = {
+"back_default": "res://sprites/pokemon/back/664.gif",
+"back_shiny": "res://sprites/pokemon/back/shiny/664.gif",
+"front_default": "res://sprites/pokemon/664.gif",
+"front_shiny": "res://sprites/pokemon/shiny/664.gif"
+}
+stats = {
+"attack": 35.0,
+"defense": 40.0,
+"hp": 38.0,
+"special-attack": 27.0,
+"special-defense": 25.0,
+"speed": 35.0
+}
+stats_effort = {
+"attack": 0.0,
+"defense": 1.0,
+"hp": 0.0,
+"special-attack": 0.0,
+"special-defense": 0.0,
+"speed": 0.0
+}
+types = {
+1.0: 11
+}

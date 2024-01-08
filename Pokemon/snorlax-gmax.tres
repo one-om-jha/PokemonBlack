@@ -1,0 +1,45 @@
+[gd_resource type="Resource" script_class="Pokemon" load_steps=6 format=3]
+
+[ext_resource type="Resource" path="res://Abilities/immunity.tres" id="1_1fhl5"]
+[ext_resource type="Resource" path="res://Abilities/thick-fat.tres" id="2_22osf"]
+[ext_resource type="Resource" path="res://Abilities/gluttony.tres" id="3_mfl2m"]
+[ext_resource type="Script" path="res://typedef/Pokemon.gd" id="4_tfnu8"]
+[ext_resource type="Resource" path="res://Species/snorlax.tres" id="5_nufr5"]
+
+[resource]
+script = ExtResource("4_tfnu8")
+id = 10206
+name = "snorlax-gmax"
+base_experience = 189
+height = 350
+weight = 10000
+abilities = [ExtResource("1_1fhl5"), ExtResource("2_22osf"), ExtResource("3_mfl2m")]
+forms = ["snorlax-gmax"]
+held_items = []
+moves = []
+species = ExtResource("5_nufr5")
+sprites = {
+"back_default": "res://sprites/pokemon/back/10206.gif",
+"back_shiny": "res://sprites/pokemon/back/shiny/10206.gif",
+"front_default": "res://sprites/pokemon/10206.gif",
+"front_shiny": "res://sprites/pokemon/shiny/10206.gif"
+}
+stats = {
+"attack": 110.0,
+"defense": 65.0,
+"hp": 160.0,
+"special-attack": 65.0,
+"special-defense": 110.0,
+"speed": 30.0
+}
+stats_effort = {
+"attack": 0.0,
+"defense": 0.0,
+"hp": 2.0,
+"special-attack": 0.0,
+"special-defense": 0.0,
+"speed": 0.0
+}
+types = {
+1.0: 0
+}

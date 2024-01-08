@@ -1,0 +1,94 @@
+[gd_scene load_steps=11 format=3 uid="uid://unuonqlx2xpd"]
+
+[ext_resource type="Script" path="res://scenes/ui/save_node.gd" id="1_8b3wi"]
+[ext_resource type="FontFile" uid="uid://dqx0wj7cshp1t" path="res://ui/fonts/NunitoSans_10pt-Italic.ttf" id="1_dc7fs"]
+[ext_resource type="Texture2D" uid="uid://cjui8l2hac1b2" path="res://textures/menu/SaveNodeUnselected.png" id="1_vpret"]
+[ext_resource type="Texture2D" uid="uid://cqmauk1wx3uqy" path="res://textures/player/player_male.png" id="2_6k8jg"]
+[ext_resource type="Texture2D" uid="uid://ch578dutset2r" path="res://textures/menu/SaveNodeSelected.png" id="2_ybv45"]
+[ext_resource type="FontFile" uid="uid://voh2awxrc13f" path="res://ui/fonts/NunitoSans_10pt-BlackItalic.ttf" id="3_my4to"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ku3dk"]
+font = ExtResource("1_dc7fs")
+font_size = 18
+font_color = Color(1, 1, 1, 0.5)
+
+[sub_resource type="LabelSettings" id="LabelSettings_cpqts"]
+font = ExtResource("3_my4to")
+font_size = 50
+
+[sub_resource type="LabelSettings" id="LabelSettings_pvlk1"]
+font = ExtResource("3_my4to")
+font_size = 24
+
+[sub_resource type="LabelSettings" id="LabelSettings_7q6k4"]
+font = ExtResource("3_my4to")
+font_size = 32
+
+[node name="Save1" type="TextureButton"]
+offset_right = 856.0
+offset_bottom = 200.0
+texture_normal = ExtResource("1_vpret")
+texture_focused = ExtResource("2_ybv45")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("1_8b3wi")
+
+[node name="SaveNumber" type="Label" parent="."]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 24.0
+offset_right = 146.0
+offset_bottom = 50.0
+text = "Save Game 1"
+label_settings = SubResource("LabelSettings_ku3dk")
+uppercase = true
+
+[node name="PlayerSprite" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 24.0
+offset_top = 59.0
+offset_right = 114.0
+offset_bottom = 161.0
+texture = ExtResource("2_6k8jg")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="TrainerName" type="Label" parent="."]
+layout_mode = 0
+offset_left = 146.0
+offset_top = 58.0
+offset_right = 383.0
+offset_bottom = 127.0
+text = "No Data"
+label_settings = SubResource("LabelSettings_cpqts")
+uppercase = true
+
+[node name="Playtime" type="Label" parent="."]
+layout_mode = 0
+offset_left = 146.0
+offset_top = 124.0
+offset_right = 209.0
+offset_bottom = 158.0
+text = "-"
+label_settings = SubResource("LabelSettings_pvlk1")
+
+[node name="Badges" type="Label" parent="."]
+layout_mode = 0
+offset_left = 738.0
+offset_top = 68.0
+offset_right = 778.0
+offset_bottom = 113.0
+text = "-"
+label_settings = SubResource("LabelSettings_7q6k4")
+horizontal_alignment = 2
+
+[node name="Pokemon" type="Label" parent="."]
+layout_mode = 0
+offset_left = 738.0
+offset_top = 124.0
+offset_right = 778.0
+offset_bottom = 169.0
+text = "-"
+label_settings = SubResource("LabelSettings_7q6k4")
+horizontal_alignment = 2

@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="Move" load_steps=3 format=3]
+
+[ext_resource type="Resource" path="res://Ailments/paralysis.tres" id="1_55xf7"]
+[ext_resource type="Script" path="res://typedef/Move.gd" id="2_ipwup"]
+
+[resource]
+script = ExtResource("2_ipwup")
+id = 340
+name = "bounce"
+accuracy = 85
+effect_chance = 30
+pp = 5
+priority = 0
+power = 85
+damage_class = "physical"
+effect = "Inflicts regular damage.  User bounces high into the air for one turn, becoming immune to attack, and hits on the second turn.  Has a $effect_chance% chance to paralyze the target.
+
+During the immune turn, gust, hurricane, sky uppercut, smack down, thunder, and twister still hit the user normally.  gust and twister also have double power against the user.
+
+The damage from hail and sandstorm still applies during the immune turn.
+
+The user may be hit during its immune turn if under the effect of lock on, mind reader, or no guard.
+
+This move cannot be used while gravity is in effect.
+
+This move cannot be selected by sleep talk."
+stat_changes = []
+target = "selected-pokemon"
+type = 9
+ailment = ExtResource("1_55xf7")
+category = "damage+ailment"
+min_hits = 0
+max_hits = 0
+min_turns = 0
+max_turns = 0
+drain = 0
+healing = 0
+crit_rate = 0
+ailment_chance = 30
+flinch_chance = 0
+stat_chance = 0

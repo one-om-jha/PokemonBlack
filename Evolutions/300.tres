@@ -1,0 +1,49 @@
+[gd_resource type="Resource" script_class="EvolutionChain" load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://typedef/ChainLink.gd" id="1_423cv"]
+[ext_resource type="Resource" path="res://Species/amoonguss.tres" id="2_er3qb"]
+[ext_resource type="Resource" path="res://Species/foongus.tres" id="3_y52wr"]
+[ext_resource type="Script" path="res://typedef/EvolutionChain.gd" id="4_tq1pk"]
+
+[sub_resource type="Resource" id="Resource_vso5t"]
+script = ExtResource("1_423cv")
+is_baby = false
+species = ExtResource("2_er3qb")
+evolves_to = []
+trigger = ""
+gender = 0
+known_move_type = 0
+location = ""
+min_level = 0
+min_happiness = 0
+min_beauty = 0
+min_affection = 0
+needs_overworld_rain = false
+party_type = 0
+relative_physical_stats = 0
+time_of_day = ""
+turn_upside_down = false
+
+[sub_resource type="Resource" id="Resource_egnq4"]
+script = ExtResource("1_423cv")
+is_baby = false
+species = ExtResource("3_y52wr")
+evolves_to = [SubResource("Resource_vso5t")]
+trigger = ""
+gender = 0
+known_move_type = 0
+location = ""
+min_level = 0
+min_happiness = 0
+min_beauty = 0
+min_affection = 0
+needs_overworld_rain = false
+party_type = 0
+relative_physical_stats = 0
+time_of_day = ""
+turn_upside_down = false
+
+[resource]
+script = ExtResource("4_tq1pk")
+id = 300
+chain = SubResource("Resource_egnq4")

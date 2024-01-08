@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://typedef/Item.gd" id="1_l8x70"]
+
+[resource]
+script = ExtResource("1_l8x70")
+id = 40
+name = "elixir"
+cost = 3000
+fling_power = 30
+fling_effect = ""
+effect = "Used on a party Pokémon
+:   Restores 10 PP for each move."
+flavor = "This medicine can be used to restore 10 PP to each of
+the moves that have been learned by a Pokémon."
+sprite = "res://sprites/items/elixir.png"
+attributes = ["countable", "consumable", "usable-overworld", "usable-in-battle", "holdable"]
+category = "pp-recovery"

@@ -1,0 +1,44 @@
+[gd_resource type="Resource" script_class="Pokemon" load_steps=5 format=3]
+
+[ext_resource type="Resource" path="res://Abilities/levitate.tres" id="1_25h2h"]
+[ext_resource type="Resource" path="res://Moves/hidden-power.tres" id="2_3wgnx"]
+[ext_resource type="Script" path="res://typedef/Pokemon.gd" id="3_guvmf"]
+[ext_resource type="Resource" path="res://Species/unown.tres" id="4_k508j"]
+
+[resource]
+script = ExtResource("3_guvmf")
+id = 201
+name = "unown"
+base_experience = 118
+height = 5
+weight = 50
+abilities = [ExtResource("1_25h2h"), ExtResource("1_25h2h"), null]
+forms = ["unown-a", "unown-b", "unown-c", "unown-d", "unown-e", "unown-f", "unown-g", "unown-h", "unown-i", "unown-j", "unown-k", "unown-l", "unown-m", "unown-n", "unown-o", "unown-p", "unown-q", "unown-r", "unown-s", "unown-t", "unown-u", "unown-v", "unown-w", "unown-x", "unown-y", "unown-z", "unown-exclamation", "unown-question"]
+held_items = []
+moves = [[0, "machine", ExtResource("2_3wgnx")]]
+species = ExtResource("4_k508j")
+sprites = {
+"back_default": "res://sprites/pokemon/versions/generation-v/black-white/animated/back/201.gif",
+"back_shiny": "res://sprites/pokemon/versions/generation-v/black-white/animated/back/shiny/201.gif",
+"front_default": "res://sprites/pokemon/versions/generation-v/black-white/animated/201.gif",
+"front_shiny": "res://sprites/pokemon/versions/generation-v/black-white/animated/shiny/201.gif"
+}
+stats = {
+"attack": 72.0,
+"defense": 48.0,
+"hp": 48.0,
+"special-attack": 72.0,
+"special-defense": 48.0,
+"speed": 48.0
+}
+stats_effort = {
+"attack": 1.0,
+"defense": 0.0,
+"hp": 0.0,
+"special-attack": 1.0,
+"special-defense": 0.0,
+"speed": 0.0
+}
+types = {
+1.0: 10
+}

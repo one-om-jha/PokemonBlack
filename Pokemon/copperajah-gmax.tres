@@ -1,0 +1,44 @@
+[gd_resource type="Resource" script_class="Pokemon" load_steps=5 format=3]
+
+[ext_resource type="Resource" path="res://Abilities/sheer-force.tres" id="1_tl3wa"]
+[ext_resource type="Resource" path="res://Abilities/heavy-metal.tres" id="2_7un6g"]
+[ext_resource type="Script" path="res://typedef/Pokemon.gd" id="3_amw0q"]
+[ext_resource type="Resource" path="res://Species/copperajah.tres" id="4_rfk4x"]
+
+[resource]
+script = ExtResource("3_amw0q")
+id = 10224
+name = "copperajah-gmax"
+base_experience = 175
+height = 230
+weight = 10000
+abilities = [ExtResource("1_tl3wa"), ExtResource("1_tl3wa"), ExtResource("2_7un6g")]
+forms = ["copperajah-gmax"]
+held_items = []
+moves = []
+species = ExtResource("4_rfk4x")
+sprites = {
+"back_default": "res://sprites/pokemon/back/10224.gif",
+"back_shiny": "res://sprites/pokemon/back/shiny/10224.gif",
+"front_default": "res://sprites/pokemon/10224.gif",
+"front_shiny": "res://sprites/pokemon/shiny/10224.gif"
+}
+stats = {
+"attack": 130.0,
+"defense": 69.0,
+"hp": 122.0,
+"special-attack": 80.0,
+"special-defense": 69.0,
+"speed": 30.0
+}
+stats_effort = {
+"attack": 2.0,
+"defense": 0.0,
+"hp": 0.0,
+"special-attack": 0.0,
+"special-defense": 0.0,
+"speed": 0.0
+}
+types = {
+1.0: 16
+}

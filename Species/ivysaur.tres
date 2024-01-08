@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="Species" load_steps=3 format=3]
+
+[ext_resource type="Resource" path="res://GrowthRates/medium-slow.tres" id="1_lbjeu"]
+[ext_resource type="Script" path="res://typedef/Species.gd" id="2_ui1s7"]
+
+[resource]
+script = ExtResource("2_ui1s7")
+id = 2
+name = "ivysaur"
+order = 2
+genus = "Seed Pokémon"
+flavor = "When the bud on its back starts
+swelling, a sweet aroma wafts to
+indicate the flower’s coming bloom."
+gender_rate = 1
+capture_rate = 45
+base_happiness = 50
+is_baby = false
+is_legendary = false
+is_mythical = false
+hatch_counter = 20
+has_gender_differences = false
+forms_switchable = false
+growth_rate = ExtResource("1_lbjeu")
+local_dex = 0
+national_dex = 2
+egg_groups = ["monster", "plant"]
+evolution_chain = 1
+habitat = "grassland"

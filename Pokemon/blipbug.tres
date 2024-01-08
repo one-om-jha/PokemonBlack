@@ -1,0 +1,50 @@
+[gd_resource type="Resource" script_class="Pokemon" load_steps=11 format=3]
+
+[ext_resource type="Resource" path="res://Abilities/swarm.tres" id="1_1hc3a"]
+[ext_resource type="Resource" path="res://Abilities/compound-eyes.tres" id="2_0shkx"]
+[ext_resource type="Resource" path="res://Abilities/telepathy.tres" id="3_ls7qj"]
+[ext_resource type="Resource" path="res://Moves/supersonic.tres" id="4_sax4c"]
+[ext_resource type="Resource" path="res://Moves/recover.tres" id="5_phlyd"]
+[ext_resource type="Resource" path="res://Moves/struggle-bug.tres" id="6_1jwhi"]
+[ext_resource type="Resource" path="res://Moves/sticky-web.tres" id="7_lnvs0"]
+[ext_resource type="Resource" path="res://Moves/infestation.tres" id="8_3vh2s"]
+[ext_resource type="Script" path="res://typedef/Pokemon.gd" id="9_6qb62"]
+[ext_resource type="Resource" path="res://Species/blipbug.tres" id="10_yc6es"]
+
+[resource]
+script = ExtResource("9_6qb62")
+id = 824
+name = "blipbug"
+base_experience = 36
+height = 4
+weight = 80
+abilities = [ExtResource("1_1hc3a"), ExtResource("2_0shkx"), ExtResource("3_ls7qj")]
+forms = ["blipbug"]
+held_items = []
+moves = [[0, "egg", ExtResource("4_sax4c")], [0, "egg", ExtResource("5_phlyd")], [1, "level-up", ExtResource("6_1jwhi")], [0, "egg", ExtResource("7_lnvs0")], [0, "egg", ExtResource("8_3vh2s")]]
+species = ExtResource("10_yc6es")
+sprites = {
+"back_default": "res://sprites/pokemon/back/824.gif",
+"back_shiny": "res://sprites/pokemon/back/shiny/824.gif",
+"front_default": "res://sprites/pokemon/824.gif",
+"front_shiny": "res://sprites/pokemon/shiny/824.gif"
+}
+stats = {
+"attack": 20.0,
+"defense": 20.0,
+"hp": 25.0,
+"special-attack": 25.0,
+"special-defense": 45.0,
+"speed": 45.0
+}
+stats_effort = {
+"attack": 0.0,
+"defense": 0.0,
+"hp": 0.0,
+"special-attack": 0.0,
+"special-defense": 1.0,
+"speed": 0.0
+}
+types = {
+1.0: 11
+}

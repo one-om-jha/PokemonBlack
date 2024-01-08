@@ -1,0 +1,70 @@
+[gd_resource type="Resource" script_class="Pokemon" load_steps=31 format=3]
+
+[ext_resource type="Resource" path="res://Abilities/sweet-veil.tres" id="1_pk4t5"]
+[ext_resource type="Resource" path="res://Abilities/aroma-veil.tres" id="2_nfyft"]
+[ext_resource type="Resource" path="res://Moves/tackle.tres" id="3_1im30"]
+[ext_resource type="Resource" path="res://Moves/recover.tres" id="4_r1tne"]
+[ext_resource type="Resource" path="res://Moves/acid-armor.tres" id="5_t85xw"]
+[ext_resource type="Resource" path="res://Moves/rest.tres" id="6_miu3e"]
+[ext_resource type="Resource" path="res://Moves/substitute.tres" id="7_1sw0g"]
+[ext_resource type="Resource" path="res://Moves/snore.tres" id="8_k0xf6"]
+[ext_resource type="Resource" path="res://Moves/protect.tres" id="9_oqbuw"]
+[ext_resource type="Resource" path="res://Moves/sweet-kiss.tres" id="10_34c5s"]
+[ext_resource type="Resource" path="res://Moves/endure.tres" id="11_2o1my"]
+[ext_resource type="Resource" path="res://Moves/charm.tres" id="12_5ycdt"]
+[ext_resource type="Resource" path="res://Moves/attract.tres" id="13_jfhr2"]
+[ext_resource type="Resource" path="res://Moves/sleep-talk.tres" id="14_0gnxv"]
+[ext_resource type="Resource" path="res://Moves/sweet-scent.tres" id="15_rhby6"]
+[ext_resource type="Resource" path="res://Moves/facade.tres" id="16_rkbxv"]
+[ext_resource type="Resource" path="res://Moves/helping-hand.tres" id="17_hkwcy"]
+[ext_resource type="Resource" path="res://Moves/aromatherapy.tres" id="18_h054e"]
+[ext_resource type="Resource" path="res://Moves/fling.tres" id="19_8ewov"]
+[ext_resource type="Resource" path="res://Moves/last-resort.tres" id="20_ua0l6"]
+[ext_resource type="Resource" path="res://Moves/entrainment.tres" id="21_jxniq"]
+[ext_resource type="Resource" path="res://Moves/round.tres" id="22_sqc6x"]
+[ext_resource type="Resource" path="res://Moves/stored-power.tres" id="23_sadsj"]
+[ext_resource type="Resource" path="res://Moves/draining-kiss.tres" id="24_p3svv"]
+[ext_resource type="Resource" path="res://Moves/misty-terrain.tres" id="25_2842s"]
+[ext_resource type="Resource" path="res://Moves/aromatic-mist.tres" id="26_tvudt"]
+[ext_resource type="Resource" path="res://Moves/dazzling-gleam.tres" id="27_qc17t"]
+[ext_resource type="Resource" path="res://Moves/baby-doll-eyes.tres" id="28_fup25"]
+[ext_resource type="Script" path="res://typedef/Pokemon.gd" id="29_6xqr6"]
+[ext_resource type="Resource" path="res://Species/milcery.tres" id="30_yrhuo"]
+
+[resource]
+script = ExtResource("29_6xqr6")
+id = 868
+name = "milcery"
+base_experience = 54
+height = 2
+weight = 3
+abilities = [ExtResource("1_pk4t5"), ExtResource("1_pk4t5"), ExtResource("2_nfyft")]
+forms = ["milcery"]
+held_items = []
+moves = [[1, "level-up", ExtResource("3_1im30")], [40, "level-up", ExtResource("4_r1tne")], [30, "level-up", ExtResource("5_t85xw")], [0, "machine", ExtResource("6_miu3e")], [0, "machine", ExtResource("7_1sw0g")], [0, "machine", ExtResource("8_k0xf6")], [0, "machine", ExtResource("9_oqbuw")], [5, "level-up", ExtResource("10_34c5s")], [0, "machine", ExtResource("11_2o1my")], [0, "machine", ExtResource("12_5ycdt")], [0, "machine", ExtResource("13_jfhr2")], [0, "machine", ExtResource("14_0gnxv")], [10, "level-up", ExtResource("15_rhby6")], [0, "machine", ExtResource("16_rkbxv")], [0, "machine", ExtResource("17_hkwcy")], [20, "level-up", ExtResource("18_h054e")], [0, "machine", ExtResource("19_8ewov")], [0, "egg", ExtResource("20_ua0l6")], [50, "level-up", ExtResource("21_jxniq")], [0, "machine", ExtResource("22_sqc6x")], [0, "machine", ExtResource("23_sadsj")], [0, "machine", ExtResource("24_p3svv")], [0, "machine", ExtResource("25_2842s")], [1, "level-up", ExtResource("26_tvudt")], [0, "machine", ExtResource("27_qc17t")], [0, "egg", ExtResource("28_fup25")]]
+species = ExtResource("30_yrhuo")
+sprites = {
+"back_default": "res://sprites/pokemon/back/868.gif",
+"back_shiny": "res://sprites/pokemon/back/shiny/868.gif",
+"front_default": "res://sprites/pokemon/868.gif",
+"front_shiny": "res://sprites/pokemon/shiny/868.gif"
+}
+stats = {
+"attack": 40.0,
+"defense": 40.0,
+"hp": 45.0,
+"special-attack": 50.0,
+"special-defense": 61.0,
+"speed": 34.0
+}
+stats_effort = {
+"attack": 0.0,
+"defense": 0.0,
+"hp": 0.0,
+"special-attack": 0.0,
+"special-defense": 1.0,
+"speed": 0.0
+}
+types = {
+1.0: 17
+}

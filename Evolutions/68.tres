@@ -1,0 +1,69 @@
+[gd_resource type="Resource" script_class="EvolutionChain" load_steps=9 format=3]
+
+[ext_resource type="Script" path="res://typedef/ChainLink.gd" id="1_qc2gq"]
+[ext_resource type="Resource" path="res://Species/porygon-z.tres" id="2_50wqs"]
+[ext_resource type="Resource" path="res://Species/porygon2.tres" id="3_2yj76"]
+[ext_resource type="Resource" path="res://Species/porygon.tres" id="4_km1br"]
+[ext_resource type="Script" path="res://typedef/EvolutionChain.gd" id="5_mptoj"]
+
+[sub_resource type="Resource" id="Resource_v2pyn"]
+script = ExtResource("1_qc2gq")
+is_baby = false
+species = ExtResource("2_50wqs")
+evolves_to = []
+trigger = ""
+gender = 0
+known_move_type = 0
+location = ""
+min_level = 0
+min_happiness = 0
+min_beauty = 0
+min_affection = 0
+needs_overworld_rain = false
+party_type = 0
+relative_physical_stats = 0
+time_of_day = ""
+turn_upside_down = false
+
+[sub_resource type="Resource" id="Resource_wv7jk"]
+script = ExtResource("1_qc2gq")
+is_baby = false
+species = ExtResource("3_2yj76")
+evolves_to = [SubResource("Resource_v2pyn")]
+trigger = ""
+gender = 0
+known_move_type = 0
+location = ""
+min_level = 0
+min_happiness = 0
+min_beauty = 0
+min_affection = 0
+needs_overworld_rain = false
+party_type = 0
+relative_physical_stats = 0
+time_of_day = ""
+turn_upside_down = false
+
+[sub_resource type="Resource" id="Resource_o303d"]
+script = ExtResource("1_qc2gq")
+is_baby = false
+species = ExtResource("4_km1br")
+evolves_to = [SubResource("Resource_wv7jk")]
+trigger = ""
+gender = 0
+known_move_type = 0
+location = ""
+min_level = 0
+min_happiness = 0
+min_beauty = 0
+min_affection = 0
+needs_overworld_rain = false
+party_type = 0
+relative_physical_stats = 0
+time_of_day = ""
+turn_upside_down = false
+
+[resource]
+script = ExtResource("5_mptoj")
+id = 68
+chain = SubResource("Resource_o303d")

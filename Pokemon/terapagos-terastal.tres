@@ -1,0 +1,43 @@
+[gd_resource type="Resource" script_class="Pokemon" load_steps=4 format=3]
+
+[ext_resource type="Resource" path="res://Abilities/tera-shell.tres" id="1_lg4mq"]
+[ext_resource type="Script" path="res://typedef/Pokemon.gd" id="2_bdjsf"]
+[ext_resource type="Resource" path="res://Species/terapagos.tres" id="3_bfkb4"]
+
+[resource]
+script = ExtResource("2_bdjsf")
+id = 10276
+name = "terapagos-terastal"
+base_experience = 0
+height = 3
+weight = 160
+abilities = [ExtResource("1_lg4mq"), ExtResource("1_lg4mq"), null]
+forms = ["terapagos-terastal"]
+held_items = []
+moves = []
+species = ExtResource("3_bfkb4")
+sprites = {
+"back_default": "res://sprites/pokemon/back/10276.gif",
+"back_shiny": "res://sprites/pokemon/back/shiny/10276.gif",
+"front_default": "res://sprites/pokemon/10276.gif",
+"front_shiny": "res://sprites/pokemon/shiny/10276.gif"
+}
+stats = {
+"attack": 95.0,
+"defense": 110.0,
+"hp": 95.0,
+"special-attack": 105.0,
+"special-defense": 110.0,
+"speed": 85.0
+}
+stats_effort = {
+"attack": 0.0,
+"defense": 2.0,
+"hp": 0.0,
+"special-attack": 0.0,
+"special-defense": 2.0,
+"speed": 0.0
+}
+types = {
+1.0: 0
+}

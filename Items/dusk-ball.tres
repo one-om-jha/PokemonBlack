@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://typedef/Item.gd" id="1_u53rt"]
+
+[resource]
+script = ExtResource("1_u53rt")
+id = 13
+name = "dusk-ball"
+cost = 1000
+fling_power = 0
+fling_effect = ""
+effect = "Used in battle
+:   Attempts to catch a wild Pokémon.  If it's currently nighttime or the wild Pokémon was encountered while walking in a cave, this ball has a catch rate of 3.5×.  Otherwise, it has a catch rate of 1×.
+
+    If used in a trainer battle, nothing happens and the ball is lost."
+flavor = "A somewhat different Poké Ball that makes it
+easier to catch wild Pokémon at night or in dark
+places such as caves."
+sprite = "res://sprites/items/dusk-ball.png"
+attributes = ["countable", "consumable", "usable-in-battle", "holdable"]
+category = "special-balls"

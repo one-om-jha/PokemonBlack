@@ -1,0 +1,67 @@
+[gd_resource type="Resource" script_class="Pokemon" load_steps=27 format=3]
+
+[ext_resource type="Resource" path="res://Abilities/rattled.tres" id="1_a6uao"]
+[ext_resource type="Resource" path="res://Abilities/static.tres" id="2_rl6dg"]
+[ext_resource type="Resource" path="res://Abilities/klutz.tres" id="3_82nws"]
+[ext_resource type="Resource" path="res://Moves/growl.tres" id="4_4nxcy"]
+[ext_resource type="Resource" path="res://Moves/acid.tres" id="5_nivow"]
+[ext_resource type="Resource" path="res://Moves/rest.tres" id="6_taoii"]
+[ext_resource type="Resource" path="res://Moves/substitute.tres" id="7_wmbq2"]
+[ext_resource type="Resource" path="res://Moves/snore.tres" id="8_wiqqc"]
+[ext_resource type="Resource" path="res://Moves/flail.tres" id="9_1pf7n"]
+[ext_resource type="Resource" path="res://Moves/protect.tres" id="10_m0ndy"]
+[ext_resource type="Resource" path="res://Moves/endure.tres" id="11_p432q"]
+[ext_resource type="Resource" path="res://Moves/charm.tres" id="12_15sxb"]
+[ext_resource type="Resource" path="res://Moves/attract.tres" id="13_dtry6"]
+[ext_resource type="Resource" path="res://Moves/sleep-talk.tres" id="14_jnef3"]
+[ext_resource type="Resource" path="res://Moves/encore.tres" id="15_kcfdd"]
+[ext_resource type="Resource" path="res://Moves/facade.tres" id="16_4l1wo"]
+[ext_resource type="Resource" path="res://Moves/endeavor.tres" id="17_ed6py"]
+[ext_resource type="Resource" path="res://Moves/metal-sound.tres" id="18_78nn4"]
+[ext_resource type="Resource" path="res://Moves/round.tres" id="19_quja7"]
+[ext_resource type="Resource" path="res://Moves/belch.tres" id="20_yv64m"]
+[ext_resource type="Resource" path="res://Moves/nuzzle.tres" id="21_24fsn"]
+[ext_resource type="Resource" path="res://Moves/power-up-punch.tres" id="22_16hej"]
+[ext_resource type="Resource" path="res://Moves/tearful-look.tres" id="23_22f8b"]
+[ext_resource type="Resource" path="res://Moves/tera-blast.tres" id="24_el6op"]
+[ext_resource type="Script" path="res://typedef/Pokemon.gd" id="25_gsv0l"]
+[ext_resource type="Resource" path="res://Species/toxel.tres" id="26_j8hl6"]
+
+[resource]
+script = ExtResource("25_gsv0l")
+id = 848
+name = "toxel"
+base_experience = 48
+height = 4
+weight = 110
+abilities = [ExtResource("1_a6uao"), ExtResource("2_rl6dg"), ExtResource("3_82nws")]
+forms = ["toxel"]
+held_items = []
+moves = [[1, "level-up", ExtResource("4_4nxcy")], [1, "level-up", ExtResource("5_nivow")], [0, "machine", ExtResource("6_taoii")], [0, "machine", ExtResource("7_wmbq2")], [0, "machine", ExtResource("8_wiqqc")], [1, "level-up", ExtResource("9_1pf7n")], [0, "machine", ExtResource("10_m0ndy")], [0, "machine", ExtResource("11_p432q")], [0, "machine", ExtResource("12_15sxb")], [0, "machine", ExtResource("13_dtry6")], [0, "machine", ExtResource("14_jnef3")], [0, "machine", ExtResource("15_kcfdd")], [0, "machine", ExtResource("16_4l1wo")], [0, "egg", ExtResource("17_ed6py")], [0, "egg", ExtResource("18_78nn4")], [0, "machine", ExtResource("19_quja7")], [1, "level-up", ExtResource("20_yv64m")], [1, "level-up", ExtResource("21_24fsn")], [0, "egg", ExtResource("22_16hej")], [1, "level-up", ExtResource("23_22f8b")], [0, "machine", ExtResource("24_el6op")]]
+species = ExtResource("26_j8hl6")
+sprites = {
+"back_default": "res://sprites/pokemon/back/848.gif",
+"back_shiny": "res://sprites/pokemon/back/shiny/848.gif",
+"front_default": "res://sprites/pokemon/848.gif",
+"front_shiny": "res://sprites/pokemon/shiny/848.gif"
+}
+stats = {
+"attack": 38.0,
+"defense": 35.0,
+"hp": 40.0,
+"special-attack": 54.0,
+"special-defense": 35.0,
+"speed": 40.0
+}
+stats_effort = {
+"attack": 0.0,
+"defense": 0.0,
+"hp": 0.0,
+"special-attack": 1.0,
+"special-defense": 0.0,
+"speed": 0.0
+}
+types = {
+1.0: 3,
+2.0: 7
+}

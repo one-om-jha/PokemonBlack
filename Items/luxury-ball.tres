@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://typedef/Item.gd" id="1_xk2n6"]
+
+[resource]
+script = ExtResource("1_xk2n6")
+id = 11
+name = "luxury-ball"
+cost = 3000
+fling_power = 0
+fling_effect = ""
+effect = "Used in battle
+:   Attempts to catch a wild Pokémon, using a catch rate of 1×.  Whenever the caught Pokémon's happiness increases, it increases by one extra point.
+
+    If used in a trainer battle, nothing happens and the ball is lost."
+flavor = "A particularly comfortable Poké Ball that makes a
+wild Pokémon quickly grow friendlier after
+being caught."
+sprite = "res://sprites/items/luxury-ball.png"
+attributes = ["countable", "consumable", "usable-in-battle", "holdable"]
+category = "special-balls"

@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="Species" load_steps=3 format=3]
+
+[ext_resource type="Resource" path="res://GrowthRates/fast.tres" id="1_qy25o"]
+[ext_resource type="Script" path="res://typedef/Species.gd" id="2_uvpbe"]
+
+[resource]
+script = ExtResource("2_uvpbe")
+id = 210
+name = "granbull"
+order = 241
+genus = "Fairy Pokémon"
+flavor = "It is timid in spite of its looks.
+If it becomes enraged, however,
+it will strike with its huge fangs."
+gender_rate = 6
+capture_rate = 75
+base_happiness = 70
+is_baby = false
+is_legendary = false
+is_mythical = false
+hatch_counter = 20
+has_gender_differences = false
+forms_switchable = false
+growth_rate = ExtResource("1_qy25o")
+local_dex = 0
+national_dex = 210
+egg_groups = ["ground", "fairy"]
+evolution_chain = 105
+habitat = "urban"

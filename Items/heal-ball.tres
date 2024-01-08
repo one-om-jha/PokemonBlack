@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://typedef/Item.gd" id="1_12kee"]
+
+[resource]
+script = ExtResource("1_12kee")
+id = 14
+name = "heal-ball"
+cost = 300
+fling_power = 0
+fling_effect = ""
+effect = "Used in battle
+:   Attempts to catch a wild Pokémon, using a catch rate of 1×.  The caught Pokémon's HP is immediately restored, PP for all its moves is restored, and any status ailment is cured.
+
+    If used in a trainer battle, nothing happens and the ball is lost."
+flavor = "A remedial Poké Ball that restores the HP of a
+Pokémon caught with it and eliminates any
+status conditions."
+sprite = "res://sprites/items/heal-ball.png"
+attributes = ["countable", "consumable", "usable-in-battle", "holdable"]
+category = "special-balls"

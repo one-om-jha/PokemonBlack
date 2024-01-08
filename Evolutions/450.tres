@@ -1,0 +1,69 @@
+[gd_resource type="Resource" script_class="EvolutionChain" load_steps=9 format=3]
+
+[ext_resource type="Script" path="res://typedef/ChainLink.gd" id="1_at6yr"]
+[ext_resource type="Resource" path="res://Species/hatterene.tres" id="2_brrtq"]
+[ext_resource type="Resource" path="res://Species/hattrem.tres" id="3_cpefi"]
+[ext_resource type="Resource" path="res://Species/hatenna.tres" id="4_yepsd"]
+[ext_resource type="Script" path="res://typedef/EvolutionChain.gd" id="5_0mqgj"]
+
+[sub_resource type="Resource" id="Resource_ji3di"]
+script = ExtResource("1_at6yr")
+is_baby = false
+species = ExtResource("2_brrtq")
+evolves_to = []
+trigger = ""
+gender = 0
+known_move_type = 0
+location = ""
+min_level = 0
+min_happiness = 0
+min_beauty = 0
+min_affection = 0
+needs_overworld_rain = false
+party_type = 0
+relative_physical_stats = 0
+time_of_day = ""
+turn_upside_down = false
+
+[sub_resource type="Resource" id="Resource_rjcv1"]
+script = ExtResource("1_at6yr")
+is_baby = false
+species = ExtResource("3_cpefi")
+evolves_to = [SubResource("Resource_ji3di")]
+trigger = ""
+gender = 0
+known_move_type = 0
+location = ""
+min_level = 0
+min_happiness = 0
+min_beauty = 0
+min_affection = 0
+needs_overworld_rain = false
+party_type = 0
+relative_physical_stats = 0
+time_of_day = ""
+turn_upside_down = false
+
+[sub_resource type="Resource" id="Resource_7xl45"]
+script = ExtResource("1_at6yr")
+is_baby = false
+species = ExtResource("4_yepsd")
+evolves_to = [SubResource("Resource_rjcv1")]
+trigger = ""
+gender = 0
+known_move_type = 0
+location = ""
+min_level = 0
+min_happiness = 0
+min_beauty = 0
+min_affection = 0
+needs_overworld_rain = false
+party_type = 0
+relative_physical_stats = 0
+time_of_day = ""
+turn_upside_down = false
+
+[resource]
+script = ExtResource("5_0mqgj")
+id = 450
+chain = SubResource("Resource_7xl45")

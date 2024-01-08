@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://typedef/Item.gd" id="1_dbk20"]
+
+[resource]
+script = ExtResource("1_dbk20")
+id = 10
+name = "timer-ball"
+cost = 1000
+fling_power = 0
+fling_effect = ""
+effect = "Used in battle
+:   Attempts to catch a wild Pokémon.  Has a catch rate of 1.1× on the first turn of the battle and increases by 0.1× every turn, to a maximum of 4× on turn 30.
+
+    If used in a trainer battle, nothing happens and the ball is lost."
+flavor = "A somewhat different Poké Ball that becomes
+progressively more effective at catching Pokémon
+the more turns that are taken in battle."
+sprite = "res://sprites/items/timer-ball.png"
+attributes = ["countable", "consumable", "usable-in-battle", "holdable"]
+category = "special-balls"

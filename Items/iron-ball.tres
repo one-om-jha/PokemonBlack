@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://typedef/Item.gd" id="1_d7fdb"]
+
+[resource]
+script = ExtResource("1_d7fdb")
+id = 255
+name = "iron-ball"
+cost = 4000
+fling_power = 130
+fling_effect = ""
+effect = "Held: Decreases the holder's Speed by 50%.  If the holder is Flying or has Levitate, it takes regular damage from Ground attacks and is suspectible to Spikes and Toxic Spikes."
+flavor = "An item to be held by a Pokémon. It lowers Speed
+and allows Ground-type moves to hit Flying types
+and holders that are levitating."
+sprite = "res://sprites/items/iron-ball.png"
+attributes = ["holdable", "holdable-active", "underground"]
+category = "bad-held-items"

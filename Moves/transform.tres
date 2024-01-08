@@ -1,0 +1,35 @@
+[gd_resource type="Resource" script_class="Move" load_steps=3 format=3]
+
+[ext_resource type="Resource" path="res://Ailments/none.tres" id="1_0f2sh"]
+[ext_resource type="Script" path="res://typedef/Move.gd" id="2_jxbiw"]
+
+[resource]
+script = ExtResource("2_jxbiw")
+id = 144
+name = "transform"
+accuracy = 0
+effect_chance = 0
+pp = 10
+priority = 0
+power = 0
+damage_class = "status"
+effect = "User copies the target's species, weight, type, ability, calculated stats (except HP), and moves.  Copied moves will all have 5 PP remaining.  IVs are copied for the purposes of hidden power, but stats are not recalculated.
+
+choice band, choice scarf, and choice specs stay in effect, and the user must select a new move.
+
+This move cannot be copied by mirror move, nor forced by encore."
+stat_changes = []
+target = "selected-pokemon"
+type = 0
+ailment = ExtResource("1_0f2sh")
+category = "unique"
+min_hits = 0
+max_hits = 0
+min_turns = 0
+max_turns = 0
+drain = 0
+healing = 0
+crit_rate = 0
+ailment_chance = 0
+flinch_chance = 0
+stat_chance = 0

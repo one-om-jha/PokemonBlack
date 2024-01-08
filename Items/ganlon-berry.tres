@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://typedef/Item.gd" id="1_mxobg"]
+
+[resource]
+script = ExtResource("1_mxobg")
+id = 179
+name = "ganlon-berry"
+cost = 80
+fling_power = 10
+fling_effect = "berry-effect"
+effect = "Held in battle
+:   When the holder has 1/4 its max HP remaining or less, it consumes this item to raise its Defense by one stage."
+flavor = "A Berry to be consumed by Pokémon. If a Pokémon
+holds one, its Defense stat will increase when it’s in
+a pinch."
+sprite = "res://sprites/items/ganlon-berry.png"
+attributes = ["holdable-active"]
+category = "in-a-pinch"

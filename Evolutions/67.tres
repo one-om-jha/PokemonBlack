@@ -1,0 +1,189 @@
+[gd_resource type="Resource" script_class="EvolutionChain" load_steps=21 format=3]
+
+[ext_resource type="Script" path="res://typedef/ChainLink.gd" id="1_uwb1o"]
+[ext_resource type="Resource" path="res://Species/vaporeon.tres" id="2_tvfvt"]
+[ext_resource type="Resource" path="res://Species/jolteon.tres" id="3_ck7vw"]
+[ext_resource type="Resource" path="res://Species/flareon.tres" id="4_0q500"]
+[ext_resource type="Resource" path="res://Species/espeon.tres" id="5_kl466"]
+[ext_resource type="Resource" path="res://Species/umbreon.tres" id="6_jan4b"]
+[ext_resource type="Resource" path="res://Species/leafeon.tres" id="7_quowx"]
+[ext_resource type="Resource" path="res://Species/glaceon.tres" id="8_rnxuc"]
+[ext_resource type="Resource" path="res://Species/sylveon.tres" id="9_5s28c"]
+[ext_resource type="Resource" path="res://Species/eevee.tres" id="10_184jt"]
+[ext_resource type="Script" path="res://typedef/EvolutionChain.gd" id="11_3dg67"]
+
+[sub_resource type="Resource" id="Resource_0daq0"]
+script = ExtResource("1_uwb1o")
+is_baby = false
+species = ExtResource("2_tvfvt")
+evolves_to = []
+trigger = ""
+gender = 0
+known_move_type = 0
+location = ""
+min_level = 0
+min_happiness = 0
+min_beauty = 0
+min_affection = 0
+needs_overworld_rain = false
+party_type = 0
+relative_physical_stats = 0
+time_of_day = ""
+turn_upside_down = false
+
+[sub_resource type="Resource" id="Resource_yxs86"]
+script = ExtResource("1_uwb1o")
+is_baby = false
+species = ExtResource("3_ck7vw")
+evolves_to = []
+trigger = ""
+gender = 0
+known_move_type = 0
+location = ""
+min_level = 0
+min_happiness = 0
+min_beauty = 0
+min_affection = 0
+needs_overworld_rain = false
+party_type = 0
+relative_physical_stats = 0
+time_of_day = ""
+turn_upside_down = false
+
+[sub_resource type="Resource" id="Resource_udtdg"]
+script = ExtResource("1_uwb1o")
+is_baby = false
+species = ExtResource("4_0q500")
+evolves_to = []
+trigger = ""
+gender = 0
+known_move_type = 0
+location = ""
+min_level = 0
+min_happiness = 0
+min_beauty = 0
+min_affection = 0
+needs_overworld_rain = false
+party_type = 0
+relative_physical_stats = 0
+time_of_day = ""
+turn_upside_down = false
+
+[sub_resource type="Resource" id="Resource_1dcha"]
+script = ExtResource("1_uwb1o")
+is_baby = false
+species = ExtResource("5_kl466")
+evolves_to = []
+trigger = ""
+gender = 0
+known_move_type = 0
+location = ""
+min_level = 0
+min_happiness = 0
+min_beauty = 0
+min_affection = 0
+needs_overworld_rain = false
+party_type = 0
+relative_physical_stats = 0
+time_of_day = ""
+turn_upside_down = false
+
+[sub_resource type="Resource" id="Resource_7xxkd"]
+script = ExtResource("1_uwb1o")
+is_baby = false
+species = ExtResource("6_jan4b")
+evolves_to = []
+trigger = ""
+gender = 0
+known_move_type = 0
+location = ""
+min_level = 0
+min_happiness = 0
+min_beauty = 0
+min_affection = 0
+needs_overworld_rain = false
+party_type = 0
+relative_physical_stats = 0
+time_of_day = ""
+turn_upside_down = false
+
+[sub_resource type="Resource" id="Resource_qy4wn"]
+script = ExtResource("1_uwb1o")
+is_baby = false
+species = ExtResource("7_quowx")
+evolves_to = []
+trigger = ""
+gender = 0
+known_move_type = 0
+location = ""
+min_level = 0
+min_happiness = 0
+min_beauty = 0
+min_affection = 0
+needs_overworld_rain = false
+party_type = 0
+relative_physical_stats = 0
+time_of_day = ""
+turn_upside_down = false
+
+[sub_resource type="Resource" id="Resource_bhcwh"]
+script = ExtResource("1_uwb1o")
+is_baby = false
+species = ExtResource("8_rnxuc")
+evolves_to = []
+trigger = ""
+gender = 0
+known_move_type = 0
+location = ""
+min_level = 0
+min_happiness = 0
+min_beauty = 0
+min_affection = 0
+needs_overworld_rain = false
+party_type = 0
+relative_physical_stats = 0
+time_of_day = ""
+turn_upside_down = false
+
+[sub_resource type="Resource" id="Resource_nj5te"]
+script = ExtResource("1_uwb1o")
+is_baby = false
+species = ExtResource("9_5s28c")
+evolves_to = []
+trigger = ""
+gender = 0
+known_move_type = 0
+location = ""
+min_level = 0
+min_happiness = 0
+min_beauty = 0
+min_affection = 0
+needs_overworld_rain = false
+party_type = 0
+relative_physical_stats = 0
+time_of_day = ""
+turn_upside_down = false
+
+[sub_resource type="Resource" id="Resource_gwsqs"]
+script = ExtResource("1_uwb1o")
+is_baby = false
+species = ExtResource("10_184jt")
+evolves_to = [SubResource("Resource_0daq0"), SubResource("Resource_yxs86"), SubResource("Resource_udtdg"), SubResource("Resource_1dcha"), SubResource("Resource_7xxkd"), SubResource("Resource_qy4wn"), SubResource("Resource_bhcwh"), SubResource("Resource_nj5te")]
+trigger = ""
+gender = 0
+known_move_type = 0
+location = ""
+min_level = 0
+min_happiness = 0
+min_beauty = 0
+min_affection = 0
+needs_overworld_rain = false
+party_type = 0
+relative_physical_stats = 0
+time_of_day = ""
+turn_upside_down = false
+
+[resource]
+script = ExtResource("11_3dg67")
+id = 67
+chain = SubResource("Resource_gwsqs")

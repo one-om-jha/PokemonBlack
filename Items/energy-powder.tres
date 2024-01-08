@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://typedef/Item.gd" id="1_v11an"]
+
+[resource]
+script = ExtResource("1_v11an")
+id = 34
+name = "energy-powder"
+cost = 500
+fling_power = 30
+fling_effect = ""
+effect = "Used on a party Pokémon
+:   Restores 50 HP.  Decreases happiness by 5/5/10."
+flavor = "A very bitter medicinal powder. It can be used to
+restore 60 HP to a single Pokémon."
+sprite = "res://sprites/items/energy-powder.png"
+attributes = ["countable", "consumable", "usable-overworld", "usable-in-battle", "holdable"]
+category = "healing"

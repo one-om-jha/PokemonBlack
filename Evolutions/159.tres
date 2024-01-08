@@ -1,0 +1,49 @@
+[gd_resource type="Resource" script_class="EvolutionChain" load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://typedef/ChainLink.gd" id="1_5i40t"]
+[ext_resource type="Resource" path="res://Species/swalot.tres" id="2_6vbe6"]
+[ext_resource type="Resource" path="res://Species/gulpin.tres" id="3_vkcfp"]
+[ext_resource type="Script" path="res://typedef/EvolutionChain.gd" id="4_dyyfb"]
+
+[sub_resource type="Resource" id="Resource_pujxs"]
+script = ExtResource("1_5i40t")
+is_baby = false
+species = ExtResource("2_6vbe6")
+evolves_to = []
+trigger = ""
+gender = 0
+known_move_type = 0
+location = ""
+min_level = 0
+min_happiness = 0
+min_beauty = 0
+min_affection = 0
+needs_overworld_rain = false
+party_type = 0
+relative_physical_stats = 0
+time_of_day = ""
+turn_upside_down = false
+
+[sub_resource type="Resource" id="Resource_0na0f"]
+script = ExtResource("1_5i40t")
+is_baby = false
+species = ExtResource("3_vkcfp")
+evolves_to = [SubResource("Resource_pujxs")]
+trigger = ""
+gender = 0
+known_move_type = 0
+location = ""
+min_level = 0
+min_happiness = 0
+min_beauty = 0
+min_affection = 0
+needs_overworld_rain = false
+party_type = 0
+relative_physical_stats = 0
+time_of_day = ""
+turn_upside_down = false
+
+[resource]
+script = ExtResource("4_dyyfb")
+id = 159
+chain = SubResource("Resource_0na0f")

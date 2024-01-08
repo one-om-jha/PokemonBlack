@@ -1,0 +1,49 @@
+[gd_resource type="Resource" script_class="EvolutionChain" load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://typedef/ChainLink.gd" id="1_pdct8"]
+[ext_resource type="Resource" path="res://Species/eldegoss.tres" id="2_mnqtg"]
+[ext_resource type="Resource" path="res://Species/gossifleur.tres" id="3_h807i"]
+[ext_resource type="Script" path="res://typedef/EvolutionChain.gd" id="4_28dhs"]
+
+[sub_resource type="Resource" id="Resource_hvaxl"]
+script = ExtResource("1_pdct8")
+is_baby = false
+species = ExtResource("2_mnqtg")
+evolves_to = []
+trigger = ""
+gender = 0
+known_move_type = 0
+location = ""
+min_level = 0
+min_happiness = 0
+min_beauty = 0
+min_affection = 0
+needs_overworld_rain = false
+party_type = 0
+relative_physical_stats = 0
+time_of_day = ""
+turn_upside_down = false
+
+[sub_resource type="Resource" id="Resource_ub74i"]
+script = ExtResource("1_pdct8")
+is_baby = false
+species = ExtResource("3_h807i")
+evolves_to = [SubResource("Resource_hvaxl")]
+trigger = ""
+gender = 0
+known_move_type = 0
+location = ""
+min_level = 0
+min_happiness = 0
+min_beauty = 0
+min_affection = 0
+needs_overworld_rain = false
+party_type = 0
+relative_physical_stats = 0
+time_of_day = ""
+turn_upside_down = false
+
+[resource]
+script = ExtResource("4_28dhs")
+id = 437
+chain = SubResource("Resource_ub74i")

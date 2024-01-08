@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="Species" load_steps=3 format=3]
+
+[ext_resource type="Resource" path="res://GrowthRates/medium.tres" id="1_3o2q6"]
+[ext_resource type="Script" path="res://typedef/Species.gd" id="2_glgoh"]
+
+[resource]
+script = ExtResource("2_glgoh")
+id = 10
+name = "caterpie"
+order = 10
+genus = "Worm Pokémon"
+flavor = "It releases a stench from its red
+antenna to repel enemies. It
+grows by molting repeatedly."
+gender_rate = 4
+capture_rate = 255
+base_happiness = 50
+is_baby = false
+is_legendary = false
+is_mythical = false
+hatch_counter = 15
+has_gender_differences = false
+forms_switchable = false
+growth_rate = ExtResource("1_3o2q6")
+local_dex = 0
+national_dex = 10
+egg_groups = ["bug"]
+evolution_chain = 4
+habitat = "forest"

@@ -1,0 +1,52 @@
+[gd_resource type="Resource" script_class="Pokemon" load_steps=13 format=3]
+
+[ext_resource type="Resource" path="res://Abilities/shed-skin.tres" id="1_bnulh"]
+[ext_resource type="Resource" path="res://Abilities/friend-guard.tres" id="2_wx05q"]
+[ext_resource type="Resource" path="res://Moves/harden.tres" id="3_mwhmi"]
+[ext_resource type="Resource" path="res://Moves/protect.tres" id="4_q6ubc"]
+[ext_resource type="Resource" path="res://Moves/iron-defense.tres" id="5_yc8qj"]
+[ext_resource type="Resource" path="res://Moves/bug-bite.tres" id="6_ulwhh"]
+[ext_resource type="Resource" path="res://Moves/struggle-bug.tres" id="7_70ae4"]
+[ext_resource type="Resource" path="res://Moves/electroweb.tres" id="8_nu7me"]
+[ext_resource type="Resource" path="res://Moves/tera-blast.tres" id="9_rxlq1"]
+[ext_resource type="Resource" path="res://Moves/pounce.tres" id="10_b16ad"]
+[ext_resource type="Script" path="res://typedef/Pokemon.gd" id="11_c4mqp"]
+[ext_resource type="Resource" path="res://Species/spewpa.tres" id="12_xd8qo"]
+
+[resource]
+script = ExtResource("11_c4mqp")
+id = 665
+name = "spewpa"
+base_experience = 75
+height = 3
+weight = 84
+abilities = [ExtResource("1_bnulh"), ExtResource("1_bnulh"), ExtResource("2_wx05q")]
+forms = ["spewpa-icy-snow", "spewpa-polar", "spewpa-tundra", "spewpa-continental", "spewpa-garden", "spewpa-elegant", "spewpa-meadow", "spewpa-modern", "spewpa-marine", "spewpa-archipelago", "spewpa-high-plains", "spewpa-sandstorm", "spewpa-river", "spewpa-monsoon", "spewpa-savanna", "spewpa-sun", "spewpa-ocean", "spewpa-jungle", "spewpa-fancy", "spewpa-poke-ball"]
+held_items = []
+moves = [[1, "level-up", ExtResource("3_mwhmi")], [0, "machine", ExtResource("4_q6ubc")], [0, "machine", ExtResource("5_yc8qj")], [0, "machine", ExtResource("6_ulwhh")], [0, "machine", ExtResource("7_70ae4")], [0, "", ExtResource("8_nu7me")], [0, "machine", ExtResource("9_rxlq1")], [0, "machine", ExtResource("10_b16ad")]]
+species = ExtResource("12_xd8qo")
+sprites = {
+"back_default": "res://sprites/pokemon/back/665.gif",
+"back_shiny": "res://sprites/pokemon/back/shiny/665.gif",
+"front_default": "res://sprites/pokemon/665.gif",
+"front_shiny": "res://sprites/pokemon/shiny/665.gif"
+}
+stats = {
+"attack": 22.0,
+"defense": 60.0,
+"hp": 45.0,
+"special-attack": 27.0,
+"special-defense": 30.0,
+"speed": 29.0
+}
+stats_effort = {
+"attack": 0.0,
+"defense": 2.0,
+"hp": 0.0,
+"special-attack": 0.0,
+"special-defense": 0.0,
+"speed": 0.0
+}
+types = {
+1.0: 11
+}

@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="Species" load_steps=3 format=3]
+
+[ext_resource type="Resource" path="res://GrowthRates/medium-slow.tres" id="1_ni87l"]
+[ext_resource type="Script" path="res://typedef/Species.gd" id="2_bwyuk"]
+
+[resource]
+script = ExtResource("2_bwyuk")
+id = 198
+name = "murkrow"
+order = 227
+genus = "Darkness Pokémon"
+flavor = "If spotted, it will lure an unwary
+person into chasing it, then lose
+the pursuer on mountain trails."
+gender_rate = 4
+capture_rate = 30
+base_happiness = 35
+is_baby = false
+is_legendary = false
+is_mythical = false
+hatch_counter = 20
+has_gender_differences = true
+forms_switchable = false
+growth_rate = ExtResource("1_ni87l")
+local_dex = 0
+national_dex = 198
+egg_groups = ["flying"]
+evolution_chain = 97
+habitat = "forest"

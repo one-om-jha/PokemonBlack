@@ -1,0 +1,49 @@
+[gd_resource type="Resource" script_class="EvolutionChain" load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://typedef/ChainLink.gd" id="1_dch02"]
+[ext_resource type="Resource" path="res://Species/rampardos.tres" id="2_o8qyx"]
+[ext_resource type="Resource" path="res://Species/cranidos.tres" id="3_p3xrk"]
+[ext_resource type="Script" path="res://typedef/EvolutionChain.gd" id="4_iqpld"]
+
+[sub_resource type="Resource" id="Resource_cy1yh"]
+script = ExtResource("1_dch02")
+is_baby = false
+species = ExtResource("2_o8qyx")
+evolves_to = []
+trigger = ""
+gender = 0
+known_move_type = 0
+location = ""
+min_level = 0
+min_happiness = 0
+min_beauty = 0
+min_affection = 0
+needs_overworld_rain = false
+party_type = 0
+relative_physical_stats = 0
+time_of_day = ""
+turn_upside_down = false
+
+[sub_resource type="Resource" id="Resource_4ptlc"]
+script = ExtResource("1_dch02")
+is_baby = false
+species = ExtResource("3_p3xrk")
+evolves_to = [SubResource("Resource_cy1yh")]
+trigger = ""
+gender = 0
+known_move_type = 0
+location = ""
+min_level = 0
+min_happiness = 0
+min_beauty = 0
+min_affection = 0
+needs_overworld_rain = false
+party_type = 0
+relative_physical_stats = 0
+time_of_day = ""
+turn_upside_down = false
+
+[resource]
+script = ExtResource("4_iqpld")
+id = 211
+chain = SubResource("Resource_4ptlc")

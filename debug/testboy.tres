@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="PokemonInstance" load_steps=6 format=3]
+
+[ext_resource type="Resource" path="res://Moves/tail-whip.tres" id="1_pv55x"]
+[ext_resource type="Resource" path="res://Moves/tackle.tres" id="2_w7lwl"]
+[ext_resource type="Resource" path="res://Natures/bashful.tres" id="3_lv6rb"]
+[ext_resource type="Resource" path="res://Pokemon/oshawott.tres" id="4_kogrq"]
+[ext_resource type="Script" path="res://typedef/PokemonInstance.gd" id="5_vkyk8"]
+
+[resource]
+script = ExtResource("5_vkyk8")
+name = "oshawott"
+pokemon = ExtResource("4_kogrq")
+curr_health = 21
+ivs = Array[int]([29, 17, 9, 28, 26, 18])
+evs = Array[int]([0, 0, 0, 0, 0, 0])
+stats = Array[int]([21, 11, 9, 12, 10, 10])
+xp = 135
+level = 5
+ball = ""
+ability_slot = 1
+nature = ExtResource("3_lv6rb")
+gender = 0
+ailments = Array[Resource("res://typedef/Ailment.gd")]([])
+move1 = ExtResource("1_pv55x")
+move2 = ExtResource("2_w7lwl")
+met_location = ""
+met_time = 0
+markings = []
+original_trainer = ""

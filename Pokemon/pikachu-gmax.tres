@@ -1,0 +1,44 @@
+[gd_resource type="Resource" script_class="Pokemon" load_steps=5 format=3]
+
+[ext_resource type="Resource" path="res://Abilities/static.tres" id="1_o6l2r"]
+[ext_resource type="Resource" path="res://Abilities/lightning-rod.tres" id="2_2tb1w"]
+[ext_resource type="Script" path="res://typedef/Pokemon.gd" id="3_hba5t"]
+[ext_resource type="Resource" path="res://Species/pikachu.tres" id="4_at0l4"]
+
+[resource]
+script = ExtResource("3_hba5t")
+id = 10199
+name = "pikachu-gmax"
+base_experience = 112
+height = 210
+weight = 10000
+abilities = [ExtResource("1_o6l2r"), ExtResource("1_o6l2r"), ExtResource("2_2tb1w")]
+forms = ["pikachu-gmax"]
+held_items = []
+moves = []
+species = ExtResource("4_at0l4")
+sprites = {
+"back_default": "res://sprites/pokemon/back/10199.gif",
+"back_shiny": "res://sprites/pokemon/back/shiny/10199.gif",
+"front_default": "res://sprites/pokemon/10199.gif",
+"front_shiny": "res://sprites/pokemon/shiny/10199.gif"
+}
+stats = {
+"attack": 55.0,
+"defense": 40.0,
+"hp": 35.0,
+"special-attack": 50.0,
+"special-defense": 50.0,
+"speed": 90.0
+}
+stats_effort = {
+"attack": 0.0,
+"defense": 0.0,
+"hp": 0.0,
+"special-attack": 0.0,
+"special-defense": 0.0,
+"speed": 2.0
+}
+types = {
+1.0: 3
+}

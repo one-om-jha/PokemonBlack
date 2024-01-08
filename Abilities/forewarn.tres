@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="Ability" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://typedef/Ability.gd" id="1_0crwt"]
+
+[resource]
+script = ExtResource("1_0crwt")
+id = 108
+name = "forewarn"
+effect = "When this Pokémon enters battle, it reveals the move with the highest base power known by any opposing Pokémon to all participating trainers.
+
+In the event of a tie, one is chosen at random.
+
+Moves without a listed base power are assigned one as follows:
+
+Power | Moves
+----: | -----
+  160 | One-hit KO moves: fissure, guillotine, horn drill, and sheer cold
+  120 | Counter moves: counter, metal burst, and mirror coat
+   80 | Variable power or set damage: crush grip, dragon rage, electro ball, endeavor, final gambit, flail, frustration, grass knot, gyro ball, heat crash, heavy slam, hidden power, low kick, natural gift, night shade, psywave, return, reversal, seismic toss, sonic boom, trump card, and wring out
+    0 | Any such move not listed
+"
+flavor = "When it enters a battle, the Pokémon can tell one of
+the moves an opposing Pokémon has."

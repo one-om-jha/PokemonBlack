@@ -1,0 +1,71 @@
+[gd_resource type="Resource" script_class="EvolutionChain" load_steps=10 format=3]
+
+[ext_resource type="Resource" path="res://Items/odd-incense.tres" id="1_pofc7"]
+[ext_resource type="Script" path="res://typedef/ChainLink.gd" id="2_dkoa7"]
+[ext_resource type="Resource" path="res://Species/mr-rime.tres" id="3_ypk8t"]
+[ext_resource type="Resource" path="res://Species/mr-mime.tres" id="4_77v2u"]
+[ext_resource type="Resource" path="res://Species/mime-jr.tres" id="5_7vyl6"]
+[ext_resource type="Script" path="res://typedef/EvolutionChain.gd" id="6_d5wkl"]
+
+[sub_resource type="Resource" id="Resource_vase4"]
+script = ExtResource("2_dkoa7")
+is_baby = false
+species = ExtResource("3_ypk8t")
+evolves_to = []
+trigger = ""
+gender = 0
+known_move_type = 0
+location = ""
+min_level = 0
+min_happiness = 0
+min_beauty = 0
+min_affection = 0
+needs_overworld_rain = false
+party_type = 0
+relative_physical_stats = 0
+time_of_day = ""
+turn_upside_down = false
+
+[sub_resource type="Resource" id="Resource_eiocq"]
+script = ExtResource("2_dkoa7")
+is_baby = false
+species = ExtResource("4_77v2u")
+evolves_to = [SubResource("Resource_vase4")]
+trigger = ""
+gender = 0
+known_move_type = 0
+location = ""
+min_level = 0
+min_happiness = 0
+min_beauty = 0
+min_affection = 0
+needs_overworld_rain = false
+party_type = 0
+relative_physical_stats = 0
+time_of_day = ""
+turn_upside_down = false
+
+[sub_resource type="Resource" id="Resource_oyvd4"]
+script = ExtResource("2_dkoa7")
+is_baby = true
+species = ExtResource("5_7vyl6")
+evolves_to = [SubResource("Resource_eiocq")]
+trigger = ""
+gender = 0
+known_move_type = 0
+location = ""
+min_level = 0
+min_happiness = 0
+min_beauty = 0
+min_affection = 0
+needs_overworld_rain = false
+party_type = 0
+relative_physical_stats = 0
+time_of_day = ""
+turn_upside_down = false
+
+[resource]
+script = ExtResource("6_d5wkl")
+id = 57
+baby_trigger_item = ExtResource("1_pofc7")
+chain = SubResource("Resource_oyvd4")

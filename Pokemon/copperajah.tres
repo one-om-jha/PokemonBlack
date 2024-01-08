@@ -1,0 +1,103 @@
+[gd_resource type="Resource" script_class="Pokemon" load_steps=64 format=3]
+
+[ext_resource type="Resource" path="res://Abilities/sheer-force.tres" id="1_w0n0d"]
+[ext_resource type="Resource" path="res://Abilities/heavy-metal.tres" id="2_3ug3h"]
+[ext_resource type="Resource" path="res://Moves/stomp.tres" id="3_wam6y"]
+[ext_resource type="Resource" path="res://Moves/mega-kick.tres" id="4_06jo7"]
+[ext_resource type="Resource" path="res://Moves/tackle.tres" id="5_l1b0o"]
+[ext_resource type="Resource" path="res://Moves/body-slam.tres" id="6_a3o3x"]
+[ext_resource type="Resource" path="res://Moves/take-down.tres" id="7_2yacd"]
+[ext_resource type="Resource" path="res://Moves/growl.tres" id="8_h1vac"]
+[ext_resource type="Resource" path="res://Moves/hyper-beam.tres" id="9_al5xu"]
+[ext_resource type="Resource" path="res://Moves/strength.tres" id="10_4ug4u"]
+[ext_resource type="Resource" path="res://Moves/earthquake.tres" id="11_y2u7c"]
+[ext_resource type="Resource" path="res://Moves/dig.tres" id="12_lrmbk"]
+[ext_resource type="Resource" path="res://Moves/screech.tres" id="13_3ubyt"]
+[ext_resource type="Resource" path="res://Moves/rest.tres" id="14_f3x8f"]
+[ext_resource type="Resource" path="res://Moves/rock-slide.tres" id="15_34yge"]
+[ext_resource type="Resource" path="res://Moves/substitute.tres" id="16_r2v3f"]
+[ext_resource type="Resource" path="res://Moves/snore.tres" id="17_cmdtc"]
+[ext_resource type="Resource" path="res://Moves/protect.tres" id="18_rk5m2"]
+[ext_resource type="Resource" path="res://Moves/scary-face.tres" id="19_yx8ya"]
+[ext_resource type="Resource" path="res://Moves/outrage.tres" id="20_4l7e2"]
+[ext_resource type="Resource" path="res://Moves/sandstorm.tres" id="21_tgp23"]
+[ext_resource type="Resource" path="res://Moves/endure.tres" id="22_ag0lk"]
+[ext_resource type="Resource" path="res://Moves/rollout.tres" id="23_opy6y"]
+[ext_resource type="Resource" path="res://Moves/attract.tres" id="24_uxwr8"]
+[ext_resource type="Resource" path="res://Moves/sleep-talk.tres" id="25_jcq3x"]
+[ext_resource type="Resource" path="res://Moves/rock-smash.tres" id="26_85hio"]
+[ext_resource type="Resource" path="res://Moves/facade.tres" id="27_tcwbu"]
+[ext_resource type="Resource" path="res://Moves/taunt.tres" id="28_xbs3i"]
+[ext_resource type="Resource" path="res://Moves/superpower.tres" id="29_72djv"]
+[ext_resource type="Resource" path="res://Moves/revenge.tres" id="30_0b72s"]
+[ext_resource type="Resource" path="res://Moves/brick-break.tres" id="31_sl45q"]
+[ext_resource type="Resource" path="res://Moves/knock-off.tres" id="32_dsoci"]
+[ext_resource type="Resource" path="res://Moves/rock-tomb.tres" id="33_fqul3"]
+[ext_resource type="Resource" path="res://Moves/iron-defense.tres" id="34_kh08x"]
+[ext_resource type="Resource" path="res://Moves/mud-shot.tres" id="35_w6nxa"]
+[ext_resource type="Resource" path="res://Moves/rock-blast.tres" id="36_q1h10"]
+[ext_resource type="Resource" path="res://Moves/payback.tres" id="37_nrm2x"]
+[ext_resource type="Resource" path="res://Moves/fling.tres" id="38_j5fxm"]
+[ext_resource type="Resource" path="res://Moves/earth-power.tres" id="39_88oby"]
+[ext_resource type="Resource" path="res://Moves/giga-impact.tres" id="40_p6duk"]
+[ext_resource type="Resource" path="res://Moves/zen-headbutt.tres" id="41_ot75u"]
+[ext_resource type="Resource" path="res://Moves/flash-cannon.tres" id="42_31csq"]
+[ext_resource type="Resource" path="res://Moves/power-whip.tres" id="43_kgggo"]
+[ext_resource type="Resource" path="res://Moves/iron-head.tres" id="44_iwapr"]
+[ext_resource type="Resource" path="res://Moves/stone-edge.tres" id="45_5m341"]
+[ext_resource type="Resource" path="res://Moves/stealth-rock.tres" id="46_fntbf"]
+[ext_resource type="Resource" path="res://Moves/smack-down.tres" id="47_2v65t"]
+[ext_resource type="Resource" path="res://Moves/heavy-slam.tres" id="48_4xy7y"]
+[ext_resource type="Resource" path="res://Moves/round.tres" id="49_477hc"]
+[ext_resource type="Resource" path="res://Moves/bulldoze.tres" id="50_kocru"]
+[ext_resource type="Resource" path="res://Moves/work-up.tres" id="51_3tqom"]
+[ext_resource type="Resource" path="res://Moves/heat-crash.tres" id="52_4fo6l"]
+[ext_resource type="Resource" path="res://Moves/snarl.tres" id="53_66wvk"]
+[ext_resource type="Resource" path="res://Moves/play-rough.tres" id="54_pjotf"]
+[ext_resource type="Resource" path="res://Moves/high-horsepower.tres" id="55_1sowj"]
+[ext_resource type="Resource" path="res://Moves/brutal-swing.tres" id="56_qcyli"]
+[ext_resource type="Resource" path="res://Moves/stomping-tantrum.tres" id="57_voljr"]
+[ext_resource type="Resource" path="res://Moves/body-press.tres" id="58_7rhc5"]
+[ext_resource type="Resource" path="res://Moves/steel-beam.tres" id="59_2k21k"]
+[ext_resource type="Resource" path="res://Moves/steel-roller.tres" id="60_m1307"]
+[ext_resource type="Resource" path="res://Moves/tera-blast.tres" id="61_b2d0r"]
+[ext_resource type="Script" path="res://typedef/Pokemon.gd" id="62_kwcws"]
+[ext_resource type="Resource" path="res://Species/copperajah.tres" id="63_phdgs"]
+
+[resource]
+script = ExtResource("62_kwcws")
+id = 879
+name = "copperajah"
+base_experience = 175
+height = 30
+weight = 6500
+abilities = [ExtResource("1_w0n0d"), ExtResource("1_w0n0d"), ExtResource("2_3ug3h")]
+forms = ["copperajah"]
+held_items = []
+moves = [[20, "level-up", ExtResource("3_wam6y")], [0, "machine", ExtResource("4_06jo7")], [1, "level-up", ExtResource("5_l1b0o")], [0, "machine", ExtResource("6_a3o3x")], [0, "machine", ExtResource("7_2yacd")], [1, "level-up", ExtResource("8_h1vac")], [0, "machine", ExtResource("9_al5xu")], [37, "level-up", ExtResource("10_4ug4u")], [0, "machine", ExtResource("11_y2u7c")], [0, "machine", ExtResource("12_lrmbk")], [0, "machine", ExtResource("13_3ubyt")], [0, "machine", ExtResource("14_f3x8f")], [0, "machine", ExtResource("15_34yge")], [0, "machine", ExtResource("16_r2v3f")], [0, "machine", ExtResource("17_cmdtc")], [0, "machine", ExtResource("18_rk5m2")], [0, "machine", ExtResource("19_yx8ya")], [0, "machine", ExtResource("20_4l7e2")], [0, "machine", ExtResource("21_tgp23")], [0, "machine", ExtResource("22_ag0lk")], [1, "level-up", ExtResource("23_opy6y")], [0, "machine", ExtResource("24_uxwr8")], [0, "machine", ExtResource("25_jcq3x")], [1, "level-up", ExtResource("26_85hio")], [0, "machine", ExtResource("27_tcwbu")], [0, "machine", ExtResource("28_xbs3i")], [65, "level-up", ExtResource("29_72djv")], [0, "machine", ExtResource("30_0b72s")], [0, "machine", ExtResource("31_sl45q")], [0, "machine", ExtResource("32_dsoci")], [0, "machine", ExtResource("33_fqul3")], [0, "machine", ExtResource("34_kh08x")], [0, "machine", ExtResource("35_w6nxa")], [0, "machine", ExtResource("36_q1h10")], [0, "machine", ExtResource("37_nrm2x")], [0, "machine", ExtResource("38_j5fxm")], [0, "machine", ExtResource("39_88oby")], [0, "machine", ExtResource("40_p6duk")], [0, "machine", ExtResource("41_ot75u")], [0, "machine", ExtResource("42_31csq")], [0, "machine", ExtResource("43_kgggo")], [0, "machine", ExtResource("44_iwapr")], [0, "machine", ExtResource("45_5m341")], [0, "machine", ExtResource("46_fntbf")], [0, "machine", ExtResource("47_2v65t")], [0, "machine", ExtResource("48_4xy7y")], [0, "machine", ExtResource("49_477hc")], [0, "machine", ExtResource("50_kocru")], [0, "machine", ExtResource("51_3tqom")], [0, "machine", ExtResource("52_4fo6l")], [0, "machine", ExtResource("53_66wvk")], [0, "machine", ExtResource("54_pjotf")], [0, "machine", ExtResource("55_1sowj")], [0, "machine", ExtResource("56_qcyli")], [0, "machine", ExtResource("57_voljr")], [0, "machine", ExtResource("58_7rhc5")], [0, "machine", ExtResource("59_2k21k")], [0, "tutor", ExtResource("60_m1307")], [0, "machine", ExtResource("61_b2d0r")]]
+species = ExtResource("63_phdgs")
+sprites = {
+"back_default": "res://sprites/pokemon/back/879.gif",
+"back_shiny": "res://sprites/pokemon/back/shiny/879.gif",
+"front_default": "res://sprites/pokemon/879.gif",
+"front_shiny": "res://sprites/pokemon/shiny/879.gif"
+}
+stats = {
+"attack": 130.0,
+"defense": 69.0,
+"hp": 122.0,
+"special-attack": 80.0,
+"special-defense": 69.0,
+"speed": 30.0
+}
+stats_effort = {
+"attack": 2.0,
+"defense": 0.0,
+"hp": 0.0,
+"special-attack": 0.0,
+"special-defense": 0.0,
+"speed": 0.0
+}
+types = {
+1.0: 16
+}

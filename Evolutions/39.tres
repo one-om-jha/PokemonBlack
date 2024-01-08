@@ -1,0 +1,49 @@
+[gd_resource type="Resource" script_class="EvolutionChain" load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://typedef/ChainLink.gd" id="1_gvwdc"]
+[ext_resource type="Resource" path="res://Species/cloyster.tres" id="2_d5vha"]
+[ext_resource type="Resource" path="res://Species/shellder.tres" id="3_blsal"]
+[ext_resource type="Script" path="res://typedef/EvolutionChain.gd" id="4_cay8m"]
+
+[sub_resource type="Resource" id="Resource_6st0r"]
+script = ExtResource("1_gvwdc")
+is_baby = false
+species = ExtResource("2_d5vha")
+evolves_to = []
+trigger = ""
+gender = 0
+known_move_type = 0
+location = ""
+min_level = 0
+min_happiness = 0
+min_beauty = 0
+min_affection = 0
+needs_overworld_rain = false
+party_type = 0
+relative_physical_stats = 0
+time_of_day = ""
+turn_upside_down = false
+
+[sub_resource type="Resource" id="Resource_cejvq"]
+script = ExtResource("1_gvwdc")
+is_baby = false
+species = ExtResource("3_blsal")
+evolves_to = [SubResource("Resource_6st0r")]
+trigger = ""
+gender = 0
+known_move_type = 0
+location = ""
+min_level = 0
+min_happiness = 0
+min_beauty = 0
+min_affection = 0
+needs_overworld_rain = false
+party_type = 0
+relative_physical_stats = 0
+time_of_day = ""
+turn_upside_down = false
+
+[resource]
+script = ExtResource("4_cay8m")
+id = 39
+chain = SubResource("Resource_cejvq")

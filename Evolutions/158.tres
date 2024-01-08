@@ -1,0 +1,71 @@
+[gd_resource type="Resource" script_class="EvolutionChain" load_steps=10 format=3]
+
+[ext_resource type="Resource" path="res://Items/rose-incense.tres" id="1_1eew4"]
+[ext_resource type="Script" path="res://typedef/ChainLink.gd" id="2_oo738"]
+[ext_resource type="Resource" path="res://Species/roserade.tres" id="3_17l7u"]
+[ext_resource type="Resource" path="res://Species/roselia.tres" id="4_eafng"]
+[ext_resource type="Resource" path="res://Species/budew.tres" id="5_pdxno"]
+[ext_resource type="Script" path="res://typedef/EvolutionChain.gd" id="6_6ub3v"]
+
+[sub_resource type="Resource" id="Resource_p523e"]
+script = ExtResource("2_oo738")
+is_baby = false
+species = ExtResource("3_17l7u")
+evolves_to = []
+trigger = ""
+gender = 0
+known_move_type = 0
+location = ""
+min_level = 0
+min_happiness = 0
+min_beauty = 0
+min_affection = 0
+needs_overworld_rain = false
+party_type = 0
+relative_physical_stats = 0
+time_of_day = ""
+turn_upside_down = false
+
+[sub_resource type="Resource" id="Resource_yac46"]
+script = ExtResource("2_oo738")
+is_baby = false
+species = ExtResource("4_eafng")
+evolves_to = [SubResource("Resource_p523e")]
+trigger = ""
+gender = 0
+known_move_type = 0
+location = ""
+min_level = 0
+min_happiness = 0
+min_beauty = 0
+min_affection = 0
+needs_overworld_rain = false
+party_type = 0
+relative_physical_stats = 0
+time_of_day = ""
+turn_upside_down = false
+
+[sub_resource type="Resource" id="Resource_gfqrh"]
+script = ExtResource("2_oo738")
+is_baby = true
+species = ExtResource("5_pdxno")
+evolves_to = [SubResource("Resource_yac46")]
+trigger = ""
+gender = 0
+known_move_type = 0
+location = ""
+min_level = 0
+min_happiness = 0
+min_beauty = 0
+min_affection = 0
+needs_overworld_rain = false
+party_type = 0
+relative_physical_stats = 0
+time_of_day = ""
+turn_upside_down = false
+
+[resource]
+script = ExtResource("6_6ub3v")
+id = 158
+baby_trigger_item = ExtResource("1_1eew4")
+chain = SubResource("Resource_gfqrh")

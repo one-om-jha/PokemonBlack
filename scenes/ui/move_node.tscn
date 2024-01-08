@@ -1,0 +1,84 @@
+[gd_scene load_steps=9 format=3 uid="uid://sw88h8ltfyu6"]
+
+[ext_resource type="Texture2D" uid="uid://56dldiibt7xb" path="res://textures/menu/MoveUnselectedBG.png" id="1_cb0ac"]
+[ext_resource type="Texture2D" uid="uid://dlwcqvjnkv5yu" path="res://textures/menu/MoveSelectedBG.png" id="2_q7h6h"]
+[ext_resource type="Script" path="res://scenes/ui/move_node.gd" id="3_q6agg"]
+[ext_resource type="FontFile" uid="uid://voh2awxrc13f" path="res://ui/fonts/NunitoSans_10pt-BlackItalic.ttf" id="3_yw6jm"]
+[ext_resource type="FontFile" uid="uid://dqx0wj7cshp1t" path="res://ui/fonts/NunitoSans_10pt-Italic.ttf" id="4_4omh0"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_o1ewd"]
+font = ExtResource("3_yw6jm")
+font_size = 24
+
+[sub_resource type="LabelSettings" id="LabelSettings_8qprk"]
+font = ExtResource("3_yw6jm")
+font_size = 18
+
+[sub_resource type="LabelSettings" id="LabelSettings_5kcb7"]
+font = ExtResource("4_4omh0")
+font_size = 12
+
+[node name="Move" type="TextureButton"]
+offset_left = 748.0
+offset_top = 512.0
+offset_right = 1298.0
+offset_bottom = 604.0
+texture_normal = ExtResource("1_cb0ac")
+texture_focused = ExtResource("2_q7h6h")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("3_q6agg")
+
+[node name="Name" type="Label" parent="."]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 117.0
+offset_bottom = 50.0
+text = "Outrage"
+label_settings = SubResource("LabelSettings_o1ewd")
+
+[node name="Type" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 48.0
+offset_right = 85.0
+offset_bottom = 72.0
+
+[node name="Category" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 343.0
+offset_top = 52.0
+offset_right = 367.0
+offset_bottom = 76.0
+
+[node name="Power" type="Label" parent="."]
+layout_mode = 0
+offset_left = 382.0
+offset_top = 46.0
+offset_right = 415.0
+offset_bottom = 72.0
+text = "120"
+label_settings = SubResource("LabelSettings_8qprk")
+horizontal_alignment = 1
+
+[node name="Accuracy" type="Label" parent="."]
+layout_mode = 0
+offset_left = 441.0
+offset_top = 46.0
+offset_right = 474.0
+offset_bottom = 72.0
+text = "100"
+label_settings = SubResource("LabelSettings_8qprk")
+horizontal_alignment = 1
+
+[node name="PP" type="Label" parent="."]
+layout_mode = 0
+offset_left = 440.0
+offset_top = 16.0
+offset_right = 479.0
+offset_bottom = 39.0
+text = "10 / 10"
+label_settings = SubResource("LabelSettings_5kcb7")
+horizontal_alignment = 1
+vertical_alignment = 1

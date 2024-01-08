@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://typedef/Item.gd" id="1_w3phf"]
+
+[resource]
+script = ExtResource("1_w3phf")
+id = 200
+name = "amulet-coin"
+cost = 10000
+fling_power = 30
+fling_effect = ""
+effect = "Held
+:   If the holder participated in a trainer battle, the trainer earns twice the usual prize money.  This effect applies even if the holder fainted.
+
+    This effect does not stack with any other similar effect."
+flavor = "An item to be held by a Pokémon. It doubles any
+prize money received if the holding Pokémon joins
+a battle."
+sprite = "res://sprites/items/amulet-coin.png"
+attributes = ["holdable", "holdable-active"]
+category = "training"

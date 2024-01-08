@@ -1,0 +1,57 @@
+[gd_resource type="Resource" script_class="Pokemon" load_steps=17 format=3]
+
+[ext_resource type="Resource" path="res://Abilities/ripen.tres" id="1_dmuw5"]
+[ext_resource type="Resource" path="res://Abilities/gluttony.tres" id="2_84xma"]
+[ext_resource type="Resource" path="res://Abilities/bulletproof.tres" id="3_udw6g"]
+[ext_resource type="Resource" path="res://Moves/withdraw.tres" id="4_76vw5"]
+[ext_resource type="Resource" path="res://Moves/defense-curl.tres" id="5_471wc"]
+[ext_resource type="Resource" path="res://Moves/rollout.tres" id="6_hkq0x"]
+[ext_resource type="Resource" path="res://Moves/attract.tres" id="7_bc35d"]
+[ext_resource type="Resource" path="res://Moves/recycle.tres" id="8_ng7m6"]
+[ext_resource type="Resource" path="res://Moves/astonish.tres" id="9_f8ixd"]
+[ext_resource type="Resource" path="res://Moves/sucker-punch.tres" id="10_pljsd"]
+[ext_resource type="Resource" path="res://Moves/draco-meteor.tres" id="11_4lxg5"]
+[ext_resource type="Resource" path="res://Moves/grassy-glide.tres" id="12_7hwmn"]
+[ext_resource type="Resource" path="res://Moves/tera-blast.tres" id="13_cm2d3"]
+[ext_resource type="Resource" path="res://Moves/pounce.tres" id="14_l0gdf"]
+[ext_resource type="Script" path="res://typedef/Pokemon.gd" id="15_fo4ho"]
+[ext_resource type="Resource" path="res://Species/applin.tres" id="16_f11ji"]
+
+[resource]
+script = ExtResource("15_fo4ho")
+id = 840
+name = "applin"
+base_experience = 52
+height = 2
+weight = 5
+abilities = [ExtResource("1_dmuw5"), ExtResource("2_84xma"), ExtResource("3_udw6g")]
+forms = ["applin"]
+held_items = []
+moves = [[1, "level-up", ExtResource("4_76vw5")], [0, "egg", ExtResource("5_471wc")], [0, "egg", ExtResource("6_hkq0x")], [0, "machine", ExtResource("7_bc35d")], [0, "egg", ExtResource("8_ng7m6")], [1, "level-up", ExtResource("9_f8ixd")], [0, "egg", ExtResource("10_pljsd")], [0, "tutor", ExtResource("11_4lxg5")], [0, "tutor", ExtResource("12_7hwmn")], [0, "machine", ExtResource("13_cm2d3")], [0, "machine", ExtResource("14_l0gdf")]]
+species = ExtResource("16_f11ji")
+sprites = {
+"back_default": "res://sprites/pokemon/back/840.gif",
+"back_shiny": "res://sprites/pokemon/back/shiny/840.gif",
+"front_default": "res://sprites/pokemon/840.gif",
+"front_shiny": "res://sprites/pokemon/shiny/840.gif"
+}
+stats = {
+"attack": 40.0,
+"defense": 80.0,
+"hp": 40.0,
+"special-attack": 40.0,
+"special-defense": 40.0,
+"speed": 20.0
+}
+stats_effort = {
+"attack": 0.0,
+"defense": 1.0,
+"hp": 0.0,
+"special-attack": 0.0,
+"special-defense": 0.0,
+"speed": 0.0
+}
+types = {
+1.0: 4,
+2.0: 14
+}

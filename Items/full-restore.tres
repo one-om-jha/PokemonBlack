@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://typedef/Item.gd" id="1_hnfvn"]
+
+[resource]
+script = ExtResource("1_hnfvn")
+id = 23
+name = "full-restore"
+cost = 3000
+fling_power = 30
+fling_effect = ""
+effect = "Used on a party Pokémon
+:   Restores HP to full and cures any status ailment and confusion."
+flavor = "A medicine that can be used to fully restore the HP of
+a single Pokémon and heal any status conditions it has."
+sprite = "res://sprites/items/full-restore.png"
+attributes = ["countable", "consumable", "usable-overworld", "usable-in-battle", "holdable"]
+category = "healing"

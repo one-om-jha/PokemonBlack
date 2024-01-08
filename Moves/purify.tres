@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="Move" load_steps=3 format=3]
+
+[ext_resource type="Resource" path="res://Ailments/none.tres" id="1_ep8hq"]
+[ext_resource type="Script" path="res://typedef/Move.gd" id="2_3dhbj"]
+
+[resource]
+script = ExtResource("2_3dhbj")
+id = 685
+name = "purify"
+accuracy = 0
+effect_chance = 0
+pp = 20
+priority = 0
+power = 0
+damage_class = "status"
+effect = "Cures the target of its major status ailment and heals the user for 50% of its max HP.  If the target has no major status ailment, this move will fail."
+stat_changes = []
+target = "selected-pokemon"
+type = 7
+ailment = ExtResource("1_ep8hq")
+category = "unique"
+min_hits = 0
+max_hits = 0
+min_turns = 0
+max_turns = 0
+drain = 0
+healing = 50
+crit_rate = 0
+ailment_chance = 0
+flinch_chance = 0
+stat_chance = 0

@@ -1,0 +1,45 @@
+[gd_resource type="Resource" script_class="Pokemon" load_steps=5 format=3]
+
+[ext_resource type="Resource" path="res://Abilities/compound-eyes.tres" id="1_cvyoy"]
+[ext_resource type="Resource" path="res://Abilities/tinted-lens.tres" id="2_pi7g5"]
+[ext_resource type="Script" path="res://typedef/Pokemon.gd" id="3_f8747"]
+[ext_resource type="Resource" path="res://Species/butterfree.tres" id="4_kl4lr"]
+
+[resource]
+script = ExtResource("3_f8747")
+id = 10198
+name = "butterfree-gmax"
+base_experience = 178
+height = 170
+weight = 10000
+abilities = [ExtResource("1_cvyoy"), ExtResource("1_cvyoy"), ExtResource("2_pi7g5")]
+forms = ["butterfree-gmax"]
+held_items = []
+moves = []
+species = ExtResource("4_kl4lr")
+sprites = {
+"back_default": "res://sprites/pokemon/back/10198.gif",
+"back_shiny": "res://sprites/pokemon/back/shiny/10198.gif",
+"front_default": "res://sprites/pokemon/10198.gif",
+"front_shiny": "res://sprites/pokemon/shiny/10198.gif"
+}
+stats = {
+"attack": 45.0,
+"defense": 50.0,
+"hp": 60.0,
+"special-attack": 90.0,
+"special-defense": 80.0,
+"speed": 70.0
+}
+stats_effort = {
+"attack": 0.0,
+"defense": 0.0,
+"hp": 0.0,
+"special-attack": 2.0,
+"special-defense": 1.0,
+"speed": 0.0
+}
+types = {
+1.0: 11,
+2.0: 9
+}

@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://typedef/Item.gd" id="1_b1qhg"]
+
+[resource]
+script = ExtResource("1_b1qhg")
+id = 55
+name = "guard-spec"
+cost = 1500
+fling_power = 30
+fling_effect = ""
+effect = "Used on a party Pokémon in battle
+:   Protects the target's stats from being lowered for the next five turns.  Increases happiness by 1/1/0."
+flavor = "An item that prevents stat reduction among the
+Trainer’s party Pokémon for five turns after it is
+used in battle."
+sprite = "res://sprites/items/guard-spec.png"
+attributes = ["countable", "consumable", "usable-in-battle", "holdable"]
+category = "stat-boosts"

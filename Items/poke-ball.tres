@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://typedef/Item.gd" id="1_cylcf"]
+
+[resource]
+script = ExtResource("1_cylcf")
+id = 4
+name = "poke-ball"
+cost = 200
+fling_power = 0
+fling_effect = ""
+effect = "Used in battle
+:   Attempts to catch a wild Pokémon, using a catch rate of 1×.
+
+    If used in a trainer battle, nothing happens and the ball is lost."
+flavor = "A device for catching wild Pokémon. It’s thrown like
+a ball at a Pokémon, comfortably encapsulating
+its target."
+sprite = "res://sprites/items/poke-ball.png"
+attributes = ["countable", "consumable", "usable-in-battle", "holdable"]
+category = "standard-balls"

@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://typedef/Item.gd" id="1_w48rv"]
+
+[resource]
+script = ExtResource("1_w48rv")
+id = 248
+name = "power-herb"
+cost = 4000
+fling_power = 10
+fling_effect = ""
+effect = "Held: Whenever the holder uses a move that requires a turn to charge first (Bounce, Dig, Dive, Fly, Razor Wind, Skull Bash, Sky Attack, or Solarbeam), this item is consumed and the charge is skipped.  Skull Bash still provides a Defense boost."
+flavor = "A single-use item to be held by a Pokémon. It
+allows the holder to immediately use a move that
+normally requires a turn to charge."
+sprite = "res://sprites/items/power-herb.png"
+attributes = ["holdable", "holdable-active"]
+category = "held-items"

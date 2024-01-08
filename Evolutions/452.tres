@@ -1,0 +1,49 @@
+[gd_resource type="Resource" script_class="EvolutionChain" load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://typedef/ChainLink.gd" id="1_6hrdd"]
+[ext_resource type="Resource" path="res://Species/alcremie.tres" id="2_cpwki"]
+[ext_resource type="Resource" path="res://Species/milcery.tres" id="3_u12hr"]
+[ext_resource type="Script" path="res://typedef/EvolutionChain.gd" id="4_ddypw"]
+
+[sub_resource type="Resource" id="Resource_lxs6v"]
+script = ExtResource("1_6hrdd")
+is_baby = false
+species = ExtResource("2_cpwki")
+evolves_to = []
+trigger = ""
+gender = 0
+known_move_type = 0
+location = ""
+min_level = 0
+min_happiness = 0
+min_beauty = 0
+min_affection = 0
+needs_overworld_rain = false
+party_type = 0
+relative_physical_stats = 0
+time_of_day = ""
+turn_upside_down = false
+
+[sub_resource type="Resource" id="Resource_sfifv"]
+script = ExtResource("1_6hrdd")
+is_baby = false
+species = ExtResource("3_u12hr")
+evolves_to = [SubResource("Resource_lxs6v")]
+trigger = ""
+gender = 0
+known_move_type = 0
+location = ""
+min_level = 0
+min_happiness = 0
+min_beauty = 0
+min_affection = 0
+needs_overworld_rain = false
+party_type = 0
+relative_physical_stats = 0
+time_of_day = ""
+turn_upside_down = false
+
+[resource]
+script = ExtResource("4_ddypw")
+id = 452
+chain = SubResource("Resource_sfifv")

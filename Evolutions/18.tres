@@ -1,0 +1,89 @@
+[gd_resource type="Resource" script_class="EvolutionChain" load_steps=11 format=3]
+
+[ext_resource type="Script" path="res://typedef/ChainLink.gd" id="1_ifhmy"]
+[ext_resource type="Resource" path="res://Species/vileplume.tres" id="2_b652h"]
+[ext_resource type="Resource" path="res://Species/bellossom.tres" id="3_mx1h7"]
+[ext_resource type="Resource" path="res://Species/gloom.tres" id="4_i0bqb"]
+[ext_resource type="Resource" path="res://Species/oddish.tres" id="5_u0g7t"]
+[ext_resource type="Script" path="res://typedef/EvolutionChain.gd" id="6_tkpu8"]
+
+[sub_resource type="Resource" id="Resource_f36o6"]
+script = ExtResource("1_ifhmy")
+is_baby = false
+species = ExtResource("2_b652h")
+evolves_to = []
+trigger = ""
+gender = 0
+known_move_type = 0
+location = ""
+min_level = 0
+min_happiness = 0
+min_beauty = 0
+min_affection = 0
+needs_overworld_rain = false
+party_type = 0
+relative_physical_stats = 0
+time_of_day = ""
+turn_upside_down = false
+
+[sub_resource type="Resource" id="Resource_h65im"]
+script = ExtResource("1_ifhmy")
+is_baby = false
+species = ExtResource("3_mx1h7")
+evolves_to = []
+trigger = ""
+gender = 0
+known_move_type = 0
+location = ""
+min_level = 0
+min_happiness = 0
+min_beauty = 0
+min_affection = 0
+needs_overworld_rain = false
+party_type = 0
+relative_physical_stats = 0
+time_of_day = ""
+turn_upside_down = false
+
+[sub_resource type="Resource" id="Resource_ikjr4"]
+script = ExtResource("1_ifhmy")
+is_baby = false
+species = ExtResource("4_i0bqb")
+evolves_to = [SubResource("Resource_f36o6"), SubResource("Resource_h65im")]
+trigger = ""
+gender = 0
+known_move_type = 0
+location = ""
+min_level = 0
+min_happiness = 0
+min_beauty = 0
+min_affection = 0
+needs_overworld_rain = false
+party_type = 0
+relative_physical_stats = 0
+time_of_day = ""
+turn_upside_down = false
+
+[sub_resource type="Resource" id="Resource_pb2qt"]
+script = ExtResource("1_ifhmy")
+is_baby = false
+species = ExtResource("5_u0g7t")
+evolves_to = [SubResource("Resource_ikjr4")]
+trigger = ""
+gender = 0
+known_move_type = 0
+location = ""
+min_level = 0
+min_happiness = 0
+min_beauty = 0
+min_affection = 0
+needs_overworld_rain = false
+party_type = 0
+relative_physical_stats = 0
+time_of_day = ""
+turn_upside_down = false
+
+[resource]
+script = ExtResource("6_tkpu8")
+id = 18
+chain = SubResource("Resource_pb2qt")

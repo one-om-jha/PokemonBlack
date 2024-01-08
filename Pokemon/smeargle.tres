@@ -1,0 +1,46 @@
+[gd_resource type="Resource" script_class="Pokemon" load_steps=7 format=3]
+
+[ext_resource type="Resource" path="res://Abilities/own-tempo.tres" id="1_8fjnn"]
+[ext_resource type="Resource" path="res://Abilities/technician.tres" id="2_noxyg"]
+[ext_resource type="Resource" path="res://Abilities/moody.tres" id="3_4pow5"]
+[ext_resource type="Resource" path="res://Moves/sketch.tres" id="4_v8pwi"]
+[ext_resource type="Script" path="res://typedef/Pokemon.gd" id="5_55oq6"]
+[ext_resource type="Resource" path="res://Species/smeargle.tres" id="6_w2y14"]
+
+[resource]
+script = ExtResource("5_55oq6")
+id = 235
+name = "smeargle"
+base_experience = 88
+height = 12
+weight = 580
+abilities = [ExtResource("1_8fjnn"), ExtResource("2_noxyg"), ExtResource("3_4pow5")]
+forms = ["smeargle"]
+held_items = []
+moves = [[91, "level-up", ExtResource("4_v8pwi")]]
+species = ExtResource("6_w2y14")
+sprites = {
+"back_default": "res://sprites/pokemon/versions/generation-v/black-white/animated/back/235.gif",
+"back_shiny": "res://sprites/pokemon/versions/generation-v/black-white/animated/back/shiny/235.gif",
+"front_default": "res://sprites/pokemon/versions/generation-v/black-white/animated/235.gif",
+"front_shiny": "res://sprites/pokemon/versions/generation-v/black-white/animated/shiny/235.gif"
+}
+stats = {
+"attack": 20.0,
+"defense": 35.0,
+"hp": 55.0,
+"special-attack": 20.0,
+"special-defense": 45.0,
+"speed": 75.0
+}
+stats_effort = {
+"attack": 0.0,
+"defense": 0.0,
+"hp": 0.0,
+"special-attack": 0.0,
+"special-defense": 0.0,
+"speed": 1.0
+}
+types = {
+1.0: 0
+}

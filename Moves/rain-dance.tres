@@ -1,0 +1,45 @@
+[gd_resource type="Resource" script_class="Move" load_steps=3 format=3]
+
+[ext_resource type="Resource" path="res://Ailments/none.tres" id="1_andyn"]
+[ext_resource type="Script" path="res://typedef/Move.gd" id="2_jx08a"]
+
+[resource]
+script = ExtResource("2_jx08a")
+id = 240
+name = "rain-dance"
+accuracy = 0
+effect_chance = 0
+pp = 5
+priority = 0
+power = 0
+damage_class = "status"
+effect = "Changes the weather to rain for five turns, during which water moves inflict 50% extra damage, and fire moves inflict half damage.
+
+If the user is holding damp rock, this effect lasts for eight turns.
+
+thunder has 100% accuracy.  If the target has used detect or protect, thunder has a (100 - accuracy)% chance to break through the protection.
+
+solar beam has half power.
+
+moonlight, morning sun, and synthesis heal only 1/4 of the user's max HP.
+
+Pokémon with swift swim have doubled original Speed.
+
+Pokémon with forecast become water.
+
+Pokémon with dry skin heal 1/8 max HP, Pokémon with hydration are cured of major status effects, and Pokémon with rain dish heal 1/16 max HP at the end of each turn."
+stat_changes = []
+target = "entire-field"
+type = 2
+ailment = ExtResource("1_andyn")
+category = "whole-field-effect"
+min_hits = 0
+max_hits = 0
+min_turns = 0
+max_turns = 0
+drain = 0
+healing = 0
+crit_rate = 0
+ailment_chance = 0
+flinch_chance = 0
+stat_chance = 0

@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="Move" load_steps=3 format=3]
+
+[ext_resource type="Resource" path="res://Ailments/none.tres" id="1_ipg3p"]
+[ext_resource type="Script" path="res://typedef/Move.gd" id="2_bd6uf"]
+
+[resource]
+script = ExtResource("2_bd6uf")
+id = 271
+name = "trick"
+accuracy = 100
+effect_chance = 0
+pp = 10
+priority = 0
+power = 0
+damage_class = "status"
+effect = "User and target permanently swap held items.  Works even if one of the Pokémon isn't holding anything.  If either Pokémon is holding mail, this move will fail.
+
+If either Pokémon has multitype or sticky hold, this move will fail.
+
+If this move results in a Pokémon obtaining choice band, choice scarf, or choice specs, and that Pokémon was the latter of the pair to move this turn, then the move it used this turn becomes its chosen forced move.  This applies even if both Pokémon had a choice item before this move was used.  If the first of the two Pokémon gains a choice item, it may select whatever choice move it wishes next turn.
+
+Neither the user nor the target can recover its item with recycle.
+
+This move cannot be selected by assist or metronome."
+stat_changes = []
+target = "selected-pokemon"
+type = 10
+ailment = ExtResource("1_ipg3p")
+category = "unique"
+min_hits = 0
+max_hits = 0
+min_turns = 0
+max_turns = 0
+drain = 0
+healing = 0
+crit_rate = 0
+ailment_chance = 0
+flinch_chance = 0
+stat_chance = 0

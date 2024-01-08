@@ -1,0 +1,50 @@
+[gd_resource type="Resource" script_class="Move" load_steps=3 format=3]
+
+[ext_resource type="Resource" path="res://Ailments/none.tres" id="1_y875k"]
+[ext_resource type="Script" path="res://typedef/Move.gd" id="2_chweu"]
+
+[resource]
+script = ExtResource("2_chweu")
+id = 197
+name = "detect"
+accuracy = 0
+effect_chance = 0
+pp = 5
+priority = 4
+power = 0
+damage_class = "status"
+effect = "No moves will hit the user for the remainder of this turn.  If the user is last to act this turn, this move will fail.
+
+If the user successfully used detect, endure, protect, quick guard, or wide guard on the last turn, this move has a 50% chance to fail.
+
+lock on, mind reader, and no guard provide a (100 – accuracy)% chance for moves to break through this move.  This does not apply to one-hit KO moves (fissure, guillotine, horn drill, and sheer cold); those are always blocked by this move.
+
+thunder during rain dance and blizzard during hail have a 30% chance to break through this move.
+
+The following effects are not prevented by this move:
+
+* acupressure from an ally
+* curse's curse effect
+* Delayed damage from doom desire and future sight; however, these moves will be prevented if they are used this turn
+* feint, which will also end this move's protection after it hits
+* imprison
+* perish song
+* shadow force
+* Moves that merely copy the user, such as transform or psych up
+
+This move cannot be selected by assist or metronome."
+stat_changes = []
+target = "user"
+type = 6
+ailment = ExtResource("1_y875k")
+category = "unique"
+min_hits = 0
+max_hits = 0
+min_turns = 0
+max_turns = 0
+drain = 0
+healing = 0
+crit_rate = 0
+ailment_chance = 0
+flinch_chance = 0
+stat_chance = 0

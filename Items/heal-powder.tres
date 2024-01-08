@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://typedef/Item.gd" id="1_cqmvn"]
+
+[resource]
+script = ExtResource("1_cqmvn")
+id = 36
+name = "heal-powder"
+cost = 300
+fling_power = 30
+fling_effect = ""
+effect = "Used on a party Pokémon
+:   Cures any status ailment.  Decreases happiness by 5/5/10."
+flavor = "A very bitter medicinal powder. It can be used once
+to heal all the status conditions of a Pokémon."
+sprite = "res://sprites/items/heal-powder.png"
+attributes = ["countable", "consumable", "usable-overworld", "usable-in-battle", "holdable"]
+category = "status-cures"

@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="Move" load_steps=3 format=3]
+
+[ext_resource type="Resource" path="res://Ailments/none.tres" id="1_18x5t"]
+[ext_resource type="Script" path="res://typedef/Move.gd" id="2_1gxfv"]
+
+[resource]
+script = ExtResource("2_1gxfv")
+id = 165
+name = "struggle"
+accuracy = 0
+effect_chance = 0
+pp = 1
+priority = 0
+power = 50
+damage_class = "physical"
+effect = "Inflicts typeless regular damage.  User takes 1/4 its max HP in recoil.  Ignores accuracy and evasion modifiers.
+
+This move is used automatically when a Pokémon cannot use any other move legally, e.g., due to having no PP remaining or being under the effect of both encore and torment at the same time.
+
+This move's recoil is not treated as recoil for the purposes of anything that affects recoil, such as the ability rock head.  It also is not prevented by magic guard.
+
+This move cannot be copied by mimic, mirror move, or sketch, nor selected by assist or metronome, nor forced by encore."
+stat_changes = []
+target = "random-opponent"
+type = 0
+ailment = ExtResource("1_18x5t")
+category = "damage"
+min_hits = 0
+max_hits = 0
+min_turns = 0
+max_turns = 0
+drain = 0
+healing = -25
+crit_rate = 0
+ailment_chance = 0
+flinch_chance = 0
+stat_chance = 0

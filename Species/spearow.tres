@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="Species" load_steps=3 format=3]
+
+[ext_resource type="Resource" path="res://GrowthRates/medium.tres" id="1_25me2"]
+[ext_resource type="Script" path="res://typedef/Species.gd" id="2_j1w2a"]
+
+[resource]
+script = ExtResource("2_j1w2a")
+id = 21
+name = "spearow"
+order = 21
+genus = "Tiny Bird Pokémon"
+flavor = "It flaps its small wings busily to
+fly. Using its beak, it searches
+in grass for prey."
+gender_rate = 4
+capture_rate = 255
+base_happiness = 70
+is_baby = false
+is_legendary = false
+is_mythical = false
+hatch_counter = 15
+has_gender_differences = false
+forms_switchable = false
+growth_rate = ExtResource("1_25me2")
+local_dex = 0
+national_dex = 21
+egg_groups = ["flying"]
+evolution_chain = 8
+habitat = "rough-terrain"

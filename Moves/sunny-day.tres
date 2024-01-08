@@ -1,0 +1,53 @@
+[gd_resource type="Resource" script_class="Move" load_steps=3 format=3]
+
+[ext_resource type="Resource" path="res://Ailments/none.tres" id="1_u5pkx"]
+[ext_resource type="Script" path="res://typedef/Move.gd" id="2_fk4d4"]
+
+[resource]
+script = ExtResource("2_fk4d4")
+id = 241
+name = "sunny-day"
+accuracy = 0
+effect_chance = 0
+pp = 5
+priority = 0
+power = 0
+damage_class = "status"
+effect = "Changes the weather to sunshine for five turns, during which fire moves inflict 50% extra damage, and water moves inflict half damage.
+
+If the user is holding heat rock, this effect lasts for eight turns.
+
+Pokémon cannot become frozen.
+
+thunder has 50% accuracy.
+
+solar beam skips its charge turn.
+
+moonlight, morning sun, and synthesis heal 2/3 of the user's max HP.
+
+Pokémon with chlorophyll have doubled original Speed.
+
+Pokémon with forecast become fire.
+
+Pokémon with leaf guard are not affected by major status effects.
+
+Pokémon with flower gift change form; every Pokémon on their side of the field have their original Attack and Special Attack increased by 50%.
+
+Pokémon with dry skin lose 1/8 max HP at the end of each turn.
+
+Pokémon with solar power have their original Special Attack raised by 50% but lose 1/8 their max HP at the end of each turn."
+stat_changes = []
+target = "entire-field"
+type = 1
+ailment = ExtResource("1_u5pkx")
+category = "whole-field-effect"
+min_hits = 0
+max_hits = 0
+min_turns = 0
+max_turns = 0
+drain = 0
+healing = 0
+crit_rate = 0
+ailment_chance = 0
+flinch_chance = 0
+stat_chance = 0

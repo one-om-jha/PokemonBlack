@@ -1,0 +1,46 @@
+[gd_resource type="Resource" script_class="Pokemon" load_steps=6 format=3]
+
+[ext_resource type="Resource" path="res://Abilities/water-absorb.tres" id="1_3w8uf"]
+[ext_resource type="Resource" path="res://Abilities/shell-armor.tres" id="2_nodhp"]
+[ext_resource type="Resource" path="res://Abilities/hydration.tres" id="3_3javq"]
+[ext_resource type="Script" path="res://typedef/Pokemon.gd" id="4_qmtet"]
+[ext_resource type="Resource" path="res://Species/lapras.tres" id="5_p881i"]
+
+[resource]
+script = ExtResource("4_qmtet")
+id = 10204
+name = "lapras-gmax"
+base_experience = 187
+height = 240
+weight = 10000
+abilities = [ExtResource("1_3w8uf"), ExtResource("2_nodhp"), ExtResource("3_3javq")]
+forms = ["lapras-gmax"]
+held_items = []
+moves = []
+species = ExtResource("5_p881i")
+sprites = {
+"back_default": "res://sprites/pokemon/back/10204.gif",
+"back_shiny": "res://sprites/pokemon/back/shiny/10204.gif",
+"front_default": "res://sprites/pokemon/10204.gif",
+"front_shiny": "res://sprites/pokemon/shiny/10204.gif"
+}
+stats = {
+"attack": 85.0,
+"defense": 80.0,
+"hp": 130.0,
+"special-attack": 85.0,
+"special-defense": 95.0,
+"speed": 60.0
+}
+stats_effort = {
+"attack": 0.0,
+"defense": 0.0,
+"hp": 2.0,
+"special-attack": 0.0,
+"special-defense": 0.0,
+"speed": 0.0
+}
+types = {
+1.0: 2,
+2.0: 5
+}

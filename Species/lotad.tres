@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="Species" load_steps=3 format=3]
+
+[ext_resource type="Resource" path="res://GrowthRates/medium-slow.tres" id="1_u53hv"]
+[ext_resource type="Script" path="res://typedef/Species.gd" id="2_wi2hm"]
+
+[resource]
+script = ExtResource("2_wi2hm")
+id = 270
+name = "lotad"
+order = 295
+genus = "Water Weed Pokémon"
+flavor = "It looks like an aquatic plant and
+serves as a ferry to Pokémon
+that can’t swim."
+gender_rate = 4
+capture_rate = 255
+base_happiness = 50
+is_baby = false
+is_legendary = false
+is_mythical = false
+hatch_counter = 15
+has_gender_differences = false
+forms_switchable = false
+growth_rate = ExtResource("1_u53hv")
+local_dex = 0
+national_dex = 270
+egg_groups = ["water1", "plant"]
+evolution_chain = 136
+habitat = "waters-edge"

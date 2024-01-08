@@ -1,0 +1,49 @@
+[gd_resource type="Resource" script_class="EvolutionChain" load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://typedef/ChainLink.gd" id="1_vh25a"]
+[ext_resource type="Resource" path="res://Species/drapion.tres" id="2_mr0rh"]
+[ext_resource type="Resource" path="res://Species/skorupi.tres" id="3_4edb6"]
+[ext_resource type="Script" path="res://typedef/EvolutionChain.gd" id="4_idonk"]
+
+[sub_resource type="Resource" id="Resource_1p6k8"]
+script = ExtResource("1_vh25a")
+is_baby = false
+species = ExtResource("2_mr0rh")
+evolves_to = []
+trigger = ""
+gender = 0
+known_move_type = 0
+location = ""
+min_level = 0
+min_happiness = 0
+min_beauty = 0
+min_affection = 0
+needs_overworld_rain = false
+party_type = 0
+relative_physical_stats = 0
+time_of_day = ""
+turn_upside_down = false
+
+[sub_resource type="Resource" id="Resource_ixnni"]
+script = ExtResource("1_vh25a")
+is_baby = false
+species = ExtResource("3_4edb6")
+evolves_to = [SubResource("Resource_1p6k8")]
+trigger = ""
+gender = 0
+known_move_type = 0
+location = ""
+min_level = 0
+min_happiness = 0
+min_beauty = 0
+min_affection = 0
+needs_overworld_rain = false
+party_type = 0
+relative_physical_stats = 0
+time_of_day = ""
+turn_upside_down = false
+
+[resource]
+script = ExtResource("4_idonk")
+id = 234
+chain = SubResource("Resource_ixnni")

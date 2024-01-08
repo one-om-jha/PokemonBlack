@@ -1,0 +1,51 @@
+[gd_resource type="Resource" script_class="EvolutionChain" load_steps=8 format=3]
+
+[ext_resource type="Resource" path="res://Items/rock-incense.tres" id="1_qq8qy"]
+[ext_resource type="Script" path="res://typedef/ChainLink.gd" id="2_3o3y5"]
+[ext_resource type="Resource" path="res://Species/sudowoodo.tres" id="3_il0g4"]
+[ext_resource type="Resource" path="res://Species/bonsly.tres" id="4_ddo2j"]
+[ext_resource type="Script" path="res://typedef/EvolutionChain.gd" id="5_iijxf"]
+
+[sub_resource type="Resource" id="Resource_iyx1q"]
+script = ExtResource("2_3o3y5")
+is_baby = false
+species = ExtResource("3_il0g4")
+evolves_to = []
+trigger = ""
+gender = 0
+known_move_type = 0
+location = ""
+min_level = 0
+min_happiness = 0
+min_beauty = 0
+min_affection = 0
+needs_overworld_rain = false
+party_type = 0
+relative_physical_stats = 0
+time_of_day = ""
+turn_upside_down = false
+
+[sub_resource type="Resource" id="Resource_6aftf"]
+script = ExtResource("2_3o3y5")
+is_baby = true
+species = ExtResource("4_ddo2j")
+evolves_to = [SubResource("Resource_iyx1q")]
+trigger = ""
+gender = 0
+known_move_type = 0
+location = ""
+min_level = 0
+min_happiness = 0
+min_beauty = 0
+min_affection = 0
+needs_overworld_rain = false
+party_type = 0
+relative_physical_stats = 0
+time_of_day = ""
+turn_upside_down = false
+
+[resource]
+script = ExtResource("5_iijxf")
+id = 91
+baby_trigger_item = ExtResource("1_qq8qy")
+chain = SubResource("Resource_6aftf")

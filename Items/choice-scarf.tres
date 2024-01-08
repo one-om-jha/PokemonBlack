@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://typedef/Item.gd" id="1_eni8l"]
+
+[resource]
+script = ExtResource("1_eni8l")
+id = 264
+name = "choice-scarf"
+cost = 4000
+fling_power = 10
+fling_effect = ""
+effect = "Held: Increases the holder's Speed by 50%, but restricts it to the first move it uses until it leaves battle or loses this item.  If this item is swapped for another Choice item via Trick or Switcheroo, the holder's restriction is still lifted, but it will again be restricted to the next move it uses.
+(Quirk: If the holder is switched in by U-Turn and it also knows U-Turn, U-Turn becomes its restricted move.)"
+flavor = "An item to be held by a Pokémon. This curious
+scarf boosts Speed but only allows the use of
+one move."
+sprite = "res://sprites/items/choice-scarf.png"
+attributes = ["holdable", "holdable-active"]
+category = "choice"

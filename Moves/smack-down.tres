@@ -1,0 +1,35 @@
+[gd_resource type="Resource" script_class="Move" load_steps=3 format=3]
+
+[ext_resource type="Resource" path="res://Ailments/unknown.tres" id="1_rbsnl"]
+[ext_resource type="Script" path="res://typedef/Move.gd" id="2_ynoo3"]
+
+[resource]
+script = ExtResource("2_ynoo3")
+id = 479
+name = "smack-down"
+accuracy = 100
+effect_chance = 100
+pp = 15
+priority = 0
+power = 50
+damage_class = "physical"
+effect = "Inflicts regular damage.  Removes the target's immunity to ground-type damage.  This effect removes any existing Ground immunity due to levitate, magnet rise, or telekinesis, and causes the target's flying type to be ignored when it takes Ground damage.
+
+If the target isn't immune to Ground damage, this move will fail.
+
+This move can hit Pokémon under the effect of bounce, fly, or sky drop, and ends the effect of Bounce or Fly."
+stat_changes = []
+target = "selected-pokemon"
+type = 12
+ailment = ExtResource("1_rbsnl")
+category = "damage"
+min_hits = 0
+max_hits = 0
+min_turns = 0
+max_turns = 0
+drain = 0
+healing = 0
+crit_rate = 0
+ailment_chance = 100
+flinch_chance = 0
+stat_chance = 0

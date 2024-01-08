@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://typedef/Item.gd" id="1_0w4wf"]
+
+[resource]
+script = ExtResource("1_0w4wf")
+id = 207
+name = "focus-band"
+cost = 4000
+fling_power = 10
+fling_effect = ""
+effect = "Held: If the holder is attacked for regular damage that would faint it, this item has a 10% chance to prevent the holder's HP from lowering below 1."
+flavor = "An item to be held by a Pokémon. The holder may
+endure a potential KO attack, leaving it with just
+1 HP."
+sprite = "res://sprites/items/focus-band.png"
+attributes = ["holdable", "holdable-active"]
+category = "held-items"
