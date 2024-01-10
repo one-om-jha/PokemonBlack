@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://dh5ig08mw2psy"]
+[gd_scene load_steps=24 format=3 uid="uid://dh5ig08mw2psy"]
 
 [ext_resource type="Script" path="res://scenes/battle_state.gd" id="1_r7sms"]
 [ext_resource type="CameraAttributesPractical" uid="uid://bgnxctxqlo8l3" path="res://scenes/camera_attributes_battle.tres" id="2_hqqat"]
@@ -7,6 +7,7 @@
 [ext_resource type="Material" uid="uid://o85vny5w0dma" path="res://models/maps/matrix1/mats/ki02ax_lm1.tres" id="5_j108e"]
 [ext_resource type="Material" uid="uid://pk8dtol00ctf" path="res://models/maps/matrix1/mats/ki02bx_lm1.tres" id="6_hrycq"]
 [ext_resource type="Material" uid="uid://bbgtynlnrp63u" path="res://models/maps/matrix1/mats/ki02dx_lm1.tres" id="7_sg2nn"]
+[ext_resource type="Script" path="res://scenes/BattleManager.gd" id="8_eudaq"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_l2g4y"]
 sky_top_color = Color(0.388235, 0.611765, 0.647059, 1)
@@ -164,22 +165,27 @@ size = Vector2(200, 200)
 [node name="BattleState" type="Node"]
 script = ExtResource("1_r7sms")
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(0.358368, 0.0130348, -0.933489, 3.48753e-16, 0.999903, 0.0139622, 0.93358, -0.0050036, 0.358333, -2.73, 1.21, 2.07)
+[node name="BattleManager" type="Node" parent="."]
+script = ExtResource("8_eudaq")
+
+[node name="Camera3D" type="Camera3D" parent="BattleManager"]
+transform = Transform3D(0.358368, 0.0130348, -0.933489, 3.48753e-16, 0.999903, 0.0139622, 0.93358, -0.00500359, 0.358333, -2.73, 1.21, 2.07)
 attributes = ExtResource("2_hqqat")
 fov = 48.4
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="BattleManager"]
 environment = SubResource("Environment_rhi7i")
 
-[node name="Platform1" type="MeshInstance3D" parent="."]
+[node name="Platform1" type="MeshInstance3D" parent="BattleManager"]
 mesh = SubResource("CylinderMesh_236pu")
+skeleton = NodePath("../..")
 
-[node name="Platform2" type="MeshInstance3D" parent="."]
+[node name="Platform2" type="MeshInstance3D" parent="BattleManager"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 2.08165e-12, 2.08165e-12)
 mesh = SubResource("CylinderMesh_236pu")
+skeleton = NodePath("../..")
 
-[node name="PlayerSprite" type="AnimatedSprite3D" parent="."]
+[node name="PlayerSprite" type="AnimatedSprite3D" parent="BattleManager"]
 transform = Transform3D(-4.37114e-08, -3.48787e-16, -1, 3.48787e-16, 1, -3.48787e-16, 1, -3.48787e-16, -4.37114e-08, 2.08165e-12, 0.75, 2.08165e-12)
 pixel_size = 0.05
 alpha_cut = 2
@@ -187,7 +193,7 @@ texture_filter = 0
 sprite_frames = ExtResource("3_5pv5s")
 animation = &"idle_up"
 
-[node name="EnemySprite" type="AnimatedSprite3D" parent="."]
+[node name="EnemySprite" type="AnimatedSprite3D" parent="BattleManager"]
 transform = Transform3D(-4.37114e-08, 3.48787e-16, 1, 3.48787e-16, 1, -3.48787e-16, -1, 3.48787e-16, -4.37114e-08, 10, 0.75, 2.08165e-12)
 pixel_size = 0.05
 alpha_cut = 2
@@ -195,108 +201,108 @@ texture_filter = 0
 sprite_frames = ExtResource("3_5pv5s")
 animation = &"idle_down"
 
-[node name="Environment" type="Node3D" parent="."]
+[node name="Environment" type="Node3D" parent="BattleManager"]
 
-[node name="Node3D" type="Node3D" parent="Environment"]
+[node name="Node3D" type="Node3D" parent="BattleManager/Environment"]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
 
-[node name="polygon2_030" type="MeshInstance3D" parent="Environment/Node3D"]
+[node name="polygon2_030" type="MeshInstance3D" parent="BattleManager/Environment/Node3D"]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 8, -0.05, 0)
 mesh = SubResource("ArrayMesh_q6pkw")
 skeleton = NodePath("")
 
-[node name="polygon3_030" type="MeshInstance3D" parent="Environment/Node3D"]
+[node name="polygon3_030" type="MeshInstance3D" parent="BattleManager/Environment/Node3D"]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 8, -0.05, 0)
 visible = false
 mesh = SubResource("ArrayMesh_h7au0")
 skeleton = NodePath("")
 
-[node name="polygon4_030" type="MeshInstance3D" parent="Environment/Node3D"]
+[node name="polygon4_030" type="MeshInstance3D" parent="BattleManager/Environment/Node3D"]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 8, -0.05, 0)
 visible = false
 mesh = SubResource("ArrayMesh_ebc0j")
 skeleton = NodePath("")
 
-[node name="Node3D2" type="Node3D" parent="Environment"]
+[node name="Node3D2" type="Node3D" parent="BattleManager/Environment"]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, -80.5258)
 
-[node name="polygon2_030" type="MeshInstance3D" parent="Environment/Node3D2"]
+[node name="polygon2_030" type="MeshInstance3D" parent="BattleManager/Environment/Node3D2"]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 8, -0.05, 0)
 mesh = SubResource("ArrayMesh_q6pkw")
 skeleton = NodePath("")
 
-[node name="polygon3_030" type="MeshInstance3D" parent="Environment/Node3D2"]
+[node name="polygon3_030" type="MeshInstance3D" parent="BattleManager/Environment/Node3D2"]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 8, -0.05, 0)
 visible = false
 mesh = SubResource("ArrayMesh_h7au0")
 skeleton = NodePath("")
 
-[node name="polygon4_030" type="MeshInstance3D" parent="Environment/Node3D2"]
+[node name="polygon4_030" type="MeshInstance3D" parent="BattleManager/Environment/Node3D2"]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 8, -0.05, 0)
 visible = false
 mesh = SubResource("ArrayMesh_ebc0j")
 skeleton = NodePath("")
 
-[node name="Node3D3" type="Node3D" parent="Environment"]
+[node name="Node3D3" type="Node3D" parent="BattleManager/Environment"]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -80.7797, 0, -80.5258)
 
-[node name="polygon2_030" type="MeshInstance3D" parent="Environment/Node3D3"]
+[node name="polygon2_030" type="MeshInstance3D" parent="BattleManager/Environment/Node3D3"]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 8, -0.05, 0)
 mesh = SubResource("ArrayMesh_q6pkw")
 skeleton = NodePath("")
 
-[node name="polygon3_030" type="MeshInstance3D" parent="Environment/Node3D3"]
+[node name="polygon3_030" type="MeshInstance3D" parent="BattleManager/Environment/Node3D3"]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 8, -0.05, 0)
 visible = false
 mesh = SubResource("ArrayMesh_h7au0")
 skeleton = NodePath("")
 
-[node name="polygon4_030" type="MeshInstance3D" parent="Environment/Node3D3"]
+[node name="polygon4_030" type="MeshInstance3D" parent="BattleManager/Environment/Node3D3"]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 8, -0.05, 0)
 visible = false
 mesh = SubResource("ArrayMesh_ebc0j")
 skeleton = NodePath("")
 
-[node name="Node3D4" type="Node3D" parent="Environment"]
+[node name="Node3D4" type="Node3D" parent="BattleManager/Environment"]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -80.7797, 0, 81.9233)
 
-[node name="polygon2_030" type="MeshInstance3D" parent="Environment/Node3D4"]
+[node name="polygon2_030" type="MeshInstance3D" parent="BattleManager/Environment/Node3D4"]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 8, -0.05, 0)
 mesh = SubResource("ArrayMesh_q6pkw")
 skeleton = NodePath("")
 
-[node name="polygon3_030" type="MeshInstance3D" parent="Environment/Node3D4"]
+[node name="polygon3_030" type="MeshInstance3D" parent="BattleManager/Environment/Node3D4"]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 8, -0.05, 0)
 visible = false
 mesh = SubResource("ArrayMesh_h7au0")
 skeleton = NodePath("")
 
-[node name="polygon4_030" type="MeshInstance3D" parent="Environment/Node3D4"]
+[node name="polygon4_030" type="MeshInstance3D" parent="BattleManager/Environment/Node3D4"]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 8, -0.05, 0)
 visible = false
 mesh = SubResource("ArrayMesh_ebc0j")
 skeleton = NodePath("")
 
-[node name="Node3D5" type="Node3D" parent="Environment"]
+[node name="Node3D5" type="Node3D" parent="BattleManager/Environment"]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -0.177925, 0, 81.9233)
 
-[node name="polygon2_030" type="MeshInstance3D" parent="Environment/Node3D5"]
+[node name="polygon2_030" type="MeshInstance3D" parent="BattleManager/Environment/Node3D5"]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 8, -0.05, 0)
 mesh = SubResource("ArrayMesh_q6pkw")
 skeleton = NodePath("")
 
-[node name="polygon3_030" type="MeshInstance3D" parent="Environment/Node3D5"]
+[node name="polygon3_030" type="MeshInstance3D" parent="BattleManager/Environment/Node3D5"]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 8, -0.05, 0)
 visible = false
 mesh = SubResource("ArrayMesh_h7au0")
 skeleton = NodePath("")
 
-[node name="polygon4_030" type="MeshInstance3D" parent="Environment/Node3D5"]
+[node name="polygon4_030" type="MeshInstance3D" parent="BattleManager/Environment/Node3D5"]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 8, -0.05, 0)
 visible = false
 mesh = SubResource("ArrayMesh_ebc0j")
 skeleton = NodePath("")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="BattleManager/Environment"]
 mesh = SubResource("PlaneMesh_xjegr")
-skeleton = NodePath("../..")
+skeleton = NodePath("../../..")

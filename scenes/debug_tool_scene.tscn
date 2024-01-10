@@ -1,9 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://vl4x8tdomyn7"]
 
 [ext_resource type="Script" path="res://scenes/debug_tool_scene.gd" id="1_sx2ql"]
-[ext_resource type="Resource" path="res://Pokemon/oshawott.tres" id="2_jul16"]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_xen61"]
+[ext_resource type="Resource" uid="uid://de4rsxn4qxwri" path="res://Pokemon/oshawott.tres" id="2_jul16"]
+[ext_resource type="SpriteFrames" uid="uid://c27cfgg075lx6" path="res://sprites/pokemon/animated/363.res" id="3_qqdw6"]
 
 [node name="DebugToolScene" type="FlowContainer"]
 anchors_preset = 15
@@ -25,8 +24,27 @@ layout_mode = 2
 layout_mode = 2
 text = "add_starter"
 
+[node name="Button3" type="Button" parent="."]
+layout_mode = 2
+text = "set sprites"
+
+[node name="Button4" type="Button" parent="."]
+layout_mode = 2
+text = "fix sprite refs"
+
+[node name="Button5" type="Button" parent="."]
+layout_mode = 2
+text = "fix sprite refs2"
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-sprite_frames = SubResource("SpriteFrames_xen61")
+position = Vector2(481, 497)
+scale = Vector2(5.58882, 5.28571)
+sprite_frames = ExtResource("3_qqdw6")
+frame = 54
+frame_progress = 0.852702
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="Button4" to="." method="_on_button_4_pressed"]
+[connection signal="pressed" from="Button5" to="." method="_on_button_5_pressed"]
