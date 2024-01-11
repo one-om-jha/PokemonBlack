@@ -1,7 +1,5 @@
 extends State
 
-var player_choice
-
 func enter_state():
 	pass
 	

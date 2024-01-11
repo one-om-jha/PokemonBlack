@@ -15,28 +15,11 @@ extends StateMachine
 @onready var player_sprite = $BaseState/PlayerSprite
 @onready var opp_sprite = $BaseState/EnemySprite
 
-var player_index = 0
-var opp_index = 0
-
 var battle: Battle
-
-enum Action {
-	MOVE1,
-	MOVE2,
-	MOVE3,
-	MOVE4,
-	POKEMON,
-	ITEM,
-	RUN,
-}
-
-var player_choice: Action
-var opp_choice: Action
 
 func start_battle():
 	battle = get_parent().battle
 	load_sprites()
-	#stack.push_front(base_state)
 	remove_child(intro_state)
 	remove_child(choice_state)
 	remove_child(move_state)
@@ -48,11 +31,10 @@ func start_battle():
 	push_state(intro_state)
 	
 func get_p() -> PokemonInstance:
-	print_debug(pd.data.party)
-	return pd.data.party[player_index]
+	return battle.player_party[battle.p_index]
 	
 func get_o() -> PokemonInstance:
-	return battle.party[opp_index]
+	return battle.party[battle.o_index]
 
 func load_sprites():
 	player_sprite.sprite_frames = get_p().get_back_sprite()

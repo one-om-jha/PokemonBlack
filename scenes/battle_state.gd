@@ -7,6 +7,7 @@ extends State
 
 func enter_state():
 	camera.current = true
+	battle.player_party = pd.data.party
 	bm.start_battle()
 	
 func exit_state():

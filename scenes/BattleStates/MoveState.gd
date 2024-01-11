@@ -1,9 +1,9 @@
 extends State
 
-@onready var p_move_1 = $CanvasLayer/VBoxContainer/Move1
-@onready var p_move_2 = $CanvasLayer/VBoxContainer/Move2
-@onready var p_move_3 = $CanvasLayer/VBoxContainer/Move3
-@onready var p_move_4 = $CanvasLayer/VBoxContainer/Move4
+@onready var p_move_1 = $CanvasLayer/Move1
+@onready var p_move_2 = $CanvasLayer/Move2
+@onready var p_move_3 = $CanvasLayer/Move3
+@onready var p_move_4 = $CanvasLayer/Move4
 
 @export var p: PokemonInstance
 

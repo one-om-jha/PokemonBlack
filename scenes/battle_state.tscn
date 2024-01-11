@@ -230,24 +230,29 @@ script = ExtResource("3_igtnn")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="BattleManager/MoveState"]
 
-[node name="VBoxContainer" type="VBoxContainer" parent="BattleManager/MoveState/CanvasLayer"]
+[node name="Move1" parent="BattleManager/MoveState/CanvasLayer" instance=ExtResource("7_hibpb")]
 offset_left = 137.72
-offset_right = 177.72
-offset_bottom = 336.0
-theme = ExtResource("3_nvase")
-theme_override_constants/separation = 112
+offset_top = 0.0
+offset_right = 687.72
+offset_bottom = 92.0
 
-[node name="Move1" parent="BattleManager/MoveState/CanvasLayer/VBoxContainer" instance=ExtResource("7_hibpb")]
-layout_mode = 2
+[node name="Move2" parent="BattleManager/MoveState/CanvasLayer" instance=ExtResource("7_hibpb")]
+offset_left = 137.72
+offset_top = 112.0
+offset_right = 687.72
+offset_bottom = 204.0
 
-[node name="Move2" parent="BattleManager/MoveState/CanvasLayer/VBoxContainer" instance=ExtResource("7_hibpb")]
-layout_mode = 2
+[node name="Move3" parent="BattleManager/MoveState/CanvasLayer" instance=ExtResource("7_hibpb")]
+offset_left = 137.72
+offset_top = 224.0
+offset_right = 687.72
+offset_bottom = 316.0
 
-[node name="Move3" parent="BattleManager/MoveState/CanvasLayer/VBoxContainer" instance=ExtResource("7_hibpb")]
-layout_mode = 2
-
-[node name="Move4" parent="BattleManager/MoveState/CanvasLayer/VBoxContainer" instance=ExtResource("7_hibpb")]
-layout_mode = 2
+[node name="Move4" parent="BattleManager/MoveState/CanvasLayer" instance=ExtResource("7_hibpb")]
+offset_left = 137.72
+offset_top = 336.0
+offset_right = 687.72
+offset_bottom = 428.0
 
 [node name="PokemonState" type="Node" parent="BattleManager"]
 script = ExtResource("3_7eiyj")
@@ -440,10 +445,10 @@ skeleton = NodePath("")
 mesh = SubResource("PlaneMesh_xjegr")
 skeleton = NodePath("../../../..")
 
-[connection signal="pressed" from="BattleManager/MoveState/CanvasLayer/VBoxContainer/Move1" to="BattleManager/MoveState" method="_on_move_1_pressed"]
-[connection signal="pressed" from="BattleManager/MoveState/CanvasLayer/VBoxContainer/Move2" to="BattleManager/MoveState" method="_on_move_2_pressed"]
-[connection signal="pressed" from="BattleManager/MoveState/CanvasLayer/VBoxContainer/Move3" to="BattleManager/MoveState" method="_on_move_3_pressed"]
-[connection signal="pressed" from="BattleManager/MoveState/CanvasLayer/VBoxContainer/Move4" to="BattleManager/MoveState" method="_on_move_4_pressed"]
+[connection signal="pressed" from="BattleManager/MoveState/CanvasLayer/Move1" to="BattleManager/MoveState" method="_on_move_1_pressed"]
+[connection signal="pressed" from="BattleManager/MoveState/CanvasLayer/Move2" to="BattleManager/MoveState" method="_on_move_2_pressed"]
+[connection signal="pressed" from="BattleManager/MoveState/CanvasLayer/Move3" to="BattleManager/MoveState" method="_on_move_3_pressed"]
+[connection signal="pressed" from="BattleManager/MoveState/CanvasLayer/Move4" to="BattleManager/MoveState" method="_on_move_4_pressed"]
 [connection signal="pressed" from="BattleManager/ChoiceState/CanvasLayer/VBoxContainer/FightButton" to="BattleManager/ChoiceState" method="_on_fight_button_pressed"]
 [connection signal="pressed" from="BattleManager/ChoiceState/CanvasLayer/VBoxContainer/PokemonButton" to="BattleManager/ChoiceState" method="_on_pokemon_button_pressed"]
 [connection signal="pressed" from="BattleManager/ChoiceState/CanvasLayer/VBoxContainer/BagButton" to="BattleManager/ChoiceState" method="_on_bag_button_pressed"]
