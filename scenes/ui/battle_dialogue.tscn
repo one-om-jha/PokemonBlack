@@ -1,0 +1,44 @@
+[gd_scene load_steps=5 format=3 uid="uid://c63202m27mptg"]
+
+[ext_resource type="Script" path="res://scenes/ui/battle_dialogue.gd" id="1_4c7en"]
+[ext_resource type="Theme" uid="uid://bopkg17damgfh" path="res://ui/base_theme.tres" id="2_je4yv"]
+[ext_resource type="Texture2D" uid="uid://cctjpbphnp73m" path="res://textures/menu/DialogueFloating.png" id="3_5gjyc"]
+[ext_resource type="FontFile" uid="uid://cvbi044pyxaga" path="res://ui/fonts/NunitoSans_10pt-Regular.ttf" id="5_htgr1"]
+
+[node name="BattleDialogue" type="CanvasLayer"]
+script = ExtResource("1_4c7en")
+
+[node name="Floating" type="TextureRect" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -448.0
+offset_top = -325.0
+offset_right = 448.0
+offset_bottom = -44.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("2_je4yv")
+texture = ExtResource("3_5gjyc")
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Text" type="RichTextLabel" parent="Floating"]
+layout_mode = 0
+offset_left = 168.0
+offset_top = 84.0
+offset_right = 728.0
+offset_bottom = 194.0
+theme_override_fonts/normal_font = ExtResource("5_htgr1")
+bbcode_enabled = true
+text = "A wild Patrat appeared!"
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

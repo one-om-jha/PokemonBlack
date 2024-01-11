@@ -1,13 +1,64 @@
-[gd_scene load_steps=24 format=3 uid="uid://dh5ig08mw2psy"]
+[gd_scene load_steps=40 format=3 uid="uid://dh5ig08mw2psy"]
 
 [ext_resource type="Script" path="res://scenes/battle_state.gd" id="1_r7sms"]
 [ext_resource type="CameraAttributesPractical" uid="uid://bgnxctxqlo8l3" path="res://scenes/camera_attributes_battle.tres" id="2_hqqat"]
-[ext_resource type="SpriteFrames" uid="uid://hcjso4qvqrw3" path="res://textures/player/player_male.tres" id="3_5pv5s"]
+[ext_resource type="Script" path="res://scenes/BattleManager.gd" id="2_oftty"]
+[ext_resource type="Script" path="res://scenes/BattleStates/IntroState.gd" id="3_2jngf"]
+[ext_resource type="Script" path="res://scenes/BattleStates/PokemonState.gd" id="3_7eiyj"]
+[ext_resource type="Script" path="res://scenes/BattleStates/EndState.gd" id="3_c4crc"]
+[ext_resource type="Script" path="res://scenes/BattleStates/MoveState.gd" id="3_igtnn"]
+[ext_resource type="Theme" uid="uid://bopkg17damgfh" path="res://ui/base_theme.tres" id="3_nvase"]
+[ext_resource type="Script" path="res://scenes/BattleStates/BagState.gd" id="3_qh5wk"]
+[ext_resource type="Script" path="res://scenes/BattleStates/ResolveState.gd" id="3_s0g38"]
+[ext_resource type="SpriteFrames" path="res://sprites/pokemon/animated/back/501.res" id="3_usxqh"]
+[ext_resource type="Script" path="res://scenes/BattleStates/ChoiceState.gd" id="3_vgjaq"]
+[ext_resource type="SpriteFrames" path="res://sprites/pokemon/animated/504.res" id="4_8phec"]
 [ext_resource type="Texture2D" uid="uid://bhlkjfkj6dgvg" path="res://models/maps/matrix1/matrix1_grass01ax.png" id="4_rebuo"]
 [ext_resource type="Material" uid="uid://o85vny5w0dma" path="res://models/maps/matrix1/mats/ki02ax_lm1.tres" id="5_j108e"]
 [ext_resource type="Material" uid="uid://pk8dtol00ctf" path="res://models/maps/matrix1/mats/ki02bx_lm1.tres" id="6_hrycq"]
+[ext_resource type="PackedScene" uid="uid://sw88h8ltfyu6" path="res://scenes/ui/move_node.tscn" id="7_hibpb"]
 [ext_resource type="Material" uid="uid://bbgtynlnrp63u" path="res://models/maps/matrix1/mats/ki02dx_lm1.tres" id="7_sg2nn"]
-[ext_resource type="Script" path="res://scenes/BattleManager.gd" id="8_eudaq"]
+[ext_resource type="PackedScene" uid="uid://c63202m27mptg" path="res://scenes/ui/battle_dialogue.tscn" id="9_ev6i4"]
+[ext_resource type="Script" path="res://scenes/BattleStates/AIState.gd" id="11_kdli4"]
+[ext_resource type="Script" path="res://scenes/BattleStates/BaseState.gd" id="14_0by0g"]
+
+[sub_resource type="Animation" id="Animation_ad4np"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-2.73, 1.21, 2.07)]
+}
+
+[sub_resource type="Animation" id="Animation_myyd6"]
+resource_name = "default"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(-2, -2, -2),
+"update": 0,
+"values": [Vector3(-2.73, 1.21, 2.07), Vector3(-2.73, 1.13, 2.07), Vector3(-2.73, 1.21, 2.07)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_x23ha"]
+_data = {
+"RESET": SubResource("Animation_ad4np"),
+"default": SubResource("Animation_myyd6")
+}
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_l2g4y"]
 sky_top_color = Color(0.388235, 0.611765, 0.647059, 1)
@@ -166,143 +217,235 @@ size = Vector2(200, 200)
 script = ExtResource("1_r7sms")
 
 [node name="BattleManager" type="Node" parent="."]
-script = ExtResource("8_eudaq")
+script = ExtResource("2_oftty")
 
-[node name="Camera3D" type="Camera3D" parent="BattleManager"]
+[node name="EndState" type="Node" parent="BattleManager"]
+script = ExtResource("3_c4crc")
+
+[node name="ResolveState" type="Node" parent="BattleManager"]
+script = ExtResource("3_s0g38")
+
+[node name="MoveState" type="Node" parent="BattleManager"]
+script = ExtResource("3_igtnn")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="BattleManager/MoveState"]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="BattleManager/MoveState/CanvasLayer"]
+offset_left = 137.72
+offset_right = 177.72
+offset_bottom = 336.0
+theme = ExtResource("3_nvase")
+theme_override_constants/separation = 112
+
+[node name="Move1" parent="BattleManager/MoveState/CanvasLayer/VBoxContainer" instance=ExtResource("7_hibpb")]
+layout_mode = 2
+
+[node name="Move2" parent="BattleManager/MoveState/CanvasLayer/VBoxContainer" instance=ExtResource("7_hibpb")]
+layout_mode = 2
+
+[node name="Move3" parent="BattleManager/MoveState/CanvasLayer/VBoxContainer" instance=ExtResource("7_hibpb")]
+layout_mode = 2
+
+[node name="Move4" parent="BattleManager/MoveState/CanvasLayer/VBoxContainer" instance=ExtResource("7_hibpb")]
+layout_mode = 2
+
+[node name="PokemonState" type="Node" parent="BattleManager"]
+script = ExtResource("3_7eiyj")
+
+[node name="BagState" type="Node" parent="BattleManager"]
+script = ExtResource("3_qh5wk")
+
+[node name="ChoiceState" type="Node" parent="BattleManager"]
+script = ExtResource("3_vgjaq")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="BattleManager/ChoiceState"]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="BattleManager/ChoiceState/CanvasLayer"]
+offset_right = 40.0
+offset_bottom = 40.0
+theme = ExtResource("3_nvase")
+theme_override_constants/separation = 4
+
+[node name="FightButton" type="Button" parent="BattleManager/ChoiceState/CanvasLayer/VBoxContainer"]
+layout_mode = 2
+text = "Fight"
+alignment = 0
+
+[node name="PokemonButton" type="Button" parent="BattleManager/ChoiceState/CanvasLayer/VBoxContainer"]
+layout_mode = 2
+text = "Pokemon"
+alignment = 0
+
+[node name="BagButton" type="Button" parent="BattleManager/ChoiceState/CanvasLayer/VBoxContainer"]
+layout_mode = 2
+text = "Bag"
+alignment = 0
+
+[node name="RunButton" type="Button" parent="BattleManager/ChoiceState/CanvasLayer/VBoxContainer"]
+layout_mode = 2
+text = "Run"
+alignment = 0
+
+[node name="AIState" type="Node" parent="BattleManager"]
+script = ExtResource("11_kdli4")
+
+[node name="IntroState" type="Node" parent="BattleManager"]
+script = ExtResource("3_2jngf")
+
+[node name="IntroDialogue" parent="BattleManager/IntroState" instance=ExtResource("9_ev6i4")]
+
+[node name="BaseState" type="Node" parent="BattleManager"]
+script = ExtResource("14_0by0g")
+
+[node name="Camera3D" type="Camera3D" parent="BattleManager/BaseState"]
 transform = Transform3D(0.358368, 0.0130348, -0.933489, 3.48753e-16, 0.999903, 0.0139622, 0.93358, -0.00500359, 0.358333, -2.73, 1.21, 2.07)
 attributes = ExtResource("2_hqqat")
 fov = 48.4
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="BattleManager"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="BattleManager/BaseState/Camera3D"]
+libraries = {
+"": SubResource("AnimationLibrary_x23ha")
+}
+autoplay = "default"
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="BattleManager/BaseState"]
 environment = SubResource("Environment_rhi7i")
 
-[node name="Platform1" type="MeshInstance3D" parent="BattleManager"]
+[node name="Platform1" type="MeshInstance3D" parent="BattleManager/BaseState"]
 mesh = SubResource("CylinderMesh_236pu")
-skeleton = NodePath("../..")
+skeleton = NodePath("../../..")
 
-[node name="Platform2" type="MeshInstance3D" parent="BattleManager"]
+[node name="Platform2" type="MeshInstance3D" parent="BattleManager/BaseState"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 2.08165e-12, 2.08165e-12)
 mesh = SubResource("CylinderMesh_236pu")
-skeleton = NodePath("../..")
+skeleton = NodePath("../../..")
 
-[node name="PlayerSprite" type="AnimatedSprite3D" parent="BattleManager"]
-transform = Transform3D(-4.37114e-08, -3.48787e-16, -1, 3.48787e-16, 1, -3.48787e-16, 1, -3.48787e-16, -4.37114e-08, 2.08165e-12, 0.75, 2.08165e-12)
-pixel_size = 0.05
+[node name="PlayerSprite" type="AnimatedSprite3D" parent="BattleManager/BaseState"]
+transform = Transform3D(-4.37114e-08, -3.48787e-16, -1, 3.48787e-16, 1, -3.48787e-16, 1, -3.48787e-16, -4.37114e-08, 0, 0.65, 0)
+pixel_size = 0.03
 alpha_cut = 2
 texture_filter = 0
-sprite_frames = ExtResource("3_5pv5s")
-animation = &"idle_up"
+sprite_frames = ExtResource("3_usxqh")
 
-[node name="EnemySprite" type="AnimatedSprite3D" parent="BattleManager"]
-transform = Transform3D(-4.37114e-08, 3.48787e-16, 1, 3.48787e-16, 1, -3.48787e-16, -1, 3.48787e-16, -4.37114e-08, 10, 0.75, 2.08165e-12)
-pixel_size = 0.05
+[node name="EnemySprite" type="AnimatedSprite3D" parent="BattleManager/BaseState"]
+transform = Transform3D(-4.37114e-08, 3.48787e-16, 1, 3.48787e-16, 1, -3.48787e-16, -1, 3.48787e-16, -4.37114e-08, 10, 0.65, 0)
+pixel_size = 0.03
 alpha_cut = 2
 texture_filter = 0
-sprite_frames = ExtResource("3_5pv5s")
-animation = &"idle_down"
+sprite_frames = ExtResource("4_8phec")
 
-[node name="Environment" type="Node3D" parent="BattleManager"]
+[node name="Environment" type="Node3D" parent="BattleManager/BaseState"]
 
-[node name="Node3D" type="Node3D" parent="BattleManager/Environment"]
+[node name="Node3D" type="Node3D" parent="BattleManager/BaseState/Environment"]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
 
-[node name="polygon2_030" type="MeshInstance3D" parent="BattleManager/Environment/Node3D"]
+[node name="polygon2_030" type="MeshInstance3D" parent="BattleManager/BaseState/Environment/Node3D"]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 8, -0.05, 0)
 mesh = SubResource("ArrayMesh_q6pkw")
 skeleton = NodePath("")
 
-[node name="polygon3_030" type="MeshInstance3D" parent="BattleManager/Environment/Node3D"]
+[node name="polygon3_030" type="MeshInstance3D" parent="BattleManager/BaseState/Environment/Node3D"]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 8, -0.05, 0)
 visible = false
 mesh = SubResource("ArrayMesh_h7au0")
 skeleton = NodePath("")
 
-[node name="polygon4_030" type="MeshInstance3D" parent="BattleManager/Environment/Node3D"]
+[node name="polygon4_030" type="MeshInstance3D" parent="BattleManager/BaseState/Environment/Node3D"]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 8, -0.05, 0)
 visible = false
 mesh = SubResource("ArrayMesh_ebc0j")
 skeleton = NodePath("")
 
-[node name="Node3D2" type="Node3D" parent="BattleManager/Environment"]
+[node name="Node3D2" type="Node3D" parent="BattleManager/BaseState/Environment"]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, -80.5258)
 
-[node name="polygon2_030" type="MeshInstance3D" parent="BattleManager/Environment/Node3D2"]
+[node name="polygon2_030" type="MeshInstance3D" parent="BattleManager/BaseState/Environment/Node3D2"]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 8, -0.05, 0)
 mesh = SubResource("ArrayMesh_q6pkw")
 skeleton = NodePath("")
 
-[node name="polygon3_030" type="MeshInstance3D" parent="BattleManager/Environment/Node3D2"]
+[node name="polygon3_030" type="MeshInstance3D" parent="BattleManager/BaseState/Environment/Node3D2"]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 8, -0.05, 0)
 visible = false
 mesh = SubResource("ArrayMesh_h7au0")
 skeleton = NodePath("")
 
-[node name="polygon4_030" type="MeshInstance3D" parent="BattleManager/Environment/Node3D2"]
+[node name="polygon4_030" type="MeshInstance3D" parent="BattleManager/BaseState/Environment/Node3D2"]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 8, -0.05, 0)
 visible = false
 mesh = SubResource("ArrayMesh_ebc0j")
 skeleton = NodePath("")
 
-[node name="Node3D3" type="Node3D" parent="BattleManager/Environment"]
+[node name="Node3D3" type="Node3D" parent="BattleManager/BaseState/Environment"]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -80.7797, 0, -80.5258)
 
-[node name="polygon2_030" type="MeshInstance3D" parent="BattleManager/Environment/Node3D3"]
+[node name="polygon2_030" type="MeshInstance3D" parent="BattleManager/BaseState/Environment/Node3D3"]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 8, -0.05, 0)
 mesh = SubResource("ArrayMesh_q6pkw")
 skeleton = NodePath("")
 
-[node name="polygon3_030" type="MeshInstance3D" parent="BattleManager/Environment/Node3D3"]
+[node name="polygon3_030" type="MeshInstance3D" parent="BattleManager/BaseState/Environment/Node3D3"]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 8, -0.05, 0)
 visible = false
 mesh = SubResource("ArrayMesh_h7au0")
 skeleton = NodePath("")
 
-[node name="polygon4_030" type="MeshInstance3D" parent="BattleManager/Environment/Node3D3"]
+[node name="polygon4_030" type="MeshInstance3D" parent="BattleManager/BaseState/Environment/Node3D3"]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 8, -0.05, 0)
 visible = false
 mesh = SubResource("ArrayMesh_ebc0j")
 skeleton = NodePath("")
 
-[node name="Node3D4" type="Node3D" parent="BattleManager/Environment"]
+[node name="Node3D4" type="Node3D" parent="BattleManager/BaseState/Environment"]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -80.7797, 0, 81.9233)
 
-[node name="polygon2_030" type="MeshInstance3D" parent="BattleManager/Environment/Node3D4"]
+[node name="polygon2_030" type="MeshInstance3D" parent="BattleManager/BaseState/Environment/Node3D4"]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 8, -0.05, 0)
 mesh = SubResource("ArrayMesh_q6pkw")
 skeleton = NodePath("")
 
-[node name="polygon3_030" type="MeshInstance3D" parent="BattleManager/Environment/Node3D4"]
+[node name="polygon3_030" type="MeshInstance3D" parent="BattleManager/BaseState/Environment/Node3D4"]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 8, -0.05, 0)
 visible = false
 mesh = SubResource("ArrayMesh_h7au0")
 skeleton = NodePath("")
 
-[node name="polygon4_030" type="MeshInstance3D" parent="BattleManager/Environment/Node3D4"]
+[node name="polygon4_030" type="MeshInstance3D" parent="BattleManager/BaseState/Environment/Node3D4"]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 8, -0.05, 0)
 visible = false
 mesh = SubResource("ArrayMesh_ebc0j")
 skeleton = NodePath("")
 
-[node name="Node3D5" type="Node3D" parent="BattleManager/Environment"]
+[node name="Node3D5" type="Node3D" parent="BattleManager/BaseState/Environment"]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -0.177925, 0, 81.9233)
 
-[node name="polygon2_030" type="MeshInstance3D" parent="BattleManager/Environment/Node3D5"]
+[node name="polygon2_030" type="MeshInstance3D" parent="BattleManager/BaseState/Environment/Node3D5"]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 8, -0.05, 0)
 mesh = SubResource("ArrayMesh_q6pkw")
 skeleton = NodePath("")
 
-[node name="polygon3_030" type="MeshInstance3D" parent="BattleManager/Environment/Node3D5"]
+[node name="polygon3_030" type="MeshInstance3D" parent="BattleManager/BaseState/Environment/Node3D5"]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 8, -0.05, 0)
 visible = false
 mesh = SubResource("ArrayMesh_h7au0")
 skeleton = NodePath("")
 
-[node name="polygon4_030" type="MeshInstance3D" parent="BattleManager/Environment/Node3D5"]
+[node name="polygon4_030" type="MeshInstance3D" parent="BattleManager/BaseState/Environment/Node3D5"]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 8, -0.05, 0)
 visible = false
 mesh = SubResource("ArrayMesh_ebc0j")
 skeleton = NodePath("")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="BattleManager/Environment"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="BattleManager/BaseState/Environment"]
 mesh = SubResource("PlaneMesh_xjegr")
-skeleton = NodePath("../../..")
+skeleton = NodePath("../../../..")
+
+[connection signal="pressed" from="BattleManager/MoveState/CanvasLayer/VBoxContainer/Move1" to="BattleManager/MoveState" method="_on_move_1_pressed"]
+[connection signal="pressed" from="BattleManager/MoveState/CanvasLayer/VBoxContainer/Move2" to="BattleManager/MoveState" method="_on_move_2_pressed"]
+[connection signal="pressed" from="BattleManager/MoveState/CanvasLayer/VBoxContainer/Move3" to="BattleManager/MoveState" method="_on_move_3_pressed"]
+[connection signal="pressed" from="BattleManager/MoveState/CanvasLayer/VBoxContainer/Move4" to="BattleManager/MoveState" method="_on_move_4_pressed"]
+[connection signal="pressed" from="BattleManager/ChoiceState/CanvasLayer/VBoxContainer/FightButton" to="BattleManager/ChoiceState" method="_on_fight_button_pressed"]
+[connection signal="pressed" from="BattleManager/ChoiceState/CanvasLayer/VBoxContainer/PokemonButton" to="BattleManager/ChoiceState" method="_on_pokemon_button_pressed"]
+[connection signal="pressed" from="BattleManager/ChoiceState/CanvasLayer/VBoxContainer/BagButton" to="BattleManager/ChoiceState" method="_on_bag_button_pressed"]
+[connection signal="pressed" from="BattleManager/ChoiceState/CanvasLayer/VBoxContainer/RunButton" to="BattleManager/ChoiceState" method="_on_run_button_pressed"]
+[connection signal="finished_dialogue" from="BattleManager/IntroState/IntroDialogue" to="BattleManager/IntroState" method="_on_intro_dialogue_finished_dialogue"]

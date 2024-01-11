@@ -12,7 +12,7 @@ extends Button
 
 func load():
 	if p != null:
-		sprite.texture = p.get_default_sprite()
+		sprite.sprite_frames = p.get_front_sprite()
 		p_name.text = p.name
 		health_bar.value = float(p.curr_health) / float(p.stats[0])
 		health_label.text = str(p.curr_health) + "/" + str(p.stats[0])

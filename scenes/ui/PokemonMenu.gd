@@ -58,7 +58,8 @@ func exit_state():
 
 func update_details():
 	var p = pd.data.party[selected_index]
-	p_sprite.texture = p.get_default_sprite()
+	p_sprite.sprite_frames = p.get_front_sprite()
+	p_sprite.play("default")
 	p_name.text = p.name
 	p_ability_name.text = p.pokemon.abilities[p.ability_slot].name
 	p_ability_desc.text = p.pokemon.abilities[p.ability_slot].effect

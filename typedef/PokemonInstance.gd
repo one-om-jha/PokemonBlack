@@ -16,6 +16,8 @@ class_name PokemonInstance extends Resource
 @export var gender: int
 @export var ailments: Array[Ailment]
 
+@export var shiny: bool
+
 @export var move1: Move
 @export var move2: Move
 @export var move3: Move
@@ -26,9 +28,30 @@ class_name PokemonInstance extends Resource
 @export var markings: Array
 @export var original_trainer: String
 
-func get_default_sprite() -> ImageTexture:
-	var image = Image.load_from_file(pokemon.sprites["back_default"])
-	return ImageTexture.create_from_image(image)
+func get_sprite(type: String) -> SpriteFrames:
+	return ResourceLoader.load(pokemon.sprites[type], "SpriteFrames")
+	
+func get_back_sprite() -> SpriteFrames:
+	var type = "back"
+	if shiny:
+		type += "_shiny"
+	if pokemon.species.has_gender_differences:
+		if gender == 1:
+			type += "_female"
+	if type == "back":
+		type += "_default"
+	return ResourceLoader.load(pokemon.sprites[type], "SpriteFrames")
+	
+func get_front_sprite() -> SpriteFrames:
+	var type = "front"
+	if shiny:
+		type += "_shiny"
+	if pokemon.species.has_gender_differences:
+		if gender == 1:
+			type += "_female"
+	if type == "front":
+		type += "_default"
+	return ResourceLoader.load(pokemon.sprites[type], "SpriteFrames")
 
 func get_curr_xp() -> int:
 	return xp - pokemon.species.growth_rate.levels[float(level)]

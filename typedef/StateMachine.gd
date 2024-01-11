@@ -3,8 +3,9 @@ class_name StateMachine extends Node
 var stack: Array = []
 
 func push_state(state: State):
-	stack[0].exit_state()
-	remove_child(stack[0])
+	if stack.size() > 0:
+		stack[0].exit_state()
+		remove_child(stack[0])
 	add_child(state)
 	stack.push_front(state)
 	state.enter_state()

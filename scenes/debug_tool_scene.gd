@@ -116,3 +116,25 @@ func _on_button_5_pressed():
 			var res = ResourceSaver.save(p, path + "/" + filename)
 			assert(res == OK)
 	label.text = "done!"
+
+
+func _on_button_6_pressed():
+	var path = "res://sprites/pokemon"
+	
+	setup_static_sprites(path)
+
+func setup_static_sprites(path):
+	var dir = DirAccess.open(path)
+	
+	if dir:
+		for filename in dir.get_files():
+			if filename.ends_with(".png"):
+				var s = SpriteFrames.new()
+				s.add_animation("default")
+				s.set_animation_loop("default", true)
+				s.set_animation_speed("default", 15)
+				var image = Image.load_from_file(path + "/" + filename)
+				var tex = ImageTexture.create_from_image(image)
+				s.add_frame("default", tex)
+				var res = ResourceSaver.save(s, path + "/" + filename.trim_suffix(".png") + ".res")
+				assert(res == OK)

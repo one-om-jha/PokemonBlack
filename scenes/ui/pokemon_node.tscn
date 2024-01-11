@@ -2,9 +2,9 @@
 
 [ext_resource type="Theme" uid="uid://bopkg17damgfh" path="res://ui/base_theme.tres" id="1_xwilr"]
 [ext_resource type="Script" path="res://scenes/ui/pokemon_node.gd" id="2_haqy4"]
-[ext_resource type="Texture2D" uid="uid://d2tnb8infx43k" path="res://sprites/pokemon/652.png" id="2_n7wq5"]
 [ext_resource type="FontFile" uid="uid://voh2awxrc13f" path="res://ui/fonts/NunitoSans_10pt-BlackItalic.ttf" id="3_elenl"]
 [ext_resource type="FontFile" uid="uid://dqx0wj7cshp1t" path="res://ui/fonts/NunitoSans_10pt-Italic.ttf" id="4_dxhax"]
+[ext_resource type="SpriteFrames" uid="uid://bsujx6ut3kmmf" path="res://sprites/pokemon/343.res" id="5_flajd"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8qdja"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -44,15 +44,6 @@ theme = ExtResource("1_xwilr")
 theme_override_styles/normal = SubResource("StyleBoxFlat_8qdja")
 theme_override_styles/focus = SubResource("StyleBoxFlat_71ec0")
 script = ExtResource("2_haqy4")
-
-[node name="Sprite" type="TextureRect" parent="."]
-layout_mode = 0
-offset_left = 428.0
-offset_top = 24.0
-offset_right = 492.0
-offset_bottom = 88.0
-texture = ExtResource("2_n7wq5")
-expand_mode = 1
 
 [node name="Name" type="Label" parent="."]
 layout_mode = 0
@@ -112,3 +103,8 @@ offset_bottom = 105.0
 text = "Lv. 5"
 label_settings = SubResource("LabelSettings_3e1gd")
 horizontal_alignment = 2
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(460, 54)
+scale = Vector2(0.7, 0.7)
+sprite_frames = ExtResource("5_flajd")

@@ -17,7 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://cp3vr6upf7uly" path="res://textures/menu/menu_button_selected.png" id="6_iw621"]
 [ext_resource type="Texture2D" uid="uid://lkbmho4hu0v1" path="res://textures/menu/pokemon_bg.png" id="6_ye8xn"]
 [ext_resource type="Texture2D" uid="uid://oa1w5qylr8qt" path="res://textures/menu/ball.png" id="7_5h3ug"]
-[ext_resource type="Texture2D" uid="uid://dxc7oin7yqck5" path="res://sprites/pokemon/animated/647.png" id="7_8bn2h"]
+[ext_resource type="SpriteFrames" path="res://sprites/pokemon/780.res" id="7_c1t6q"]
 [ext_resource type="FontFile" uid="uid://cvbi044pyxaga" path="res://ui/fonts/NunitoSans_10pt-Regular.ttf" id="8_ixxvk"]
 [ext_resource type="Script" path="res://scenes/ui/MainMenu.gd" id="8_r5tjx"]
 [ext_resource type="FontFile" uid="uid://voh2awxrc13f" path="res://ui/fonts/NunitoSans_10pt-BlackItalic.ttf" id="8_xe0j3"]
@@ -1571,6 +1571,11 @@ offset_right = -1960.0
 offset_bottom = 40.0
 theme = ExtResource("4_dsuyh")
 
+[node name="Sprite" type="AnimatedSprite2D" parent="MenuStateMachine/PokemonMenu/Details"]
+position = Vector2(864, 192)
+scale = Vector2(2.5, 2.5)
+sprite_frames = ExtResource("7_c1t6q")
+
 [node name="DetailsBG" type="TextureRect" parent="MenuStateMachine/PokemonMenu/Details"]
 layout_mode = 0
 offset_left = 736.0
@@ -1578,15 +1583,6 @@ offset_right = 1910.0
 offset_bottom = 1080.0
 texture = ExtResource("6_ye8xn")
 expand_mode = 3
-
-[node name="Sprite" type="TextureRect" parent="MenuStateMachine/PokemonMenu/Details"]
-layout_mode = 0
-offset_left = 748.0
-offset_top = 48.0
-offset_right = 988.0
-offset_bottom = 288.0
-texture = ExtResource("7_8bn2h")
-expand_mode = 1
 
 [node name="Name" type="Label" parent="MenuStateMachine/PokemonMenu/Details"]
 layout_mode = 0
@@ -1612,13 +1608,14 @@ uppercase = true
 layout_mode = 0
 offset_left = 748.0
 offset_top = 380.0
-offset_right = 1148.0
-offset_bottom = 440.0
+offset_right = 1248.0
+offset_bottom = 470.0
 text = "Lorem Ipsum Dolor Sit Amet,
 Blah Blah Blah,
 Poo"
 label_settings = SubResource("LabelSettings_68sp6")
 autowrap_mode = 3
+text_overrun_behavior = 3
 
 [node name="ItemName" type="Label" parent="MenuStateMachine/PokemonMenu/Details"]
 layout_mode = 0
