@@ -23,6 +23,8 @@ class_name PokemonInstance extends Resource
 @export var move3: Move
 @export var move4: Move
 
+@export var stat_changes: Array[int]
+
 @export var met_location: String
 @export var met_time: int
 @export var markings: Array
@@ -156,3 +158,86 @@ static func generate_instance(pokemon, level) -> PokemonInstance:
 	p.curr_health = p.stats[0]
 	
 	return p
+	
+func get_effective_stat(stat_id) -> float:
+	match stat_id:
+		1 or 2 or 3 or 4 or 5:
+			return stat_modifier(stat_changes[stat_id] * stats[stat_id])
+		0:
+			return stat_modifier(stat_changes[stat_id] * stats[stat_id])
+		_:
+			return stats[stat_id]
+
+func stat_modifier(mod) -> float:
+	match mod:
+		-6:
+			return 2.0/8.0
+		-5:
+			return 2.0/7.0
+		-4:
+			return 2.0/6.0
+		-3:
+			return 2.0/5.0
+		-2:
+			return 2.0/4.0
+		-1:
+			return 2.0/3.0
+		0:
+			return 2.0/2.0
+		1:
+			return 3.0/2.0
+		2:
+			return 4.0/2.0
+		3:
+			return 5.0/2.0
+		4:
+			return 6.0/2.0
+		5:
+			return 7.0/2.0
+		6:
+			return 8.0/2.0
+		_:
+			return 1.0
+
+func stat_mod_acc(mod) -> float:
+	match mod:
+		-6:
+			return 3.0/9.0
+		-5:
+			return 3.0/8.0
+		-4:
+			return 3.0/7.0
+		-3:
+			return 3.0/6.0
+		-2:
+			return 3.0/5.0
+		-1:
+			return 3.0/4.0
+		0:
+			return 3.0/3.0
+		1:
+			return 4.0/3.0
+		2:
+			return 5.0/3.0
+		3:
+			return 6.0/3.0
+		4:
+			return 7.0/3.0
+		5:
+			return 8.0/3.0
+		6:
+			return 9.0/3.0
+		_:
+			return 3.0/3.0
+
+func get_item_mult() -> float:
+	return 1.0
+
+func mod_health(mod) -> bool:
+	curr_health += mod
+	if curr_health > stats[0]:
+		curr_health = stats[0]
+	if curr_health <= 0:
+		return true
+	else:
+		return false

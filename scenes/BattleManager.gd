@@ -15,6 +15,8 @@ extends StateMachine
 @onready var player_sprite = $BaseState/PlayerSprite
 @onready var opp_sprite = $BaseState/EnemySprite
 
+@onready var debug_label = $BaseState/CanvasLayer/Label
+
 var battle: Battle
 
 func start_battle():
@@ -29,6 +31,11 @@ func start_battle():
 	remove_child(resolve_state)
 	remove_child(end_state)
 	push_state(intro_state)
+	
+func _process(delta):
+	if stack.size() >= 1:
+		stack[0].update(delta)
+	debug_label.text = "state: \n" + stack[0].name
 	
 func get_p() -> PokemonInstance:
 	return battle.player_party[battle.p_index]

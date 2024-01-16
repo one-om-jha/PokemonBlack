@@ -445,6 +445,18 @@ skeleton = NodePath("")
 mesh = SubResource("PlaneMesh_xjegr")
 skeleton = NodePath("../../../..")
 
+[node name="CanvasLayer" type="CanvasLayer" parent="BattleManager/BaseState"]
+
+[node name="Label" type="Label" parent="BattleManager/BaseState/CanvasLayer"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -48.0
+offset_bottom = 23.0
+grow_horizontal = 0
+text = "state: "
+horizontal_alignment = 2
+
 [connection signal="pressed" from="BattleManager/MoveState/CanvasLayer/Move1" to="BattleManager/MoveState" method="_on_move_1_pressed"]
 [connection signal="pressed" from="BattleManager/MoveState/CanvasLayer/Move2" to="BattleManager/MoveState" method="_on_move_2_pressed"]
 [connection signal="pressed" from="BattleManager/MoveState/CanvasLayer/Move3" to="BattleManager/MoveState" method="_on_move_3_pressed"]

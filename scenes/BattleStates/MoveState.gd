@@ -5,6 +5,8 @@ extends State
 @onready var p_move_3 = $CanvasLayer/Move3
 @onready var p_move_4 = $CanvasLayer/Move4
 
+@onready var resolve_state = $"../ResolveState"
+
 @export var p: PokemonInstance
 
 func enter_state():
@@ -48,17 +50,25 @@ func exit_state():
 
 
 func _on_move_1_pressed():
-	get_parent().player_choice = get_parent().Action.MOVE1
-	get_parent().push_state(get_parent().resolve_state)
+	var action = MoveAction.new()
+	action.move = p.move1
+	resolve_state.player_choice = action
+	get_parent().push_state(resolve_state)
 
 func _on_move_2_pressed():
-	get_parent().player_choice = get_parent().Action.MOVE2
-	get_parent().push_state(get_parent().resolve_state)
+	var action = MoveAction.new()
+	action.move = p.move2
+	resolve_state.player_choice = action
+	get_parent().push_state(resolve_state)
 
 func _on_move_3_pressed():
-	get_parent().player_choice = get_parent().Action.MOVE3
-	get_parent().push_state(get_parent().resolve_state)
+	var action = MoveAction.new()
+	action.move = p.move3
+	resolve_state.player_choice = action
+	get_parent().push_state(resolve_state)
 
 func _on_move_4_pressed():
-	get_parent().player_choice = get_parent().Action.MOVE4
-	get_parent().push_state(get_parent().resolve_state)
+	var action = MoveAction.new()
+	action.move = p.move4
+	resolve_state.player_choice = action
+	get_parent().push_state(resolve_state)
