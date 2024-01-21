@@ -1,8 +1,9 @@
-[gd_scene load_steps=40 format=3 uid="uid://dh5ig08mw2psy"]
+[gd_scene load_steps=54 format=3 uid="uid://dh5ig08mw2psy"]
 
 [ext_resource type="Script" path="res://scenes/battle_state.gd" id="1_r7sms"]
 [ext_resource type="CameraAttributesPractical" uid="uid://bgnxctxqlo8l3" path="res://scenes/camera_attributes_battle.tres" id="2_hqqat"]
 [ext_resource type="Script" path="res://scenes/BattleManager.gd" id="2_oftty"]
+[ext_resource type="Texture2D" uid="uid://b4g35lrpvvdwj" path="res://textures/fightscreen/FightReference.png" id="2_qsdua"]
 [ext_resource type="Script" path="res://scenes/BattleStates/IntroState.gd" id="3_2jngf"]
 [ext_resource type="Script" path="res://scenes/BattleStates/PokemonState.gd" id="3_7eiyj"]
 [ext_resource type="Script" path="res://scenes/BattleStates/EndState.gd" id="3_c4crc"]
@@ -20,7 +21,19 @@
 [ext_resource type="Material" uid="uid://bbgtynlnrp63u" path="res://models/maps/matrix1/mats/ki02dx_lm1.tres" id="7_sg2nn"]
 [ext_resource type="PackedScene" uid="uid://c63202m27mptg" path="res://scenes/ui/battle_dialogue.tscn" id="9_ev6i4"]
 [ext_resource type="Script" path="res://scenes/BattleStates/AIState.gd" id="11_kdli4"]
+[ext_resource type="Texture2D" uid="uid://oqsvq5nnjage" path="res://textures/fightscreen/FightButton.png" id="12_0erpo"]
+[ext_resource type="Texture2D" uid="uid://cb72vmua7unpw" path="res://textures/fightscreen/FightButtonSelected.png" id="13_4tyt5"]
 [ext_resource type="Script" path="res://scenes/BattleStates/BaseState.gd" id="14_0by0g"]
+[ext_resource type="FontFile" uid="uid://voh2awxrc13f" path="res://ui/fonts/NunitoSans_10pt-BlackItalic.ttf" id="14_uct0g"]
+[ext_resource type="FontFile" uid="uid://dqx0wj7cshp1t" path="res://ui/fonts/NunitoSans_10pt-Italic.ttf" id="26_2hnhw"]
+[ext_resource type="Texture2D" uid="uid://oa1w5qylr8qt" path="res://textures/menu/ball.png" id="27_hylrj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q8ty5"]
+bg_color = Color(0.133333, 0.133333, 0.133333, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_wn4ms"]
+font = ExtResource("14_uct0g")
+font_size = 28
 
 [sub_resource type="Animation" id="Animation_ad4np"]
 length = 0.001
@@ -213,8 +226,42 @@ uv1_scale = Vector3(100, 100, 100)
 material = SubResource("StandardMaterial3D_0ugw2")
 size = Vector2(200, 200)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g532s"]
+bg_color = Color(0.133333, 0.133333, 0.133333, 1)
+skew = Vector2(0.3, 0)
+shadow_color = Color(0, 0, 0, 0.5)
+shadow_size = 1
+shadow_offset = Vector2(16, 8)
+
+[sub_resource type="LabelSettings" id="LabelSettings_r2yg6"]
+font = ExtResource("14_uct0g")
+font_size = 24
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8t3jx"]
+bg_color = Color(0, 0, 0, 1)
+skew = Vector2(0.5, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3bn7y"]
+bg_color = Color(0.317647, 0.772549, 0.517647, 1)
+skew = Vector2(0.5, 0)
+
+[sub_resource type="LabelSettings" id="LabelSettings_2x348"]
+font = ExtResource("26_2hnhw")
+font_size = 12
+
+[sub_resource type="LabelSettings" id="LabelSettings_yrpbf"]
+font = ExtResource("26_2hnhw")
+font_size = 12
+
 [node name="BattleState" type="Node"]
 script = ExtResource("1_r7sms")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0.286275)
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("2_qsdua")
 
 [node name="BattleManager" type="Node" parent="."]
 script = ExtResource("2_oftty")
@@ -225,34 +272,55 @@ script = ExtResource("3_c4crc")
 [node name="ResolveState" type="Node" parent="BattleManager"]
 script = ExtResource("3_s0g38")
 
+[node name="BattleDialogue" parent="BattleManager/ResolveState" instance=ExtResource("9_ev6i4")]
+
+[node name="HealthTimer" type="Timer" parent="BattleManager/ResolveState"]
+wait_time = 0.5
+one_shot = true
+
 [node name="MoveState" type="Node" parent="BattleManager"]
 script = ExtResource("3_igtnn")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="BattleManager/MoveState"]
 
+[node name="Panel" type="Panel" parent="BattleManager/MoveState/CanvasLayer"]
+offset_left = 1312.0
+offset_top = 451.0
+offset_right = 1948.0
+offset_bottom = 881.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_q8ty5")
+
 [node name="Move1" parent="BattleManager/MoveState/CanvasLayer" instance=ExtResource("7_hibpb")]
-offset_left = 137.72
-offset_top = 0.0
-offset_right = 687.72
-offset_bottom = 92.0
+offset_left = 1326.0
+offset_top = 468.0
+offset_right = 1876.0
+offset_bottom = 560.0
+focus_neighbor_top = NodePath("../Move4")
+focus_neighbor_bottom = NodePath("../Move2")
 
 [node name="Move2" parent="BattleManager/MoveState/CanvasLayer" instance=ExtResource("7_hibpb")]
-offset_left = 137.72
-offset_top = 112.0
-offset_right = 687.72
-offset_bottom = 204.0
+offset_left = 1326.0
+offset_top = 568.0
+offset_right = 1876.0
+offset_bottom = 660.0
+focus_neighbor_top = NodePath("../Move1")
+focus_neighbor_bottom = NodePath("../Move3")
 
 [node name="Move3" parent="BattleManager/MoveState/CanvasLayer" instance=ExtResource("7_hibpb")]
-offset_left = 137.72
-offset_top = 224.0
-offset_right = 687.72
-offset_bottom = 316.0
+offset_left = 1326.0
+offset_top = 668.0
+offset_right = 1876.0
+offset_bottom = 760.0
+focus_neighbor_top = NodePath("../Move2")
+focus_neighbor_bottom = NodePath("../Move4")
 
 [node name="Move4" parent="BattleManager/MoveState/CanvasLayer" instance=ExtResource("7_hibpb")]
-offset_left = 137.72
-offset_top = 336.0
-offset_right = 687.72
-offset_bottom = 428.0
+offset_left = 1326.0
+offset_top = 768.0
+offset_right = 1876.0
+offset_bottom = 860.0
+focus_neighbor_top = NodePath("../Move3")
+focus_neighbor_bottom = NodePath("../Move1")
 
 [node name="PokemonState" type="Node" parent="BattleManager"]
 script = ExtResource("3_7eiyj")
@@ -265,31 +333,94 @@ script = ExtResource("3_vgjaq")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="BattleManager/ChoiceState"]
 
-[node name="VBoxContainer" type="VBoxContainer" parent="BattleManager/ChoiceState/CanvasLayer"]
-offset_right = 40.0
-offset_bottom = 40.0
-theme = ExtResource("3_nvase")
-theme_override_constants/separation = 4
+[node name="FightButton" type="TextureButton" parent="BattleManager/ChoiceState/CanvasLayer"]
+offset_left = 1595.0
+offset_top = 631.0
+offset_right = 2167.0
+offset_bottom = 689.0
+focus_neighbor_top = NodePath("../RunButton")
+focus_neighbor_bottom = NodePath("../PokemonButton")
+texture_normal = ExtResource("12_0erpo")
+texture_focused = ExtResource("13_4tyt5")
+ignore_texture_size = true
+stretch_mode = 4
 
-[node name="FightButton" type="Button" parent="BattleManager/ChoiceState/CanvasLayer/VBoxContainer"]
-layout_mode = 2
-text = "Fight"
-alignment = 0
+[node name="Label" type="Label" parent="BattleManager/ChoiceState/CanvasLayer/FightButton"]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 8.0
+offset_right = 126.0
+offset_bottom = 47.0
+text = "Battle"
+label_settings = SubResource("LabelSettings_wn4ms")
+uppercase = true
 
-[node name="PokemonButton" type="Button" parent="BattleManager/ChoiceState/CanvasLayer/VBoxContainer"]
-layout_mode = 2
-text = "Pokemon"
-alignment = 0
+[node name="PokemonButton" type="TextureButton" parent="BattleManager/ChoiceState/CanvasLayer"]
+offset_left = 1579.0
+offset_top = 695.0
+offset_right = 2151.0
+offset_bottom = 753.0
+focus_neighbor_top = NodePath("../FightButton")
+focus_neighbor_bottom = NodePath("../BagButton")
+texture_normal = ExtResource("12_0erpo")
+texture_focused = ExtResource("13_4tyt5")
+ignore_texture_size = true
+stretch_mode = 4
 
-[node name="BagButton" type="Button" parent="BattleManager/ChoiceState/CanvasLayer/VBoxContainer"]
-layout_mode = 2
+[node name="Label" type="Label" parent="BattleManager/ChoiceState/CanvasLayer/PokemonButton"]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 8.0
+offset_right = 126.0
+offset_bottom = 47.0
+text = "Pokémon"
+label_settings = SubResource("LabelSettings_wn4ms")
+uppercase = true
+
+[node name="BagButton" type="TextureButton" parent="BattleManager/ChoiceState/CanvasLayer"]
+offset_left = 1563.0
+offset_top = 759.0
+offset_right = 2135.0
+offset_bottom = 817.0
+focus_neighbor_top = NodePath("../PokemonButton")
+focus_neighbor_bottom = NodePath("../RunButton")
+texture_normal = ExtResource("12_0erpo")
+texture_focused = ExtResource("13_4tyt5")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="BattleManager/ChoiceState/CanvasLayer/BagButton"]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 8.0
+offset_right = 126.0
+offset_bottom = 47.0
 text = "Bag"
-alignment = 0
+label_settings = SubResource("LabelSettings_wn4ms")
+uppercase = true
 
-[node name="RunButton" type="Button" parent="BattleManager/ChoiceState/CanvasLayer/VBoxContainer"]
-layout_mode = 2
+[node name="RunButton" type="TextureButton" parent="BattleManager/ChoiceState/CanvasLayer"]
+visible = false
+offset_left = 1547.0
+offset_top = 823.0
+offset_right = 2119.0
+offset_bottom = 881.0
+focus_neighbor_top = NodePath("../BagButton")
+focus_neighbor_bottom = NodePath("../FightButton")
+texture_normal = ExtResource("12_0erpo")
+texture_focused = ExtResource("13_4tyt5")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="BattleManager/ChoiceState/CanvasLayer/RunButton"]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 8.0
+offset_right = 126.0
+offset_bottom = 47.0
 text = "Run"
-alignment = 0
+label_settings = SubResource("LabelSettings_wn4ms")
+uppercase = true
 
 [node name="AIState" type="Node" parent="BattleManager"]
 script = ExtResource("11_kdli4")
@@ -457,12 +588,139 @@ grow_horizontal = 0
 text = "state: "
 horizontal_alignment = 2
 
+[node name="OppPanel" type="Panel" parent="BattleManager/BaseState/CanvasLayer"]
+unique_name_in_owner = true
+offset_left = -41.0
+offset_top = 105.0
+offset_right = 390.0
+offset_bottom = 191.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_g532s")
+
+[node name="NameLabel" type="Label" parent="BattleManager/BaseState/CanvasLayer/OppPanel"]
+layout_mode = 0
+offset_left = 173.0
+offset_top = 10.0
+offset_right = 342.0
+offset_bottom = 44.0
+text = "Krookodile"
+label_settings = SubResource("LabelSettings_r2yg6")
+uppercase = true
+
+[node name="HPBar" type="ProgressBar" parent="BattleManager/BaseState/CanvasLayer/OppPanel"]
+layout_mode = 0
+offset_left = 172.0
+offset_top = 48.0
+offset_right = 372.0
+offset_bottom = 56.0
+theme = ExtResource("3_nvase")
+theme_override_styles/background = SubResource("StyleBoxFlat_8t3jx")
+theme_override_styles/fill = SubResource("StyleBoxFlat_3bn7y")
+max_value = 1.0
+show_percentage = false
+
+[node name="HPLabel" type="Label" parent="BattleManager/BaseState/CanvasLayer/OppPanel"]
+layout_mode = 0
+offset_left = 178.0
+offset_top = 58.0
+offset_right = 246.0
+offset_bottom = 81.0
+text = "144/144 HP"
+label_settings = SubResource("LabelSettings_2x348")
+
+[node name="LevelLabel" type="Label" parent="BattleManager/BaseState/CanvasLayer/OppPanel"]
+layout_mode = 0
+offset_left = 332.0
+offset_top = 57.0
+offset_right = 372.0
+offset_bottom = 80.0
+text = "Lv. 5"
+label_settings = SubResource("LabelSettings_yrpbf")
+horizontal_alignment = 2
+
+[node name="BallContainer" type="HBoxContainer" parent="BattleManager/BaseState/CanvasLayer/OppPanel"]
+layout_mode = 0
+offset_left = 170.025
+offset_top = -24.655
+offset_right = 346.025
+offset_bottom = -0.655001
+theme_override_constants/separation = -4
+
+[node name="Pokeball" type="TextureRect" parent="BattleManager/BaseState/CanvasLayer/OppPanel/BallContainer"]
+layout_mode = 2
+texture = ExtResource("27_hylrj")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="PlayerPanel" type="Panel" parent="BattleManager/BaseState/CanvasLayer"]
+unique_name_in_owner = true
+offset_left = 1536.0
+offset_top = 890.0
+offset_right = 1967.0
+offset_bottom = 976.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_g532s")
+
+[node name="NameLabel" type="Label" parent="BattleManager/BaseState/CanvasLayer/PlayerPanel"]
+layout_mode = 0
+offset_left = 36.0
+offset_top = 10.0
+offset_right = 205.0
+offset_bottom = 44.0
+text = "Krookodile"
+label_settings = SubResource("LabelSettings_r2yg6")
+uppercase = true
+
+[node name="HPBar" type="ProgressBar" parent="BattleManager/BaseState/CanvasLayer/PlayerPanel"]
+layout_mode = 0
+offset_left = 34.0
+offset_top = 44.0
+offset_right = 234.0
+offset_bottom = 52.0
+theme = ExtResource("3_nvase")
+theme_override_styles/background = SubResource("StyleBoxFlat_8t3jx")
+theme_override_styles/fill = SubResource("StyleBoxFlat_3bn7y")
+max_value = 1.0
+show_percentage = false
+
+[node name="HPLabel" type="Label" parent="BattleManager/BaseState/CanvasLayer/PlayerPanel"]
+layout_mode = 0
+offset_left = 34.0
+offset_top = 58.0
+offset_right = 102.0
+offset_bottom = 81.0
+text = "144/144 HP"
+label_settings = SubResource("LabelSettings_2x348")
+
+[node name="BallContainer" type="HBoxContainer" parent="BattleManager/BaseState/CanvasLayer/PlayerPanel"]
+layout_mode = 0
+offset_left = 28.29
+offset_top = 103.345
+offset_right = 204.29
+offset_bottom = 127.345
+theme_override_constants/separation = -4
+
+[node name="Pokeball" type="TextureRect" parent="BattleManager/BaseState/CanvasLayer/PlayerPanel/BallContainer"]
+layout_mode = 2
+texture = ExtResource("27_hylrj")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="LevelLabel" type="Label" parent="BattleManager/BaseState/CanvasLayer/PlayerPanel"]
+layout_mode = 0
+offset_left = 193.0
+offset_top = 59.0
+offset_right = 233.0
+offset_bottom = 82.0
+text = "Lv. 5"
+label_settings = SubResource("LabelSettings_yrpbf")
+horizontal_alignment = 2
+
+[connection signal="finished_dialogue" from="BattleManager/ResolveState/BattleDialogue" to="BattleManager/ResolveState" method="_on_battle_dialogue_finished_dialogue"]
 [connection signal="pressed" from="BattleManager/MoveState/CanvasLayer/Move1" to="BattleManager/MoveState" method="_on_move_1_pressed"]
 [connection signal="pressed" from="BattleManager/MoveState/CanvasLayer/Move2" to="BattleManager/MoveState" method="_on_move_2_pressed"]
 [connection signal="pressed" from="BattleManager/MoveState/CanvasLayer/Move3" to="BattleManager/MoveState" method="_on_move_3_pressed"]
 [connection signal="pressed" from="BattleManager/MoveState/CanvasLayer/Move4" to="BattleManager/MoveState" method="_on_move_4_pressed"]
-[connection signal="pressed" from="BattleManager/ChoiceState/CanvasLayer/VBoxContainer/FightButton" to="BattleManager/ChoiceState" method="_on_fight_button_pressed"]
-[connection signal="pressed" from="BattleManager/ChoiceState/CanvasLayer/VBoxContainer/PokemonButton" to="BattleManager/ChoiceState" method="_on_pokemon_button_pressed"]
-[connection signal="pressed" from="BattleManager/ChoiceState/CanvasLayer/VBoxContainer/BagButton" to="BattleManager/ChoiceState" method="_on_bag_button_pressed"]
-[connection signal="pressed" from="BattleManager/ChoiceState/CanvasLayer/VBoxContainer/RunButton" to="BattleManager/ChoiceState" method="_on_run_button_pressed"]
+[connection signal="pressed" from="BattleManager/ChoiceState/CanvasLayer/FightButton" to="BattleManager/ChoiceState" method="_on_fight_button_pressed"]
+[connection signal="pressed" from="BattleManager/ChoiceState/CanvasLayer/PokemonButton" to="BattleManager/ChoiceState" method="_on_pokemon_button_pressed"]
+[connection signal="pressed" from="BattleManager/ChoiceState/CanvasLayer/BagButton" to="BattleManager/ChoiceState" method="_on_bag_button_pressed"]
+[connection signal="pressed" from="BattleManager/ChoiceState/CanvasLayer/RunButton" to="BattleManager/ChoiceState" method="_on_run_button_pressed"]
 [connection signal="finished_dialogue" from="BattleManager/IntroState/IntroDialogue" to="BattleManager/IntroState" method="_on_intro_dialogue_finished_dialogue"]

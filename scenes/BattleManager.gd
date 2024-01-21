@@ -48,3 +48,33 @@ func load_sprites():
 	player_sprite.play("default")
 	opp_sprite.sprite_frames = get_o().get_front_sprite()
 	opp_sprite.play("default")
+	
+	var ball = $BaseState/CanvasLayer/OppPanel/BallContainer/Pokeball
+	var ball_container = $BaseState/CanvasLayer/OppPanel/BallContainer
+	ball_container.remove_child(ball)
+	for i in range(0, battle.party.size()):
+		ball_container.add_child(ball)
+		
+	ball = $BaseState/CanvasLayer/PlayerPanel/BallContainer/Pokeball
+	ball_container = $BaseState/CanvasLayer/PlayerPanel/BallContainer
+	ball_container.remove_child(ball)
+	for i in range(0, pd.data.party.size()):
+		ball_container.add_child(ball)
+	
+	$BaseState/CanvasLayer/OppPanel/NameLabel.text = get_o().name
+	$BaseState/CanvasLayer/PlayerPanel/NameLabel.text = get_p().name
+	$BaseState/CanvasLayer/OppPanel/HPBar.value = get_o().get_health_cent()
+	$BaseState/CanvasLayer/PlayerPanel/HPBar.value = get_p().get_health_cent()
+	$BaseState/CanvasLayer/OppPanel/HPLabel.text = get_o().get_health_string()
+	$BaseState/CanvasLayer/PlayerPanel/HPLabel.text = get_p().get_health_string()
+	$BaseState/CanvasLayer/OppPanel/LevelLabel.text = "Lv. " + str(get_o().level)
+	$BaseState/CanvasLayer/PlayerPanel/LevelLabel.text = "Lv. " + str(get_p().level)
+	
+func opp_switch():
+	battle.o_index += 1
+	opp_sprite.sprite_frames = get_o().get_front_sprite()
+	opp_sprite.play("default")
+	$BaseState/CanvasLayer/OppPanel/NameLabel.text = get_o().name
+	$BaseState/CanvasLayer/OppPanel/HPBar.value = get_o().get_health_cent()
+	$BaseState/CanvasLayer/OppPanel/HPLabel.text = get_o().get_health_string()
+	$BaseState/CanvasLayer/OppPanel/LevelLabel.text = "Lv. " + str(get_o().level)

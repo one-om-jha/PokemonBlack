@@ -14,7 +14,7 @@ var gravity = 5
 
 @onready var sprite = $PlayerSprite
 
-func move_player(direction, run):	
+func move_player(direction, run):
 	# change states
 	if run:
 		state = PlayerState.run
@@ -25,7 +25,7 @@ func move_player(direction, run):
 	else:
 		last_direction = direction
 
-	velocity = Vector3(direction.x, 0, direction.y)
+	velocity = Vector3(direction.x, 0, direction.y).normalized()
 	
 	if state == PlayerState.run:
 		velocity *= 2

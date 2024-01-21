@@ -25,12 +25,9 @@ func _process(delta):
 			displaying = false
 			vis_char = 0
 			curr_frames = 0
-			finished_dialogue.emit()
+			#finished_dialogue.emit()
 
 func display(dialogue: String):
-	if displaying:
-		return
-	
 	floating.visible = true
 	floating_text.text = dialogue.replace("\\n", "\n")
 	floating_text.visible_characters = 0
@@ -42,3 +39,4 @@ func hide_text():
 
 func _on_timer_timeout():
 	hide_text()
+	finished_dialogue.emit()

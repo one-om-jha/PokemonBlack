@@ -1,11 +1,12 @@
 extends State
 
-@onready var fight_button = $CanvasLayer/VBoxContainer/FightButton
-@onready var pokemon_button = $CanvasLayer/VBoxContainer/PokemonButton
-@onready var bag_button = $CanvasLayer/VBoxContainer/BagButton
-@onready var run_button = $CanvasLayer/VBoxContainer/RunButton
+@onready var fight_button = $CanvasLayer/FightButton
+@onready var pokemon_button = $CanvasLayer/PokemonButton
+@onready var bag_button = $CanvasLayer/BagButton
+@onready var run_button = $CanvasLayer/RunButton
 
 func enter_state():
+	fight_button.grab_focus()
 	fight_button.visible = true
 	fight_button.disabled = false
 	pokemon_button.visible = true

@@ -6,7 +6,9 @@ var save_scene = preload("res://scenes/save_scene.tscn")
 @onready var audio = $AudioStreamPlayer
 
 func _input(event):
-	if event.is_pressed():
+	if anim_player.is_playing():
+		return
+	if event is InputEventKey:
 		anim_player.play("start")
 
 func change_scene():

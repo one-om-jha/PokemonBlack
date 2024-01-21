@@ -135,13 +135,11 @@ static func generate_instance(pokemon, level) -> PokemonInstance:
 		else:
 			p.gender = 0
 			
-	print_debug(pokemon.moves[0][1])
 	
 	var level_moves: Array
 	for move in pokemon.moves:
 		if move[1] == "level-up" and move[0] <= level:
 			level_moves.append(move)
-	print_debug(level_moves)
 	level_moves.sort_custom(func(a,b): a[0] < b[0])
 	level_moves = level_moves.map(func(move): return move[2])
 	
@@ -241,3 +239,9 @@ func mod_health(mod) -> bool:
 		return true
 	else:
 		return false
+
+func get_health_string() -> String:
+	return str(curr_health) + "/" + str(stats[0]) + " HP"
+	
+func get_health_cent() -> float:
+	return float(curr_health) / float(stats[0])
