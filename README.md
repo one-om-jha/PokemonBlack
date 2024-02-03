@@ -18,7 +18,7 @@ I'd hoped to get a lot further with this project but got pretty busy (and a full
 
 # Video 
 
-![Demo on youtube here](http://www.youtube.com/watch?v=MR6N14D72Mo)
+[Demo on youtube here](http://www.youtube.com/watch?v=MR6N14D72Mo)
 
 # Screenshots
 ![](project_docs/juniper.png)
