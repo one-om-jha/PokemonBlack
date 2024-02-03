@@ -78,3 +78,6 @@ func opp_switch():
 	$BaseState/CanvasLayer/OppPanel/HPBar.value = get_o().get_health_cent()
 	$BaseState/CanvasLayer/OppPanel/HPLabel.text = get_o().get_health_string()
 	$BaseState/CanvasLayer/OppPanel/LevelLabel.text = "Lv. " + str(get_o().level)
+
+func end_battle():
+	get_parent().end_battle()

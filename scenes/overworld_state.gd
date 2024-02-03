@@ -6,7 +6,7 @@ extends State
 func enter_state():
 	player.sprite.load_sprite()
 	camera.current = true
-	player.global_position = pd.data.map_pos
+	player.global_position = pd.data.map_pos + Vector3(0,1,0)
 
 func update(delta):
 	var vert = Input.get_axis("up", "down")

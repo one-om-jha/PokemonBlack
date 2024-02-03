@@ -2,9 +2,14 @@ extends Node
 
 @export var encounters: Array[Encounter]
 
+var battled = false
+
 signal trigger_battle(battle: Battle)
 
 func _on_body_entered(body):
+	if battled:
+		return
+		
 	if body.name == "Player":
 		# trigger battle
 		var battle = Battle.new()
@@ -17,3 +22,4 @@ func _on_body_entered(body):
 		
 		battle.party.append(encounters[i].create_instance())
 		trigger_battle.emit(battle)
+		battled = true

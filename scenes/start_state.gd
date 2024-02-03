@@ -14,6 +14,8 @@ extends Node
 
 @export var data: PlayerData
 
+@export var pokemon: Pokemon
+
 var last_displayed
 
 var in_char_select = false
@@ -140,6 +142,8 @@ func begin_game():
 	data.event_flags.finished_intro = true
 	data.event_flags.opening_cutscene = false
 	data.party.resize(6)
+	var p = PokemonInstance.generate_instance(pokemon, 5)
+	data.party[0] = p
 	pd.data = data
 	if pd.data == data:
 		anim.play("close")

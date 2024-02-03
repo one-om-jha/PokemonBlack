@@ -14,6 +14,8 @@ var message_queue: Array[String]
 
 var resolved = false
 
+var battle_over = false
+
 @onready var dm = $BattleDialogue
 @onready var timer = $HealthTimer
 
@@ -113,6 +115,8 @@ func move_acted(msg):
 	message_queue.append(msg)
 
 func _on_battle_dialogue_finished_dialogue():
+	if battle_over:
+		get_parent().end_battle()
 	if message_queue.size() == 0:
 		get_parent().push_state(get_parent().choice_state)
 		return
@@ -120,7 +124,8 @@ func _on_battle_dialogue_finished_dialogue():
 		dm.display(message_queue.pop_back())
 
 func player_fainted():
-	pass
+	message_queue.append("You fainted!")
+	battle_over = true
 	
 func opp_fainted():
 	message_queue.append("The opponent fainted!")
@@ -129,4 +134,5 @@ func opp_fainted():
 		get_parent().opp_switch()
 	else:
 		message_queue.append("You won!")
+		battle_over = true
 	

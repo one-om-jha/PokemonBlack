@@ -12,3 +12,6 @@ func enter_state():
 	
 func exit_state():
 	pass
+
+func end_battle():
+	get_parent().pop_state()

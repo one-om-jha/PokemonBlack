@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://d0tstx14fo8uu"]
+[gd_scene load_steps=25 format=3 uid="uid://d0tstx14fo8uu"]
 
 [ext_resource type="Script" path="res://scenes/overworld_state.gd" id="1_0tx77"]
 [ext_resource type="SpriteFrames" uid="uid://bxt3gj6ghl7jc" path="res://textures/player/player_female.tres" id="3_mxpcr"]
@@ -11,6 +11,9 @@
 [ext_resource type="Script" path="res://typedef/WildArea.gd" id="8_c2qd4"]
 [ext_resource type="Resource" uid="uid://b74xnowcl65hs" path="res://Pokemon/patrat.tres" id="10_8jjov"]
 [ext_resource type="Script" path="res://typedef/Encounter.gd" id="11_kc0mg"]
+[ext_resource type="Script" path="res://scenes/MusicArea.gd" id="12_6cbt8"]
+[ext_resource type="AudioStream" uid="uid://desg5l5kloqm4" path="res://Audio/Music/Nuvema Town.wav" id="13_acv8s"]
+[ext_resource type="AudioStream" uid="uid://d1fs4pufcjcts" path="res://Audio/Music/Route 1.wav" id="14_t45qy"]
 
 [sub_resource type="Animation" id="Animation_orj7q"]
 length = 0.001
@@ -101,6 +104,9 @@ appearance_chance = 100
 [sub_resource type="BoxShape3D" id="BoxShape3D_ey6k2"]
 size = Vector3(2.0224, 2.39661, 1.23535)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_viq05"]
+size = Vector3(15.7626, 1.5907, 14.5114)
+
 [node name="OverworldState" type="Node"]
 script = ExtResource("1_0tx77")
 
@@ -167,5 +173,27 @@ encounters = Array[ExtResource("11_kc0mg")]([SubResource("Resource_p10es")])
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.09233, 0.698303, 0.278798)
 shape = SubResource("BoxShape3D_ey6k2")
 
+[node name="Area3D2" type="Area3D" parent="matrix1"]
+script = ExtResource("12_6cbt8")
+music = ExtResource("13_acv8s")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="matrix1/Area3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.632813, 0.295349, -0.826092)
+shape = SubResource("BoxShape3D_viq05")
+
+[node name="Area3D3" type="Area3D" parent="matrix1"]
+script = ExtResource("12_6cbt8")
+music = ExtResource("14_t45qy")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="matrix1/Area3D3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0668, 0.295349, -13.2645)
+shape = SubResource("BoxShape3D_viq05")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
 [connection signal="body_entered" from="matrix1/Area3D" to="matrix1/Area3D" method="_on_body_entered"]
 [connection signal="trigger_battle" from="matrix1/Area3D" to="." method="_on_trigger_battle"]
+[connection signal="area_entered" from="matrix1/Area3D2" to="matrix1/Area3D2" method="_on_area_entered"]
+[connection signal="body_entered" from="matrix1/Area3D2" to="matrix1/Area3D" method="_on_area_3d_2_body_entered"]
+[connection signal="body_entered" from="matrix1/Area3D2" to="matrix1/Area3D2" method="_on_body_entered"]
+[connection signal="area_entered" from="matrix1/Area3D3" to="matrix1/Area3D3" method="_on_area_entered"]
