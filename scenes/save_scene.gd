@@ -35,12 +35,15 @@ func load_saves():
 		Save3.load_save(save_3)
 
 func _on_save_1_pressed():
+	selected_save = 1
 	anim.play("begin_game")
 
 func _on_save_2_pressed():
+	selected_save = 2
 	anim.play("begin_game")
 
 func _on_save_3_pressed():
+	selected_save = 3
 	anim.play("begin_game")
 	
 func begin_game():
